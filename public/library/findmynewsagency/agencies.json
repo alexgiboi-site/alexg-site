@@ -3790,6 +3790,43 @@
    "note": "Contacts could not be read automatically; see the agency’s website."
   },
   {
+   "id": 2001,
+   "acronym": "9Colonne",
+   "name": "9Colonne",
+   "en": "",
+   "country": "Italy",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.9colonne.it",
+   "emails": [
+    {
+     "label": "Newsroom",
+     "u": "redazione",
+     "d": "9col.it"
+    },
+    {
+     "label": "Subscriptions",
+     "u": "amministrazione",
+     "d": "9col.it"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+39 06 7720 0071"
+    }
+   ],
+   "sources": [
+    {
+     "t": "9Colonne: contacts",
+     "u": "https://www.9colonne.it/94961/contatti"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
    "id": 202,
    "acronym": "Adnkronos",
    "name": "Adnkronos",
@@ -3990,6 +4027,46 @@
    "note": ""
   },
   {
+   "id": 2003,
+   "acronym": "GEA",
+   "name": "GEA – Green Economy Agency",
+   "en": "Energy and ecological transition news agency (Withub)",
+   "country": "Italy",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://geagency.it",
+   "emails": [
+    {
+     "label": "Newsroom",
+     "u": "redazione",
+     "d": "geagency.it"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Rome",
+     "n": "+39 06 9028 1651"
+    },
+    {
+     "label": "Turin",
+     "n": "+39 011 1983 8067"
+    },
+    {
+     "label": "Brussels",
+     "n": "+32 2 230 80 15"
+    }
+   ],
+   "sources": [
+    {
+     "t": "GEA: contacts",
+     "u": "https://geagency.it/contatti/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
    "id": 211,
    "acronym": "Italpress",
    "name": "Italpress",
@@ -4089,15 +4166,52 @@
    "eana": false,
    "web": "https://www.agenzianova.com",
    "emails": [],
-   "phones": [],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+39 06 699 1516"
+    }
+   ],
    "sources": [
     {
      "t": "Agenzia Nova: about us",
-     "u": "https://www.agenzianova.com/p/495/about-us"
+     "u": "https://www.agenzianova.com/p/74/chi-siamo"
     }
    ],
    "checked": "2026-10-16",
-   "note": "Agenzia Nova lists its contacts on its website; they could not be read automatically."
+   "note": ""
+  },
+  {
+   "id": 2002,
+   "acronym": "Public Policy",
+   "name": "Public Policy",
+   "en": "Political and policy news agency",
+   "country": "Italy",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.publicpolicy.it",
+   "emails": [
+    {
+     "label": "Newsroom",
+     "u": "redazione",
+     "d": "publicpolicy.it"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Newsroom",
+     "n": "+39 06 6941 3297"
+    }
+   ],
+   "sources": [
+    {
+     "t": "Public Policy: newsroom and contacts",
+     "u": "https://www.publicpolicy.net/redazione"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
   },
   {
    "id": 214,
@@ -4183,6 +4297,36 @@
    ],
    "checked": "2026-10-16",
    "note": ""
+  },
+  {
+   "id": 2004,
+   "acronym": "Vista",
+   "name": "Agenzia Vista",
+   "en": "Video news agency",
+   "country": "Italy",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.agenziavista.it",
+   "emails": [],
+   "phones": [
+    {
+     "label": "Newsroom",
+     "n": "+39 06 4544 9756"
+    },
+    {
+     "label": "Parliament desk",
+     "n": "+39 06 6760 5187"
+    }
+   ],
+   "sources": [
+    {
+     "t": "Agenzia Vista: contacts",
+     "u": "https://www.agenziavista.it/contact-us/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "The email shown on Agenzia Vista’s contact page does not match its link, so it is not listed."
   },
   {
    "id": 216,
@@ -6157,6 +6301,33 @@
    "note": ""
   },
   {
+   "id": 240,
+   "acronym": "Mediafax",
+   "name": "Mediafax",
+   "en": "",
+   "country": "Romania",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.mediafax.ro",
+   "emails": [
+    {
+     "label": "Newsroom",
+     "u": "redactie",
+     "d": "mediafax.ro"
+    }
+   ],
+   "phones": [],
+   "sources": [
+    {
+     "t": "Mediafax: contact",
+     "u": "https://www.mediafax.ro/contact"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Published since January 2025 by Titluri Quality SRL, which bought the Mediafax brand and news feed."
+  },
+  {
    "id": 241,
    "acronym": "News.ro",
    "name": "News.ro",
@@ -6166,16 +6337,27 @@
    "ownership": "Private",
    "eana": false,
    "web": "https://www.news.ro",
-   "emails": [],
+   "emails": [
+    {
+     "label": "Feedback",
+     "u": "news",
+     "d": "news.ro"
+    },
+    {
+     "label": "Subscriptions",
+     "u": "abonamente",
+     "d": "news.ro"
+    }
+   ],
    "phones": [],
    "sources": [
     {
-     "t": "News.ro: contact",
-     "u": "https://www.news.ro/contact"
+     "t": "News.ro: about us",
+     "u": "https://www.news.ro/despre-noi"
     }
    ],
    "checked": "2026-10-16",
-   "note": "Contacts could not be read automatically; see the agency’s website."
+   "note": ""
   },
   {
    "id": 242,
