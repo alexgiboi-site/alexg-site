@@ -3,6 +3,30 @@
  "updated": "2026-10-16",
  "agencies": [
   {
+   "id": 58,
+   "acronym": "AIP",
+   "name": "Afghan Islamic Press",
+   "en": "",
+   "country": "Afghanistan",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.afghanislamicpress.com",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "AIP: about us",
+     "u": "https://www.afghanislamicpress.com/en/page/2"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Contacts could not be read automatically; see the agency’s website.",
+   "also": [
+    "Pakistan"
+   ]
+  },
+  {
    "id": 55,
    "acronym": "Bakhtar",
    "name": "آژانس خبری باختر",
@@ -29,6 +53,33 @@
     {
      "t": "Bakhtar: contact us",
      "u": "https://www.bakhtarnews.af/en/contact-us-english"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 56,
+   "acronym": "Khaama",
+   "name": "Khaama Press",
+   "en": "",
+   "country": "Afghanistan",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.khaama.com",
+   "emails": [
+    {
+     "label": "General",
+     "u": "info",
+     "d": "khaama.com"
+    }
+   ],
+   "phones": [],
+   "sources": [
+    {
+     "t": "Khaama Press: contact us",
+     "u": "https://www.khaama.com/contact-us/"
     }
    ],
    "checked": "2026-10-16",
@@ -204,6 +255,38 @@
    "note": ""
   },
   {
+   "id": 114,
+   "acronym": "ARKA",
+   "name": "ARKA News Agency",
+   "en": "",
+   "country": "Armenia",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://arka.am",
+   "emails": [
+    {
+     "label": "General",
+     "u": "arka",
+     "d": "arka.am"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+374 10 52 40 80"
+    }
+   ],
+   "sources": [
+    {
+     "t": "ARKA: about",
+     "u": "https://arka.am/en/about/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
    "id": 116,
    "acronym": "Armenpress",
    "name": "Արմենպրես",
@@ -228,6 +311,129 @@
    ],
    "checked": "2026-10-16",
    "note": ""
+  },
+  {
+   "id": 115,
+   "acronym": "ArmInfo",
+   "name": "ArmInfo",
+   "en": "",
+   "country": "Armenia",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.arminfo.com",
+   "emails": [
+    {
+     "label": "General",
+     "u": "info",
+     "d": "arminfo.com"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Yerevan",
+     "n": "+374 43 14 01 44"
+    }
+   ],
+   "sources": [
+    {
+     "t": "ArmInfo: contacts",
+     "u": "https://www.arminfo.com/contacts"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 117,
+   "acronym": "Mediamax",
+   "name": "Mediamax",
+   "en": "",
+   "country": "Armenia",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://mediamax.am",
+   "emails": [
+    {
+     "label": "News",
+     "u": "news",
+     "d": "mediamax.am"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+374 10 22 87 86"
+    }
+   ],
+   "sources": [
+    {
+     "t": "Yerevan Press Club: news agencies",
+     "u": "https://ypc.am/armenian-media/news-agencies-and-online-media/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Details from the Yerevan Press Club media directory."
+  },
+  {
+   "id": 118,
+   "acronym": "News.am",
+   "name": "News.am",
+   "en": "",
+   "country": "Armenia",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://news.am",
+   "emails": [
+    {
+     "label": "Editor",
+     "u": "editor",
+     "d": "news.am"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+374 10 44 40 33"
+    }
+   ],
+   "sources": [
+    {
+     "t": "Yerevan Press Club: news agencies",
+     "u": "https://ypc.am/armenian-media/news-agencies-and-online-media/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Details from the Yerevan Press Club media directory."
+  },
+  {
+   "id": 119,
+   "acronym": "PanARMENIAN",
+   "name": "PanARMENIAN.Net",
+   "en": "",
+   "country": "Armenia",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.panarmenian.net",
+   "emails": [
+    {
+     "label": "General",
+     "u": "media",
+     "d": "pan.am"
+    }
+   ],
+   "phones": [],
+   "sources": [
+    {
+     "t": "Yerevan Press Club: news agencies",
+     "u": "https://ypc.am/armenian-media/news-agencies-and-online-media/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Details from the Yerevan Press Club media directory."
   },
   {
    "id": 59,
@@ -515,6 +721,27 @@
    ],
    "checked": "2026-10-16",
    "note": "Contact page could not be read automatically; see the agency’s website."
+  },
+  {
+   "id": 63,
+   "acronym": "bdnews24",
+   "name": "bdnews24.com",
+   "en": "",
+   "country": "Bangladesh",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://bdnews24.com",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "bdnews24.com: contact",
+     "u": "https://bdnews24.com/contact"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Contacts could not be read automatically; see the agency’s website."
   },
   {
    "id": 61,
@@ -1075,6 +1302,54 @@
    "note": "No phone number or email could be confirmed; see the agency’s website."
   },
   {
+   "id": 65,
+   "acronym": "AKP",
+   "name": "Agence Kampuchea Presse",
+   "en": "",
+   "country": "Cambodia",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://www.akp.gov.kh",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "OANA member profile",
+     "u": "https://oananews.org/agencies/AKP"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Contacts could not be read automatically; see the agency’s website."
+  },
+  {
+   "id": 1002,
+   "acronym": "AVI",
+   "name": "Agence Virtuelle d’Information",
+   "en": "Cameroon Virtual Information Agency",
+   "country": "Cameroon",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://avi.cm",
+   "emails": [
+    {
+     "label": "Ministry of Communication",
+     "u": "contact",
+     "d": "mincom.gov.cm"
+    }
+   ],
+   "phones": [],
+   "sources": [
+    {
+     "t": "AVI website",
+     "u": "https://avi.cm/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "AVI publishes no contact of its own; the email is that of the Ministry of Communication, which runs it."
+  },
+  {
    "id": 432,
    "acronym": "CP",
    "name": "The Canadian Press",
@@ -1137,6 +1412,27 @@
    "note": ""
   },
   {
+   "id": 8,
+   "acronym": "ACAP",
+   "name": "Agence Centrafricaine de Presse",
+   "en": "Central African Press Agency",
+   "country": "Central African Republic",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://acap-rca.com",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "ACAP: contacts",
+     "u": "https://acap-rca.com/contacts/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Contacts could not be read automatically; see the agency’s website."
+  },
+  {
    "id": 9,
    "acronym": "ATPE",
    "name": "Agence Tchadienne de Presse et d’Édition",
@@ -1156,6 +1452,48 @@
    ],
    "checked": "2026-10-16",
    "note": "No phone number or email could be confirmed; see the agency’s website."
+  },
+  {
+   "id": 66,
+   "acronym": "CCTV+",
+   "name": "CCTV+",
+   "en": "China Central Television video news agency",
+   "country": "China",
+   "kind": "Specialist news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://www.cctvplus.com",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "CCTV+ website",
+     "u": "https://www.cctvplus.com/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "CCTV+ lists its contacts on a separate page of its website."
+  },
+  {
+   "id": 67,
+   "acronym": "CNS",
+   "name": "中国新闻社",
+   "en": "China News Service",
+   "country": "China",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://www.chinanews.com.cn",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "China News Service: contact",
+     "u": "http://www.chinanews.com.cn/common/footer/contact.shtml"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Contacts could not be read automatically; see the agency’s website."
   },
   {
    "id": 68,
@@ -1420,6 +1758,43 @@
    ],
    "checked": "2026-10-16",
    "note": "No phone number or email could be confirmed; see the agency’s website."
+  },
+  {
+   "id": 12,
+   "acronym": "Alerte Info",
+   "name": "Alerte Info",
+   "en": "",
+   "country": "Côte d’Ivoire",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.alerte-info.net",
+   "emails": [
+    {
+     "label": "Newsroom",
+     "u": "redaction",
+     "d": "alerte-info.net"
+    },
+    {
+     "label": "Management",
+     "u": "direction",
+     "d": "alerte-info.net"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+225 01 40 37 73 52"
+    }
+   ],
+   "sources": [
+    {
+     "t": "Alerte Info: the agency",
+     "u": "https://www.alerte-info.net/pages/agence/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
   },
   {
    "id": 13,
@@ -1997,6 +2372,64 @@
     {
      "t": "Government of The Gambia: GAMNA",
      "u": "https://gambia.gov.gm/gambia-news-agency/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 126,
+   "acronym": "GHN",
+   "name": "GHN",
+   "en": "Georgian news agency",
+   "country": "Georgia",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://ghn.ge",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "Wikipedia: GHN (news agency)",
+     "u": "https://en.wikipedia.org/wiki/GHN_(news_agency)"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "No general email or phone could be confirmed; see the agency’s website."
+  },
+  {
+   "id": 127,
+   "acronym": "IPN",
+   "name": "Interpressnews",
+   "en": "",
+   "country": "Georgia",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.interpressnews.ge",
+   "emails": [
+    {
+     "label": "Newsroom",
+     "u": "ipnnews",
+     "d": "ipn.ge"
+    },
+    {
+     "label": "Newsroom",
+     "u": "interpress",
+     "d": "ipn.ge"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Palitra Media hotline",
+     "n": "+995 32 219 60 13"
+    }
+   ],
+   "sources": [
+    {
+     "t": "Interpressnews: about us",
+     "u": "https://www.interpressnews.ge/en/article/142514-about-us/"
     }
    ],
    "checked": "2026-10-16",
@@ -2603,6 +3036,27 @@
    "note": ""
   },
   {
+   "id": 73,
+   "acronym": "HS",
+   "name": "हिन्दुस्थान समाचार",
+   "en": "Hindusthan Samachar",
+   "country": "India",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.hindusthansamachar.in",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "Hindusthan Samachar website",
+     "u": "https://www.hindusthansamachar.in/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "No general email or phone could be confirmed; see the agency’s website."
+  },
+  {
    "id": 74,
    "acronym": "IANS",
    "name": "Indo-Asian News Service",
@@ -2633,6 +3087,27 @@
    ],
    "checked": "2026-10-16",
    "note": ""
+  },
+  {
+   "id": 76,
+   "acronym": "KNN",
+   "name": "Knowledge and News Network",
+   "en": "",
+   "country": "India",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://knnindia.co.in",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "KNN: contact us",
+     "u": "http://knnindia.co.in/page/pg/contact-us"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Contacts could not be read automatically; see the agency’s website."
   },
   {
    "id": 77,
@@ -2716,6 +3191,27 @@
    ],
    "checked": "2026-10-16",
    "note": ""
+  },
+  {
+   "id": 80,
+   "acronym": "KBR",
+   "name": "Kantor Berita Radio",
+   "en": "",
+   "country": "Indonesia",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://kbr.id",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "KBR: about us",
+     "u": "https://kbr.id/tentang-kami"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Contacts could not be read automatically; see the agency’s website."
   },
   {
    "id": 321,
@@ -3287,6 +3783,53 @@
    "note": ""
   },
   {
+   "id": 83,
+   "acronym": "QUICK",
+   "name": "株式会社QUICK",
+   "en": "QUICK Corp. (Nikkei group financial news)",
+   "country": "Japan",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://corporate.quick.co.jp/en/",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "QUICK: company outline",
+     "u": "https://corporate.quick.co.jp/en/about/outline/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "No general email or phone could be confirmed; see the agency’s website."
+  },
+  {
+   "id": 84,
+   "acronym": "Radiopress",
+   "name": "一般財団法人ラヂオプレス",
+   "en": "Radiopress",
+   "country": "Japan",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "",
+   "emails": [],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+81 3 5273 2171"
+    }
+   ],
+   "sources": [
+    {
+     "t": "Koueki: Radiopress",
+     "u": "https://koueki.jp/d/list/ra-radio/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Monitoring service for North Korean, Chinese and other foreign broadcasts."
+  },
+  {
    "id": 405,
    "acronym": "Petra",
    "name": "وكالة الأنباء الأردنية",
@@ -3307,6 +3850,38 @@
     {
      "t": "Petra: about us",
      "u": "https://petra.gov.jo/en/about-us"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 128,
+   "acronym": "Interfax-KZ",
+   "name": "Интерфакс-Казахстан",
+   "en": "Interfax-Kazakhstan",
+   "country": "Kazakhstan",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.interfax.kz",
+   "emails": [
+    {
+     "label": "Newsroom",
+     "u": "news",
+     "d": "interfax.kz"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Almaty",
+     "n": "+7 727 313 15 30"
+    }
+   ],
+   "sources": [
+    {
+     "t": "Interfax-Kazakhstan: about us",
+     "u": "https://www.interfax.kz/?lang=rus&int_id=About_Us"
     }
    ],
    "checked": "2026-10-16",
@@ -3337,6 +3912,27 @@
    ],
    "checked": "2026-10-16",
    "note": ""
+  },
+  {
+   "id": 129,
+   "acronym": "KazTAG",
+   "name": "KazTAG",
+   "en": "",
+   "country": "Kazakhstan",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://kaztag.kz",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "KazTAG: contacts",
+     "u": "https://kaztag.kz/ru/contacts/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Contacts could not be read automatically; see the agency’s website."
   },
   {
    "id": 23,
@@ -3452,6 +4048,27 @@
    ],
    "checked": "2026-10-16",
    "note": ""
+  },
+  {
+   "id": 132,
+   "acronym": "AKIpress",
+   "name": "AKIpress",
+   "en": "",
+   "country": "Kyrgyzstan",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://akipress.com",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "AKIpress website",
+     "u": "https://akipress.com/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "No general email or phone could be confirmed; see the agency’s website."
   },
   {
    "id": 133,
@@ -4013,6 +4630,59 @@
    "note": "No phone number or email could be confirmed; see the agency’s website."
   },
   {
+   "id": 92,
+   "acronym": "Myanmar Now",
+   "name": "Myanmar Now",
+   "en": "",
+   "country": "Myanmar",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://myanmar-now.org",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "Myanmar Now: contact us",
+     "u": "https://myanmar-now.org/mm/contact-us/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Contacts could not be read automatically; see the agency’s website."
+  },
+  {
+   "id": 93,
+   "acronym": "SHAN",
+   "name": "Shan Herald Agency for News",
+   "en": "",
+   "country": "Myanmar",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://english.shannews.org",
+   "emails": [
+    {
+     "label": "General",
+     "u": "shan",
+     "d": "panglong.org"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Thailand",
+     "n": "+66 65 746 1834"
+    }
+   ],
+   "sources": [
+    {
+     "t": "SHAN: contact",
+     "u": "https://english.shannews.org/contact"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
    "id": 32,
    "acronym": "NAMPA",
    "name": "Namibia Press Agency",
@@ -4048,6 +4718,27 @@
    ],
    "checked": "2026-10-16",
    "note": ""
+  },
+  {
+   "id": 94,
+   "acronym": "RSS",
+   "name": "राष्ट्रिय समाचार समिति",
+   "en": "Rastriya Samachar Samiti (National News Agency)",
+   "country": "Nepal",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://www.rssnepal.com",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "RSS: contact us",
+     "u": "http://www.rssnepal.com/?page_id=12"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Contacts could not be read automatically; see the agency’s website."
   },
   {
    "id": 226,
@@ -4304,6 +4995,64 @@
    ],
    "checked": "2026-10-16",
    "note": ""
+  },
+  {
+   "id": 100,
+   "acronym": "NNI",
+   "name": "News Network International",
+   "en": "",
+   "country": "Pakistan",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://nni-news.com.pk",
+   "emails": [
+    {
+     "label": "News",
+     "u": "news",
+     "d": "nni-news.com.pk"
+    },
+    {
+     "label": "General",
+     "u": "info",
+     "d": "nni-news.com.pk"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+92 51 289 1921"
+    }
+   ],
+   "sources": [
+    {
+     "t": "APNS: news agencies",
+     "u": "https://www.apns.com.pk/news_agencies/index.php"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 101,
+   "acronym": "PPI",
+   "name": "Pakistan Press International",
+   "en": "",
+   "country": "Pakistan",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "Wikipedia: Pakistan Press International",
+     "u": "https://en.wikipedia.org/wiki/Pakistan_Press_International"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Published contact details found were outdated and are not listed."
   },
   {
    "id": 413,
@@ -4647,6 +5396,49 @@
    ],
    "checked": "2026-10-16",
    "note": ""
+  },
+  {
+   "id": 36,
+   "acronym": "ADIAC",
+   "name": "Agence d’Information d’Afrique Centrale",
+   "en": "Central Africa Information Agency (Les Dépêches de Brazzaville)",
+   "country": "Republic of the Congo",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.adiac-congo.com",
+   "emails": [
+    {
+     "label": "Newsroom",
+     "u": "redaction",
+     "d": "lesdepechesdebrazzaville.fr"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Brazzaville",
+     "n": "+242 05 532 01 09"
+    },
+    {
+     "label": "Kinshasa",
+     "n": "+243 015 166 200"
+    },
+    {
+     "label": "Pointe-Noire",
+     "n": "+242 06 963 31 34"
+    }
+   ],
+   "sources": [
+    {
+     "t": "ADIAC: contact",
+     "u": "https://www.adiac-congo.com/content/contact"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "",
+   "also": [
+    "DR Congo"
+   ]
   },
   {
    "id": 238,
@@ -5140,6 +5932,27 @@
    "note": ""
   },
   {
+   "id": 37,
+   "acronym": "APA",
+   "name": "APA news",
+   "en": "African Press Agency",
+   "country": "Senegal",
+   "kind": "International news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://apanews.net",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "APA news website",
+     "u": "https://apanews.net/senegal-launches-national-media-observatory/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "No general email or phone could be confirmed; see the agency’s website."
+  },
+  {
    "id": 38,
    "acronym": "APS (Senegal)",
    "name": "Agence de Presse Sénégalaise",
@@ -5443,6 +6256,27 @@
    "note": ""
   },
   {
+   "id": 42,
+   "acronym": "SONNA",
+   "name": "Somali National News Agency",
+   "en": "",
+   "country": "Somalia",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://sonna.so",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "UNA-OIC member profile",
+     "u": "https://una-oic.org/en/news_agencies/%D9%88%D9%83%D8%A7%D9%84%D8%A9-%D8%A7%D9%84%D8%A3%D9%86%D8%A8%D8%A7%D8%A1-%D8%A7%D9%84%D9%88%D8%B7%D9%86%D9%8A%D8%A9-%D8%A7%D9%84%D8%B5%D9%88%D9%85%D8%A7%D9%84%D9%8A%D8%A9-%D8%B5%D9%88%D9%86%D8%A7/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Contacts could not be read automatically; see the agency’s website."
+  },
+  {
    "id": 46,
    "acronym": "SAnews",
    "name": "South African Government News Agency",
@@ -5473,6 +6307,32 @@
    ],
    "checked": "2026-10-16",
    "note": ""
+  },
+  {
+   "id": 104,
+   "acronym": "News1",
+   "name": "뉴스1",
+   "en": "News1 Korea",
+   "country": "South Korea",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.news1.kr",
+   "emails": [],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+82 2 397 7000"
+    }
+   ],
+   "sources": [
+    {
+     "t": "News1: organisation",
+     "u": "https://www.news1.kr/customer/organization"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "News tips go through the form at news1.kr/jebo."
   },
   {
    "id": 105,
@@ -5521,6 +6381,38 @@
     {
      "t": "OANA member profile",
      "u": "https://oananews.org/agencies/YONHAP_NEWS_AGENCY"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 48,
+   "acronym": "SSNA",
+   "name": "South Sudan News Agency",
+   "en": "",
+   "country": "South Sudan",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://southsudannewsagency.net",
+   "emails": [
+    {
+     "label": "General",
+     "u": "info",
+     "d": "southsudannewsagency.net"
+    },
+    {
+     "label": "Editorial",
+     "u": "editor",
+     "d": "southsudannewsagency.net"
+    }
+   ],
+   "phones": [],
+   "sources": [
+    {
+     "t": "SSNA: contact us",
+     "u": "https://southsudannewsagency.net/contact-us/"
     }
    ],
    "checked": "2026-10-16",
@@ -5769,6 +6661,27 @@
    "note": ""
   },
   {
+   "id": 107,
+   "acronym": "Lankapuvath",
+   "name": "Lankapuvath",
+   "en": "",
+   "country": "Sri Lanka",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://english.lankapuvath.lk",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "Lankapuvath: contact us",
+     "u": "https://english.lankapuvath.lk/contact-us/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Contacts could not be read automatically; see the agency’s website."
+  },
+  {
    "id": 422,
    "acronym": "SUNA",
    "name": "وكالة السودان للأنباء",
@@ -5973,6 +6886,42 @@
    "note": ""
   },
   {
+   "id": 49,
+   "acronym": "STP-Press",
+   "name": "Agência STP-Press",
+   "en": "São Tomé and Príncipe news agency",
+   "country": "São Tomé and Príncipe",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://www.stp-press.st",
+   "emails": [
+    {
+     "label": "General",
+     "u": "info",
+     "d": "stp-press.st"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+239 990 7040"
+    },
+    {
+     "label": "Switchboard",
+     "n": "+239 222 2087"
+    }
+   ],
+   "sources": [
+    {
+     "t": "STP-Press website",
+     "u": "https://www.stp-press.st/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
    "id": 108,
    "acronym": "CNA",
    "name": "中央通訊社",
@@ -6036,6 +6985,75 @@
    "note": ""
   },
   {
+   "id": 134,
+   "acronym": "Asia-Plus",
+   "name": "Asia-Plus",
+   "en": "",
+   "country": "Tajikistan",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://asiaplus.news",
+   "emails": [
+    {
+     "label": "General",
+     "u": "infoasiaplustj",
+     "d": "gmail.com"
+    }
+   ],
+   "phones": [],
+   "sources": [
+    {
+     "t": "Asia-Plus: about us",
+     "u": "https://asiaplus.news/en/about-us/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 135,
+   "acronym": "Khovar",
+   "name": "Миллии иттилоотии «Ховар»",
+   "en": "Khovar National Information Agency",
+   "country": "Tajikistan",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://khovar.tj",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "UNA-OIC member profile",
+     "u": "https://una-oic.org/en/news_agencies/Tajikistan-News-Agency/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Contacts could not be read automatically; see the agency’s website."
+  },
+  {
+   "id": 1004,
+   "acronym": "NNT",
+   "name": "National News Bureau of Thailand",
+   "en": "",
+   "country": "Thailand",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://nbtworld.prd.go.th",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "NNT website",
+     "u": "https://nbtworld.prd.go.th/en/home/index"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Contacts could not be read automatically; see the agency’s website."
+  },
+  {
    "id": 110,
    "acronym": "TNA",
    "name": "สำนักข่าวไทย",
@@ -6066,6 +7084,30 @@
    ],
    "checked": "2026-10-16",
    "note": ""
+  },
+  {
+   "id": 71,
+   "acronym": "UCA News",
+   "name": "Union of Catholic Asian News",
+   "en": "",
+   "country": "Thailand",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.ucanews.com",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "UCA News: contact",
+     "u": "https://www.ucanews.com/contact-us"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Contacts could not be read automatically; see the agency’s website.",
+   "also": [
+    "International"
+   ]
   },
   {
    "id": 111,
@@ -6318,6 +7360,32 @@
    ],
    "checked": "2026-10-16",
    "note": "No phone number or email could be confirmed; see the agency’s website."
+  },
+  {
+   "id": 52,
+   "acronym": "URN",
+   "name": "Uganda Radio Network",
+   "en": "",
+   "country": "Uganda",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://ugandaradionetwork.com",
+   "emails": [],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+256 414 530777"
+    }
+   ],
+   "sources": [
+    {
+     "t": "URN: about",
+     "u": "https://ugandaradionetwork.com/s/about/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
   },
   {
    "id": 299,
@@ -7009,6 +8077,27 @@
    ],
    "checked": "2026-10-16",
    "note": "MercoPress takes messages through the contact form on its website."
+  },
+  {
+   "id": 137,
+   "acronym": "Dunyo",
+   "name": "Dunyo axborot agentligi",
+   "en": "Dunyo Information Agency",
+   "country": "Uzbekistan",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://dunyo.info",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "Dunyo website",
+     "u": "https://dunyo.info/en/category/uzbekistan"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "No general email or phone could be confirmed; see the agency’s website."
   },
   {
    "id": 139,

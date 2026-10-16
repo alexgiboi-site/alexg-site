@@ -147,12 +147,12 @@
   }
 
   function card(a) {
-    const host = a.web.replace(/^https?:\/\//, '').replace(/\/$/, '');
-    const web = el('div', {class: 'line'}, el('a', {href: a.web, target: '_blank', rel: 'noopener'}, host));
+    const host = (a.web || '').replace(/^https?:\/\//, '').replace(/\/$/, '');
+    const web = a.web ? el('div', {class: 'line'}, el('a', {href: a.web, target: '_blank', rel: 'noopener'}, host)) : el('span', {class: 'none'}, 'No website confirmed');
     const emails = a.emails.length ? a.emails.map(e => {
       const addr = e.u + '@' + e.d;
       return el('div', {class: 'line'}, el('a', {href: 'mailto:' + addr}, addr), e.label !== 'General' ? el('span', {class: 'lbl'}, e.label) : null, copyBtn(addr, 'email address'));
-    }) : [el('span', {class: 'none'}, 'Use the contact form on the agency’s website')];
+    }) : [el('span', {class: 'none'}, 'No public email found')];
     const phones = a.phones.length ? a.phones.map(p => el('div', {class: 'line'},
       el('a', {href: 'tel:' + p.n.replace(/[^+\d]/g, '')}, p.n), p.label !== 'Switchboard' ? el('span', {class: 'lbl'}, p.label) : null, copyBtn(p.n, 'phone number'))) : [el('span', {class: 'none'}, 'No public number found')];
     const names = el('p', {class: 'names'}, a.name !== a.acronym ? a.name : null, a.en ? el('span', {}, a.en) : null);
