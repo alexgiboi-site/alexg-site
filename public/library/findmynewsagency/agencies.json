@@ -3329,16 +3329,31 @@
    "ownership": "Public / State",
    "eana": true,
    "web": "https://mti.hu",
-   "emails": [],
-   "phones": [],
+   "emails": [
+    {
+     "label": "General",
+     "u": "info",
+     "d": "mti.hu"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+36 1 759 5050"
+    }
+   ],
    "sources": [
+    {
+     "t": "MTI: imprint",
+     "u": "https://mti.hu/impresszum"
+    },
     {
      "t": "EANA member directory",
      "u": "https://newsalliance.org/members/hungarian-news-agency-corp"
     }
    ],
    "checked": "2026-10-16",
-   "note": "No public phone number or email found. Hungary's public media are being reorganised under a law passed in June 2026."
+   "note": ""
   },
   {
    "id": 72,
@@ -5371,16 +5386,35 @@
    "ownership": "Public / State",
    "eana": false,
    "web": "https://aimnews.org",
-   "emails": [],
-   "phones": [],
+   "emails": [
+    {
+     "label": "General",
+     "u": "aim",
+     "d": "aim.org.mz"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+258 21 313 225"
+    },
+    {
+     "label": "Switchboard",
+     "n": "+258 21 313 226"
+    }
+   ],
    "sources": [
+    {
+     "t": "AIM: context and mission",
+     "u": "https://aimnews.org/contexto-e-missao/"
+    },
     {
      "t": "State Media Monitor: AIM",
      "u": "https://statemediamonitor.com/2026/05/agencia-de-informacao-de-mocambique-aim/"
     }
    ],
    "checked": "2026-10-16",
-   "note": "No phone number or email could be confirmed; see the agency’s website."
+   "note": ""
   },
   {
    "id": 92,
@@ -5624,16 +5658,31 @@
    "ownership": "Public / State",
    "eana": false,
    "web": "https://mia.mk",
-   "emails": [],
-   "phones": [],
+   "emails": [
+    {
+     "label": "General",
+     "u": "mia",
+     "d": "mia.mk"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+389 2 246 1600"
+    }
+   ],
    "sources": [
+    {
+     "t": "MIA: about us",
+     "u": "https://mia.mk/page/about-us-en"
+    },
     {
      "t": "MIA website",
      "u": "https://mia.mk/en"
     }
    ],
    "checked": "2026-10-16",
-   "note": "MIA’s website does not allow automated reading, so its contact details are not listed here yet. Its imprint page lists them."
+   "note": ""
   },
   {
    "id": 231,
