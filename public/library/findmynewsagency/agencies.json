@@ -1145,38 +1145,6 @@
    "note": ""
   },
   {
-   "id": 163,
-   "acronym": "TAK",
-   "name": "Türk Ajansı Kıbrıs",
-   "en": "Turkish Agency Cyprus",
-   "country": "Cyprus (north)",
-   "kind": "National news agency",
-   "ownership": "Public / State",
-   "eana": false,
-   "web": "https://tak.gov.ct.tr",
-   "emails": [
-    {
-     "label": "General",
-     "u": "turkajansikibris",
-     "d": "gmail.com"
-    }
-   ],
-   "phones": [
-    {
-     "label": "Switchboard",
-     "n": "444 18 81"
-    }
-   ],
-   "sources": [
-    {
-     "t": "TAK: contact",
-     "u": "https://tak.gov.ct.tr/iletisim"
-    }
-   ],
-   "checked": "2026-10-16",
-   "note": ""
-  },
-  {
    "id": 164,
    "acronym": "ČTK",
    "name": "Česká tisková kancelář",
@@ -3860,38 +3828,6 @@
     {
      "t": "REGNUM: contacts",
      "u": "https://regnum.ru/information/contacts"
-    }
-   ],
-   "checked": "2026-10-16",
-   "note": ""
-  },
-  {
-   "id": 260,
-   "acronym": "Sputnik",
-   "name": "Sputnik",
-   "en": "",
-   "country": "Russia",
-   "kind": "International news agency",
-   "ownership": "Public / State",
-   "eana": false,
-   "web": "https://sputnikglobe.com",
-   "emails": [
-    {
-     "label": "Sales",
-     "u": "info",
-     "d": "sputnikmediabank.com"
-    }
-   ],
-   "phones": [
-    {
-     "label": "Sales",
-     "n": "+7 495 637 3519"
-    }
-   ],
-   "sources": [
-    {
-     "t": "Sputnik Mediabank: contacts",
-     "u": "https://sputnikmediabank.com/docs/about/contacts.html"
     }
    ],
    "checked": "2026-10-16",
