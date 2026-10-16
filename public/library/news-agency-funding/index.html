@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>News agency funding and ownership — Ion-Alexandru Giboi</title>
+<meta name="description" content="Who funds and owns the world's news agencies: 456 agencies classified by funding and ownership, plus 80 years of ownership and funding changes. Each row checked against its sources.">
+<link rel="canonical" href="https://alexgiboi.com/library/news-agency-funding/">
+<meta property="og:title" content="News agency funding and ownership">
+<meta property="og:url" content="https://alexgiboi.com/library/news-agency-funding/">
+<meta name="theme-color" content="#102A5C">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap">
+<link rel="stylesheet" href="/assets/style.css">
+<style>
+#dash-root {
+  --font-anthropic-sans: 'IBM Plex Sans', system-ui, sans-serif;
+  --font-anthropic-serif: 'Source Serif 4', Georgia, serif;
+  --color-fg: #141414; --color-fg-muted: #4A4A46; --color-bg: #F6F6F3; --color-panel: #FFFFFF;
+  --color-border-line: #D9D9D3; --color-ok: #2A7D4F; --color-warn: #B7791F; --color-bad: #B42318;
+  --cds-border: #D9D9D3; --cds-chart-axis: #8F8F88; --cds-chart-grid: #E6E6E0; --cds-chart-muted: #B9B9B2;
+  --cds-chart-reference: #4A4A46; --cds-chart-status-critical: #B42318;
+  --cds-dur-slow: 300ms; --cds-font-size-body: 17px; --cds-font-size-caption: 14px; --cds-font-size-heading: 20px;
+  --cds-font-size-title: 36px; --cds-font-weight-medium: 600;
+  --cds-gap-xs: 6px; --cds-gap-sm: 10px; --cds-gap-md: 16px; --cds-gap-lg: 28px;
+  --cds-pad-xs: 6px; --cds-pad-sm: 10px; --cds-pad-md: 16px; --cds-pad-lg: 22px; --cds-radius: 4px;
+  --cds-shadow-popover: 0 6px 20px rgba(16,42,92,.14); --cds-surface-popover: #FFFFFF; --cds-text-secondary: #5C5C57;
+  padding: 40px 0 64px;
+}
+#dash-root .dash-skeleton { color: #9A9A94; }
+#dash-root .card { display: block; border-top-width: 1px; border-top-color: var(--color-border-line); }
+#dash-root .noscript { padding: 20px; background: #fff; border: 1px solid var(--color-border-line); }
+#dash-root .ff h1 { color: var(--navy); }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/">Alex Giboi</a>
+    <nav class="nav" aria-label="Main">
+      <a href="/#work">Work</a>
+      <a href="/#ventures">Ventures</a>
+      <a href="/library/" aria-current="page">Library</a>
+      <a href="/#teaching">Teaching</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap">
+  <a class="back" href="/library/" style="color: var(--gold-text); margin-top: 24px">← Library</a>
+  <div id="dash-root">
+<style>
+#dash-root .ff { font-family: var(--font-anthropic-sans); color: var(--color-fg); }
+#dash-root .ff h1 { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); margin: 0 0 var(--cds-gap-xs); }
+#dash-root .ff .lede { color: var(--color-fg-muted); font-size: var(--cds-font-size-body); margin: 0 0 var(--cds-gap-lg); max-width: 62rem; }
+#dash-root .ff .lede b, #dash-root .ff .caveats b { font-weight: var(--cds-font-weight-medium); color: var(--color-fg); font-variant-numeric: tabular-nums; }
+#dash-root .ff .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 9.5rem), 1fr)); gap: var(--cds-gap-md); margin-bottom: var(--cds-gap-lg); }
+#dash-root .ff .card { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); min-width: 0; }
+#dash-root .ff .card.mb { margin-bottom: var(--cds-gap-lg); }
+#dash-root .ff .tile .lbl { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); display: flex; align-items: center; gap: .35rem; }
+#dash-root .ff .tile .val { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); font-variant-numeric: tabular-nums; margin-top: var(--cds-gap-xs); }
+#dash-root .ff .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 26rem), 1fr)); gap: var(--cds-gap-md); margin-bottom: var(--cds-gap-lg); }
+#dash-root .ff h2 { font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); margin: 0 0 var(--cds-gap-xs); }
+#dash-root .ff .note { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); margin: 0 0 var(--cds-gap-md); }
+#dash-root .ff .chart { position: relative; min-height: 240px; }
+#dash-root .ff .chart svg { display: block; }
+#dash-root .ff .legend { display: flex; flex-wrap: wrap; gap: var(--cds-gap-xs) var(--cds-gap-md); font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); margin-bottom: var(--cds-gap-sm); }
+#dash-root .ff i.sw { display: inline-block; width: .6rem; height: .6rem; border-radius: 2px; margin-right: .35rem; vertical-align: baseline; flex: none; }
+#dash-root .ff i.dot { display: inline-block; width: .6rem; height: .6rem; border-radius: 50%; margin-right: .35rem; flex: none; }
+#dash-root .ff .tip { position: absolute; pointer-events: none; background: var(--cds-surface-popover); border: 1px solid var(--cds-border); border-radius: var(--cds-radius); box-shadow: var(--cds-shadow-popover); padding: var(--cds-pad-xs) var(--cds-pad-sm); font-size: var(--cds-font-size-caption); display: none; max-width: 20rem; z-index: 3; }
+#dash-root .ff .tip .k { color: var(--cds-text-secondary); }
+#dash-root .ff .tip div { display: flex; align-items: baseline; }
+#dash-root .ff table { width: 100%; border-collapse: collapse; font-size: var(--cds-font-size-caption); font-variant-numeric: tabular-nums; }
+#dash-root .ff th, #dash-root .ff td { text-align: left; padding: var(--cds-pad-xs) var(--cds-pad-sm); border-bottom: 1px solid var(--color-border-line); vertical-align: top; }
+#dash-root .ff th { position: sticky; top: 0; background: var(--color-panel); font-weight: var(--cds-font-weight-medium); z-index: 1; }
+#dash-root .ff th button { all: unset; cursor: pointer; }
+#dash-root .ff td.num, #dash-root .ff th.num { text-align: right; }
+#dash-root .ff td.wrap { white-space: normal; min-width: 12rem; }
+#dash-root .ff .scroll { max-height: 34rem; overflow: auto; }
+#dash-root .ff .scroll.free { max-height: none; }
+#dash-root .ff .controls { display: flex; flex-wrap: wrap; gap: var(--cds-gap-sm); margin-bottom: var(--cds-gap-md); }
+#dash-root .ff .controls input, #dash-root .ff .controls select, #dash-root .ff select.big { font: inherit; font-size: var(--cds-font-size-caption); padding: var(--cds-pad-xs) var(--cds-pad-sm); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); background: var(--color-bg); color: var(--color-fg); max-width: 100%; }
+#dash-root .ff .controls input { flex: 1 1 14rem; }
+#dash-root .ff .controls button { font: inherit; font-size: var(--cds-font-size-caption); padding: var(--cds-pad-xs) var(--cds-pad-sm); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); background: var(--color-bg); color: var(--color-fg-muted); cursor: pointer; }
+#dash-root .ff .count { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); margin-bottom: var(--cds-gap-xs); }
+#dash-root .ff .cat { display: inline-flex; align-items: center; white-space: nowrap; }
+@media (max-width: 760px) { #dash-root .ff .hide-narrow { display: none; } }
+#dash-root .ff .failed { display: flex; align-items: center; justify-content: center; gap: .4rem; min-height: inherit; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+#dash-root .ff .failed::before { content: ""; width: .375rem; height: .375rem; border-radius: 50%; background: var(--color-bad); }
+#dash-root [data-dash-source-state=empty] { color: transparent; }
+#dash-root [data-dash-source-state=refreshing] { opacity: .5; transition: opacity var(--cds-dur-slow); }
+#dash-root .ff .tabs { display: flex; flex-wrap: wrap; gap: var(--cds-gap-xs); margin-bottom: var(--cds-gap-lg); border-bottom: 1px solid var(--color-border-line); }
+#dash-root .ff .tabs button { all: unset; cursor: pointer; padding: var(--cds-pad-xs) var(--cds-pad-md); font-size: var(--cds-font-size-body); color: var(--color-fg-muted); border-bottom: 2px solid transparent; margin-bottom: -1px; }
+#dash-root .ff .tabs button[aria-selected="true"] { color: var(--color-fg); border-bottom-color: var(--color-fg); font-weight: var(--cds-font-weight-medium); }
+#dash-root .ff ul.caveats { margin: 0; padding-left: 1.1rem; font-size: var(--cds-font-size-body); color: var(--color-fg-muted); }
+#dash-root .ff ul.caveats li { margin-bottom: var(--cds-gap-xs); }
+#dash-root .ff ul.caveats li strong { color: var(--color-fg); font-weight: var(--cds-font-weight-medium); }
+#dash-root .ff .matrix td.cell { text-align: center; min-width: 3.2rem; }
+#dash-root .ff .matrix th.col { text-align: center; white-space: normal; min-width: 4.5rem; font-size: var(--cds-font-size-caption); }
+#dash-root .ff .matrix tr.tot td { font-weight: var(--cds-font-weight-medium); }
+#dash-root .ff .zero { color: var(--color-fg-muted); opacity: .45; }
+#dash-root .ff tr.clickable { cursor: pointer; }
+#dash-root .ff tr.clickable:hover td { background: var(--color-bg); }
+#dash-root .ff .traj-head { font-size: var(--cds-font-size-body); margin: 0 0 var(--cds-gap-md); color: var(--color-fg-muted); }
+#dash-root .ff .traj-head .nm { color: var(--color-fg); font-weight: var(--cds-font-weight-medium); }
+#dash-root .ff .traj-head .now { display: block; margin-top: var(--cds-gap-xs); }
+#dash-root .ff a { color: inherit; text-decoration: underline; text-decoration-color: var(--color-border-line); text-underline-offset: 2px; }
+</style>
+
+<div class="ff">
+  <nav class="tabs" role="tablist" aria-label="Pages">
+    <button role="tab" id="tab-funding" data-page="funding" aria-selected="true">Who funds them</button>
+    <button role="tab" id="tab-changes" data-page="changes" aria-selected="false">Ownership and funding changes</button>
+    <button role="tab" id="tab-definitions" data-page="definitions" aria-selected="false">Definitions and sources</button>
+  </nav>
+
+  <!-- ============ PAGE 1 ============ -->
+  <section id="funding" class="page">
+    <h1 id="funding-title">News agency funding and ownership</h1>
+    <p class="lede" id="funding-takeaway">Of <b data-source="fkpis" data-field="active" data-row="0" class="dash-skeleton">—</b> active agencies, <b data-source="fkpis" data-field="state" data-row="0" class="dash-skeleton">—</b> are mainly state-funded, <b data-source="fkpis" data-field="public_other" data-row="0" class="dash-skeleton">—</b> more are publicly owned but either earn most of their own income or do not publish the split, and <b data-source="fkpis" data-field="private" data-row="0" class="dash-skeleton">—</b> are private, mostly small specialist services. Among national agencies, <b data-source="fkpis" data-field="national_state_share" data-row="0" data-fmt="pct" class="dash-skeleton">—</b> are state-funded and <b data-source="fkpis" data-field="national_public_share" data-row="0" data-fmt="pct" class="dash-skeleton">—</b> publicly owned, so selling to most of FactFocus's core buyers usually means going through public procurement. Every agency was checked one by one against a cited source on 13 October 2026.</p>
+
+    <div class="tiles" id="funding-kpis">
+      <div class="card tile"><div class="lbl">Active agencies</div><div class="val dash-skeleton" data-source="fkpis" data-field="active" data-row="0">—</div></div>
+      <div class="card tile"><div class="lbl"><i class="sw" data-fc="State-funded"></i>State-funded</div><div class="val dash-skeleton" data-source="fkpis" data-field="state" data-row="0">—</div></div>
+      <div class="card tile"><div class="lbl"><i class="sw" data-fc="Public, commercially financed"></i>Public, commercially financed</div><div class="val dash-skeleton" data-source="fkpis" data-field="publicc" data-row="0">—</div></div>
+      <div class="card tile"><div class="lbl"><i class="sw" data-fc="Public, funding split not published"></i>Public, split not published</div><div class="val dash-skeleton" data-source="fkpis" data-field="publicnp" data-row="0">—</div></div>
+      <div class="card tile"><div class="lbl"><i class="sw" data-fc="Private"></i>Private</div><div class="val dash-skeleton" data-source="fkpis" data-field="private" data-row="0">—</div></div>
+      <div class="card tile"><div class="lbl"><i class="sw" data-fc="Unknown"></i>Funding unknown</div><div class="val dash-skeleton" data-source="fkpis" data-field="unknown" data-row="0">—</div></div>
+    </div>
+
+    <div class="grid">
+      <div class="card" id="region-card">
+        <h2>By region</h2>
+        <p class="note">Active agencies by funding category. Click a segment to list those agencies below.</p>
+        <div class="legend" id="region-legend"></div>
+        <div class="chart dash-skeleton" id="region-chart" data-source="fund_by_region"></div>
+      </div>
+      <div class="card" id="kind-card">
+        <h2>By kind of agency</h2>
+        <p class="note">Active agencies by funding category. Click a segment to list those agencies below.</p>
+        <div class="legend" id="kind-legend"></div>
+        <div class="chart dash-skeleton" id="kind-chart" data-source="fund_by_kind"></div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="card" id="share-card">
+        <h2>How much of their income is public money</h2>
+        <p class="note">Agencies where a figure was found: state grants, subsidies or public-service contracts as a share of total income, latest year found (some are expert estimates; hover for the basis). At 50% or more an agency counts as state-funded.</p>
+        <div class="legend" id="share-legend"></div>
+        <div class="chart dash-skeleton" id="share-chart" data-source="state_share" style="min-height:560px"></div>
+      </div>
+      <div class="card" id="matrix-card">
+        <h2>Who owns them, by region</h2>
+        <p class="note">Active agencies by ownership type. Darker cells hold more agencies. "Legal form not confirmed" = state-owned, but whether it is a ministry unit or a separate company was not established.</p>
+        <div class="scroll free">
+          <table class="matrix" id="own-table" data-source="own_matrix" data-row-key="region">
+            <thead><tr>
+              <th data-field="region">Region</th>
+              <th class="col" data-field="gov">Government body</th>
+              <th class="col" data-field="soc">State company / statutory body</th>
+              <th class="col" data-field="sonc">State-owned, legal form not confirmed</th>
+              <th class="col" data-field="pli">Public-law institution</th>
+              <th class="col" data-field="party">Party-owned</th>
+              <th class="col" data-field="igo">Inter-governmental</th>
+              <th class="col" data-field="media">Private: media-owned</th>
+              <th class="col" data-field="comm">Private: commercial</th>
+              <th class="col" data-field="np">Non-profit</th>
+              <th class="col" data-field="rel">Religious</th>
+              <th class="col" data-field="unk">Unknown</th>
+              <th class="num" data-field="total">Total</th>
+            </tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" id="agencies-card">
+      <h2>All agencies</h2>
+      <p class="note">Search or filter; click a column header to sort. Click a row with a logged change to see its history.</p>
+      <div class="controls">
+        <input type="search" id="q" placeholder="Search agency, country, owner…" aria-label="Search agencies">
+        <select id="f-region" aria-label="Region"><option value="">All regions</option></select>
+        <select id="f-fund" aria-label="Funding category"><option value="">All funding categories</option></select>
+        <select id="f-own" aria-label="Ownership type"><option value="">All ownership types</option></select>
+        <select id="f-kind" aria-label="Kind"><option value="">All kinds</option></select>
+        <select id="f-size" aria-label="Size"><option value="">Any size</option><option value="XL">XL</option><option value="L">L</option><option value="M">M</option><option value="S">S</option></select>
+        <select id="f-chg" aria-label="Changes"><option value="">Changed or not</option><option value="yes">With a logged change</option><option value="no">No logged change</option></select>
+        <select id="f-ev" aria-label="Evidence"><option value="">Any evidence</option><option value="Official source">Official source</option><option value="Independent source">Independent source</option><option value="Not confirmed">Not confirmed</option></select>
+        <select id="f-status" aria-label="Status"><option value="">Any status</option><option value="Active">Active</option><option value="Unclear">Unclear</option><option value="Merged">Merged</option><option value="Closed">Closed</option></select>
+        <button type="button" id="f-reset">Reset</button>
+      </div>
+      <div class="count" id="row-count"></div>
+      <div class="scroll">
+        <table id="agency-table" data-source="funding_agencies" data-row-key="id">
+          <thead><tr>
+            <th data-field="agency"><button data-sort="agency">Agency</button></th>
+            <th data-field="acronym" class="hide-narrow"><button data-sort="acronym">Acronym</button></th>
+            <th data-field="country"><button data-sort="country">Country</button></th>
+            <th data-field="region" class="hide-narrow"><button data-sort="region">Region</button></th>
+            <th data-field="kind" class="hide-narrow"><button data-sort="kind">Kind</button></th>
+            <th data-field="size" class="hide-narrow"><button data-sort="size">Size</button></th>
+            <th data-field="funding_category"><button data-sort="funding_category">Funding</button></th>
+            <th data-field="ownership_type" class="hide-narrow"><button data-sort="ownership_type">Ownership</button></th>
+            <th data-field="owner" class="hide-narrow"><button data-sort="owner">Owner / controlling body</button></th>
+            <th data-field="state_share_pct" class="num"><button data-sort="state_share_pct">State share</button></th>
+            <th data-field="mixed_ownership" class="hide-narrow"><button data-sort="mixed_ownership">Mixed ownership</button></th>
+            <th data-field="last_change" class="hide-narrow"><button data-sort="last_change_year">Latest change</button></th>
+            <th data-field="evidence" class="hide-narrow"><button data-sort="evidence">Evidence</button></th>
+            <th data-field="status" class="hide-narrow"><button data-sort="status">Status</button></th>
+            <th data-field="sources" class="hide-narrow">Sources</th>
+          </tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PAGE 2 ============ -->
+  <section id="changes" class="page" hidden>
+    <h1 id="changes-title">Ownership and funding changes</h1>
+    <p class="lede" id="changes-takeaway"><b data-source="chg_kpis" data-field="changes" data-row="0" class="dash-skeleton">—</b> changes in ownership, legal form or public funding are logged at <b data-source="chg_kpis" data-field="agencies" data-row="0" class="dash-skeleton">—</b> agencies, <b data-source="chg_kpis" data-field="since2020" data-row="0" class="dash-skeleton">—</b> of them since 2020. Since 2020 there were <b data-source="chg_kpis" data-field="s20_state" data-row="0" class="dash-skeleton">—</b> moves toward state control, <b data-source="chg_kpis" data-field="s20_up" data-row="0" class="dash-skeleton">—</b> increases and <b data-source="chg_kpis" data-field="s20_down" data-row="0" class="dash-skeleton">—</b> cuts in public money, <b data-source="chg_kpis" data-field="s20_priv" data-row="0" class="dash-skeleton">—</b> privatisations or private owner changes, and <b data-source="chg_kpis" data-field="s20_close" data-row="0" class="dash-skeleton">—</b> closures or announced closures.</p>
+
+    <div class="tiles" id="changes-kpis">
+      <div class="card tile"><div class="lbl">Changes logged</div><div class="val dash-skeleton" data-source="chg_kpis" data-field="changes" data-row="0">—</div></div>
+      <div class="card tile"><div class="lbl">Agencies affected</div><div class="val dash-skeleton" data-source="chg_kpis" data-field="agencies" data-row="0">—</div></div>
+      <div class="card tile"><div class="lbl">Since 2020</div><div class="val dash-skeleton" data-source="chg_kpis" data-field="since2020" data-row="0">—</div></div>
+      <div class="card tile"><div class="lbl"><i class="dot" data-grp="state"></i>Toward state control</div><div class="val dash-skeleton" data-source="chg_kpis" data-field="state" data-row="0">—</div></div>
+      <div class="card tile"><div class="lbl"><i class="dot" data-grp="private"></i>Privatised or new owner</div><div class="val dash-skeleton" data-source="chg_kpis" data-field="private" data-row="0">—</div></div>
+      <div class="card tile"><div class="lbl"><i class="dot" data-grp="closure"></i>Closed or at risk</div><div class="val dash-skeleton" data-source="chg_kpis" data-field="closure" data-row="0">—</div></div>
+    </div>
+
+    <div class="card mb" id="timeline-card">
+      <h2>When and in which direction</h2>
+      <p class="note" id="timeline-note">Each dot is one logged change, by year and direction. Hover for details; click a dot to open that agency's history below.</p>
+      <div class="chart dash-skeleton" id="timeline-chart" data-source="funding_changes" style="min-height:420px"></div>
+    </div>
+
+    <div class="grid">
+      <div class="card" id="history-card">
+        <h2>One agency's history</h2>
+        <p class="note">Pick an agency to see each change in order and its funding today.</p>
+        <div class="controls"><select class="big" id="traj-sel" aria-label="Agency"></select></div>
+        <p class="traj-head" id="traj-head">
+          <span class="nm" id="traj-name"></span>
+          <span class="now">Funding today: <span id="traj-cat" data-source="funding_agencies" data-field="funding_category">—</span> · <span id="traj-own" data-source="funding_agencies" data-field="ownership_type">—</span><span id="traj-share-wrap"> · public money <span id="traj-share" data-source="funding_agencies" data-field="state_share_pct">—</span>% of income (<span id="traj-note" data-source="funding_agencies" data-field="state_share_note">—</span>)</span></span>
+        </p>
+        <div class="scroll free">
+          <table id="traj-table" data-source="funding_changes" data-row-key="event">
+            <thead><tr>
+              <th data-field="date">When</th>
+              <th data-field="direction">Direction</th>
+              <th data-field="from_state">From</th>
+              <th data-field="to_state">To</th>
+              <th data-field="description" class="hide-narrow">Details</th>
+            </tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card" id="chg-region-card">
+        <h2>Direction of change by region</h2>
+        <p class="note">All logged changes, every year.</p>
+        <div class="legend" id="chg-region-legend"></div>
+        <div class="chart dash-skeleton" id="chg-region-chart" data-source="chg_by_region"></div>
+      </div>
+    </div>
+
+    <div class="card" id="log-card">
+      <h2>Change log</h2>
+      <p class="note">Every logged change with its source. "Official source" = agency, regulator, registry or government document; "Independent source" = State Media Monitor, encyclopaedia or press; "Not confirmed" = no source found for the date or detail.</p>
+      <div class="controls">
+        <input type="search" id="cq" placeholder="Search agency, country, details…" aria-label="Search changes">
+        <select id="c-region" aria-label="Region"><option value="">All regions</option></select>
+        <select id="c-grp" aria-label="Direction"><option value="">All directions</option></select>
+        <select id="c-type" aria-label="Change type"><option value="">All change types</option></select>
+        <select id="c-period" aria-label="Period"><option value="">Any year</option><option value="2020">2020 onwards</option><option value="2010">2010–2019</option><option value="2000">2000–2009</option><option value="1999">Before 2000</option></select>
+        <select id="c-ver" aria-label="Evidence"><option value="">Any evidence</option><option value="Official source">Official source</option><option value="Independent source">Independent source</option><option value="Not confirmed">Not confirmed</option></select>
+        <button type="button" id="c-reset">Reset</button>
+      </div>
+      <div class="count" id="chg-count"></div>
+      <div class="scroll">
+        <table id="chg-table" data-source="funding_changes" data-row-key="event">
+          <thead><tr>
+            <th data-field="year" class="num"><button data-sort="year">Year</button></th>
+            <th data-field="date" class="hide-narrow">Date</th>
+            <th data-field="acronym"><button data-sort="acronym">Agency</button></th>
+            <th data-field="country" class="hide-narrow"><button data-sort="country">Country</button></th>
+            <th data-field="direction"><button data-sort="direction">Direction</button></th>
+            <th data-field="change_type" class="hide-narrow"><button data-sort="change_type">Change type</button></th>
+            <th data-field="from_state">From</th>
+            <th data-field="to_state">To</th>
+            <th data-field="description" class="hide-narrow">Details</th>
+            <th data-field="verification" class="hide-narrow"><button data-sort="verification">Evidence</button></th>
+            <th data-field="source" class="hide-narrow">Source</th>
+          </tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PAGE 3 ============ -->
+  <section id="definitions" class="page" hidden>
+    <h1 id="definitions-title">Definitions and sources</h1>
+    <p class="lede">How each agency was classified, what the change directions mean, and how far to trust each figure.</p>
+    <div class="grid">
+      <div class="card" id="cat-card">
+        <h2>Funding categories</h2>
+        <p class="note">Who mainly pays for the agency. Counts are active agencies; the last column counts those confirmed by an official source.</p>
+        <table id="cat-table" data-source="cat_counts" data-row-key="category">
+          <thead><tr><th data-field="category">Category</th><th data-field="definition">Definition</th><th data-field="active" class="num">Active</th><th data-field="official" class="num hide-narrow">Official source</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="card" id="own-card">
+        <h2>Ownership types</h2>
+        <p class="note">Who owns or controls the agency. Counts are active agencies.</p>
+        <table id="owncount-table" data-source="own_counts" data-row-key="ownership_type">
+          <thead><tr><th data-field="ownership_type">Type</th><th data-field="definition">Definition</th><th data-field="active" class="num">Active</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="grid">
+      <div class="card" id="dir-card">
+        <h2>Directions of change</h2>
+        <p class="note">How each logged change is grouped in the timeline and filters.</p>
+        <ul class="caveats" id="dir-list"></ul>
+      </div>
+      <div class="card" id="trust-card">
+        <h2>How far to trust this</h2>
+        <ul class="caveats">
+          <li>Every one of the <b data-source="fkpis" data-field="total" data-row="0" class="dash-skeleton">—</b> agencies was checked one by one on 13 October 2026: <b data-source="fkpis" data-field="ev_official" data-row="0" class="dash-skeleton">—</b> against an official source (the agency, a regulator, a company registry or a government document) and <b data-source="fkpis" data-field="ev_independent" data-row="0" class="dash-skeleton">—</b> against an independent source (State Media Monitor, an encyclopaedia or press). For <b data-source="fkpis" data-field="ev_none" data-row="0" class="dash-skeleton">—</b> no source could confirm the owner or even that the agency still operates; they are marked "Not confirmed" and mostly have status "Unclear".</li>
+          <li>Many private agencies rest on a single secondary source, often Wikipedia, and owner data can be several years old; the notes column says so where it matters.</li>
+          <li><b data-source="chg_kpis" data-field="unconfirmed" data-row="0" class="dash-skeleton">—</b> of <b data-source="chg_kpis" data-field="changes" data-row="0" class="dash-skeleton">—</b> logged changes have a date or detail that could not be confirmed; the rest cite a source.</li>
+          <li>Public-money shares come from different years and bases (budget grant, public-service contract, expert estimate); each one's basis is in its note. "Public, funding split not published" means the agency is state-owned but no source gives how much of its income is public money.</li>
+          <li>The change log holds what the sources record. An agency with no entry may still have changed owner or funding, especially smaller private ones.</li>
+          </ul>
+      </div>
+    </div>
+    <div class="card" id="sources-card">
+      <h2>Sources cited</h2>
+      <p class="note">Websites cited for agencies and logged changes. State Media Monitor (Media and Journalism Research Center) profiles are the main source for state agencies.</p>
+      <div class="scroll">
+        <table id="src-table" data-source="source_list" data-row-key="domain">
+          <thead><tr><th data-field="domain">Website</th><th data-field="agencies" class="num">Agencies</th><th data-field="events" class="num">Changes</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+  </div>
+  <div class="made" style="margin-bottom: 72px">
+    <strong>HOW THIS WAS MADE</strong>
+    <p>Researched and compiled with AI assistance (Claude), checked row by row against the sources listed under "Definitions and sources", and reviewed by me. Data as of 13 October 2026. You can download the data: <a href="funding_agencies.csv">agencies (CSV)</a> and <a href="funding_changes.csv">changes (CSV)</a>.</p>
+  </div>
+</div>
+</main>
+<footer class="site-footer"><div class="wrap"><span>© 2026 Ion-Alexandru Giboi</span><span>Lugano, Switzerland</span></div></footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script>if(!window.d3){document.getElementById("dash-root").insertAdjacentHTML("afterbegin","<p class=\"noscript\">The charts could not load. You can still download the data below.</p>");}</script>
+<script src="dash-shim.js"></script>
+<script src="page.js"></script>
+</body>
+</html>
