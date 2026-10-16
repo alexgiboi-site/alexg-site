@@ -1,0 +1,1067 @@
+{
+ "edition": "Europe, part 1: members of the European Alliance of News Agencies",
+ "updated": "2026-10-16",
+ "agencies": [
+  {
+   "id": 141,
+   "acronym": "ATA",
+   "name": "Agjencia Telegrafike Shqiptare",
+   "en": "Albanian Telegraphic Agency",
+   "country": "Albania",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": true,
+   "web": "https://ata.gov.al",
+   "emails": [
+    {
+     "label": "Foreign relations",
+     "u": "foreignrelations",
+     "d": "ata.gov.al"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+355 4 223 4386"
+    }
+   ],
+   "address": "Rruga Ismail Qemali 11, Tirana",
+   "sources": [
+    {
+     "t": "EANA member directory",
+     "u": "https://newsalliance.org/members/albanian-telegraphic-agency"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 142,
+   "acronym": "ANA",
+   "name": "Agència de Notícies Andorrana",
+   "en": "Andorran News Agency",
+   "country": "Andorra",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": true,
+   "web": "https://www.ana.ad",
+   "emails": [],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+376 821 600"
+    }
+   ],
+   "address": "Antic Carrer Major 22, AD500 Andorra la Vella",
+   "sources": [
+    {
+     "t": "EANA member directory",
+     "u": "https://newsalliance.org/members/agència-de-notícies-andorrana"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 143,
+   "acronym": "APA",
+   "name": "Austria Presse Agentur",
+   "en": "Austria Press Agency",
+   "country": "Austria",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": true,
+   "web": "https://apa.at",
+   "emails": [],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+43 1 360 60-0"
+    }
+   ],
+   "address": "Laimgrubengasse 10, 1060 Vienna",
+   "sources": [
+    {
+     "t": "EANA member directory",
+     "u": "https://newsalliance.org/members/austria-presse-agentur"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 121,
+   "acronym": "AZERTAC",
+   "name": "Azərbaycan Dövlət İnformasiya Agentliyi",
+   "en": "Azerbaijan State News Agency",
+   "country": "Azerbaijan",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": true,
+   "web": "https://azertag.az",
+   "emails": [
+    {
+     "label": "General",
+     "u": "azertac",
+     "d": "azertag.com"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+994 12 498 60 07"
+    }
+   ],
+   "address": "30 A. Garaybayli Street, Baku",
+   "sources": [
+    {
+     "t": "EANA member directory",
+     "u": "https://newsalliance.org/members/state-news-agency-of-the-republic-of-azerbaijan"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 149,
+   "acronym": "Belga",
+   "name": "Belga News Agency",
+   "en": "",
+   "country": "Belgium",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": true,
+   "web": "https://www.belga.be",
+   "emails": [],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+32 2 743 23 11"
+    },
+    {
+     "label": "Newsroom, Dutch (24/7)",
+     "n": "+32 2 743 23 68"
+    },
+    {
+     "label": "Newsroom, French (24/7)",
+     "n": "+32 2 743 23 20"
+    }
+   ],
+   "address": "Quai aux Pierres de Taille / Arduinkaai 29, 1000 Brussels",
+   "sources": [
+    {
+     "t": "Belga: contact us",
+     "u": "https://www.belga.be/contact-us"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Belga publishes its email addresses on its contact page."
+  },
+  {
+   "id": 151,
+   "acronym": "FENA",
+   "name": "Federalna novinska agencija",
+   "en": "Federal News Agency",
+   "country": "Bosnia and Herzegovina",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": true,
+   "web": "https://www.fena.ba",
+   "emails": [
+    {
+     "label": "International",
+     "u": "international",
+     "d": "fena.ba"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+387 33 445 477"
+    }
+   ],
+   "address": "Obala Kulina bana 16, 71000 Sarajevo",
+   "sources": [
+    {
+     "t": "EANA member directory",
+     "u": "https://newsalliance.org/members/federal-news-agency"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 155,
+   "acronym": "BTA",
+   "name": "Българска телеграфна агенция",
+   "en": "Bulgarian News Agency",
+   "country": "Bulgaria",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": true,
+   "web": "https://www.bta.bg",
+   "emails": [
+    {
+     "label": "General",
+     "u": "bta",
+     "d": "bta.bg"
+    },
+    {
+     "label": "English service",
+     "u": "dnews",
+     "d": "bta.bg"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+359 2 926 2210"
+    },
+    {
+     "label": "English service",
+     "n": "+359 2 926 2279"
+    }
+   ],
+   "address": "49 Tsarigradsko shose Blvd, 1124 Sofia",
+   "sources": [
+    {
+     "t": "BTA: contacts",
+     "u": "https://bta.bg/en/contacts"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 159,
+   "acronym": "HINA",
+   "name": "Hrvatska izvještajna novinska agencija",
+   "en": "Croatian News Agency",
+   "country": "Croatia",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": true,
+   "web": "https://www.hina.hr",
+   "emails": [
+    {
+     "label": "Newsdesk",
+     "u": "newsline",
+     "d": "hina.hr"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+385 1 4808 700"
+    }
+   ],
+   "address": "Marulićev trg 16, 10000 Zagreb",
+   "sources": [
+    {
+     "t": "EANA member directory",
+     "u": "https://newsalliance.org/members/hrvatska-izvjestajna-novinska-agencija-croatian-news-agency"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 162,
+   "acronym": "CNA",
+   "name": "Κυπριακό Πρακτορείο Ειδήσεων",
+   "en": "Cyprus News Agency",
+   "country": "Cyprus",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": true,
+   "web": "https://www.cna.org.cy",
+   "emails": [
+    {
+     "label": "Newsroom",
+     "u": "news",
+     "d": "cna.org.cy"
+    },
+    {
+     "label": "Administration",
+     "u": "info",
+     "d": "cna.org.cy"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Newsroom",
+     "n": "+357 22 556 000"
+    }
+   ],
+   "address": "21 Glafkos Klerides Ave, 2107 Aglantzia, Nicosia",
+   "sources": [
+    {
+     "t": "CNA: contact information",
+     "u": "https://cna.org.cy/en/contact"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 164,
+   "acronym": "ČTK",
+   "name": "Česká tisková kancelář",
+   "en": "Czech News Agency",
+   "country": "Czech Republic",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": true,
+   "web": "https://www.ctk.cz",
+   "emails": [
+    {
+     "label": "General",
+     "u": "ctk",
+     "d": "ctk.cz"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+420 222 098 111"
+    }
+   ],
+   "address": "Opletalova 5, 111 44 Prague 1",
+   "sources": [
+    {
+     "t": "EANA member directory",
+     "u": "https://newsalliance.org/members/czech-news-agency"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 165,
+   "acronym": "Ritzau",
+   "name": "Ritzaus Bureau",
+   "en": "Danish news agency",
+   "country": "Denmark",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": true,
+   "web": "https://ritzau.dk",
+   "emails": [
+    {
+     "label": "General",
+     "u": "ritzau",
+     "d": "ritzau.dk"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+45 33 30 00 00"
+    }
+   ],
+   "address": "Store Kongensgade 14, 1264 Copenhagen K",
+   "sources": [
+    {
+     "t": "EANA member directory",
+     "u": "https://newsalliance.org/members/ritzaus-bureau-i-s"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 167,
+   "acronym": "STT",
+   "name": "Suomen Tietotoimisto",
+   "en": "Finnish News Agency",
+   "country": "Finland",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": true,
+   "web": "https://stt.fi",
+   "emails": [],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+358 9 695 811"
+    }
+   ],
+   "address": "Porkkalankatu 20 A, 00180 Helsinki",
+   "sources": [
+    {
+     "t": "STT news room",
+     "u": "https://www.sttinfo.fi/uutishuone/3654/stt"
+    },
+    {
+     "t": "STT restructuring, 30 Sep 2026",
+     "u": "https://www.sttinfo.fi/tiedote/72371605/stt-suunnittelee-uudelleenjarjestelya-nykymuotoinen-liiketoiminta-saattaa-paattya?lang=fi"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "STT announced on 30 September 2026 that its news and photo agency business may end in its current form, possibly in March 2027."
+  },
+  {
+   "id": 171,
+   "acronym": "AFP",
+   "name": "Agence France-Presse",
+   "en": "",
+   "country": "France",
+   "kind": "International news agency",
+   "ownership": "Public / State",
+   "eana": true,
+   "web": "https://www.afp.com",
+   "emails": [
+    {
+     "label": "General",
+     "u": "contact",
+     "d": "afp.com"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+33 1 40 41 46 46"
+    }
+   ],
+   "address": "11-13 place de la Bourse, 75002 Paris",
+   "sources": [
+    {
+     "t": "EANA member directory",
+     "u": "https://newsalliance.org/members/agence-france-presse"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 176,
+   "acronym": "dpa",
+   "name": "Deutsche Presse-Agentur",
+   "en": "German Press Agency",
+   "country": "Germany",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": true,
+   "web": "https://www.dpa.com",
+   "emails": [
+    {
+     "label": "General",
+     "u": "info",
+     "d": "dpa.com"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+49 40 4113-0"
+    }
+   ],
+   "address": "Mittelweg 38, 20148 Hamburg",
+   "sources": [
+    {
+     "t": "dpa: imprint",
+     "u": "https://www.dpa.com/en/imprint/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 194,
+   "acronym": "ANA-MPA",
+   "name": "Athens-Macedonian News Agency",
+   "en": "Αθηναϊκό-Μακεδονικό Πρακτορείο Ειδήσεων (AMNA)",
+   "country": "Greece",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": true,
+   "web": "https://www.amna.gr",
+   "emails": [
+    {
+     "label": "Press",
+     "u": "press",
+     "d": "ana-mpa.gr"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+30 210 640 0560"
+    }
+   ],
+   "address": "Tsocha 36, 115 21 Athens",
+   "sources": [
+    {
+     "t": "EANA member directory",
+     "u": "https://newsalliance.org/members/athens-news-agency-macedonian-press-agency-s-a"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 196,
+   "acronym": "MTI",
+   "name": "Magyar Távirati Iroda",
+   "en": "Hungarian News Agency",
+   "country": "Hungary",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": true,
+   "web": "https://mti.hu",
+   "emails": [],
+   "phones": [],
+   "address": "Bojtár utca 41-47, 1038 Budapest",
+   "sources": [
+    {
+     "t": "EANA member directory",
+     "u": "https://newsalliance.org/members/hungarian-news-agency-corp"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "No public phone number or email found. Hungary's public media are being reorganised under a law passed in June 2026."
+  },
+  {
+   "id": 206,
+   "acronym": "ANSA",
+   "name": "Agenzia Nazionale Stampa Associata",
+   "en": "",
+   "country": "Italy",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": true,
+   "web": "https://www.ansa.it",
+   "emails": [
+    {
+     "label": "Sales",
+     "u": "commerciale",
+     "d": "ansa.it"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+39 06 67741"
+    }
+   ],
+   "address": "Via della Dataria 94, 00187 Rome",
+   "sources": [
+    {
+     "t": "ANSA: where we are",
+     "u": "https://ansa.it/corporate/en/info/were_we_are.html"
+    },
+    {
+     "t": "EANA member directory",
+     "u": "https://newsalliance.org/members/agenzia-nazionale-stampa-associata"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 217,
+   "acronym": "KosovaPress",
+   "name": "KosovaPress",
+   "en": "",
+   "country": "Kosovo",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": true,
+   "web": "https://kosovapress.com",
+   "emails": [
+    {
+     "label": "General",
+     "u": "info",
+     "d": "kosovapress.com"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+383 38 249 721"
+    },
+    {
+     "label": "Mobile",
+     "n": "+383 44 507 766"
+    }
+   ],
+   "address": "Rruga Hamëz Jashari 28, Pristina",
+   "sources": [
+    {
+     "t": "ABNA-SE member profile",
+     "u": "https://abnase.com/kosova-press/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 218,
+   "acronym": "LETA",
+   "name": "LETA",
+   "en": "Latvian National Information Agency",
+   "country": "Latvia",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": true,
+   "web": "https://leta.lv",
+   "emails": [
+    {
+     "label": "Office",
+     "u": "birojs",
+     "d": "leta.lv"
+    }
+   ],
+   "phones": [],
+   "address": "Sātekles iela 2B, Riga LV-1050",
+   "sources": [
+    {
+     "t": "EANA member directory",
+     "u": "https://newsalliance.org/members/latvian-national-information-agency"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 226,
+   "acronym": "ANP",
+   "name": "Algemeen Nederlands Persbureau",
+   "en": "Dutch News Agency",
+   "country": "Netherlands",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": true,
+   "web": "https://www.anp.nl",
+   "emails": [],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+31 70 414 1160"
+    }
+   ],
+   "address": "Prinses Beatrixlaan 582, 2595 BM The Hague",
+   "sources": [
+    {
+     "t": "EANA member directory",
+     "u": "https://newsalliance.org/members/algemeen-nederlands-persbureau"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 232,
+   "acronym": "NTB",
+   "name": "Norsk Telegrambyrå",
+   "en": "Norwegian News Agency",
+   "country": "Norway",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": true,
+   "web": "https://www.ntb.no",
+   "emails": [],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+47 22 03 44 00"
+    }
+   ],
+   "address": "Langkaia (Havnelageret), 0130 Oslo",
+   "sources": [
+    {
+     "t": "EANA member directory",
+     "u": "https://newsalliance.org/members/norsk-telegrambyra-as"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 235,
+   "acronym": "PAP",
+   "name": "Polska Agencja Prasowa",
+   "en": "Polish Press Agency",
+   "country": "Poland",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": true,
+   "web": "https://www.pap.pl",
+   "emails": [],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+48 22 509 2555"
+    },
+    {
+     "label": "Phone",
+     "n": "+48 22 509 2225"
+    }
+   ],
+   "address": "ul. Bracka 6/8, 00-502 Warsaw",
+   "sources": [
+    {
+     "t": "EANA member directory",
+     "u": "https://newsalliance.org/members/polska-agencja-prasowa"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 236,
+   "acronym": "Lusa",
+   "name": "Lusa – Agência de Notícias de Portugal",
+   "en": "Portuguese News Agency",
+   "country": "Portugal",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": true,
+   "web": "https://www.lusa.pt",
+   "emails": [
+    {
+     "label": "General",
+     "u": "agencialusa",
+     "d": "lusa.pt"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+351 21 711 6500"
+    }
+   ],
+   "address": "Rua Dr. João Couto, Lote C, 1503-809 Lisbon",
+   "sources": [
+    {
+     "t": "EANA member directory",
+     "u": "https://newsalliance.org/members/lusa-agencia-de-noticias-de-portugal"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 238,
+   "acronym": "AGERPRES",
+   "name": "Agenția Națională de Presă AGERPRES",
+   "en": "Romanian National News Agency",
+   "country": "Romania",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": true,
+   "web": "https://www.agerpres.ro",
+   "emails": [
+    {
+     "label": "General",
+     "u": "office",
+     "d": "agerpres.ro"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+40 21 207 61 10"
+    }
+   ],
+   "address": "Piața Presei Libere 1, sector 1, 013701 Bucharest",
+   "sources": [
+    {
+     "t": "EANA member directory",
+     "u": "https://newsalliance.org/members/romanian-national-news-agency"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 266,
+   "acronym": "Tanjug",
+   "name": "Novinska agencija Tanjug",
+   "en": "Tanjug News Agency",
+   "country": "Serbia",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": true,
+   "web": "https://www.tanjug.rs",
+   "emails": [
+    {
+     "label": "Office",
+     "u": "office",
+     "d": "tanjug.rs"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+381 66 831 7095"
+    }
+   ],
+   "address": "Dečanska 12/7, 11000 Belgrade",
+   "sources": [
+    {
+     "t": "EANA member directory",
+     "u": "https://newsalliance.org/members/tanjug-news-agency-novinska-agencija-tanjug"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 267,
+   "acronym": "TASR",
+   "name": "Tlačová agentúra Slovenskej republiky",
+   "en": "News Agency of the Slovak Republic",
+   "country": "Slovakia",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": true,
+   "web": "https://www.tasr.sk",
+   "emails": [
+    {
+     "label": "Desks",
+     "u": "tasr",
+     "d": "tasr.sk"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Desks",
+     "n": "+421 2 5921 0444"
+    }
+   ],
+   "address": "Dúbravská cesta 14, 841 04 Bratislava",
+   "sources": [
+    {
+     "t": "TASR: English page",
+     "u": "https://www.tasr.sk/english"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 269,
+   "acronym": "STA",
+   "name": "Slovenska tiskovna agencija",
+   "en": "Slovenian Press Agency",
+   "country": "Slovenia",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": true,
+   "web": "https://www.sta.si",
+   "emails": [
+    {
+     "label": "Newsdesk",
+     "u": "desk",
+     "d": "sta.si"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+386 1 241 0100"
+    }
+   ],
+   "address": "Tivolska 50, 1000 Ljubljana",
+   "sources": [
+    {
+     "t": "EANA member directory",
+     "u": "https://newsalliance.org/members/slovenska-tiskovna-agencija"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 272,
+   "acronym": "EFE",
+   "name": "Agencia EFE",
+   "en": "Spanish news agency",
+   "country": "Spain",
+   "kind": "International news agency",
+   "ownership": "Public / State",
+   "eana": true,
+   "web": "https://www.efe.com",
+   "emails": [],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+34 91 346 7400"
+    }
+   ],
+   "address": "Avenida de Burgos 8-B, 28036 Madrid",
+   "sources": [
+    {
+     "t": "EANA member directory",
+     "u": "https://newsalliance.org/members/agencia-efe-s-a"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 284,
+   "acronym": "TT",
+   "name": "TT Nyhetsbyrån",
+   "en": "TT News Agency",
+   "country": "Sweden",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": true,
+   "web": "https://tt.se",
+   "emails": [
+    {
+     "label": "Newsroom",
+     "u": "redaktionen",
+     "d": "tt.se"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+46 8 692 26 00"
+    }
+   ],
+   "address": "Östgötagatan 100, 105 12 Stockholm",
+   "sources": [
+    {
+     "t": "EANA member directory",
+     "u": "https://newsalliance.org/members/tidningarnas-telegrambyrå"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 288,
+   "acronym": "Keystone-SDA",
+   "name": "Keystone-SDA-ATS",
+   "en": "Swiss news agency",
+   "country": "Switzerland",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": true,
+   "web": "https://www.keystone-sda.ch",
+   "emails": [
+    {
+     "label": "General",
+     "u": "info",
+     "d": "keystone-sda.ch"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+41 58 909 50 50"
+    }
+   ],
+   "address": "Wankdorfallee 5, 3000 Bern 22",
+   "sources": [
+    {
+     "t": "Keystone-SDA: editorial department",
+     "u": "https://keystone-sda.ch/en/editorial"
+    },
+    {
+     "t": "EANA member directory",
+     "u": "https://newsalliance.org/members/keystone-sda"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 292,
+   "acronym": "AA",
+   "name": "Anadolu Ajansı",
+   "en": "Anadolu Agency",
+   "country": "Türkiye",
+   "kind": "International news agency",
+   "ownership": "Public / State",
+   "eana": true,
+   "web": "https://www.aa.com.tr",
+   "emails": [
+    {
+     "label": "International",
+     "u": "international",
+     "d": "aa.com.tr"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+90 312 999 20 00"
+    }
+   ],
+   "address": "Eti Mahallesi, GMK Bulvarı No:132, Çankaya, Ankara",
+   "sources": [
+    {
+     "t": "EANA member directory",
+     "u": "https://newsalliance.org/members/anadolu-ajansi"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 307,
+   "acronym": "Ukrinform",
+   "name": "Укрінформ",
+   "en": "Ukrainian National News Agency",
+   "country": "Ukraine",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": true,
+   "web": "https://www.ukrinform.net",
+   "emails": [
+    {
+     "label": "Office",
+     "u": "office",
+     "d": "ukrinform.com"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+380 44 279 8152"
+    }
+   ],
+   "address": "8/16 Bohdana Khmelnytskoho Street, 01001 Kyiv",
+   "sources": [
+    {
+     "t": "EANA member directory",
+     "u": "https://newsalliance.org/members/ukranian-national-news-agency"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 314,
+   "acronym": "PA Media",
+   "name": "PA Media",
+   "en": "UK national news agency",
+   "country": "United Kingdom",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": true,
+   "web": "https://pa.media",
+   "emails": [],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+44 20 7963 7000"
+    }
+   ],
+   "address": "37 North Wharf Road, London W2 1AF",
+   "sources": [
+    {
+     "t": "EANA member directory",
+     "u": "https://newsalliance.org/members/the-press-association-limited"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  }
+ ]
+}

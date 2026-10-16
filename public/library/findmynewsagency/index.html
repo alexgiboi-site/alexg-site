@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Find my news agency — Ion-Alexandru Giboi</title>
+<meta name="description" content="Find the news agency in your country and how to reach it: website, newsroom email and phone number, as each agency publishes them.">
+<link rel="canonical" href="https://alexgiboi.com/library/findmynewsagency/">
+<meta property="og:title" content="Find my news agency">
+<meta property="og:url" content="https://alexgiboi.com/library/findmynewsagency/">
+<meta name="theme-color" content="#102A5C">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap">
+<link rel="stylesheet" href="/assets/style.css">
+<style>
+/* Find my news agency: directory of agency contacts. Uses the site tokens from /assets/style.css. */
+.fmna { padding-bottom: 72px; }
+.finder { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--paper); padding: 16px 0 14px; border-bottom: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 12px; align-items: end; }
+.finder .field { display: flex; flex-direction: column; gap: 6px; flex: 1 1 260px; min-width: 0; }
+.finder .field.country { flex: 1 1 220px; }
+.finder label { font-size: 14px; font-weight: 600; color: var(--ink-2); }
+.finder input, .finder select { min-height: 48px; padding: 10px 14px; border: 1px solid #8F8F88; font: inherit; font-size: 16px; background: #fff; color: var(--ink); border-radius: 0; width: 100%; }
+.finder .count { flex: 1 1 100%; font-family: var(--mono); font-size: 13px; color: var(--faint); margin: 0; }
+.edition { margin: 28px 0 8px; max-width: 760px; font-size: 16px; color: var(--muted); }
+.edition strong { color: var(--ink); font-weight: 600; }
+.results { display: grid; gap: 24px; grid-template-columns: minmax(0, 1fr); margin-top: 24px; }
+@media (min-width: 820px) { .results { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.agency { display: flex; flex-direction: column; gap: 14px; padding: 24px; background: var(--card); border: 1px solid var(--line); border-top: 5px solid var(--gold); min-width: 0; }
+.agency .ctry { font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold-text); }
+.agency h2 { margin: 0; font-family: var(--serif); font-weight: 600; font-size: 28px; line-height: 1.15; color: var(--navy); text-wrap: balance; }
+.agency .names { margin: 4px 0 0; font-size: 16px; color: var(--ink-2); }
+.agency .names span { display: block; color: var(--muted); font-size: 15px; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { font-family: var(--mono); font-size: 12px; padding: 3px 8px; border: 1px solid var(--line); color: var(--ink-2); background: var(--paper); }
+.tag.eana { border-color: #B9C6E0; color: var(--navy); background: #EEF1F6; }
+.contacts { margin: 0; display: grid; grid-template-columns: minmax(0, 1fr); border-top: 1px solid var(--line); }
+.contacts .row { display: grid; grid-template-columns: 84px minmax(0, 1fr); gap: 4px 12px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+.contacts dt { font-family: var(--mono); font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--faint); padding-top: 4px; }
+.contacts dd { margin: 0; display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.line { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; min-width: 0; }
+.line a, .line .val { font-size: 16px; overflow-wrap: anywhere; font-variant-numeric: tabular-nums; }
+.line .lbl { font-size: 13px; color: var(--faint); }
+.copy { font: inherit; font-size: 13px; font-weight: 600; min-height: 32px; padding: 0 10px; border: 1px solid var(--line); background: #fff; color: var(--ink-2); cursor: pointer; }
+.copy:hover { border-color: var(--navy); color: var(--navy); }
+.none { font-size: 15px; color: var(--faint); }
+.agency .note { margin: 0; padding: 10px 12px; background: #FBF4E2; border-left: 3px solid var(--gold-rule); font-size: 15px; color: var(--ink-2); }
+.agency .src { margin-top: auto; font-size: 13px; color: var(--faint); }
+.agency .src a { color: var(--faint); }
+.empty { padding: 28px; background: #fff; border: 1px solid var(--line); font-size: 17px; color: var(--muted); }
+.fix { margin-top: 48px; padding: 24px; background: #fff; border: 1px solid var(--line); border-top: 5px solid var(--navy); max-width: 760px; display: flex; flex-direction: column; gap: 12px; }
+.fix h2 { margin: 0; font-family: var(--serif); font-weight: 600; font-size: 26px; color: var(--navy); }
+.fix p { margin: 0; color: var(--muted); }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/">Alex Giboi</a>
+    <nav class="nav" aria-label="Main">
+      <a href="/#work">Work</a>
+      <a href="/#ventures">Ventures</a>
+      <a href="/library/" aria-current="page">Library</a>
+      <a href="/#teaching">Teaching</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<div class="wrap fmna">
+  <a class="back" href="/library/" style="color: var(--gold-text); margin-top: 24px">← Library</a>
+  <div class="intro-block" style="border-top-color: var(--gold-rule)">
+    <div class="eyebrow" style="color: var(--gold-text)">LIBRARY · DIRECTORY</div>
+    <h1>Find my news agency</h1>
+    <p>Pick your country to find its news agency and how to reach it: website, newsroom email and phone number, as each agency publishes them.</p>
+  </div>
+
+  <p class="edition" id="edition"><strong>First edition:</strong> the members of the European Alliance of News Agencies. The rest of Europe, the big international agencies and national agencies on other continents are being added.</p>
+
+  <div class="finder" role="search">
+    <div class="field country">
+      <label for="country">Country</label>
+      <select id="country"><option value="">All countries</option></select>
+    </div>
+    <div class="field">
+      <label for="q">Search</label>
+      <input id="q" type="search" placeholder="Agency name, acronym or city" autocomplete="off">
+    </div>
+    <p class="count" id="count" aria-live="polite">Loading agencies…</p>
+  </div>
+
+  <div class="results" id="results"></div>
+  <noscript><div class="empty">This directory needs JavaScript to show the agencies. The data is also available as <a href="agencies.json">agencies.json</a>.</div></noscript>
+
+  <div class="fix">
+    <h2>Something wrong or missing?</h2>
+    <p>Agencies move offices and change numbers. If you spot an outdated contact, or your country's agency is missing, tell me and I will update it.</p>
+    <div class="btns"><a class="btn btn-navy" href="/#contact">Send a correction</a></div>
+  </div>
+
+  <div class="made">
+    <strong>HOW THIS WAS MADE</strong>
+    <p>Compiled with Claude from each agency's own website and the member directories of the European Alliance of News Agencies (EANA) and the Alliance of News Agencies in South-East Europe (ABNA-SE), then checked by me. Only institutional contacts are listed: general, newsroom and switchboard addresses and numbers, never personal ones. Each entry links to its source and shows when it was last checked.</p>
+  </div>
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 Ion-Alexandru Giboi</span>
+    <span>Lugano, Switzerland</span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  const $ = (id) => document.getElementById(id);
+  const slug = (s) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+  const fmtDate = (iso) => new Date(iso + 'T12:00:00Z').toLocaleDateString('en-GB', {day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC'});
+  let DATA = [];
+
+  function el(tag, attrs, ...kids) {
+    const n = document.createElement(tag);
+    for (const [k, v] of Object.entries(attrs || {})) { if (v != null) n.setAttribute(k, v); }
+    kids.flat().forEach(k => { if (k != null) n.append(k); });
+    return n;
+  }
+  function copyBtn(text, what) {
+    const b = el('button', {type: 'button', class: 'copy', 'aria-label': 'Copy ' + what}, 'Copy');
+    b.addEventListener('click', () => {
+      const done = () => { b.textContent = 'Copied'; setTimeout(() => { b.textContent = 'Copy'; }, 1600); };
+      const fallback = () => {
+        const v = b.parentNode.querySelector('.val, a');
+        const r = document.createRange(); r.selectNodeContents(v);
+        const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+        b.textContent = 'Selected';
+      };
+      try { navigator.clipboard.writeText(text).then(done, fallback); } catch (e) { fallback(); }
+    });
+    return b;
+  }
+  function row(label, items) {
+    return el('div', {class: 'row'}, el('dt', {}, label), el('dd', {}, items));
+  }
+
+  function card(a) {
+    const host = a.web.replace(/^https?:\/\//, '').replace(/\/$/, '');
+    const web = el('div', {class: 'line'}, el('a', {href: a.web, target: '_blank', rel: 'noopener'}, host));
+    const emails = a.emails.length ? a.emails.map(e => {
+      const addr = e.u + '@' + e.d;
+      return el('div', {class: 'line'}, el('a', {href: 'mailto:' + addr}, addr), e.label !== 'General' ? el('span', {class: 'lbl'}, e.label) : null, copyBtn(addr, 'email address'));
+    }) : [el('span', {class: 'none'}, 'Use the contact form on the agency’s website')];
+    const phones = a.phones.length ? a.phones.map(p => el('div', {class: 'line'},
+      el('a', {href: 'tel:' + p.n.replace(/[^+\d]/g, '')}, p.n), p.label !== 'Switchboard' ? el('span', {class: 'lbl'}, p.label) : null, copyBtn(p.n, 'phone number'))) : [el('span', {class: 'none'}, 'No public number found')];
+    const names = el('p', {class: 'names'}, a.name !== a.acronym ? a.name : null, a.en ? el('span', {}, a.en) : null);
+    const src = el('p', {class: 'src'}, 'Source: ', a.sources.map((s, i) => [i ? ' · ' : '', el('a', {href: s.u, target: '_blank', rel: 'noopener'}, s.t)]), ` · Checked ${fmtDate(a.checked)}`);
+    return el('article', {class: 'agency', id: slug(a.acronym + '-' + a.country)},
+      el('div', {class: 'ctry'}, a.country),
+      el('div', {}, el('h2', {}, a.acronym), names.childNodes.length ? names : null),
+      el('div', {class: 'tags'}, el('span', {class: 'tag'}, a.kind), el('span', {class: 'tag'}, a.ownership), a.eana ? el('span', {class: 'tag eana'}, 'EANA member') : null),
+      el('dl', {class: 'contacts'}, row('Website', web), row('Email', emails), row('Phone', phones), a.address ? row('Address', el('span', {class: 'val'}, a.address)) : null),
+      a.note ? el('p', {class: 'note'}, a.note) : null,
+      src);
+  }
+
+  function render() {
+    const c = $('country').value, q = $('q').value.trim().toLowerCase();
+    const list = DATA.filter(a => (!c || a.country === c) &&
+      (!q || [a.acronym, a.name, a.en, a.country, a.address].join(' ').toLowerCase().includes(q)));
+    const out = $('results'); out.replaceChildren(...list.map(card));
+    const nC = new Set(list.map(a => a.country)).size;
+    $('count').textContent = list.length ? `${list.length} ${list.length === 1 ? 'agency' : 'agencies'} in ${nC} ${nC === 1 ? 'country' : 'countries'}` : 'No agency found';
+    if (!list.length) out.append(el('div', {class: 'empty'}, c ? `${c} is not in this edition yet. ` : 'Nothing matches that search. ', el('a', {href: '/#contact'}, 'Tell me which agency you are looking for.')));
+  }
+
+  fetch('agencies.json').then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }).then(d => {
+    DATA = d.agencies;
+    const sel = $('country');
+    [...new Set(DATA.map(a => a.country))].sort((x, y) => x.localeCompare(y)).forEach(n => sel.append(el('option', {value: n}, n)));
+    const h = decodeURIComponent(location.hash.slice(1));
+    const hit = [...new Set(DATA.map(a => a.country))].find(n => slug(n) === h);
+    if (hit) sel.value = hit;
+    sel.addEventListener('change', () => { render(); try { history.replaceState(null, '', sel.value ? '#' + slug(sel.value) : location.pathname); } catch (e) {} });
+    $('q').addEventListener('input', render);
+    render();
+  }).catch(() => { $('count').textContent = 'The directory could not be loaded. Please reload the page.'; });
+})();
+</script>
+</body>
+</html>
