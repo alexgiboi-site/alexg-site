@@ -3,6 +3,38 @@
  "updated": "2026-10-16",
  "agencies": [
   {
+   "id": 55,
+   "acronym": "Bakhtar",
+   "name": "آژانس خبری باختر",
+   "en": "Bakhtar News Agency",
+   "country": "Afghanistan",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://www.bakhtarnews.af",
+   "emails": [
+    {
+     "label": "General",
+     "u": "info",
+     "d": "bakhtarnews.af"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+93 788 111 193"
+    }
+   ],
+   "sources": [
+    {
+     "t": "Bakhtar: contact us",
+     "u": "https://www.bakhtarnews.af/en/contact-us-english"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
    "id": 141,
    "acronym": "ATA",
    "name": "Agjencia Telegrafike Shqiptare",
@@ -55,6 +87,38 @@
     {
      "t": "EANA member directory",
      "u": "https://newsalliance.org/members/agència-de-notícies-andorrana"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 59,
+   "acronym": "AAP",
+   "name": "Australian Associated Press",
+   "en": "",
+   "country": "Australia",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.aap.com.au",
+   "emails": [
+    {
+     "label": "Story ideas and editorial",
+     "u": "editors",
+     "d": "aap.com.au"
+    },
+    {
+     "label": "Press releases",
+     "u": "aapr",
+     "d": "aap.com.au"
+    }
+   ],
+   "phones": [],
+   "sources": [
+    {
+     "t": "AAP: contact us",
+     "u": "https://www.aap.com.au/about/contact/"
     }
    ],
    "checked": "2026-10-16",
@@ -117,6 +181,70 @@
    ],
    "checked": "2026-10-16",
    "note": ""
+  },
+  {
+   "id": 61,
+   "acronym": "BSS",
+   "name": "বাংলাদেশ সংবাদ সংস্থা",
+   "en": "Bangladesh Sangbad Sangstha",
+   "country": "Bangladesh",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://www.bssnews.net",
+   "emails": [
+    {
+     "label": "General",
+     "u": "bssnews",
+     "d": "bssnews.net"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+880 2 4105 3450"
+    }
+   ],
+   "sources": [
+    {
+     "t": "BSS: contact us",
+     "u": "https://www.bssnews.net/contact-us/14"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 332,
+   "acronym": "CMC",
+   "name": "Caribbean Media Corporation",
+   "en": "",
+   "country": "Barbados",
+   "kind": "Regional news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.cmccaribbean.com",
+   "emails": [
+    {
+     "label": "General",
+     "u": "info",
+     "d": "cmccaribbean.com"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+1 246 467 1000"
+    }
+   ],
+   "sources": [
+    {
+     "t": "CMC: contact us",
+     "u": "https://www.cmccaribbean.com/contact-us/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Covers the Caribbean."
   },
   {
    "id": 146,
@@ -284,6 +412,72 @@
     {
      "t": "BTA: contacts",
      "u": "https://bta.bg/en/contacts"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 432,
+   "acronym": "CP",
+   "name": "The Canadian Press",
+   "en": "La Presse Canadienne",
+   "country": "Canada",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.thecanadianpress.com",
+   "emails": [],
+   "phones": [
+    {
+     "label": "National desk (24 hours)",
+     "n": "+1 416 507 2150"
+    },
+    {
+     "label": "Picture desk",
+     "n": "+1 416 507 2169"
+    }
+   ],
+   "sources": [
+    {
+     "t": "The Canadian Press: our newsrooms",
+     "u": "https://www.thecanadianpress.com/contact/our-newsrooms/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 68,
+   "acronym": "Xinhua",
+   "name": "新华通讯社",
+   "en": "Xinhua News Agency",
+   "country": "China",
+   "kind": "International news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://english.news.cn",
+   "emails": [
+    {
+     "label": "English website",
+     "u": "xinhuanet_english",
+     "d": "news.cn"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+86 10 6307 2562"
+    }
+   ],
+   "sources": [
+    {
+     "t": "Xinhua: contact us",
+     "u": "https://english.news.cn/20221017/139a768d90e74c2ba3f6c45740be3531/c.html"
+    },
+    {
+     "t": "OANA member profile",
+     "u": "https://oananews.org/agencies/XINHUA"
     }
    ],
    "checked": "2026-10-16",
@@ -497,6 +691,38 @@
     "Latvia",
     "Lithuania"
    ]
+  },
+  {
+   "id": 69,
+   "acronym": "Pacnews",
+   "name": "Pacnews",
+   "en": "Pacific Islands News Association news service",
+   "country": "Fiji",
+   "kind": "Regional news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://pina.com.fj",
+   "emails": [
+    {
+     "label": "General",
+     "u": "pacnews1",
+     "d": "pina.com.fj"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+679 331 5732"
+    }
+   ],
+   "sources": [
+    {
+     "t": "PINA: contact",
+     "u": "https://pina.com.fj/contact/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Covers the Pacific Islands."
   },
   {
    "id": 167,
@@ -720,6 +946,33 @@
    "note": ""
   },
   {
+   "id": 1003,
+   "acronym": "ANA",
+   "name": "African News Agency",
+   "en": "",
+   "country": "Ghana",
+   "kind": "Regional news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://africannewsagency.com",
+   "emails": [
+    {
+     "label": "General",
+     "u": "hello",
+     "d": "africannewsagency.com"
+    }
+   ],
+   "phones": [],
+   "sources": [
+    {
+     "t": "African News Agency: contact us",
+     "u": "https://africannewsagency.com/contact-us/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Covers Africa."
+  },
+  {
    "id": 194,
    "acronym": "ANA-MPA",
    "name": "Athens-Macedonian News Agency",
@@ -771,6 +1024,68 @@
    ],
    "checked": "2026-10-16",
    "note": "No public phone number or email found. Hungary's public media are being reorganised under a law passed in June 2026."
+  },
+  {
+   "id": 77,
+   "acronym": "PTI",
+   "name": "Press Trust of India",
+   "en": "",
+   "country": "India",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.ptinews.com",
+   "emails": [],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+91 11 4139 4645"
+    }
+   ],
+   "sources": [
+    {
+     "t": "OANA member profile",
+     "u": "https://oananews.org/agencies/PTI"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 79,
+   "acronym": "ANTARA",
+   "name": "Kantor Berita ANTARA",
+   "en": "Indonesian News Agency",
+   "country": "Indonesia",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://www.antaranews.com",
+   "emails": [
+    {
+     "label": "Newsroom",
+     "u": "sekretariatredaksi",
+     "d": "antara.id"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Newsroom",
+     "n": "+62 21 2239 5579"
+    },
+    {
+     "label": "Switchboard",
+     "n": "+62 21 384 2591"
+    }
+   ],
+   "sources": [
+    {
+     "t": "ANTARA: contact us",
+     "u": "https://korporat.antaranews.com/hubungi-kami"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
   },
   {
    "id": 202,
@@ -994,6 +1309,32 @@
    "note": ""
   },
   {
+   "id": 82,
+   "acronym": "Kyodo",
+   "name": "共同通信社",
+   "en": "Kyodo News",
+   "country": "Japan",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://english.kyodonews.net",
+   "emails": [],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+81 3 6252 8301"
+    }
+   ],
+   "sources": [
+    {
+     "t": "OANA member profile",
+     "u": "https://oananews.org/agencies/KYODO"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
    "id": 217,
    "acronym": "KosovaPress",
    "name": "KosovaPress",
@@ -1028,6 +1369,33 @@
    ],
    "checked": "2026-10-16",
    "note": ""
+  },
+  {
+   "id": 86,
+   "acronym": "KPL",
+   "name": "ສຳນັກຂ່າວສານປະເທດລາວ",
+   "en": "Lao News Agency",
+   "country": "Laos",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://kpl.gov.la",
+   "emails": [
+    {
+     "label": "General",
+     "u": "laonewsagency",
+     "d": "kpl.gov.la"
+    }
+   ],
+   "phones": [],
+   "sources": [
+    {
+     "t": "KPL: contact us",
+     "u": "https://kpl.gov.la/En/Page/ContactUs/ContactUs.aspx"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "KPL’s contact page lists conflicting phone numbers, so none is shown."
   },
   {
    "id": 218,
@@ -1076,6 +1444,59 @@
    ],
    "checked": "2026-10-16",
    "note": "No contact page could be read; see the agency’s website."
+  },
+  {
+   "id": 87,
+   "acronym": "Bernama",
+   "name": "Pertubuhan Berita Nasional Malaysia",
+   "en": "Malaysian National News Agency",
+   "country": "Malaysia",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://www.bernama.com/en",
+   "emails": [
+    {
+     "label": "General",
+     "u": "bfns",
+     "d": "bernama.com"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+60 3 2632 1255"
+    }
+   ],
+   "sources": [
+    {
+     "t": "OANA member profile",
+     "u": "https://oananews.org/agencies/BERNAMA"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 88,
+   "acronym": "NNN",
+   "name": "NAM News Network",
+   "en": "",
+   "country": "Malaysia",
+   "kind": "Regional news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://namnewsnetwork.org",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "Wikipedia: NAM News Network",
+     "u": "https://en.wikipedia.org/wiki/NAM_News_Network"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "News exchange of Non-Aligned Movement agencies, run by Bernama. See Bernama for contacts."
   },
   {
    "id": 223,
@@ -1141,6 +1562,32 @@
     {
      "t": "Moldpres: contacts",
      "u": "https://www.moldpres.md/contacte"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 90,
+   "acronym": "Montsame",
+   "name": "МОНЦАМЭ",
+   "en": "Montsame National News Agency",
+   "country": "Mongolia",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://montsame.mn/en/",
+   "emails": [],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+976 51 266904"
+    }
+   ],
+   "sources": [
+    {
+     "t": "OANA member profile",
+     "u": "https://oananews.org/agencies/MONTSAME"
     }
    ],
    "checked": "2026-10-16",
@@ -1266,6 +1713,100 @@
     {
      "t": "EANA member directory",
      "u": "https://newsalliance.org/members/norsk-telegrambyra-as"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 99,
+   "acronym": "APP",
+   "name": "Associated Press of Pakistan",
+   "en": "",
+   "country": "Pakistan",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://www.app.com.pk",
+   "emails": [],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+92 51 111 277 277"
+    },
+    {
+     "label": "Head office",
+     "n": "+92 51 220 3064"
+    }
+   ],
+   "sources": [
+    {
+     "t": "APP: contact us",
+     "u": "https://www.app.com.pk/contact-us/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 102,
+   "acronym": "PIA",
+   "name": "Philippine Information Agency",
+   "en": "",
+   "country": "Philippines",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://pia.gov.ph",
+   "emails": [
+    {
+     "label": "General",
+     "u": "info",
+     "d": "pia.gov.ph"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+63 2 8926 5129"
+    }
+   ],
+   "sources": [
+    {
+     "t": "PIA: contact",
+     "u": "https://pia.gov.ph/about/contact/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 103,
+   "acronym": "PNA",
+   "name": "Philippine News Agency",
+   "en": "",
+   "country": "Philippines",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://www.pna.gov.ph",
+   "emails": [
+    {
+     "label": "General",
+     "u": "info",
+     "d": "pna.gov.ph"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+63 2 8352 4328"
+    }
+   ],
+   "sources": [
+    {
+     "t": "OANA member profile",
+     "u": "https://oananews.org/agencies/PNA"
     }
    ],
    "checked": "2026-10-16",
@@ -1535,6 +2076,38 @@
    "note": ""
   },
   {
+   "id": 260,
+   "acronym": "Sputnik",
+   "name": "Sputnik",
+   "en": "",
+   "country": "Russia",
+   "kind": "International news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://sputnikglobe.com",
+   "emails": [
+    {
+     "label": "Sales",
+     "u": "info",
+     "d": "sputnikmediabank.com"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Sales",
+     "n": "+7 495 637 3519"
+    }
+   ],
+   "sources": [
+    {
+     "t": "Sputnik Mediabank: contacts",
+     "u": "https://sputnikmediabank.com/docs/about/contacts.html"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
    "id": 261,
    "acronym": "TASS",
    "name": "ТАСС",
@@ -1554,6 +2127,38 @@
    ],
    "checked": "2026-10-16",
    "note": "The only contact page found dates from 2010, so its details are not listed. TASS’s membership of the European Alliance of News Agencies is suspended."
+  },
+  {
+   "id": 39,
+   "acronym": "PANA",
+   "name": "Panapress",
+   "en": "Pan-African News Agency",
+   "country": "Senegal",
+   "kind": "Regional news agency",
+   "ownership": "Intergovernmental",
+   "eana": false,
+   "web": "https://www.panapress.com",
+   "emails": [
+    {
+     "label": "Newsroom",
+     "u": "feedback",
+     "d": "panapress.com"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+221 33 869 12 34"
+    }
+   ],
+   "sources": [
+    {
+     "t": "Panapress: contact us",
+     "u": "https://www.panapress.com/contact-us-lang2.html"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Covers Africa; headquarters in Dakar."
   },
   {
    "id": 264,
@@ -1731,6 +2336,32 @@
     {
      "t": "EANA member directory",
      "u": "https://newsalliance.org/members/slovenska-tiskovna-agencija"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 106,
+   "acronym": "Yonhap",
+   "name": "연합뉴스",
+   "en": "Yonhap News Agency",
+   "country": "South Korea",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://en.yna.co.kr",
+   "emails": [],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+82 2 398 3114"
+    }
+   ],
+   "sources": [
+    {
+     "t": "OANA member profile",
+     "u": "https://oananews.org/agencies/YONHAP_NEWS_AGENCY"
     }
    ],
    "checked": "2026-10-16",
@@ -1983,6 +2614,133 @@
     {
      "t": "EANA member directory",
      "u": "https://newsalliance.org/members/keystone-sda"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 108,
+   "acronym": "CNA",
+   "name": "中央通訊社",
+   "en": "Central News Agency",
+   "country": "Taiwan",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://focustaiwan.tw",
+   "emails": [
+    {
+     "label": "Focus Taiwan newsroom",
+     "u": "focustaiwan",
+     "d": "cna.com.tw"
+    },
+    {
+     "label": "General",
+     "u": "services",
+     "d": "cna.com.tw"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+886 2 2505 1180"
+    }
+   ],
+   "sources": [
+    {
+     "t": "Focus Taiwan: contact us",
+     "u": "https://focustaiwan.tw/contactus"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 109,
+   "acronym": "MNA (Taiwan)",
+   "name": "軍事新聞通訊社",
+   "en": "Military News Agency",
+   "country": "Taiwan",
+   "kind": "Specialist news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://mna.mnd.gov.tw/en/",
+   "emails": [],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+886 2 2395 1723"
+    }
+   ],
+   "sources": [
+    {
+     "t": "Political Warfare Bureau: unit phone numbers",
+     "u": "https://gpwd.mnd.gov.tw/Publish.aspx?cnid=505"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 110,
+   "acronym": "TNA",
+   "name": "สำนักข่าวไทย",
+   "en": "Thai News Agency (MCOT)",
+   "country": "Thailand",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://tna.mcot.net",
+   "emails": [
+    {
+     "label": "General",
+     "u": "mcotonline",
+     "d": "gmail.com"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+66 2 201 6000"
+    }
+   ],
+   "sources": [
+    {
+     "t": "OANA member profile",
+     "u": "https://oananews.org/agencies/TNA"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 111,
+   "acronym": "Tatoli",
+   "name": "Agência Noticiosa de Timor-Leste",
+   "en": "Tatoli",
+   "country": "Timor-Leste",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://pt.tatoli.tl",
+   "emails": [
+    {
+     "label": "Newsroom",
+     "u": "redasauntatoli",
+     "d": "gmail.com"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Newsroom",
+     "n": "+670 331 0374"
+    }
+   ],
+   "sources": [
+    {
+     "t": "Tatoli: contact",
+     "u": "https://pt.tatoli.tl/contacto/"
     }
    ],
    "checked": "2026-10-16",
@@ -2277,6 +3035,133 @@
     {
      "t": "EANA member directory",
      "u": "https://newsalliance.org/members/the-press-association-limited"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 324,
+   "acronym": "Reuters",
+   "name": "Reuters",
+   "en": "",
+   "country": "United Kingdom",
+   "kind": "International news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.reuters.com",
+   "emails": [
+    {
+     "label": "Editorial bookings",
+     "u": "Editorial.Booking",
+     "d": "thomsonreuters.com"
+    },
+    {
+     "label": "Sales",
+     "u": "reutersnewsagencysales",
+     "d": "thomsonreuters.com"
+    }
+   ],
+   "phones": [],
+   "sources": [
+    {
+     "t": "Thomson Reuters: media contacts",
+     "u": "https://www.thomsonreuters.com/en/contact-us/media-contacts"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 433,
+   "acronym": "AP",
+   "name": "The Associated Press",
+   "en": "",
+   "country": "United States",
+   "kind": "International news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.ap.org",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "Wikipedia: Associated Press",
+     "u": "https://en.wikipedia.org/wiki/Associated_Press"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "No general newsroom email or phone could be confirmed on AP’s own website."
+  },
+  {
+   "id": 325,
+   "acronym": "Bloomberg",
+   "name": "Bloomberg News",
+   "en": "",
+   "country": "United States",
+   "kind": "International news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.bloomberg.com",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "Bloomberg: tips",
+     "u": "https://www.bloomberg.com/tips"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Bloomberg takes news tips through its tips page, bloomberg.com/tips."
+  },
+  {
+   "id": 326,
+   "acronym": "Dow Jones Newswires",
+   "name": "Dow Jones Newswires",
+   "en": "",
+   "country": "United States",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.dowjones.com",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "Wikipedia: Dow Jones Newswires",
+     "u": "https://en.wikipedia.org/wiki/Dow_Jones_Newswires"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "No general newsroom contact could be confirmed."
+  },
+  {
+   "id": 112,
+   "acronym": "VNA",
+   "name": "Thông tấn xã Việt Nam",
+   "en": "Vietnam News Agency",
+   "country": "Vietnam",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://news.vnanet.vn",
+   "emails": [
+    {
+     "label": "General",
+     "u": "btk.ttxvn",
+     "d": "gmail.com"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+84 24 3825 5443"
+    }
+   ],
+   "sources": [
+    {
+     "t": "OANA member profile",
+     "u": "https://oananews.org/agencies/VNA"
     }
    ],
    "checked": "2026-10-16",
