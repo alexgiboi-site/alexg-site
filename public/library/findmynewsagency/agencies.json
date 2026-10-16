@@ -35,6 +35,32 @@
    "note": ""
   },
   {
+   "id": 57,
+   "acronym": "Pajhwok",
+   "name": "Pajhwok Afghan News",
+   "en": "",
+   "country": "Afghanistan",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://pajhwok.com",
+   "emails": [],
+   "phones": [
+    {
+     "label": "News department",
+     "n": "+93 20 220 1814"
+    }
+   ],
+   "sources": [
+    {
+     "t": "Pajhwok: contact",
+     "u": "https://pajhwok.com/contact/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
    "id": 141,
    "acronym": "ATA",
    "name": "Agjencia Telegrafike Shqiptare",
@@ -146,6 +172,38 @@
    "note": "No phone number or email could be confirmed; see the agency’s website."
   },
   {
+   "id": 330,
+   "acronym": "NA",
+   "name": "Noticias Argentinas",
+   "en": "",
+   "country": "Argentina",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://noticiasargentinas.com",
+   "emails": [
+    {
+     "label": "Sales",
+     "u": "comercial",
+     "d": "noticiasargentinas.com.ar"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+54 11 4010 8310"
+    }
+   ],
+   "sources": [
+    {
+     "t": "Noticias Argentinas: Agencia NA",
+     "u": "https://noticiasargentinas.com/agencia-na_p65552a2de38b1d41233b1b66"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
    "id": 116,
    "acronym": "Armenpress",
    "name": "Արմենպրես",
@@ -230,6 +288,32 @@
    "note": ""
   },
   {
+   "id": 120,
+   "acronym": "APA",
+   "name": "Azərbaycan Press Agentliyi",
+   "en": "APA Information Agency",
+   "country": "Azerbaijan",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://en.apa.az",
+   "emails": [],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+994 12 488 35 76"
+    }
+   ],
+   "sources": [
+    {
+     "t": "APA: contact",
+     "u": "https://en.apa.az/contact"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
    "id": 121,
    "acronym": "AZERTAC",
    "name": "Azərbaycan Dövlət İnformasiya Agentliyi",
@@ -256,6 +340,75 @@
     {
      "t": "EANA member directory",
      "u": "https://newsalliance.org/members/state-news-agency-of-the-republic-of-azerbaijan"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 122,
+   "acronym": "Report",
+   "name": "Report İnformasiya Agentliyi",
+   "en": "Report News Agency",
+   "country": "Azerbaijan",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://report.az/en",
+   "emails": [
+    {
+     "label": "Newsroom",
+     "u": "news",
+     "d": "report.az"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Newsroom",
+     "n": "+994 12 599 12 19"
+    }
+   ],
+   "sources": [
+    {
+     "t": "Report: contacts",
+     "u": "https://report.az/en/contacts"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 123,
+   "acronym": "Trend",
+   "name": "Trend",
+   "en": "Trend News Agency",
+   "country": "Azerbaijan",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.trend.az",
+   "emails": [
+    {
+     "label": "General",
+     "u": "agency",
+     "d": "trend.az"
+    },
+    {
+     "label": "Press and media",
+     "u": "press",
+     "d": "trend.az"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+994 12 510 81 03"
+    }
+   ],
+   "sources": [
+    {
+     "t": "Trend: contacts",
+     "u": "https://www.trend.az/contacts"
     }
    ],
    "checked": "2026-10-16",
@@ -309,6 +462,38 @@
     {
      "t": "BSS: contact us",
      "u": "https://www.bssnews.net/contact-us/14"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 62,
+   "acronym": "UNB",
+   "name": "United News of Bangladesh",
+   "en": "",
+   "country": "Bangladesh",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://unb.com.bd",
+   "emails": [
+    {
+     "label": "Newsdesk",
+     "u": "newsdesk",
+     "d": "unb.com.bd"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+880 2 4832 2363"
+    }
+   ],
+   "sources": [
+    {
+     "t": "UNB: contact",
+     "u": "https://unb.com.bd/contact-us"
     }
    ],
    "checked": "2026-10-16",
@@ -519,6 +704,38 @@
    "note": "BOPA publishes the Daily News; it takes messages through the contact page on that website."
   },
   {
+   "id": 340,
+   "acronym": "AE",
+   "name": "Agência Estado (Broadcast)",
+   "en": "",
+   "country": "Brazil",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.aebroadcast.com.br",
+   "emails": [
+    {
+     "label": "Customer service",
+     "u": "atende.ae",
+     "d": "estadao.com"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+55 11 3856 3500"
+    }
+   ],
+   "sources": [
+    {
+     "t": "Broadcast: contact",
+     "u": "https://www.aebroadcast.com.br/fale-conosco/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
    "id": 337,
    "acronym": "Agência Brasil",
    "name": "Agência Brasil (EBC)",
@@ -545,6 +762,38 @@
     {
      "t": "EBC: contact",
      "u": "https://www.ebc.com.br/fale-conosco"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 343,
+   "acronym": "Agência Senado",
+   "name": "Agência Senado",
+   "en": "Brazilian Federal Senate news agency",
+   "country": "Brazil",
+   "kind": "Specialist news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://www12.senado.leg.br/noticias",
+   "emails": [
+    {
+     "label": "General",
+     "u": "agencia",
+     "d": "senado.leg.br"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+55 61 3303 3333"
+    }
+   ],
+   "sources": [
+    {
+     "t": "Senado Notícias: contact",
+     "u": "https://www12.senado.leg.br/noticias/fale-conosco"
     }
    ],
    "checked": "2026-10-16",
@@ -747,6 +996,38 @@
     {
      "t": "OANA member profile",
      "u": "https://oananews.org/agencies/XINHUA"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 348,
+   "acronym": "Colprensa",
+   "name": "Agencia Colombiana de Prensa",
+   "en": "",
+   "country": "Colombia",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.colprensa.com",
+   "emails": [
+    {
+     "label": "Newsroom",
+     "u": "redaccion",
+     "d": "colprensa.com"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+57 601 357 0892"
+    }
+   ],
+   "sources": [
+    {
+     "t": "Colprensa: about us",
+     "u": "https://www.colprensa.com/quienes-somos/"
     }
    ],
    "checked": "2026-10-16",
@@ -1072,6 +1353,32 @@
    ],
    "checked": "2026-10-16",
    "note": ""
+  },
+  {
+   "id": 15,
+   "acronym": "ERINA",
+   "name": "Eritrean News Agency",
+   "en": "",
+   "country": "Eritrea",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://shabait.com",
+   "emails": [],
+   "phones": [
+    {
+     "label": "Ministry of Information",
+     "n": "+291 1 128 058"
+    }
+   ],
+   "sources": [
+    {
+     "t": "Ministry of Information: contact us",
+     "u": "https://shabait.com/contact-us/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "ERINA is part of the Ministry of Information and publishes on shabait.com."
   },
   {
    "id": 166,
@@ -1604,6 +1911,64 @@
    "note": ""
   },
   {
+   "id": 22,
+   "acronym": "ANG",
+   "name": "Agência de Notícias da Guiné",
+   "en": "Guinea-Bissau News Agency",
+   "country": "Guinea-Bissau",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://ang.gw",
+   "emails": [],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+245 96 900 7347"
+    }
+   ],
+   "sources": [
+    {
+     "t": "ANG: contacts",
+     "u": "https://ang.gw/contactos/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 356,
+   "acronym": "DPI",
+   "name": "Department of Public Information",
+   "en": "Guyana government news service",
+   "country": "Guyana",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://dpi.gov.gy",
+   "emails": [
+    {
+     "label": "General",
+     "u": "info",
+     "d": "dpi.gov.gy"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+592 226 6715"
+    }
+   ],
+   "sources": [
+    {
+     "t": "DPI: contact us",
+     "u": "https://dpi.gov.gy/contact-us/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
    "id": 196,
    "acronym": "MTI",
    "name": "Magyar Távirati Iroda",
@@ -1623,6 +1988,65 @@
    ],
    "checked": "2026-10-16",
    "note": "No public phone number or email found. Hungary's public media are being reorganised under a law passed in June 2026."
+  },
+  {
+   "id": 72,
+   "acronym": "ANI",
+   "name": "Asian News International",
+   "en": "",
+   "country": "India",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.aniin.com",
+   "emails": [
+    {
+     "label": "Coordination",
+     "u": "coordination",
+     "d": "aniin.com"
+    }
+   ],
+   "phones": [],
+   "sources": [
+    {
+     "t": "OANA member profile",
+     "u": "https://oananews.org/agencies/ANI"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 74,
+   "acronym": "IANS",
+   "name": "Indo-Asian News Service",
+   "en": "",
+   "country": "India",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://ianslive.in",
+   "emails": [
+    {
+     "label": "Marketing",
+     "u": "marketing",
+     "d": "ians.in"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+91 120 482 2400"
+    }
+   ],
+   "sources": [
+    {
+     "t": "IANS: contact us",
+     "u": "https://ianslive.in/contactus"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
   },
   {
    "id": 77,
@@ -1649,6 +2073,27 @@
    ],
    "checked": "2026-10-16",
    "note": ""
+  },
+  {
+   "id": 78,
+   "acronym": "UNI",
+   "name": "United News of India",
+   "en": "",
+   "country": "India",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.uniindia.com",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "UNI: contact us",
+     "u": "https://www.uniindia.com/contact-us"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "UNI lists desk contacts only under staff names; see its contact page."
   },
   {
    "id": 79,
@@ -1681,6 +2126,38 @@
     {
      "t": "ANTARA: contact us",
      "u": "https://korporat.antaranews.com/hubungi-kami"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 321,
+   "acronym": "IPS",
+   "name": "Inter Press Service",
+   "en": "",
+   "country": "International",
+   "kind": "International news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.ipsnews.net",
+   "emails": [
+    {
+     "label": "North America",
+     "u": "noram",
+     "d": "ips.org"
+    },
+    {
+     "label": "Latin America",
+     "u": "latam",
+     "d": "ipslatam.net"
+    }
+   ],
+   "phones": [],
+   "sources": [
+    {
+     "t": "IPS: contact us",
+     "u": "https://www.ipsnews.net/contact-us/"
     }
    ],
    "checked": "2026-10-16",
@@ -1950,6 +2427,32 @@
    "note": ""
   },
   {
+   "id": 81,
+   "acronym": "Jiji",
+   "name": "時事通信社",
+   "en": "Jiji Press",
+   "country": "Japan",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.jiji.co.jp/en",
+   "emails": [],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+81 3 6800 1111"
+    }
+   ],
+   "sources": [
+    {
+     "t": "Jiji Press: about us",
+     "u": "https://www.jiji.co.jp/en/company/aboutus"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
    "id": 82,
    "acronym": "Kyodo",
    "name": "共同通信社",
@@ -2105,6 +2608,38 @@
     {
      "t": "KUNA: services",
      "u": "https://www.kuna.net.kw/CMSPage.aspx?CategoryID=45&Language=en"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 131,
+   "acronym": "24.kg",
+   "name": "24.kg",
+   "en": "24.kg News Agency",
+   "country": "Kyrgyzstan",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://24.kg/english/",
+   "emails": [
+    {
+     "label": "General",
+     "u": "info",
+     "d": "24.kg"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Reception",
+     "n": "+996 312 660 188"
+    }
+   ],
+   "sources": [
+    {
+     "t": "24.kg website",
+     "u": "https://24.kg/english/"
     }
    ],
    "checked": "2026-10-16",
@@ -2295,6 +2830,42 @@
    ],
    "checked": "2026-10-16",
    "note": ""
+  },
+  {
+   "id": 409,
+   "acronym": "LANA",
+   "name": "وكالة الأنباء الليبية",
+   "en": "Libyan News Agency",
+   "country": "Libya",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://lana.gov.ly",
+   "emails": [
+    {
+     "label": "General",
+     "u": "info",
+     "d": "lana-news.ly"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+218 21 340 2607"
+    },
+    {
+     "label": "Head of editors",
+     "n": "+218 21 340 2139"
+    }
+   ],
+   "sources": [
+    {
+     "t": "LANA: contact us",
+     "u": "https://lana.gov.ly/contact-us.php?lang=en"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "This is the Tripoli-based LANA; a separate LANA operates from Benghazi."
   },
   {
    "id": 219,
@@ -3709,6 +4280,32 @@
    "note": ""
   },
   {
+   "id": 105,
+   "acronym": "Newsis",
+   "name": "뉴시스",
+   "en": "Newsis",
+   "country": "South Korea",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.newsis.com",
+   "emails": [],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+82 2 721 7400"
+    }
+   ],
+   "sources": [
+    {
+     "t": "Newsis: contact",
+     "u": "https://nwww.newsis.com/company/contact"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
    "id": 106,
    "acronym": "Yonhap",
    "name": "연합뉴스",
@@ -4718,6 +5315,27 @@
    "note": "No general newsroom contact could be confirmed."
   },
   {
+   "id": 365,
+   "acronym": "MercoPress",
+   "name": "MercoPress",
+   "en": "South Atlantic News Agency",
+   "country": "Uruguay",
+   "kind": "Regional news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://en.mercopress.com",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "MercoPress: contact us",
+     "u": "https://en.mercopress.com/contact"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "MercoPress takes messages through the contact form on its website."
+  },
+  {
    "id": 139,
    "acronym": "UzA",
    "name": "Oʻzbekiston milliy axborot agentligi",
@@ -4737,6 +5355,32 @@
    ],
    "checked": "2026-10-16",
    "note": "No phone number or email could be confirmed; see the agency’s website."
+  },
+  {
+   "id": 367,
+   "acronym": "AVN",
+   "name": "Agencia Venezolana de Noticias",
+   "en": "Venezuelan News Agency",
+   "country": "Venezuela",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://avn.info.ve",
+   "emails": [],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+58 212 781 2711"
+    }
+   ],
+   "sources": [
+    {
+     "t": "AVN: the agency",
+     "u": "https://avn.info.ve/la-agencia/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
   },
   {
    "id": 112,
