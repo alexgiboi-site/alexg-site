@@ -87,7 +87,7 @@
     </div>
     <div class="field">
       <label for="q">Search</label>
-      <input id="q" type="search" placeholder="Agency name, acronym or city" autocomplete="off">
+      <input id="q" type="search" placeholder="Agency name, acronym or country" autocomplete="off">
     </div>
     <p class="count" id="count" aria-live="polite">Loading agencies…</p>
   </div>
@@ -161,7 +161,7 @@
       el('div', {class: 'ctry'}, a.country),
       el('div', {}, el('h2', {}, a.acronym), names.childNodes.length ? names : null),
       el('div', {class: 'tags'}, el('span', {class: 'tag'}, a.kind), el('span', {class: 'tag'}, a.ownership), a.eana ? el('span', {class: 'tag eana'}, 'EANA member') : null),
-      el('dl', {class: 'contacts'}, row('Website', web), row('Email', emails), row('Phone', phones), a.address ? row('Address', el('span', {class: 'val'}, a.address)) : null),
+      el('dl', {class: 'contacts'}, row('Website', web), row('Email', emails), row('Phone', phones)),
       a.note ? el('p', {class: 'note'}, a.note) : null,
       src);
   }
@@ -169,7 +169,7 @@
   function render() {
     const c = $('country').value, q = $('q').value.trim().toLowerCase();
     const list = DATA.filter(a => (!c || a.country === c) &&
-      (!q || [a.acronym, a.name, a.en, a.country, a.address].join(' ').toLowerCase().includes(q)));
+      (!q || [a.acronym, a.name, a.en, a.country].join(' ').toLowerCase().includes(q)));
     const out = $('results'); out.replaceChildren(...list.map(card));
     const nC = new Set(list.map(a => a.country)).size;
     $('count').textContent = list.length ? `${list.length} ${list.length === 1 ? 'agency' : 'agencies'} in ${nC} ${nC === 1 ? 'country' : 'countries'}` : 'No agency found';
