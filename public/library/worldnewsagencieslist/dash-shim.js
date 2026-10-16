@@ -26,7 +26,7 @@
     onData: function (f) { cbs.push(f); try { f(); } catch (e) { console.error(e); } },
     calc: function (id, def) { calcs[id] = def; order.push(id); store[id] = { status: 'loading', data: [], columns: [], meta: [] }; },
     loader: function () {},
-    setLink: function (p) { try { history.replaceState(null, '', '#' + p); } catch (e) {} },
+    setLink: function (p) { try { history.replaceState(null, '', p === 'funding' ? location.pathname : '#' + p); } catch (e) {} },
     params: function () { return {}; }, setParams: function () {}, resetParams: function () {}, refresh: function () {}
   };
   var pending = Object.keys(files).length;
