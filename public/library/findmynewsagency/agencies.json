@@ -1,5 +1,5 @@
 {
- "edition": "Europe: members of the European Alliance of News Agencies and other national, regional and specialist agencies",
+ "edition": "National news agencies of most countries, the big international agencies, and private, regional and specialist agencies worldwide",
  "updated": "2026-10-16",
  "agencies": [
   {
@@ -223,6 +223,32 @@
    "note": "No phone number or email could be confirmed; see the agency’s website."
   },
   {
+   "id": 327,
+   "acronym": "AICA",
+   "name": "Agencia Informativa Católica Argentina",
+   "en": "Argentine Catholic news agency",
+   "country": "Argentina",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://aica.org",
+   "emails": [],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+54 11 4343 4397"
+    }
+   ],
+   "sources": [
+    {
+     "t": "AICA: contact",
+     "u": "https://aica.org/contacto.php"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
    "id": 330,
    "acronym": "NA",
    "name": "Noticias Argentinas",
@@ -253,6 +279,36 @@
    ],
    "checked": "2026-10-16",
    "note": ""
+  },
+  {
+   "id": 328,
+   "acronym": "Presentes",
+   "name": "Agencia Presentes",
+   "en": "Latin American LGBTI+ news agency",
+   "country": "Argentina",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://agenciapresentes.org",
+   "emails": [
+    {
+     "label": "General",
+     "u": "contacto",
+     "d": "agenciapresentes.org"
+    }
+   ],
+   "phones": [],
+   "sources": [
+    {
+     "t": "Agencia Presentes: the agency",
+     "u": "https://agenciapresentes.org/la-agencia/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "",
+   "also": [
+    "International"
+   ]
   },
   {
    "id": 114,
@@ -959,6 +1015,36 @@
    "note": "No phone number or email could be confirmed; see the agency’s website."
   },
   {
+   "id": 336,
+   "acronym": "ERBOL",
+   "name": "Educación Radiofónica de Bolivia",
+   "en": "ERBOL",
+   "country": "Bolivia",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://erbol.com.bo",
+   "emails": [],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+591 2 220 4011"
+    },
+    {
+     "label": "Switchboard",
+     "n": "+591 2 220 4498"
+    }
+   ],
+   "sources": [
+    {
+     "t": "ERBOL website",
+     "u": "https://erbol.com.bo/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
    "id": 151,
    "acronym": "FENA",
    "name": "Federalna novinska agencija",
@@ -1134,6 +1220,53 @@
    "note": ""
   },
   {
+   "id": 338,
+   "acronym": "Agência Brasília",
+   "name": "Agência Brasília",
+   "en": "Federal District government news agency",
+   "country": "Brazil",
+   "kind": "Regional news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://www.agenciabrasilia.df.gov.br",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "Agência Brasília website",
+     "u": "https://www.agenciabrasilia.df.gov.br/imprensa/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Contacts could not be read automatically; see the agency’s website."
+  },
+  {
+   "id": 339,
+   "acronym": "Agência Câmara",
+   "name": "Agência Câmara de Notícias",
+   "en": "Chamber of Deputies news agency",
+   "country": "Brazil",
+   "kind": "Specialist news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://www.camara.leg.br/noticias",
+   "emails": [],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+55 61 3216 1850"
+    }
+   ],
+   "sources": [
+    {
+     "t": "Agência Câmara: masthead",
+     "u": "https://www2.camara.leg.br/agencia/expediente.html"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
    "id": 343,
    "acronym": "Agência Senado",
    "name": "Agência Senado",
@@ -1160,6 +1293,80 @@
     {
      "t": "Senado Notícias: contact",
      "u": "https://www12.senado.leg.br/noticias/fale-conosco"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 344,
+   "acronym": "Amazônia Real",
+   "name": "Amazônia Real",
+   "en": "Amazon journalism agency",
+   "country": "Brazil",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://amazoniareal.com.br",
+   "emails": [],
+   "phones": [
+    {
+     "label": "Newsroom",
+     "n": "+55 92 98206 3344"
+    }
+   ],
+   "sources": [
+    {
+     "t": "Amazônia Real: masthead",
+     "u": "https://amazoniareal.com.br/expediente/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 341,
+   "acronym": "O Globo",
+   "name": "Agência O Globo",
+   "en": "",
+   "country": "Brazil",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.agenciaoglobo.com.br",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "Agência O Globo website",
+     "u": "https://www.agenciaoglobo.com.br/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "No general email or phone could be confirmed; see the agency’s website."
+  },
+  {
+   "id": 342,
+   "acronym": "Pública",
+   "name": "Agência Pública",
+   "en": "Investigative journalism agency",
+   "country": "Brazil",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://apublica.org",
+   "emails": [
+    {
+     "label": "Republication",
+     "u": "comunicacao",
+     "d": "apublica.org"
+    }
+   ],
+   "phones": [],
+   "sources": [
+    {
+     "t": "Agência Pública: republish",
+     "u": "https://apublica.org/republique/"
     }
    ],
    "checked": "2026-10-16",
@@ -1380,6 +1587,54 @@
    "note": ""
   },
   {
+   "id": 430,
+   "acronym": "CUP",
+   "name": "Canadian University Press",
+   "en": "Student newspaper cooperative",
+   "country": "Canada",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.cup.ca",
+   "emails": [
+    {
+     "label": "Membership",
+     "u": "president",
+     "d": "cup.ca"
+    }
+   ],
+   "phones": [],
+   "sources": [
+    {
+     "t": "Canadian University Press website",
+     "u": "https://www.cup.ca/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 431,
+   "acronym": "QMI",
+   "name": "Agence QMI",
+   "en": "Québecor news agency",
+   "country": "Canada",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.agenceqmi.ca",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "Wikipedia: QMI press agency",
+     "u": "https://en.wikipedia.org/wiki/QMI_press_agency"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Contacts could not be read automatically; see the agency’s website."
+  },
+  {
    "id": 7,
    "acronym": "Inforpress",
    "name": "Inforpress – Agência Cabo-verdiana de Notícias",
@@ -1452,6 +1707,27 @@
    ],
    "checked": "2026-10-16",
    "note": "No phone number or email could be confirmed; see the agency’s website."
+  },
+  {
+   "id": 347,
+   "acronym": "Agencia Uno",
+   "name": "Agencia Uno",
+   "en": "Chilean news photo agency",
+   "country": "Chile",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://agenciauno.cl",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "Agencia Uno website",
+     "u": "https://agenciauno.cl/fotos-de-la-semana/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Contacts could not be read automatically; see the agency’s website."
   },
   {
    "id": 66,
@@ -1880,6 +2156,41 @@
    ],
    "checked": "2026-10-16",
    "note": ""
+  },
+  {
+   "id": 353,
+   "acronym": "ALAI",
+   "name": "Agencia Latinoamericana de Información",
+   "en": "",
+   "country": "Ecuador",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.alainet.org",
+   "emails": [
+    {
+     "label": "General",
+     "u": "alai",
+     "d": "alainet.org"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+593 2 250 5249"
+    }
+   ],
+   "sources": [
+    {
+     "t": "UN civil society profile: ALAI",
+     "u": "https://esango.un.org/civilsociety/showProfileDetail.do?method=printProfile&tab=1&profileCode=1539"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "",
+   "also": [
+    "International"
+   ]
   },
   {
    "id": 370,
@@ -2877,6 +3188,27 @@
    "note": "No phone number or email could be confirmed; see the agency’s website."
   },
   {
+   "id": 355,
+   "acronym": "Prensa Comunitaria",
+   "name": "Prensa Comunitaria",
+   "en": "Community news agency",
+   "country": "Guatemala",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://prensacomunitaria.org",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "Prensa Comunitaria: contact",
+     "u": "https://prensacomunitaria.org/contacto/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Contacts could not be read automatically; see the agency’s website."
+  },
+  {
    "id": 21,
    "acronym": "AGP (Guinea)",
    "name": "Agence Guinéenne de Presse",
@@ -3246,6 +3578,33 @@
    "note": ""
   },
   {
+   "id": 322,
+   "acronym": "Pressenza",
+   "name": "Pressenza",
+   "en": "International press agency for peace and non-violence",
+   "country": "International",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.pressenza.com",
+   "emails": [
+    {
+     "label": "General",
+     "u": "info",
+     "d": "pressenza.com"
+    }
+   ],
+   "phones": [],
+   "sources": [
+    {
+     "t": "Pressenza: contact",
+     "u": "https://www.pressenza.com/contact/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Pressenza lists separate addresses for its language desks on its contact page."
+  },
+  {
    "id": 383,
    "acronym": "IRNA",
    "name": "خبرگزاری جمهوری اسلامی",
@@ -3288,6 +3647,80 @@
    "note": "Contact page could not be read automatically; see the agency’s website."
   },
   {
+   "id": 394,
+   "acronym": "INA",
+   "name": "وكالة الأنباء العراقية",
+   "en": "Iraqi News Agency",
+   "country": "Iraq",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://ina.iq",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "Wikipedia: Iraqi News Agency",
+     "u": "https://en.wikipedia.org/wiki/Iraqi_News_Agency"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Contacts could not be read automatically; see the agency’s website."
+  },
+  {
+   "id": 395,
+   "acronym": "NINA",
+   "name": "الوكالة الوطنية العراقية للأنباء",
+   "en": "National Iraqi News Agency",
+   "country": "Iraq",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://ninanews.com",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "Wikipedia: National Iraqi News Agency",
+     "u": "https://en.wikipedia.org/wiki/National_Iraqi_News_Agency"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Contacts could not be read automatically; see the agency’s website."
+  },
+  {
+   "id": 397,
+   "acronym": "Shafaq",
+   "name": "شفق نيوز",
+   "en": "Shafaq News",
+   "country": "Iraq",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://shafaq.com",
+   "emails": [
+    {
+     "label": "Newsroom",
+     "u": "news",
+     "d": "shafaq.com"
+    },
+    {
+     "label": "General",
+     "u": "info",
+     "d": "shafaq.com"
+    }
+   ],
+   "phones": [],
+   "sources": [
+    {
+     "t": "Shafaq News: contact us",
+     "u": "https://shafaq.com/en/contact-us"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
    "id": 200,
    "acronym": "Storyful",
    "name": "Storyful",
@@ -3310,6 +3743,51 @@
    "also": [
     "United Kingdom"
    ]
+  },
+  {
+   "id": 403,
+   "acronym": "JNS",
+   "name": "Jewish News Syndicate",
+   "en": "",
+   "country": "Israel",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.jns.org",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "JNS: about",
+     "u": "https://www.jns.org/about-jns"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "No general email or phone could be confirmed; see the agency’s website.",
+   "also": [
+    "United States"
+   ]
+  },
+  {
+   "id": 402,
+   "acronym": "TPS",
+   "name": "Tazpit Press Service",
+   "en": "",
+   "country": "Israel",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://tps.co.il",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "TPS: FAQ",
+     "u": "https://tps.co.il/faq/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Contacts could not be read automatically; see the agency’s website."
   },
   {
    "id": 202,
@@ -3830,6 +4308,27 @@
    "note": "Monitoring service for North Korean, Chinese and other foreign broadcasts."
   },
   {
+   "id": 404,
+   "acronym": "Ammon",
+   "name": "عمون",
+   "en": "Ammon News",
+   "country": "Jordan",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.ammonnews.net",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "Wikipedia: Ammon News",
+     "u": "https://en.wikipedia.org/wiki/Ammon_News"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "No general email or phone could be confirmed; see the agency’s website."
+  },
+  {
    "id": 405,
    "acronym": "Petra",
    "name": "وكالة الأنباء الأردنية",
@@ -4161,6 +4660,27 @@
    "note": ""
   },
   {
+   "id": 407,
+   "acronym": "Al Markazia",
+   "name": "الوكالة المركزية",
+   "en": "Central News Agency (Al Markazia)",
+   "country": "Lebanon",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.almarkazia.com",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "Al Markazia: about us",
+     "u": "https://www.almarkazia.com/ar/info/about-us"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "No general email or phone could be confirmed; see the agency’s website."
+  },
+  {
    "id": 408,
    "acronym": "NNA",
    "name": "الوكالة الوطنية للإعلام",
@@ -4428,6 +4948,95 @@
    ],
    "checked": "2026-10-16",
    "note": "No phone number or email could be confirmed; see the agency’s website."
+  },
+  {
+   "id": 358,
+   "acronym": "CIMAC",
+   "name": "CIMAC Noticias",
+   "en": "Women’s news agency",
+   "country": "Mexico",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://cimacnoticias.com.mx",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "CIMAC Noticias: directory",
+     "u": "https://cimacnoticias.com.mx/directorio-cimacnoticias/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "No general email or phone could be confirmed; see the agency’s website."
+  },
+  {
+   "id": 359,
+   "acronym": "NotiPress",
+   "name": "NotiPress",
+   "en": "",
+   "country": "Mexico",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://notipress.mx",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "NotiPress: contact",
+     "u": "https://notipress.mx/empresa/contacto"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "NotiPress takes enquiries only through the contact form on its website."
+  },
+  {
+   "id": 361,
+   "acronym": "Quadratín",
+   "name": "Agencia Quadratín",
+   "en": "",
+   "country": "Mexico",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://mexico.quadratin.com.mx",
+   "emails": [],
+   "phones": [
+    {
+     "label": "Mexico City",
+     "n": "+52 55 5208 2495"
+    }
+   ],
+   "sources": [
+    {
+     "t": "Quadratín México: about us",
+     "u": "https://mexico.quadratin.com.mx/quienes-somos/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 357,
+   "acronym": "Reforma",
+   "name": "Agencia Reforma",
+   "en": "Grupo Reforma news agency",
+   "country": "Mexico",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.reforma.com",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "Wikipedia: Grupo Reforma",
+     "u": "https://en.wikipedia.org/wiki/Grupo_Reforma"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "No general email or phone could be confirmed; see the agency’s website."
   },
   {
    "id": 223,
@@ -5055,6 +5664,27 @@
    "note": "Published contact details found were outdated and are not listed."
   },
   {
+   "id": 412,
+   "acronym": "Ma’an",
+   "name": "وكالة معا الإخبارية",
+   "en": "Ma’an News Agency",
+   "country": "Palestine",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.maannews.net",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "Wikipedia: Ma’an News Agency",
+     "u": "https://en.wikipedia.org/wiki/Ma%27an_News_Agency"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "No general email or phone could be confirmed; see the agency’s website."
+  },
+  {
    "id": 413,
    "acronym": "WAFA",
    "name": "وكالة الأنباء والمعلومات الفلسطينية",
@@ -5075,6 +5705,33 @@
     {
      "t": "WAFA: contact us",
      "u": "https://english.wafa.ps/Home/ContactUs"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 418,
+   "acronym": "Watan",
+   "name": "وكالة وطن للأنباء",
+   "en": "Watan News Agency",
+   "country": "Palestine",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.wattan.net",
+   "emails": [
+    {
+     "label": "Newsroom",
+     "u": "newsroom",
+     "d": "wattan.tv"
+    }
+   ],
+   "phones": [],
+   "sources": [
+    {
+     "t": "Watan: contact us",
+     "u": "https://www.wattan.net/ar/contact-us"
     }
    ],
    "checked": "2026-10-16",
@@ -7995,6 +8652,27 @@
    "note": ""
   },
   {
+   "id": 434,
+   "acronym": "AINA",
+   "name": "Assyrian International News Agency",
+   "en": "",
+   "country": "United States",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.aina.org",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "Wikipedia: Assyrian International News Agency",
+     "u": "https://en.wikipedia.org/wiki/Assyrian_International_News_Agency"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "No general email or phone could be confirmed; see the agency’s website."
+  },
+  {
    "id": 433,
    "acronym": "AP",
    "name": "The Associated Press",
@@ -8014,6 +8692,38 @@
    ],
    "checked": "2026-10-16",
    "note": "No general newsroom email or phone could be confirmed on AP’s own website."
+  },
+  {
+   "id": 436,
+   "acronym": "BCN",
+   "name": "Bay City News",
+   "en": "San Francisco Bay Area news service",
+   "country": "United States",
+   "kind": "Regional news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://baycitynews.com",
+   "emails": [
+    {
+     "label": "Newsroom",
+     "u": "newsroom",
+     "d": "baycitynews.com"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Newsroom",
+     "n": "+1 510 251 8100"
+    }
+   ],
+   "sources": [
+    {
+     "t": "Bay City News: contact",
+     "u": "https://baycitynews.org/contact/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
   },
   {
    "id": 325,
@@ -8037,6 +8747,108 @@
    "note": "Bloomberg takes news tips through its tips page, bloomberg.com/tips."
   },
   {
+   "id": 435,
+   "acronym": "BP",
+   "name": "Baptist Press",
+   "en": "Southern Baptist Convention news service",
+   "country": "United States",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.baptistpress.com",
+   "emails": [
+    {
+     "label": "Submissions",
+     "u": "bpress",
+     "d": "sbc.net"
+    }
+   ],
+   "phones": [],
+   "sources": [
+    {
+     "t": "Baptist Press: contact",
+     "u": "https://www.baptistpress.com/contact/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 437,
+   "acronym": "CNI",
+   "name": "Capitol News Illinois",
+   "en": "Illinois state government news service",
+   "country": "United States",
+   "kind": "Regional news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://capitolnewsillinois.com",
+   "emails": [
+    {
+     "label": "Editors",
+     "u": "editors",
+     "d": "capitolnewsillinois.com"
+    }
+   ],
+   "phones": [],
+   "sources": [
+    {
+     "t": "Capitol News Illinois: contact",
+     "u": "https://capitolnewsillinois.com/about-us/contact/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 440,
+   "acronym": "CNS",
+   "name": "City News Service",
+   "en": "Southern California news wire",
+   "country": "United States",
+   "kind": "Regional news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.socalnews.com",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "City News Service: contacts",
+     "u": "https://www.socalnews.com/contact.html"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Contacts could not be read automatically; see the agency’s website."
+  },
+  {
+   "id": 441,
+   "acronym": "Courthouse News",
+   "name": "Courthouse News Service",
+   "en": "Court and legal news service",
+   "country": "United States",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.courthousenews.com",
+   "emails": [
+    {
+     "label": "Subscriber support",
+     "u": "support",
+     "d": "courthousenews.com"
+    }
+   ],
+   "phones": [],
+   "sources": [
+    {
+     "t": "Courthouse News: support",
+     "u": "https://courthousenews.com/support/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
    "id": 326,
    "acronym": "Dow Jones Newswires",
    "name": "Dow Jones Newswires",
@@ -8056,6 +8868,274 @@
    ],
    "checked": "2026-10-16",
    "note": "No general newsroom contact could be confirmed."
+  },
+  {
+   "id": 442,
+   "acronym": "JTA",
+   "name": "Jewish Telegraphic Agency",
+   "en": "",
+   "country": "United States",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.jta.org",
+   "emails": [
+    {
+     "label": "Newsdesk",
+     "u": "newsdesk",
+     "d": "jta.org"
+    },
+    {
+     "label": "General",
+     "u": "info",
+     "d": "jta.org"
+    }
+   ],
+   "phones": [],
+   "sources": [
+    {
+     "t": "JTA: contact",
+     "u": "https://www.jta.org/contact"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 443,
+   "acronym": "OSV News",
+   "name": "OSV News",
+   "en": "Catholic news agency (Our Sunday Visitor)",
+   "country": "United States",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.osvnews.com",
+   "emails": [
+    {
+     "label": "General",
+     "u": "osvnews",
+     "d": "osv.com"
+    }
+   ],
+   "phones": [],
+   "sources": [
+    {
+     "t": "OSV News: about",
+     "u": "https://www.osvnews.com/about/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 444,
+   "acronym": "PNS",
+   "name": "Public News Service",
+   "en": "",
+   "country": "United States",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.publicnewsservice.org",
+   "emails": [],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+1 303 448 9105"
+    }
+   ],
+   "sources": [
+    {
+     "t": "Public News Service: contact",
+     "u": "https://www.newsservice.org/contact.html"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 446,
+   "acronym": "RNS",
+   "name": "Religion News Service",
+   "en": "",
+   "country": "United States",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://religionnews.com",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "RNS: contact",
+     "u": "https://religionnews.com/contact/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "RNS takes enquiries through the contact form on its website."
+  },
+  {
+   "id": 445,
+   "acronym": "RTTNews",
+   "name": "RTTNews",
+   "en": "Financial news agency",
+   "country": "United States",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.rttnews.com",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "Crunchbase: RTTNews",
+     "u": "https://www.crunchbase.com/organization/rtt-news"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "No general email or phone could be confirmed; see the agency’s website."
+  },
+  {
+   "id": 448,
+   "acronym": "SHNS",
+   "name": "State House News Service",
+   "en": "Massachusetts state government news service",
+   "country": "United States",
+   "kind": "Regional news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.statehousenews.com",
+   "emails": [
+    {
+     "label": "Newsroom",
+     "u": "news",
+     "d": "statehousenews.com"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Newsroom",
+     "n": "+1 617 722 2439"
+    }
+   ],
+   "sources": [
+    {
+     "t": "SHNS: contact",
+     "u": "https://www.statehousenews.com/site/contact.html"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 447,
+   "acronym": "Splash",
+   "name": "Splash News",
+   "en": "Celebrity photo and video agency",
+   "country": "United States",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.splashnews.com",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "Wikipedia: Splash News",
+     "u": "https://en.wikipedia.org/wiki/Splash_News"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "No general email or phone could be confirmed; see the agency’s website."
+  },
+  {
+   "id": 450,
+   "acronym": "TML",
+   "name": "The Media Line",
+   "en": "Middle East news agency",
+   "country": "United States",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://themedialine.org",
+   "emails": [
+    {
+     "label": "General",
+     "u": "TMLUSA",
+     "d": "themedialine.org"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+1 917 573 9731"
+    }
+   ],
+   "sources": [
+    {
+     "t": "Arab America directory: The Media Line",
+     "u": "https://www.arabamerica.com/business-directory/18140/the-media-line-news-agency-5/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Details from a business directory.",
+   "also": [
+    "Israel"
+   ]
+  },
+  {
+   "id": 452,
+   "acronym": "UPI",
+   "name": "United Press International",
+   "en": "",
+   "country": "United States",
+   "kind": "International news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.upi.com",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "Wikipedia: United Press International",
+     "u": "https://en.wikipedia.org/wiki/United_Press_International"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "No general email or phone could be confirmed; see the agency’s website."
+  },
+  {
+   "id": 451,
+   "acronym": "UWIRE",
+   "name": "UWIRE",
+   "en": "College news wire",
+   "country": "United States",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.uwire.com",
+   "emails": [
+    {
+     "label": "General",
+     "u": "info",
+     "d": "uwire.com"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+1 312 854 7606"
+    }
+   ],
+   "sources": [
+    {
+     "t": "UWIRE: contact",
+     "u": "https://www.uwire.com/contact/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
   },
   {
    "id": 365,
@@ -8145,6 +9225,27 @@
    ],
    "checked": "2026-10-16",
    "note": ""
+  },
+  {
+   "id": 366,
+   "acronym": "ACN",
+   "name": "Agencia Carabobeña de Noticias",
+   "en": "",
+   "country": "Venezuela",
+   "kind": "Regional news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://acn.com.ve",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "ACN: about us",
+     "u": "https://acn.com.ve/quienes-somos/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Contacts could not be read automatically; see the agency’s website."
   },
   {
    "id": 367,
