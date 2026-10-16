@@ -498,6 +498,27 @@
    "note": ""
   },
   {
+   "id": 3,
+   "acronym": "BOPA",
+   "name": "Botswana Press Agency",
+   "en": "",
+   "country": "Botswana",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://dailynews.gov.bw",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "Daily News: about us",
+     "u": "https://dailynews.gov.bw/content/65385/about-us"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "BOPA publishes the Daily News; it takes messages through the contact page on that website."
+  },
+  {
    "id": 337,
    "acronym": "Agência Brasil",
    "name": "Agência Brasil (EBC)",
@@ -592,6 +613,27 @@
    "note": "No phone number or email could be confirmed; see the agency’s website."
   },
   {
+   "id": 5,
+   "acronym": "ABP (Burundi)",
+   "name": "Agence Burundaise de Presse",
+   "en": "Burundi Press Agency",
+   "country": "Burundi",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://abpinfo.bi",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "ABP: about us",
+     "u": "https://en.abpinfo.bi/about-us/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "No phone number or email could be confirmed; see the agency’s website."
+  },
+  {
    "id": 432,
    "acronym": "CP",
    "name": "The Canadian Press",
@@ -652,6 +694,27 @@
    ],
    "checked": "2026-10-16",
    "note": ""
+  },
+  {
+   "id": 9,
+   "acronym": "ATPE",
+   "name": "Agence Tchadienne de Presse et d’Édition",
+   "en": "Chad Press and Publishing Agency",
+   "country": "Chad",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://atpe.td",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "ATPE: contact",
+     "u": "https://atpe.td/contact/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "No phone number or email could be confirmed; see the agency’s website."
   },
   {
    "id": 68,
@@ -939,6 +1002,38 @@
    "note": ""
   },
   {
+   "id": 14,
+   "acronym": "ADI",
+   "name": "Agence Djiboutienne d’Information",
+   "en": "Djibouti News Agency",
+   "country": "Djibouti",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://www.adi.dj",
+   "emails": [
+    {
+     "label": "General",
+     "u": "contact",
+     "d": "adi.dj"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+253 21 35 40 13"
+    }
+   ],
+   "sources": [
+    {
+     "t": "ADI: contact",
+     "u": "https://www.adi.dj/contact"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
    "id": 370,
    "acronym": "MENA",
    "name": "وكالة أنباء الشرق الأوسط",
@@ -1180,6 +1275,32 @@
     {
      "t": "AGP: legal notice",
      "u": "https://agpgabon.ga/legal-notice/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 19,
+   "acronym": "GAMNA",
+   "name": "Gambia News Agency",
+   "en": "",
+   "country": "Gambia",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://gamna.gov.gm",
+   "emails": [],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+220 449 8766"
+    }
+   ],
+   "sources": [
+    {
+     "t": "Government of The Gambia: GAMNA",
+     "u": "https://gambia.gov.gm/gambia-news-agency/"
     }
    ],
    "checked": "2026-10-16",
@@ -1455,6 +1576,32 @@
    ],
    "checked": "2026-10-16",
    "note": "No phone number or email could be confirmed; see the agency’s website."
+  },
+  {
+   "id": 21,
+   "acronym": "AGP (Guinea)",
+   "name": "Agence Guinéenne de Presse",
+   "en": "Guinean Press Agency",
+   "country": "Guinea",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://agpguinee.com",
+   "emails": [],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+224 622 13 64 51"
+    }
+   ],
+   "sources": [
+    {
+     "t": "AGP Guinée website",
+     "u": "https://agpguinee.com/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
   },
   {
    "id": 196,
@@ -2086,6 +2233,38 @@
    "note": ""
   },
   {
+   "id": 1001,
+   "acronym": "LENA",
+   "name": "Lesotho News Agency",
+   "en": "",
+   "country": "Lesotho",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://www.lena.gov.ls",
+   "emails": [
+    {
+     "label": "General",
+     "u": "info",
+     "d": "lena.gov.ls"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+266 2232 5317"
+    }
+   ],
+   "sources": [
+    {
+     "t": "LENA: contact",
+     "u": "https://www.lena.gov.ls/contact-4/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
    "id": 24,
    "acronym": "LINA",
    "name": "Liberia News Agency",
@@ -2137,6 +2316,27 @@
    ],
    "checked": "2026-10-16",
    "note": "No contact page could be read; see the agency’s website."
+  },
+  {
+   "id": 26,
+   "acronym": "MANA",
+   "name": "Malawi News Agency",
+   "en": "",
+   "country": "Malawi",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://manaonline.gov.mw",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "MANA online",
+     "u": "https://manaonline.gov.mw/index.php?Itemid=107&id=2&option=com_content&view=category"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "No phone number or email could be confirmed; see the agency’s website."
   },
   {
    "id": 87,
@@ -2899,6 +3099,33 @@
    "note": ""
   },
   {
+   "id": 35,
+   "acronym": "ACI",
+   "name": "Agence Congolaise d’Information",
+   "en": "Congolese Information Agency",
+   "country": "Republic of the Congo",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://www.aci.cg",
+   "emails": [
+    {
+     "label": "General",
+     "u": "contact",
+     "d": "aci.cg"
+    }
+   ],
+   "phones": [],
+   "sources": [
+    {
+     "t": "ACI website",
+     "u": "https://www.aci.cg/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
    "id": 238,
    "acronym": "AGERPRES",
    "name": "Agenția Națională de Presă AGERPRES",
@@ -3300,6 +3527,59 @@
     {
      "t": "EANA member directory",
      "u": "https://newsalliance.org/members/tanjug-news-agency-novinska-agencija-tanjug"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 40,
+   "acronym": "SNA",
+   "name": "Seychelles News Agency",
+   "en": "",
+   "country": "Seychelles",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "http://www.seychellesnewsagency.com",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "Seychelles News Agency: contact us",
+     "u": "http://www.seychellesnewsagency.com/about/contact_us"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "No phone number or email could be confirmed; see the agency’s website."
+  },
+  {
+   "id": 41,
+   "acronym": "SLENA",
+   "name": "Sierra Leone News Agency",
+   "en": "",
+   "country": "Sierra Leone",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://www.slena.gov.sl",
+   "emails": [
+    {
+     "label": "General",
+     "u": "info",
+     "d": "slena.gov.sl"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+232 79 107752"
+    }
+   ],
+   "sources": [
+    {
+     "t": "SLENA: terms and conditions",
+     "u": "https://www.slena.gov.sl/terms-and-conditions"
     }
    ],
    "checked": "2026-10-16",
@@ -4047,6 +4327,27 @@
    ],
    "checked": "2026-10-16",
    "note": "İHA publishes its email addresses on its contact page."
+  },
+  {
+   "id": 51,
+   "acronym": "UMC",
+   "name": "Uganda Media Centre",
+   "en": "",
+   "country": "Uganda",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://www.mediacentre.go.ug",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "Uganda Media Centre: contact us",
+     "u": "https://www.mediacentre.go.ug/contact-us"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "No phone number or email could be confirmed; see the agency’s website."
   },
   {
    "id": 299,
