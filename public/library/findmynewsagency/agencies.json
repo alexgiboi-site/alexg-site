@@ -1,5 +1,5 @@
 {
- "edition": "Europe, part 1: members of the European Alliance of News Agencies",
+ "edition": "Europe: members of the European Alliance of News Agencies and other national, regional and specialist agencies",
  "updated": "2026-10-16",
  "agencies": [
   {
@@ -119,6 +119,38 @@
    "note": ""
   },
   {
+   "id": 146,
+   "acronym": "BelTA",
+   "name": "Белорусское телеграфное агентство",
+   "en": "Belarusian Telegraph Agency",
+   "country": "Belarus",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://www.belta.by",
+   "emails": [
+    {
+     "label": "Newsdesk",
+     "u": "oper",
+     "d": "belta.by"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+375 17 311 33 20"
+    }
+   ],
+   "sources": [
+    {
+     "t": "BelTA: contacts",
+     "u": "https://www.belta.by/contacts/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
    "id": 149,
    "acronym": "Belga",
    "name": "Belga News Agency",
@@ -179,6 +211,38 @@
     {
      "t": "EANA member directory",
      "u": "https://newsalliance.org/members/federal-news-agency"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 153,
+   "acronym": "SRNA",
+   "name": "Novinska agencija Republike Srpske",
+   "en": "News Agency of Republika Srpska",
+   "country": "Bosnia and Herzegovina",
+   "kind": "Regional news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://www.srna.rs",
+   "emails": [
+    {
+     "label": "Newsroom",
+     "u": "srna",
+     "d": "srna.rs"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Newsdesk",
+     "n": "+387 55 211 555"
+    }
+   ],
+   "sources": [
+    {
+     "t": "SRNA: contact",
+     "u": "https://www.srna.rs/en/kontakt"
     }
    ],
    "checked": "2026-10-16",
@@ -295,6 +359,38 @@
    "note": ""
   },
   {
+   "id": 163,
+   "acronym": "TAK",
+   "name": "Türk Ajansı Kıbrıs",
+   "en": "Turkish Agency Cyprus",
+   "country": "Cyprus (north)",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://tak.gov.ct.tr",
+   "emails": [
+    {
+     "label": "General",
+     "u": "turkajansikibris",
+     "d": "gmail.com"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "444 18 81"
+    }
+   ],
+   "sources": [
+    {
+     "t": "TAK: contact",
+     "u": "https://tak.gov.ct.tr/iletisim"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
    "id": 164,
    "acronym": "ČTK",
    "name": "Česká tisková kancelář",
@@ -357,6 +453,50 @@
    ],
    "checked": "2026-10-16",
    "note": ""
+  },
+  {
+   "id": 166,
+   "acronym": "BNS",
+   "name": "Baltic News Service",
+   "en": "",
+   "country": "Estonia",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.bns.ee",
+   "emails": [
+    {
+     "label": "General",
+     "u": "bns",
+     "d": "bns.ee"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Tallinn, duty editor",
+     "n": "+372 610 8832"
+    },
+    {
+     "label": "Vilnius office",
+     "n": "+370 5 205 8501"
+    }
+   ],
+   "sources": [
+    {
+     "t": "BNS Estonia: contacts",
+     "u": "https://www.bns.ee/en/contact_new/"
+    },
+    {
+     "t": "BNS Lithuania: about",
+     "u": "https://bns.lt/en/apie"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Covers Estonia, Latvia and Lithuania.",
+   "also": [
+    "Latvia",
+    "Lithuania"
+   ]
   },
   {
    "id": 167,
@@ -453,6 +593,133 @@
    "note": ""
   },
   {
+   "id": 186,
+   "acronym": "dpa-AFX",
+   "name": "dpa-AFX Wirtschaftsnachrichten",
+   "en": "dpa-AFX financial news",
+   "country": "Germany",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.dpa-afx.de",
+   "emails": [],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+49 69 920 22 400"
+    }
+   ],
+   "sources": [
+    {
+     "t": "dpa-AFX: contact",
+     "u": "https://www.dpa-afx.de/en/kontakt"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 187,
+   "acronym": "dts",
+   "name": "dts Nachrichtenagentur",
+   "en": "",
+   "country": "Germany",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.dts-nachrichtenagentur.de",
+   "emails": [
+    {
+     "label": "Editorial service",
+     "u": "redaktionsservice",
+     "d": "dts-nachrichtenagentur.de"
+    },
+    {
+     "label": "Press releases",
+     "u": "pressemitteilungen",
+     "d": "dts-nachrichtenagentur.de"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Central newsroom",
+     "n": "+49 345 580537 60"
+    }
+   ],
+   "sources": [
+    {
+     "t": "dts: imprint",
+     "u": "https://www.dts-nachrichtenagentur.de/impressum"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 179,
+   "acronym": "epd",
+   "name": "Evangelischer Pressedienst",
+   "en": "Protestant Press Service",
+   "country": "Germany",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.epd.de",
+   "emails": [
+    {
+     "label": "General",
+     "u": "info",
+     "d": "epd.de"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Central newsroom",
+     "n": "+49 69 58098 129"
+    }
+   ],
+   "sources": [
+    {
+     "t": "epd: contact",
+     "u": "https://www.epd.de/kontakt"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 181,
+   "acronym": "KNA",
+   "name": "Katholische Nachrichten-Agentur",
+   "en": "Catholic News Agency",
+   "country": "Germany",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.kna.de",
+   "emails": [
+    {
+     "label": "Sales",
+     "u": "vertrieb",
+     "d": "kna.de"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+49 228 26000 0"
+    }
+   ],
+   "sources": [
+    {
+     "t": "KNA: imprint",
+     "u": "https://www.kna.de/impressum"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
    "id": 194,
    "acronym": "ANA-MPA",
    "name": "Athens-Macedonian News Agency",
@@ -506,6 +773,91 @@
    "note": "No public phone number or email found. Hungary's public media are being reorganised under a law passed in June 2026."
   },
   {
+   "id": 202,
+   "acronym": "Adnkronos",
+   "name": "Adnkronos",
+   "en": "",
+   "country": "Italy",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.adnkronos.com",
+   "emails": [
+    {
+     "label": "Newsroom office",
+     "u": "segreteria.redazione",
+     "d": "adnkronos.com"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+39 06 58071"
+    }
+   ],
+   "sources": [
+    {
+     "t": "Adnkronos: contacts",
+     "u": "https://corporate.adnkronos.com/en/contacts.html"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 203,
+   "acronym": "Agenparl",
+   "name": "Agenparl",
+   "en": "Italian parliamentary news agency",
+   "country": "Italy",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://agenparl.eu",
+   "emails": [
+    {
+     "label": "Press releases",
+     "u": "redazione",
+     "d": "agenparl.eu"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+39 06 9357 9408"
+    }
+   ],
+   "sources": [
+    {
+     "t": "Agenparl website",
+     "u": "https://agenparl.eu/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 205,
+   "acronym": "AGI",
+   "name": "Agenzia Giornalistica Italia",
+   "en": "",
+   "country": "Italy",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.agi.it",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "AGI website",
+     "u": "https://www.agi.it/info/organizzazione/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "AGI’s website does not allow automated reading; its contact page lists the newsroom contacts."
+  },
+  {
    "id": 206,
    "acronym": "ANSA",
    "name": "Agenzia Nazionale Stampa Associata",
@@ -536,6 +888,106 @@
     {
      "t": "EANA member directory",
      "u": "https://newsalliance.org/members/agenzia-nazionale-stampa-associata"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 204,
+   "acronym": "Dire",
+   "name": "Agenzia Dire",
+   "en": "",
+   "country": "Italy",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.dire.it",
+   "emails": [
+    {
+     "label": "Rome office",
+     "u": "segreteria.roma",
+     "d": "dire.it"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Rome office",
+     "n": "+39 06 4549 9531"
+    }
+   ],
+   "sources": [
+    {
+     "t": "Dire: contacts",
+     "u": "https://www.dire.it/contatti/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 211,
+   "acronym": "Italpress",
+   "name": "Italpress",
+   "en": "",
+   "country": "Italy",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.italpress.com",
+   "emails": [
+    {
+     "label": "General",
+     "u": "info",
+     "d": "italpress.com"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+39 091 589674"
+    }
+   ],
+   "sources": [
+    {
+     "t": "Italpress: contacts",
+     "u": "https://www.italpress.com/contatti/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 212,
+   "acronym": "LaPresse",
+   "name": "LaPresse",
+   "en": "",
+   "country": "Italy",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.lapresse.it",
+   "emails": [
+    {
+     "label": "Rome newsroom",
+     "u": "redazione.roma",
+     "d": "lapresse.it"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Rome newsroom",
+     "n": "+39 06 6790080"
+    },
+    {
+     "label": "Milan",
+     "n": "+39 02 26305578"
+    }
+   ],
+   "sources": [
+    {
+     "t": "LaPresse: contacts",
+     "u": "https://www.lapresse.it/contatti/"
     }
    ],
    "checked": "2026-10-16",
@@ -605,6 +1057,122 @@
    "note": ""
   },
   {
+   "id": 219,
+   "acronym": "ELTA",
+   "name": "Naujienų agentūra ELTA",
+   "en": "Lithuanian news agency",
+   "country": "Lithuania",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.elta.lt",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "Wikipedia: ELTA",
+     "u": "https://en.wikipedia.org/wiki/ELTA"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "No contact page could be read; see the agency’s website."
+  },
+  {
+   "id": 223,
+   "acronym": "Infotag",
+   "name": "Infotag",
+   "en": "",
+   "country": "Moldova",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.infotag.md",
+   "emails": [
+    {
+     "label": "General",
+     "u": "office",
+     "d": "infotag.md"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+373 22 23 49 30"
+    }
+   ],
+   "sources": [
+    {
+     "t": "Infotag: contacts",
+     "u": "https://www.infotag.md/contacts-ro/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 224,
+   "acronym": "Moldpres",
+   "name": "Agenția Informațională de Stat Moldpres",
+   "en": "Moldpres State News Agency",
+   "country": "Moldova",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://www.moldpres.md",
+   "emails": [
+    {
+     "label": "Newsroom",
+     "u": "inform",
+     "d": "moldpres.gov.md"
+    },
+    {
+     "label": "Reception",
+     "u": "anticamera",
+     "d": "moldpres.gov.md"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Reception",
+     "n": "+373 22 23 34 28"
+    }
+   ],
+   "sources": [
+    {
+     "t": "Moldpres: contacts",
+     "u": "https://www.moldpres.md/contacte"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 225,
+   "acronym": "MINA",
+   "name": "Montenegrin News Agency",
+   "en": "",
+   "country": "Montenegro",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://mina.news",
+   "emails": [],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+382 20 610 100"
+    }
+   ],
+   "sources": [
+    {
+     "t": "MINA: contacts",
+     "u": "https://mina.news/page/kontakti"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
    "id": 226,
    "acronym": "ANP",
    "name": "Algemeen Nederlands Persbureau",
@@ -631,6 +1199,53 @@
    "note": ""
   },
   {
+   "id": 229,
+   "acronym": "MakFax",
+   "name": "Независна новинска агенција МАКФАКС",
+   "en": "MakFax",
+   "country": "North Macedonia",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://makfax.com.mk",
+   "emails": [],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+389 78 499 783"
+    }
+   ],
+   "sources": [
+    {
+     "t": "MakFax: contact",
+     "u": "https://makfax.com.mk/kontakt/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 230,
+   "acronym": "MIA",
+   "name": "Медиумска информативна агенција",
+   "en": "Media Information Agency",
+   "country": "North Macedonia",
+   "kind": "National news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://mia.mk",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "MIA website",
+     "u": "https://mia.mk/en"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "MIA’s website does not allow automated reading, so its contact details are not listed here yet. Its imprint page lists them."
+  },
+  {
    "id": 232,
    "acronym": "NTB",
    "name": "Norsk Telegrambyrå",
@@ -651,6 +1266,38 @@
     {
      "t": "EANA member directory",
      "u": "https://newsalliance.org/members/norsk-telegrambyra-as"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 233,
+   "acronym": "IAR",
+   "name": "Informacyjna Agencja Radiowa",
+   "en": "Polish Radio news agency",
+   "country": "Poland",
+   "kind": "Specialist news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://www.polskieradio.pl/78,informacyjna-agencja-radiowa",
+   "emails": [
+    {
+     "label": "Secretariat",
+     "u": "sekretariat.iar",
+     "d": "polskieradio.pl"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Secretariat",
+     "n": "+48 22 645 99 30"
+    }
+   ],
+   "sources": [
+    {
+     "t": "Polskie Radio: IAR contact",
+     "u": "https://www.polskieradio.pl/78,informacyjna-agencja-radiowa/966,kontakt"
     }
    ],
    "checked": "2026-10-16",
@@ -751,6 +1398,222 @@
    "note": ""
   },
   {
+   "id": 242,
+   "acronym": "RADOR",
+   "name": "Agenția de presă RADOR",
+   "en": "Radio Romania news agency",
+   "country": "Romania",
+   "kind": "Specialist news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://www.rador.ro",
+   "emails": [
+    {
+     "label": "General",
+     "u": "rador",
+     "d": "radioromania.ro"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Newsroom",
+     "n": "+40 21 303 1483"
+    },
+    {
+     "label": "Secretariat",
+     "n": "+40 21 303 1249"
+    }
+   ],
+   "sources": [
+    {
+     "t": "RADOR: contact",
+     "u": "https://www.rador.ro/contact/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 246,
+   "acronym": "Fergana",
+   "name": "Фергана",
+   "en": "Fergana News Agency",
+   "country": "Russia",
+   "kind": "Regional news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://fergana.news",
+   "emails": [
+    {
+     "label": "Editorial",
+     "u": "ferghana",
+     "d": "ferghana.ru"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Editorial secretary",
+     "n": "+7 985 072 76 11"
+    }
+   ],
+   "sources": [
+    {
+     "t": "Fergana: about",
+     "u": "https://en.fergana.news/about/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Covers Central Asia; editorial office in Moscow."
+  },
+  {
+   "id": 248,
+   "acronym": "Interfax",
+   "name": "Интерфакс",
+   "en": "Interfax",
+   "country": "Russia",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.interfax.ru",
+   "emails": [
+    {
+     "label": "Political news",
+     "u": "opi",
+     "d": "interfax.ru"
+    },
+    {
+     "label": "Business news",
+     "u": "business",
+     "d": "interfax.ru"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+7 499 250 98 40"
+    }
+   ],
+   "sources": [
+    {
+     "t": "Interfax: contacts",
+     "u": "https://www.interfax.ru/contacts"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 257,
+   "acronym": "Regnum",
+   "name": "ИА REGNUM",
+   "en": "REGNUM News Agency",
+   "country": "Russia",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://regnum.ru",
+   "emails": [
+    {
+     "label": "General",
+     "u": "info",
+     "d": "regnum.ru"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+7 495 645 80 75"
+    }
+   ],
+   "sources": [
+    {
+     "t": "REGNUM: contacts",
+     "u": "https://regnum.ru/information/contacts"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 261,
+   "acronym": "TASS",
+   "name": "ТАСС",
+   "en": "Russian News Agency TASS",
+   "country": "Russia",
+   "kind": "International news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://tass.com",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "TASS website",
+     "u": "https://tass.com"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "The only contact page found dates from 2010, so its details are not listed. TASS’s membership of the European Alliance of News Agencies is suspended."
+  },
+  {
+   "id": 264,
+   "acronym": "Beta",
+   "name": "Novinska agencija Beta",
+   "en": "Beta News Agency",
+   "country": "Serbia",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://beta.rs",
+   "emails": [],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+381 11 3602 400"
+    }
+   ],
+   "sources": [
+    {
+     "t": "Beta: contact",
+     "u": "https://beta.rs/kontakt"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 265,
+   "acronym": "FoNet",
+   "name": "FoNet",
+   "en": "",
+   "country": "Serbia",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://fonet.rs",
+   "emails": [
+    {
+     "label": "Newsroom",
+     "u": "redakcija",
+     "d": "fonet.rs"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+381 11 30 30 680"
+    }
+   ],
+   "sources": [
+    {
+     "t": "FoNet: contact",
+     "u": "https://fonet.rs/kontakt.html"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
    "id": 266,
    "acronym": "Tanjug",
    "name": "Novinska agencija Tanjug",
@@ -777,6 +1640,33 @@
     {
      "t": "EANA member directory",
      "u": "https://newsalliance.org/members/tanjug-news-agency-novinska-agencija-tanjug"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 268,
+   "acronym": "SITA",
+   "name": "SITA Slovenská tlačová agentúra",
+   "en": "SITA Slovak News Agency",
+   "country": "Slovakia",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://sita.sk",
+   "emails": [
+    {
+     "label": "Newsroom",
+     "u": "portal",
+     "d": "sita.sk"
+    }
+   ],
+   "phones": [],
+   "sources": [
+    {
+     "t": "SITA: contacts",
+     "u": "https://sita.sk/o-nas/kontakty/"
     }
    ],
    "checked": "2026-10-16",
@@ -847,6 +1737,38 @@
    "note": ""
   },
   {
+   "id": 274,
+   "acronym": "ACN",
+   "name": "Agència Catalana de Notícies",
+   "en": "Catalan News Agency",
+   "country": "Spain",
+   "kind": "Regional news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://www.acn.cat",
+   "emails": [
+    {
+     "label": "Sales",
+     "u": "comercial",
+     "d": "acn.cat"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+34 935 531 416"
+    }
+   ],
+   "sources": [
+    {
+     "t": "ACN: company",
+     "u": "https://www.acn.cat/company"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Covers Catalonia."
+  },
+  {
    "id": 272,
    "acronym": "EFE",
    "name": "Agencia EFE",
@@ -867,6 +1789,96 @@
     {
      "t": "EANA member directory",
      "u": "https://newsalliance.org/members/agencia-efe-s-a"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 278,
+   "acronym": "Europa Press",
+   "name": "Europa Press",
+   "en": "",
+   "country": "Spain",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.europapress.es",
+   "emails": [],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+34 91 359 26 00"
+    }
+   ],
+   "sources": [
+    {
+     "t": "Europa Press: legal notice",
+     "u": "https://www.europapress.tv/legal"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 273,
+   "acronym": "ICAL",
+   "name": "Agencia de Noticias Ical",
+   "en": "",
+   "country": "Spain",
+   "kind": "Regional news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.agenciaical.es",
+   "emails": [
+    {
+     "label": "Newsroom",
+     "u": "redaccion",
+     "d": "agenciaical.es"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+34 983 325 000"
+    }
+   ],
+   "sources": [
+    {
+     "t": "Castilla y León Económica: ICAL",
+     "u": "https://www.castillayleoneconomica.es/empresa/agencia-de-noticias-ical/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Covers Castile and León."
+  },
+  {
+   "id": 280,
+   "acronym": "Servimedia",
+   "name": "Servimedia",
+   "en": "",
+   "country": "Spain",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.servimedia.es",
+   "emails": [
+    {
+     "label": "General",
+     "u": "servimedia",
+     "d": "servimedia.es"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Newsroom",
+     "n": "+34 91 545 01 00"
+    }
+   ],
+   "sources": [
+    {
+     "t": "Servimedia: contact",
+     "u": "https://www.servimedia.es/quienes-somos/contactar"
     }
    ],
    "checked": "2026-10-16",
@@ -899,6 +1911,42 @@
     {
      "t": "EANA member directory",
      "u": "https://newsalliance.org/members/tidningarnas-telegrambyrå"
+    },
+    {
+     "t": "TT: contact",
+     "u": "https://tt.se/kontakt"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 285,
+   "acronym": "AWP",
+   "name": "AWP Finanznachrichten",
+   "en": "Swiss financial news agency",
+   "country": "Switzerland",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.awp.ch",
+   "emails": [
+    {
+     "label": "Newsroom",
+     "u": "redakt",
+     "d": "awp.ch"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+41 43 960 57 00"
+    }
+   ],
+   "sources": [
+    {
+     "t": "AWP: contact",
+     "u": "https://www.awp.ch/contact"
     }
    ],
    "checked": "2026-10-16",
@@ -973,6 +2021,152 @@
    "note": ""
   },
   {
+   "id": 298,
+   "acronym": "İHA",
+   "name": "İhlas Haber Ajansı",
+   "en": "Ihlas News Agency",
+   "country": "Türkiye",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.iha.com.tr",
+   "emails": [],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+90 212 454 33 33"
+    }
+   ],
+   "sources": [
+    {
+     "t": "İHA: contact",
+     "u": "https://www.iha.com.tr/iletisim"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "İHA publishes its email addresses on its contact page."
+  },
+  {
+   "id": 299,
+   "acronym": "ArmyInform",
+   "name": "АрміяInform",
+   "en": "ArmyInform (Ministry of Defence)",
+   "country": "Ukraine",
+   "kind": "Specialist news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://armyinform.com.ua",
+   "emails": [
+    {
+     "label": "Editorial",
+     "u": "press",
+     "d": "armyinform.com.ua"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+380 93 456 88 92"
+    }
+   ],
+   "sources": [
+    {
+     "t": "ArmyInform: about us",
+     "u": "https://armyinform.com.ua/en/about-us-2/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 301,
+   "acronym": "Interfax-Ukraine",
+   "name": "Інтерфакс-Україна",
+   "en": "Interfax-Ukraine",
+   "country": "Ukraine",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://interfax.com.ua",
+   "emails": [],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+380 44 270 74 65"
+    }
+   ],
+   "sources": [
+    {
+     "t": "Interfax-Ukraine: about",
+     "u": "https://en.interfax.com.ua/about.html"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 303,
+   "acronym": "RBC-Ukraine",
+   "name": "РБК-Україна",
+   "en": "RBC-Ukraine",
+   "country": "Ukraine",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.rbc.ua",
+   "emails": [
+    {
+     "label": "Press releases",
+     "u": "news",
+     "d": "rbc.ua"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Editorial",
+     "n": "+380 44 593 29 23"
+    },
+    {
+     "label": "Reception",
+     "n": "+380 44 593 39 39"
+    }
+   ],
+   "sources": [
+    {
+     "t": "RBC-Ukraine: contacts",
+     "u": "https://newsukraine.rbc.ua/contacts.shtml"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 306,
+   "acronym": "Ukrainian News",
+   "name": "Українські новини",
+   "en": "Ukrainian News Agency",
+   "country": "Ukraine",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://ukranews.com",
+   "emails": [],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+380 50 447 83 47"
+    }
+   ],
+   "sources": [
+    {
+     "t": "Ukrainian News: contacts",
+     "u": "https://ukranews.com/en/contacts"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
    "id": 307,
    "acronym": "Ukrinform",
    "name": "Укрінформ",
@@ -999,6 +2193,64 @@
     {
      "t": "EANA member directory",
      "u": "https://newsalliance.org/members/ukranian-national-news-agency"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 304,
+   "acronym": "UNIAN",
+   "name": "УНІАН",
+   "en": "Ukrainian Independent Information Agency",
+   "country": "Ukraine",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.unian.info",
+   "emails": [
+    {
+     "label": "General",
+     "u": "unian.headquoters",
+     "d": "unian.net"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+380 44 498 07 60"
+    }
+   ],
+   "sources": [
+    {
+     "t": "UNIAN: contacts",
+     "u": "https://www.unian.info/static/contacts"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 305,
+   "acronym": "UNN",
+   "name": "Українські Національні Новини",
+   "en": "Ukrainian National News",
+   "country": "Ukraine",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://unn.ua",
+   "emails": [],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+380 44 581 77 07"
+    }
+   ],
+   "sources": [
+    {
+     "t": "UNN: contact",
+     "u": "https://unn.ua/en/contacts"
     }
    ],
    "checked": "2026-10-16",
