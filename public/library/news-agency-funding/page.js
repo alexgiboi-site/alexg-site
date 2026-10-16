@@ -134,7 +134,7 @@ dash.calc('cat_counts', {
   inputs: ['funding_agencies'],
   fn: (funding_agencies) => {
     const defs = [
-      ['Public / State', 'Owned, founded or mainly funded by the state, with or without its own commercial revenue. Ranges from ministry departments run by the government (e.g. AZERTAC, ATA) to public-service bodies whose management is approved by or answers to parliament (e.g. AGERPRES, ČTK, AFP, EFE, Lusa); see who appoints the management.'],
+      ['Public / State', 'Owned, founded or mainly funded by the state, with or without its own commercial revenue. Ranges from ministry departments and state institutions under full state control to public-service bodies whose management is approved by or answers to parliament; see who appoints the management.'],
       ['Private', 'Owned by media companies or cooperatives, commercial owners, non-profits or religious bodies, and financed mainly from its own commercial income. Some receive a public contract or targeted aid.'],
       ['Not determined', 'Owner could not be established, the agency could not be confirmed to exist, or it fits neither group (e.g. party-owned).']];
     const act = funding_agencies.filter(r => r.status === 'Active');
