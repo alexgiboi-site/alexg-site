@@ -91,7 +91,8 @@ a.card:hover { color: var(--ink); box-shadow: 0 4px 16px rgba(16, 42, 92, 0.08);
 .card .meta { font-family: var(--mono); font-size: 12px; letter-spacing: 0.02em; color: var(--navy); }
 .card .title { font-family: var(--serif); font-weight: 600; font-size: 24px; line-height: 1.2; }
 .card .desc { font-size: 16px; color: var(--muted); }
-.card .go { font-size: 15px; font-weight: 600; margin-top: auto; }
+.card .go { font-size: 15px; font-weight: 600; margin-top: auto; color: var(--navy); }
+.card-past .go { color: #4A5670; }
 .card-past { background: #FAFAF7; border-color: #E2E2DC; border-top-color: #8A97B0; }
 .card-past .meta { color: var(--faint); }
 .card-venture { border-top-color: var(--blue); }
