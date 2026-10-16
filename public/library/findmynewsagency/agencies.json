@@ -939,6 +939,27 @@
    "note": ""
   },
   {
+   "id": 154,
+   "acronym": "BGNES",
+   "name": "БГНЕС",
+   "en": "BGNES news agency",
+   "country": "Bulgaria",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.bgnes.com",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "BGNES: about us",
+     "u": "https://www.bgnes.com/page/about-us"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "BGNES publishes no general email or phone that could be confirmed; see its website."
+  },
+  {
    "id": 155,
    "acronym": "BTA",
    "name": "Българска телеграфна агенция",
@@ -974,6 +995,38 @@
     {
      "t": "BTA: contacts",
      "u": "https://bta.bg/en/contacts"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 156,
+   "acronym": "Focus",
+   "name": "Информационна агенция „Фокус“",
+   "en": "Focus Information Agency",
+   "country": "Bulgaria",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.focus-news.net",
+   "emails": [
+    {
+     "label": "General",
+     "u": "focus",
+     "d": "focus-news.net"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+359 882 801 801"
+    }
+   ],
+   "sources": [
+    {
+     "t": "Focus: team and contacts",
+     "u": "https://www.focus-news.net/team/"
     }
    ],
    "checked": "2026-10-16",
@@ -1658,6 +1711,38 @@
    "note": "STT announced on 30 September 2026 that its news and photo agency business may end in its current form, possibly in March 2027."
   },
   {
+   "id": 168,
+   "acronym": "AEF",
+   "name": "AEF info",
+   "en": "Specialist news agency (education, employment, security, energy)",
+   "country": "France",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.aefinfo.fr",
+   "emails": [
+    {
+     "label": "General",
+     "u": "l-aef",
+     "d": "aef.info"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+33 1 53 10 39 39"
+    }
+   ],
+   "sources": [
+    {
+     "t": "FFAP member profile",
+     "u": "https://www.ffap.fr/adherents/aef/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
    "id": 171,
    "acronym": "AFP",
    "name": "Agence France-Presse",
@@ -1684,6 +1769,38 @@
     {
      "t": "EANA member directory",
      "u": "https://newsalliance.org/members/agence-france-presse"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 169,
+   "acronym": "APM",
+   "name": "APM News",
+   "en": "Medical and health news agency",
+   "country": "France",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.apmnews.com",
+   "emails": [
+    {
+     "label": "General",
+     "u": "apm",
+     "d": "apmnews.com"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+33 1 48 06 54 92"
+    }
+   ],
+   "sources": [
+    {
+     "t": "FFAP member profile",
+     "u": "https://www.ffap.fr/adherents/apm-media/"
     }
    ],
    "checked": "2026-10-16",
@@ -1720,6 +1837,48 @@
    ],
    "checked": "2026-10-16",
    "note": ""
+  },
+  {
+   "id": 173,
+   "acronym": "ETX",
+   "name": "ETX Studio",
+   "en": "Formerly Relaxnews",
+   "country": "France",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.etxstudio.com",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "FFAP member profile",
+     "u": "https://www.ffap.fr/adherents/etx-studio/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Contacts could not be read automatically; see the agency’s website."
+  },
+  {
+   "id": 172,
+   "acronym": "Gamma-Rapho",
+   "name": "Gamma-Rapho",
+   "en": "Photo agency",
+   "country": "France",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.gamma-rapho-galerie.com",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "Gamma-Rapho: contact",
+     "u": "https://www.gamma-rapho-galerie.com/contact.htm"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Contacts could not be read automatically; see the agency’s website."
   },
   {
    "id": 174,
@@ -1939,6 +2098,43 @@
    "note": ""
   },
   {
+   "id": 178,
+   "acronym": "EPA",
+   "name": "European Pressphoto Agency",
+   "en": "EPA Images",
+   "country": "Germany",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://epaimages.com",
+   "emails": [
+    {
+     "label": "Editorial",
+     "u": "editorial",
+     "d": "epa.eu"
+    },
+    {
+     "label": "Sales",
+     "u": "sales",
+     "d": "epa.eu"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+49 69 244 321 800"
+    }
+   ],
+   "sources": [
+    {
+     "t": "BVPA member profile",
+     "u": "https://bvpa.org/mitglieder/epa-images/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
    "id": 179,
    "acronym": "epd",
    "name": "Evangelischer Pressedienst",
@@ -2060,6 +2256,48 @@
    ],
    "checked": "2026-10-16",
    "note": ""
+  },
+  {
+   "id": 182,
+   "acronym": "RND",
+   "name": "RedaktionsNetzwerk Deutschland",
+   "en": "",
+   "country": "Germany",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.rnd.de",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "Wikipedia: RedaktionsNetzwerk Deutschland",
+     "u": "https://en.wikipedia.org/wiki/RedaktionsNetzwerk_Deutschland"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Contacts could not be read automatically; see the agency’s website."
+  },
+  {
+   "id": 184,
+   "acronym": "SID",
+   "name": "Sport-Informations-Dienst",
+   "en": "German sports news agency",
+   "country": "Germany",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.sid.de",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "SID: contact",
+     "u": "https://www.sid.de/kontakt/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Contacts could not be read automatically; see the agency’s website."
   },
   {
    "id": 191,
@@ -2554,6 +2792,30 @@
    "note": "Contact page could not be read automatically; see the agency’s website."
   },
   {
+   "id": 200,
+   "acronym": "Storyful",
+   "name": "Storyful",
+   "en": "Social media news agency",
+   "country": "Ireland",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://storyful.com",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "Wikipedia: Storyful",
+     "u": "https://en.wikipedia.org/wiki/Storyful"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Storyful publishes no general email or phone that could be confirmed; see its website.",
+   "also": [
+    "United Kingdom"
+   ]
+  },
+  {
    "id": 202,
    "acronym": "Adnkronos",
    "name": "Adnkronos",
@@ -2673,6 +2935,27 @@
    ],
    "checked": "2026-10-16",
    "note": ""
+  },
+  {
+   "id": 209,
+   "acronym": "AsiaNews",
+   "name": "AsiaNews",
+   "en": "News agency of the Pontifical Institute for Foreign Missions",
+   "country": "Italy",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.asianews.it",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "AsiaNews: about us",
+     "u": "https://www.asianews.it/en/About-us.html"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "AsiaNews publishes no general email or phone that could be confirmed; see its website."
   },
   {
    "id": 210,
@@ -2801,6 +3084,27 @@
    "note": ""
   },
   {
+   "id": 213,
+   "acronym": "MF-DJ",
+   "name": "MF Newswires",
+   "en": "Formerly MF Dow Jones News",
+   "country": "Italy",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.mfnewswires.it",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "MF Newswires",
+     "u": "https://www.mfnewswires.it/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Contacts could not be read automatically; see the agency’s website."
+  },
+  {
    "id": 207,
    "acronym": "Nova",
    "name": "Agenzia Nova",
@@ -2820,6 +3124,38 @@
    ],
    "checked": "2026-10-16",
    "note": "Agenzia Nova lists its contacts on its website; they could not be read automatically."
+  },
+  {
+   "id": 214,
+   "acronym": "Radiocor",
+   "name": "Il Sole 24 Ore Radiocor",
+   "en": "Economic and financial news agency",
+   "country": "Italy",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.radiocor.ilsole24ore.com",
+   "emails": [
+    {
+     "label": "Desk",
+     "u": "radiocordesk",
+     "d": "ilsole24ore.com"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+39 02 30221"
+    }
+   ],
+   "sources": [
+    {
+     "t": "FIEG member profile",
+     "u": "https://www.fieg.it/chisiamo.asp?sector=imp_tes&id=806&ed=060"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
   },
   {
    "id": 215,
@@ -2873,6 +3209,30 @@
    ],
    "checked": "2026-10-16",
    "note": ""
+  },
+  {
+   "id": 216,
+   "acronym": "ZENIT",
+   "name": "ZENIT",
+   "en": "Catholic news agency",
+   "country": "Italy",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://zenit.org",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "Wikipedia: Zenit News Agency",
+     "u": "https://en.wikipedia.org/wiki/Zenit_News_Agency"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Contacts could not be read automatically; see the agency’s website.",
+   "also": [
+    "United States"
+   ]
   },
   {
    "id": 81,
@@ -3832,6 +4192,38 @@
    "note": "MIA’s website does not allow automated reading, so its contact details are not listed here yet. Its imprint page lists them."
   },
   {
+   "id": 231,
+   "acronym": "ANB",
+   "name": "Avisenes Nyhetsbyrå",
+   "en": "",
+   "country": "Norway",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://lomedia.no/om/avisenes-nyhetsbyra/",
+   "emails": [
+    {
+     "label": "LO Media (owner)",
+     "u": "firmapost",
+     "d": "lomedia.no"
+    }
+   ],
+   "phones": [
+    {
+     "label": "LO Media (owner)",
+     "n": "+47 23 06 83 60"
+    }
+   ],
+   "sources": [
+    {
+     "t": "LO Media: Avisenes Nyhetsbyrå",
+     "u": "https://lomedia.no/om/avisenes-nyhetsbyra/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "ANB has no separate published contact; the listed details are those of its owner, LO Media."
+  },
+  {
    "id": 232,
    "acronym": "NTB",
    "name": "Norsk Telegrambyrå",
@@ -4177,6 +4569,27 @@
    "note": ""
   },
   {
+   "id": 237,
+   "acronym": "Via",
+   "name": "Via News Agency",
+   "en": "",
+   "country": "Portugal",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://vianewsagency.com",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "Via News Agency: contact",
+     "u": "https://vianewsagency.com/contact"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Via News Agency takes enquiries only through the contact form on its website."
+  },
+  {
    "id": 419,
    "acronym": "QNA",
    "name": "وكالة الأنباء القطرية",
@@ -4295,6 +4708,27 @@
    "note": ""
   },
   {
+   "id": 241,
+   "acronym": "News.ro",
+   "name": "News.ro",
+   "en": "",
+   "country": "Romania",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.news.ro",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "News.ro: contact",
+     "u": "https://www.news.ro/contact"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Contacts could not be read automatically; see the agency’s website."
+  },
+  {
    "id": 242,
    "acronym": "RADOR",
    "name": "Agenția de presă RADOR",
@@ -4362,6 +4796,38 @@
     {
      "t": "ASI: contacts",
      "u": "https://asi.org.ru/contacts/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 244,
+   "acronym": "Bashinform",
+   "name": "Башинформ",
+   "en": "Bashinform (Bashkortostan)",
+   "country": "Russia",
+   "kind": "Regional news agency",
+   "ownership": "Ownership not confirmed",
+   "eana": false,
+   "web": "https://www.bashinform.ru",
+   "emails": [
+    {
+     "label": "Newsroom",
+     "u": "inf",
+     "d": "bashinform.ru"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+7 347 250 07 28"
+    }
+   ],
+   "sources": [
+    {
+     "t": "Bashinform: about",
+     "u": "https://www.bashinform.ru/pages/about"
     }
    ],
    "checked": "2026-10-16",
@@ -4437,6 +4903,38 @@
    "note": ""
   },
   {
+   "id": 249,
+   "acronym": "Moskva",
+   "name": "Агентство городских новостей «Москва»",
+   "en": "Moskva city news agency",
+   "country": "Russia",
+   "kind": "Regional news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://www.mskagency.ru",
+   "emails": [
+    {
+     "label": "Newsroom",
+     "u": "mosmed",
+     "d": "m24.ru"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+7 495 009 80 23"
+    }
+   ],
+   "sources": [
+    {
+     "t": "Moskva agency website",
+     "u": "https://www.mskagency.ru/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
    "id": 257,
    "acronym": "Regnum",
    "name": "ИА REGNUM",
@@ -4469,6 +4967,70 @@
    "note": ""
   },
   {
+   "id": 256,
+   "acronym": "RIAMO",
+   "name": "РИАМО",
+   "en": "Moscow Region news agency",
+   "country": "Russia",
+   "kind": "Regional news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://riamo.ru",
+   "emails": [
+    {
+     "label": "General",
+     "u": "info",
+     "d": "riamo.ru"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+7 495 223 35 11"
+    }
+   ],
+   "sources": [
+    {
+     "t": "RIAMO: contacts",
+     "u": "https://riamo.ru/contacts/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 258,
+   "acronym": "Rosbalt",
+   "name": "Росбалт",
+   "en": "",
+   "country": "Russia",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.rosbalt.ru",
+   "emails": [
+    {
+     "label": "General",
+     "u": "main",
+     "d": "rosbalt.ru"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+7 812 320 50 43"
+    }
+   ],
+   "sources": [
+    {
+     "t": "Lenizdat media directory: Rosbalt",
+     "u": "https://lenizdat.ru/companies/117/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Details from a media directory; not confirmed on the agency’s own site."
+  },
+  {
    "id": 261,
    "acronym": "TASS",
    "name": "ТАСС",
@@ -4488,6 +5050,68 @@
    ],
    "checked": "2026-10-16",
    "note": "The only contact page found dates from 2010, so its details are not listed. TASS’s membership of the European Alliance of News Agencies is suspended."
+  },
+  {
+   "id": 262,
+   "acronym": "Tatar-inform",
+   "name": "Татар-информ",
+   "en": "Tatar-inform (Tatarstan)",
+   "country": "Russia",
+   "kind": "Regional news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://www.tatar-inform.ru",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "Tatar-inform website",
+     "u": "https://www.tatar-inform.ru/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Contacts could not be read automatically; see the agency’s website."
+  },
+  {
+   "id": 263,
+   "acronym": "YSIA",
+   "name": "Якутское-Саха информационное агентство",
+   "en": "Yakutia-Sakha Information Agency",
+   "country": "Russia",
+   "kind": "Regional news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://ysia.ru",
+   "emails": [
+    {
+     "label": "Newsroom",
+     "u": "ysia1",
+     "d": "yandex.ru"
+    },
+    {
+     "label": "Reception",
+     "u": "info",
+     "d": "sakhamedia.ru"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Newsroom",
+     "n": "+7 914 272 96 72"
+    },
+    {
+     "label": "Reception",
+     "n": "+7 4112 219 401"
+    }
+   ],
+   "sources": [
+    {
+     "t": "YSIA: contacts",
+     "u": "https://ysia.ru/kontakty/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
   },
   {
    "id": 421,
@@ -4933,6 +5557,36 @@
    ],
    "checked": "2026-10-16",
    "note": "Covers Catalonia."
+  },
+  {
+   "id": 275,
+   "acronym": "Atlas",
+   "name": "Agencia Atlas",
+   "en": "Mediaset España news agency",
+   "country": "Spain",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.atlas-news.com",
+   "emails": [],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+34 913 966 435"
+    },
+    {
+     "label": "Switchboard",
+     "n": "+34 913 966 762"
+    }
+   ],
+   "sources": [
+    {
+     "t": "Atlas News website",
+     "u": "https://www.atlas-news.com/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
   },
   {
    "id": 277,
@@ -5577,6 +6231,48 @@
    "note": ""
   },
   {
+   "id": 291,
+   "acronym": "ANKA",
+   "name": "ANKA Haber Ajansı",
+   "en": "ANKA News Agency",
+   "country": "Türkiye",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://ankahaber.net",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "ANKA: imprint",
+     "u": "https://ankahaber.net/Kunye"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Contacts could not be read automatically; see the agency’s website."
+  },
+  {
+   "id": 294,
+   "acronym": "DHA",
+   "name": "Demirören Haber Ajansı",
+   "en": "Demirören News Agency",
+   "country": "Türkiye",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.dha.com.tr",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "DHA: contact",
+     "u": "https://www.dha.com.tr/iletisim/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Contacts could not be read automatically; see the agency’s website."
+  },
+  {
    "id": 298,
    "acronym": "İHA",
    "name": "İhlas Haber Ajansı",
@@ -5680,6 +6376,27 @@
    ],
    "checked": "2026-10-16",
    "note": ""
+  },
+  {
+   "id": 300,
+   "acronym": "QHA",
+   "name": "Qırım Haber Ajansı",
+   "en": "Crimean News Agency",
+   "country": "Ukraine",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://qha.com.ua",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "QHA: about us",
+     "u": "https://qha.com.ua/en/about-us/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "QHA says it can be contacted through its Facebook page. Its newsroom moved to mainland Ukraine after 2014."
   },
   {
    "id": 303,
@@ -5869,6 +6586,27 @@
    ],
    "checked": "2026-10-16",
    "note": ""
+  },
+  {
+   "id": 309,
+   "acronym": "BNPS",
+   "name": "BNPS",
+   "en": "Bournemouth News and Picture Service",
+   "country": "United Kingdom",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.bnps.co.uk",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "BNPS website",
+     "u": "https://www.bnps.co.uk/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Contacts could not be read automatically; see the agency’s website."
   },
   {
    "id": 310,
