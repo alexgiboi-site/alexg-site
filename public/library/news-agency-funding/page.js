@@ -1,28 +1,23 @@
 
 /* ---------- calculations ---------- */
 dash.calc('fkpis', {
-  title: 'Funding headline counts',
-  description: 'Active agencies by funding category, share of national agencies that are state-funded or publicly owned, and evidence coverage.',
+  title: 'Structure headline counts',
+  description: 'Active agencies by structure (public / state, private, not determined), share of national agencies that are public or state, and evidence coverage.',
   inputs: ['funding_agencies', 'funding_changes'],
   fn: (funding_agencies, funding_changes) => {
     const act = funding_agencies.filter(r => r.status === 'Active');
-    const n = (c) => act.filter(r => r.funding_category === c).length;
-    const pub = ['State-funded', 'Public, commercially financed', 'Public, funding split not published'];
+    const n = (c) => act.filter(r => r.structure === c).length;
     const nat = act.filter(r => String(r.kind).startsWith('National'));
-    const natState = nat.filter(r => r.funding_category === 'State-funded').length;
-    const natPublic = nat.filter(r => pub.includes(r.funding_category)).length;
+    const natPS = nat.filter(r => r.structure === 'Public / State').length;
     return [{
       total: funding_agencies.length,
       active: act.length,
-      state: n('State-funded'),
-      publicc: n('Public, commercially financed'),
-      publicnp: n('Public, funding split not published'),
-      public_other: n('Public, commercially financed') + n('Public, funding split not published'),
+      ps: n('Public / State'),
       private: n('Private'),
-      unknown: n('Unknown'),
+      undetermined: n('Not determined'),
+      inferred: act.filter(r => r.structure === 'Public / State' && r.structure_basis === 'Inferred from ownership').length,
       national: nat.length,
-      national_state_share: nat.length ? natState / nat.length : null,
-      national_public_share: nat.length ? natPublic / nat.length : null,
+      national_ps_share: nat.length ? natPS / nat.length : null,
       ev_official: funding_agencies.filter(r => r.evidence === 'Official source').length,
       ev_independent: funding_agencies.filter(r => r.evidence === 'Independent source').length,
       ev_none: funding_agencies.filter(r => r.evidence === 'Not confirmed').length,
@@ -33,29 +28,29 @@ dash.calc('fkpis', {
 });
 
 dash.calc('fund_by_region', {
-  title: 'Funding category by region',
-  description: 'Active agencies counted by region and funding category.',
+  title: 'Structure by region',
+  description: 'Active agencies counted by region and structure.',
   inputs: ['funding_agencies'],
   fn: (funding_agencies) => {
     const act = funding_agencies.filter(r => r.status === 'Active');
     return [...new Set(act.map(r => r.region))].map(region => {
       const rs = act.filter(r => r.region === region);
-      const c = (k) => rs.filter(r => r.funding_category === k).length;
-      return {region, total: rs.length, state: c('State-funded'), publicc: c('Public, commercially financed'), publicnp: c('Public, funding split not published'), private: c('Private'), unknown: c('Unknown')};
+      const c = (k) => rs.filter(r => r.structure === k).length;
+      return {region, total: rs.length, ps: c('Public / State'), private: c('Private'), undetermined: c('Not determined')};
     }).sort((a, b) => b.total - a.total);
   }
 });
 
 dash.calc('fund_by_kind', {
-  title: 'Funding category by kind',
-  description: 'Active agencies counted by kind of agency and funding category.',
+  title: 'Structure by kind',
+  description: 'Active agencies counted by kind of agency and structure.',
   inputs: ['funding_agencies'],
   fn: (funding_agencies) => {
     const act = funding_agencies.filter(r => r.status === 'Active');
     return [...new Set(act.map(r => r.kind))].map(kind => {
       const rs = act.filter(r => r.kind === kind);
-      const c = (k) => rs.filter(r => r.funding_category === k).length;
-      return {kind, total: rs.length, state: c('State-funded'), publicc: c('Public, commercially financed'), publicnp: c('Public, funding split not published'), private: c('Private'), unknown: c('Unknown')};
+      const c = (k) => rs.filter(r => r.structure === k).length;
+      return {kind, total: rs.length, ps: c('Public / State'), private: c('Private'), undetermined: c('Not determined')};
     }).sort((a, b) => b.total - a.total);
   }
 });
@@ -81,15 +76,18 @@ dash.calc('own_matrix', {
   }
 });
 
-dash.calc('state_share', {
-  title: 'Public money share of income',
-  description: 'Agencies with a public-money share found: state grants, subsidies or contracts as a share of total income.',
+dash.calc('appoint_counts', {
+  title: 'Appointing body',
+  description: 'Active public / state agencies counted by the body that appoints, elects or approves their management.',
   inputs: ['funding_agencies'],
-  fn: (funding_agencies) => funding_agencies
-    .filter(r => r.state_share_pct !== '' && r.state_share_pct != null && !isNaN(Number(r.state_share_pct)))
-    .map(r => ({id: r.id, acronym: r.acronym, agency: r.agency, country: r.country, share: Number(r.state_share_pct) / 100,
-      funding_category: r.funding_category, ownership_type: r.ownership_type, state_share_note: r.state_share_note}))
-    .sort((a, b) => b.share - a.share || a.acronym.localeCompare(b.acronym))
+  fn: (funding_agencies) => {
+    const order = ['Parliament', 'Government nominee, voted in by parliament', 'Independent board or council', 'Government or cabinet', 'Head of state', 'Ministry or government department', 'Ruling party or other state organ', 'Not documented'];
+    const act = funding_agencies.filter(r => r.status === 'Active' && r.structure === 'Public / State');
+    return order.map(appointed_by => {
+      const rs = act.filter(r => r.appointed_by === appointed_by);
+      return {appointed_by, total: rs.length, ps: rs.length};
+    }).filter(r => r.total > 0);
+  }
 });
 
 dash.calc('chg_kpis', {
@@ -131,20 +129,18 @@ dash.calc('chg_by_region', {
 });
 
 dash.calc('cat_counts', {
-  title: 'Funding category definitions',
-  description: 'Each funding category with its definition and the number of active agencies in it, by evidence level.',
+  title: 'Structure definitions',
+  description: 'Each structure with its definition, the number of active agencies in it, and how many have a documented appointment rule.',
   inputs: ['funding_agencies'],
   fn: (funding_agencies) => {
     const defs = [
-      ['State-funded', 'Mainly paid for by the state: a government body on the state budget, or a public company or institution that gets 50% or more of its income from state grants, subsidies or public-service contracts.'],
-      ['Public, commercially financed', 'Publicly owned or set up under public law, but most of its income comes from selling its services; state money, if any, is a minority.'],
-      ['Public, funding split not published', 'State-owned or public-law, but no source gives how much of its income is public money.'],
-      ['Private', 'Owned by media companies or cooperatives, commercial owners, non-profits or religious bodies. Some still receive a public grant (see public money share).'],
-      ['Unknown', 'Not determined: owner or funding could not be established, or the agency could not be confirmed to exist.']];
+      ['Public / State', 'Owned, founded or mainly funded by the state, with or without its own commercial revenue. Ranges from ministry departments run by the government (e.g. AZERTAC, ATA) to public-service bodies whose management is approved by or answers to parliament (e.g. AGERPRES, ČTK, AFP, EFE, Lusa); see who appoints the management.'],
+      ['Private', 'Owned by media companies or cooperatives, commercial owners, non-profits or religious bodies, and financed mainly from its own commercial income. Some receive a public contract or targeted aid.'],
+      ['Not determined', 'Owner could not be established, the agency could not be confirmed to exist, or it fits neither group (e.g. party-owned).']];
     const act = funding_agencies.filter(r => r.status === 'Active');
     return defs.map(([category, definition]) => ({category, definition,
-      active: act.filter(r => r.funding_category === category).length,
-      official: act.filter(r => r.funding_category === category && r.evidence === 'Official source').length}));
+      active: act.filter(r => r.structure === category).length,
+      documented: category === 'Public / State' ? act.filter(r => r.structure === category && r.structure_basis === 'Documented').length : null}));
   }
 });
 
@@ -185,10 +181,10 @@ dash.calc('source_list', {
 });
 
 /* ---------- constants for drawing ---------- */
-const FUND = ['State-funded', 'Public, commercially financed', 'Public, funding split not published', 'Private', 'Unknown'];
-const FUND_KEY = {'State-funded': 'state', 'Public, commercially financed': 'publicc', 'Public, funding split not published': 'publicnp', 'Private': 'private', 'Unknown': 'unknown'};
-const FUND_LABEL = {'State-funded': 'State-funded', 'Public, commercially financed': 'Public, commercially financed', 'Public, funding split not published': 'Public, split not published', 'Private': 'Private', 'Unknown': 'Unknown'};
-const fundColor = (c) => ({'State-funded': dash.colors[0], 'Public, commercially financed': dash.colors[1], 'Public, funding split not published': dash.colors[3], 'Private': dash.colors[2]}[c] || 'var(--cds-chart-muted)');
+const FUND = ['Public / State', 'Private', 'Not determined'];
+const FUND_KEY = {'Public / State': 'ps', 'Private': 'private', 'Not determined': 'undetermined'};
+const FUND_LABEL = {'Public / State': 'Public / State', 'Private': 'Private', 'Not determined': 'Not determined'};
+const fundColor = (c) => ({'Public / State': dash.colors[0], 'Private': dash.colors[2]}[c] || 'var(--cds-chart-muted)');
 const OWN_COLS = [['gov', 0], ['soc', 0], ['sonc', 0], ['pli', 1], ['party', 4], ['igo', 1], ['media', 2], ['comm', 2], ['np', 2], ['rel', 2], ['unk', -1]];
 const GROUPS = [
   {k: 'state', label: 'More state control', dirs: ['Toward state'], def: 'The state raised its stake, took direct control, or moved the agency under a more political body.'},
@@ -285,36 +281,6 @@ function stackedBars(el, rows, labelField, keys, onPick) {
 }
 
 /* ---------- page 1 ---------- */
-function drawShare(el, rows) {
-  el.replaceChildren();
-  const W = Math.max(280, el.clientWidth);
-  const barH = 13, gap = 6, top = 20;
-  const H = top + rows.length * (barH + gap) + 2;
-  el.style.minHeight = H + 'px';
-  const svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img');
-  const probe = svg.append('text').attr('font-size', 12).style('font-family', 'var(--font-anthropic-sans)');
-  let lw = 0; rows.forEach(r => { probe.text(r.acronym); lw = Math.max(lw, probe.node().getComputedTextLength()); });
-  probe.text('100%'); const numW = probe.node().getComputedTextLength() + 10; probe.remove();
-  const left = lw + 10;
-  const x = d3.scaleLinear([0, 1], [left, W - numW]);
-  svg.append('line').attr('x1', x(0.5)).attr('x2', x(0.5)).attr('y1', top - 6).attr('y2', H).attr('stroke', 'var(--cds-chart-reference)').attr('stroke-dasharray', '3 3');
-  svg.append('text').attr('x', x(0.5)).attr('y', 10).attr('text-anchor', 'middle').attr('font-size', 11).attr('fill', 'var(--color-fg-muted)').style('font-family', 'var(--font-anthropic-sans)').text('50%');
-  const tip = makeTip(el);
-  rows.forEach((r, i) => {
-    const y = top + i * (barH + gap);
-    svg.append('text').attr('x', left - 8).attr('y', y + barH / 2).attr('dy', '0.35em').attr('text-anchor', 'end').attr('font-size', 12)
-      .attr('fill', 'var(--color-fg)').style('font-family', 'var(--font-anthropic-sans)').text(r.acronym);
-    const w = x(r.share) - x(0);
-    const c = fundColor(r.funding_category);
-    svg.append('rect').attr('x', left).attr('y', y).attr('width', Math.max(2, w)).attr('height', barH).attr('rx', 3)
-      .style('fill', r.share > 0 ? c : 'var(--cds-chart-muted)')
-      .on('mousemove', (ev) => showTip(el, tip, ev, [{text: `${r.agency} · ${r.country}`, k: true}, {text: `${FUND_LABEL[r.funding_category] || r.funding_category}: public money ${pct0(r.share)} of income`, color: c}, {text: r.state_share_note}]))
-      .on('mouseleave', () => tip.style('display', 'none'));
-    svg.append('text').attr('x', left + Math.max(2, w) + 5).attr('y', y + barH / 2).attr('dy', '0.35em').attr('font-size', 11)
-      .attr('fill', 'var(--color-fg-muted)').style('font-family', 'var(--font-anthropic-sans)').style('font-variant-numeric', 'tabular-nums').text(pct0(r.share));
-  });
-}
-
 function drawMatrix(rows) {
   const tb = d3.select('#own-table tbody'); tb.selectAll('tr').remove();
   const body = rows.filter(r => r.region !== 'All regions');
@@ -335,22 +301,23 @@ function drawMatrix(rows) {
   });
 }
 
-const ACOLS = ['agency', 'acronym', 'country', 'region', 'kind', 'size', 'funding_category', 'ownership_type', 'owner', 'state_share_pct', 'mixed_ownership', 'last_change', 'evidence', 'status', 'sources'];
-const ANARROW = new Set(['acronym', 'region', 'kind', 'size', 'ownership_type', 'owner', 'mixed_ownership', 'last_change', 'evidence', 'status', 'sources']);
-const FORDER = {'State-funded': 0, 'Public, commercially financed': 1, 'Public, funding split not published': 2, 'Private': 3, 'Unknown': 4};
+const ACOLS = ['agency', 'acronym', 'country', 'region', 'kind', 'size', 'structure', 'ownership_type', 'owner', 'appointed_by', 'mixed_ownership', 'last_change', 'evidence', 'status', 'sources'];
+const ANARROW = new Set(['acronym', 'region', 'kind', 'size', 'ownership_type', 'owner', 'appointed_by', 'mixed_ownership', 'last_change', 'evidence', 'status', 'sources']);
+const FORDER = {'Public / State': 0, 'Private': 1, 'Not determined': 2};
 const SORDER = {XL: 0, L: 1, M: 2, S: 3};
 function addOpts(sel, vals, label) { vals.forEach(v => { const o = document.createElement('option'); o.value = v; o.textContent = label ? label(v) : v; sel.appendChild(o); }); }
 function initAgencyControls(rows) {
   if (S.inited) return; S.inited = true;
   addOpts(document.getElementById('f-region'), [...new Set(rows.map(r => r.region))].sort());
   addOpts(document.getElementById('f-fund'), FUND, v => FUND_LABEL[v]);
+  addOpts(document.getElementById('f-appt'), ['Parliament', 'Government nominee, voted in by parliament', 'Independent board or council', 'Government or cabinet', 'Head of state', 'Ministry or government department', 'Ruling party or other state organ', 'Not documented']);
   addOpts(document.getElementById('f-own'), [...new Set(rows.map(r => r.ownership_type))].sort());
   addOpts(document.getElementById('f-kind'), [...new Set(rows.map(r => r.kind))].sort());
-  const ids = ['q', 'f-region', 'f-fund', 'f-own', 'f-kind', 'f-size', 'f-chg', 'f-ev', 'f-status'];
+  const ids = ['q', 'f-region', 'f-fund', 'f-appt', 'f-own', 'f-kind', 'f-size', 'f-chg', 'f-ev', 'f-status'];
   ids.forEach(id => document.getElementById(id).addEventListener('input', drawAgencyTable));
   document.getElementById('f-reset').addEventListener('click', () => { ids.forEach(id => { document.getElementById(id).value = ''; }); drawAgencyTable(); });
   document.querySelectorAll('#agency-table th button').forEach(b => b.addEventListener('click', () => {
-    if (S.sort === b.dataset.sort) S.dir *= -1; else { S.sort = b.dataset.sort; S.dir = ['state_share_pct', 'last_change_year'].includes(b.dataset.sort) ? -1 : 1; }
+    if (S.sort === b.dataset.sort) S.dir *= -1; else { S.sort = b.dataset.sort; S.dir = b.dataset.sort === 'last_change_year' ? -1 : 1; }
     drawAgencyTable();
   }));
   document.querySelector('#agency-table tbody').addEventListener('click', (ev) => {
@@ -364,15 +331,15 @@ function drawAgencyTable() {
   if (d.status !== 'ok') { document.getElementById('row-count').textContent = d.status === 'error' ? 'Failed to load' : ''; return; }
   const v = (id) => document.getElementById(id).value;
   const q = v('q').trim().toLowerCase();
-  let out = d.data.filter(r => (!v('f-region') || r.region === v('f-region')) && (!v('f-fund') || r.funding_category === v('f-fund')) &&
+  let out = d.data.filter(r => (!v('f-region') || r.region === v('f-region')) && (!v('f-fund') || r.structure === v('f-fund')) && (!v('f-appt') || r.appointed_by === v('f-appt')) &&
     (!v('f-own') || r.ownership_type === v('f-own')) && (!v('f-kind') || r.kind === v('f-kind')) && (!v('f-size') || r.size === v('f-size')) &&
     (!v('f-chg') || (v('f-chg') === 'yes' ? Number(r.changes) > 0 : !(Number(r.changes) > 0))) &&
     (!v('f-ev') || r.evidence === v('f-ev')) &&
     (!v('f-status') || r.status === v('f-status')) &&
-    (!q || [r.agency, r.acronym, r.country, r.owner, r.legal_form, r.ownership_type, r.mixed_ownership, r.last_change, r.state_share_note, r.notes, r.alliances].join(' ').toLowerCase().includes(q)));
+    (!q || [r.agency, r.acronym, r.country, r.owner, r.legal_form, r.ownership_type, r.mixed_ownership, r.last_change, r.governance, r.appointed_by, r.notes, r.alliances].join(' ').toLowerCase().includes(q)));
   const k = S.sort;
-  const val = (r) => k === 'funding_category' ? FORDER[r[k]] ?? 9 : k === 'size' ? SORDER[r.size] ?? 9
-    : k === 'state_share_pct' ? (r[k] === '' ? -1 : Number(r[k])) : k === 'last_change_year' ? (r[k] === '' ? 0 : Number(r[k])) : String(r[k] || '').toLowerCase();
+  const val = (r) => k === 'structure' ? FORDER[r[k]] ?? 9 : k === 'size' ? SORDER[r.size] ?? 9
+    : k === 'last_change_year' ? (r[k] === '' ? 0 : Number(r[k])) : String(r[k] || '').toLowerCase();
   out.sort((a, b) => { const va = val(a), vb = val(b); return (va < vb ? -1 : va > vb ? 1 : String(a.agency).localeCompare(String(b.agency))) * S.dir; });
   document.getElementById('row-count').textContent = `${fmt(out.length)} of ${fmt(d.data.length)} agencies shown`;
   out.forEach(r => {
@@ -381,11 +348,10 @@ function drawAgencyTable() {
       const td = tr.append('td');
       const cls = [];
       if (ANARROW.has(col)) cls.push('hide-narrow');
-      if (col === 'state_share_pct') cls.push('num');
-      if (col === 'last_change' || col === 'owner') cls.push('wrap');
+      if (col === 'last_change' || col === 'owner' || col === 'appointed_by') cls.push('wrap');
       if (cls.length) td.attr('class', cls.join(' '));
-      if (col === 'funding_category') { const s = td.append('span').attr('class', 'cat'); s.append('i').attr('class', 'sw').style('background', fundColor(r[col])); s.append('span').text(r[col]); }
-      else if (col === 'state_share_pct') td.text(r[col] === '' ? '' : `${r[col]}%`);
+      if (col === 'structure') { const s = td.append('span').attr('class', 'cat'); s.append('i').attr('class', 'sw').style('background', fundColor(r[col])); s.append('span').text(r[col]); }
+      else if (col === 'appointed_by') { td.text(r.appointed_by || ''); const t = [r.governance, r.structure_basis === 'Inferred from ownership' ? 'Inferred from government ownership' : '', r.smm_class ? 'State Media Monitor: ' + r.smm_class : ''].filter(Boolean).join(' — '); if (t) td.attr('title', t); }
       else if (col === 'sources') { String(r.sources || '').split(/\s*;\s*/).filter(u => /^https?:\/\//.test(u)).forEach((u, i) => { if (i) td.append('span').text(' · '); td.append('a').attr('href', u).attr('target', '_blank').attr('rel', 'noopener noreferrer').text(host(u)); }); }
       else if (col === 'owner') { td.text(r.owner || ''); if (r.legal_form || r.notes) td.attr('title', [r.legal_form, r.notes].filter(Boolean).join(' — ')); }
       else td.text(r[col] || '');
@@ -399,6 +365,7 @@ function drawAgencyTable() {
 function pickAgencies(field, value, fund) {
   document.getElementById('f-region').value = field === 'region' ? value : '';
   document.getElementById('f-kind').value = field === 'kind' ? value : '';
+  document.getElementById('f-appt').value = field === 'appointed_by' ? value : '';
   document.getElementById('f-fund').value = fund;
   document.getElementById('f-status').value = '';
   drawAgencyTable();
@@ -415,9 +382,10 @@ function drawFunding() {
   if (reg.status === 'ok') { regEl.classList.remove('dash-skeleton'); stackedBars(regEl, reg.data, 'region', fkeys, (r, kk) => pickAgencies('region', r.region, kk.cat)); } else clearChart(regEl, reg.status);
   const kind = dash.data('fund_by_kind'), kindEl = document.getElementById('kind-chart');
   if (kind.status === 'ok') { kindEl.classList.remove('dash-skeleton'); stackedBars(kindEl, kind.data, 'kind', fkeys, (r, kk) => pickAgencies('kind', r.kind, kk.cat)); } else clearChart(kindEl, kind.status);
-  const sh = dash.data('state_share'), shEl = document.getElementById('share-chart');
-  legend(document.getElementById('share-legend'), FUND.slice(0, 4).map(c => ({label: FUND_LABEL[c], color: fundColor(c)})));
-  if (sh.status === 'ok') { shEl.classList.remove('dash-skeleton'); drawShare(shEl, sh.data); } else clearChart(shEl, sh.status);
+  const akeys = fkeys.slice(0, 1);
+  document.getElementById('appoint-legend').replaceChildren();
+  const ap = dash.data('appoint_counts'), apEl = document.getElementById('appoint-chart');
+  if (ap.status === 'ok') { apEl.classList.remove('dash-skeleton'); stackedBars(apEl, ap.data, 'appointed_by', akeys, (r, kk) => pickAgencies('appointed_by', r.appointed_by, kk.cat)); } else clearChart(apEl, ap.status);
   const mx = dash.data('own_matrix');
   if (mx.status === 'ok') drawMatrix(mx.data); else d3.select('#own-table tbody').selectAll('tr').remove();
   const ag = dash.data('funding_agencies');
@@ -499,13 +467,11 @@ function drawTraj() {
   if (ch.status !== 'ok' || ag.status !== 'ok' || !S.traj) return;
   const a = ag.data.find(r => String(r.id) === String(S.traj)); if (!a) return;
   document.getElementById('traj-name').textContent = `${a.agency} · ${a.country}`;
-  ['traj-cat', 'traj-own', 'traj-share', 'traj-note'].forEach(id => document.getElementById(id).setAttribute('data-where', `id=${encodeURIComponent(a.id)}`));
-  document.getElementById('traj-cat').textContent = a.funding_category;
+  ['traj-cat', 'traj-own', 'traj-gov'].forEach(id => document.getElementById(id).setAttribute('data-where', `id=${encodeURIComponent(a.id)}`));
+  document.getElementById('traj-cat').textContent = a.structure;
   document.getElementById('traj-own').textContent = a.ownership_type;
-  const hasShare = a.state_share_pct !== '';
-  document.getElementById('traj-share-wrap').hidden = !hasShare;
-  document.getElementById('traj-share').textContent = hasShare ? a.state_share_pct : '—';
-  document.getElementById('traj-note').textContent = a.state_share_note || '—';
+  document.getElementById('traj-gov-wrap').hidden = !a.governance;
+  document.getElementById('traj-gov').textContent = a.governance || '—';
   ch.data.filter(r => String(r.id) === String(S.traj)).sort((p, q) => Number(p.year) - Number(q.year) || Number(p.event) - Number(q.event)).forEach(r => {
     const tr = tb.append('tr').attr('data-key', r.event);
     tr.append('td').text(r.date);
@@ -599,7 +565,7 @@ function drawDefs() {
     const s = tr.append('td').append('span').attr('class', 'cat'); s.append('i').attr('class', 'sw').style('background', fundColor(r.category)); s.append('span').text(r.category);
     tr.append('td').attr('class', 'wrap').text(r.definition);
     tr.append('td').attr('class', 'num').text(fmt(r.active));
-    tr.append('td').attr('class', 'num hide-narrow').text(fmt(r.official));
+    tr.append('td').attr('class', 'num hide-narrow').text(r.documented == null ? '–' : fmt(r.documented));
   });
   const oc = dash.data('own_counts'), to = d3.select('#owncount-table tbody'); to.selectAll('tr').remove();
   if (oc.status === 'ok') oc.data.forEach(r => {

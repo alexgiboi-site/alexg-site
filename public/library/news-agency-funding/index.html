@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>News agency funding and ownership — Ion-Alexandru Giboi</title>
-<meta name="description" content="Who funds and owns the world's news agencies: 456 agencies classified by funding and ownership, plus 80 years of ownership and funding changes. Each row checked against its sources.">
+<title>Private, public and state news agencies — Ion-Alexandru Giboi</title>
+<meta name="description" content="Who owns and runs the world's news agencies: 456 agencies classified as public / state or private, who appoints their management, and 80 years of ownership and funding changes. Each row checked against its sources.">
 <link rel="canonical" href="https://alexgiboi.com/library/news-agency-funding/">
-<meta property="og:title" content="News agency funding and ownership">
+<meta property="og:title" content="Private, public and state news agencies">
 <meta property="og:url" content="https://alexgiboi.com/library/news-agency-funding/">
 <meta name="theme-color" content="#102A5C">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -113,46 +113,45 @@
 
 <div class="ff">
   <nav class="tabs" role="tablist" aria-label="Pages">
-    <button role="tab" id="tab-funding" data-page="funding" aria-selected="true">Who funds them</button>
+    <button role="tab" id="tab-funding" data-page="funding" aria-selected="true">Who runs them</button>
     <button role="tab" id="tab-changes" data-page="changes" aria-selected="false">Ownership and funding changes</button>
     <button role="tab" id="tab-definitions" data-page="definitions" aria-selected="false">Definitions and sources</button>
   </nav>
 
   <!-- ============ PAGE 1 ============ -->
   <section id="funding" class="page">
-    <h1 id="funding-title">News agency funding and ownership</h1>
-    <p class="lede" id="funding-takeaway">Of <b data-source="fkpis" data-field="active" data-row="0" class="dash-skeleton">—</b> active agencies, <b data-source="fkpis" data-field="state" data-row="0" class="dash-skeleton">—</b> are mainly state-funded, <b data-source="fkpis" data-field="public_other" data-row="0" class="dash-skeleton">—</b> more are publicly owned but either earn most of their own income or do not publish the split, and <b data-source="fkpis" data-field="private" data-row="0" class="dash-skeleton">—</b> are private, mostly small specialist services. Among national agencies, <b data-source="fkpis" data-field="national_state_share" data-row="0" data-fmt="pct" class="dash-skeleton">—</b> are state-funded and <b data-source="fkpis" data-field="national_public_share" data-row="0" data-fmt="pct" class="dash-skeleton">—</b> publicly owned, so selling to most of FactFocus's core buyers usually means going through public procurement. Every agency was checked one by one against a cited source on 13 October 2026.</p>
+    <h1 id="funding-title">Private, public and state news agencies</h1>
+    <p class="lede" id="funding-takeaway">Of <b data-source="fkpis" data-field="active" data-row="0" class="dash-skeleton">—</b> active agencies, <b data-source="fkpis" data-field="ps" data-row="0" class="dash-skeleton">—</b> are public or state agencies, owned or funded by the state, and <b data-source="fkpis" data-field="private" data-row="0" class="dash-skeleton">—</b> are private, mostly small specialist services. Among national agencies, <b data-source="fkpis" data-field="national_ps_share" data-row="0" data-fmt="pct" class="dash-skeleton">—</b> are public or state. How independent each one is from its government varies widely; the chart and table below show who appoints the management.</p>
 
     <div class="tiles" id="funding-kpis">
       <div class="card tile"><div class="lbl">Active agencies</div><div class="val dash-skeleton" data-source="fkpis" data-field="active" data-row="0">—</div></div>
-      <div class="card tile"><div class="lbl"><i class="sw" data-fc="State-funded"></i>State-funded</div><div class="val dash-skeleton" data-source="fkpis" data-field="state" data-row="0">—</div></div>
-      <div class="card tile"><div class="lbl"><i class="sw" data-fc="Public, commercially financed"></i>Public, commercially financed</div><div class="val dash-skeleton" data-source="fkpis" data-field="publicc" data-row="0">—</div></div>
-      <div class="card tile"><div class="lbl"><i class="sw" data-fc="Public, funding split not published"></i>Public, split not published</div><div class="val dash-skeleton" data-source="fkpis" data-field="publicnp" data-row="0">—</div></div>
+      <div class="card tile"><div class="lbl"><i class="sw" data-fc="Public / State"></i>Public / State</div><div class="val dash-skeleton" data-source="fkpis" data-field="ps" data-row="0">—</div></div>
       <div class="card tile"><div class="lbl"><i class="sw" data-fc="Private"></i>Private</div><div class="val dash-skeleton" data-source="fkpis" data-field="private" data-row="0">—</div></div>
-      <div class="card tile"><div class="lbl"><i class="sw" data-fc="Unknown"></i>Funding unknown</div><div class="val dash-skeleton" data-source="fkpis" data-field="unknown" data-row="0">—</div></div>
+      <div class="card tile"><div class="lbl"><i class="sw" data-fc="Not determined"></i>Not determined</div><div class="val dash-skeleton" data-source="fkpis" data-field="undetermined" data-row="0">—</div></div>
+      <div class="card tile"><div class="lbl">National agencies public / state</div><div class="val dash-skeleton" data-source="fkpis" data-field="national_ps_share" data-row="0" data-fmt="pct">—</div></div>
     </div>
 
     <div class="grid">
       <div class="card" id="region-card">
         <h2>By region</h2>
-        <p class="note">Active agencies by funding category. Click a segment to list those agencies below.</p>
+        <p class="note">Active agencies by structure. Click a segment to list those agencies below.</p>
         <div class="legend" id="region-legend"></div>
         <div class="chart dash-skeleton" id="region-chart" data-source="fund_by_region"></div>
       </div>
       <div class="card" id="kind-card">
         <h2>By kind of agency</h2>
-        <p class="note">Active agencies by funding category. Click a segment to list those agencies below.</p>
+        <p class="note">Active agencies by structure. Click a segment to list those agencies below.</p>
         <div class="legend" id="kind-legend"></div>
         <div class="chart dash-skeleton" id="kind-chart" data-source="fund_by_kind"></div>
       </div>
     </div>
 
     <div class="grid">
-      <div class="card" id="share-card">
-        <h2>How much of their income is public money</h2>
-        <p class="note">Agencies where a figure was found: state grants, subsidies or public-service contracts as a share of total income, latest year found (some are expert estimates; hover for the basis). At 50% or more an agency counts as state-funded.</p>
-        <div class="legend" id="share-legend"></div>
-        <div class="chart dash-skeleton" id="share-chart" data-source="state_share" style="min-height:560px"></div>
+      <div class="card" id="appoint-card">
+        <h2>Who appoints the management</h2>
+        <p class="note">Active public / state agencies, by the body that appoints, elects or approves the head or board under the agency's law or statute. Where the government nominates and parliament votes the nominee into office (e.g. AGERPRES), the agency is shown separately. "Not documented" = state-owned, but no appointment rule was found. Click a bar to list those agencies below.</p>
+        <div class="legend" id="appoint-legend"></div>
+        <div class="chart dash-skeleton" id="appoint-chart" data-source="appoint_counts"></div>
       </div>
       <div class="card" id="matrix-card">
         <h2>Who owns them, by region</h2>
@@ -186,7 +185,8 @@
       <div class="controls">
         <input type="search" id="q" placeholder="Search agency, country, owner…" aria-label="Search agencies">
         <select id="f-region" aria-label="Region"><option value="">All regions</option></select>
-        <select id="f-fund" aria-label="Funding category"><option value="">All funding categories</option></select>
+        <select id="f-fund" aria-label="Structure"><option value="">All structures</option></select>
+        <select id="f-appt" aria-label="Appointed by"><option value="">Any appointing body</option></select>
         <select id="f-own" aria-label="Ownership type"><option value="">All ownership types</option></select>
         <select id="f-kind" aria-label="Kind"><option value="">All kinds</option></select>
         <select id="f-size" aria-label="Size"><option value="">Any size</option><option value="XL">XL</option><option value="L">L</option><option value="M">M</option><option value="S">S</option></select>
@@ -205,10 +205,10 @@
             <th data-field="region" class="hide-narrow"><button data-sort="region">Region</button></th>
             <th data-field="kind" class="hide-narrow"><button data-sort="kind">Kind</button></th>
             <th data-field="size" class="hide-narrow"><button data-sort="size">Size</button></th>
-            <th data-field="funding_category"><button data-sort="funding_category">Funding</button></th>
+            <th data-field="structure"><button data-sort="structure">Structure</button></th>
             <th data-field="ownership_type" class="hide-narrow"><button data-sort="ownership_type">Ownership</button></th>
             <th data-field="owner" class="hide-narrow"><button data-sort="owner">Owner / controlling body</button></th>
-            <th data-field="state_share_pct" class="num"><button data-sort="state_share_pct">State share</button></th>
+            <th data-field="appointed_by" class="hide-narrow"><button data-sort="appointed_by">Management appointed by</button></th>
             <th data-field="mixed_ownership" class="hide-narrow"><button data-sort="mixed_ownership">Mixed ownership</button></th>
             <th data-field="last_change" class="hide-narrow"><button data-sort="last_change_year">Latest change</button></th>
             <th data-field="evidence" class="hide-narrow"><button data-sort="evidence">Evidence</button></th>
@@ -244,11 +244,11 @@
     <div class="grid">
       <div class="card" id="history-card">
         <h2>One agency's history</h2>
-        <p class="note">Pick an agency to see each change in order and its funding today.</p>
+        <p class="note">Pick an agency to see each change in order and its structure today.</p>
         <div class="controls"><select class="big" id="traj-sel" aria-label="Agency"></select></div>
         <p class="traj-head" id="traj-head">
           <span class="nm" id="traj-name"></span>
-          <span class="now">Funding today: <span id="traj-cat" data-source="funding_agencies" data-field="funding_category">—</span> · <span id="traj-own" data-source="funding_agencies" data-field="ownership_type">—</span><span id="traj-share-wrap"> · public money <span id="traj-share" data-source="funding_agencies" data-field="state_share_pct">—</span>% of income (<span id="traj-note" data-source="funding_agencies" data-field="state_share_note">—</span>)</span></span>
+          <span class="now">Today: <span id="traj-cat" data-source="funding_agencies" data-field="structure">—</span> · <span id="traj-own" data-source="funding_agencies" data-field="ownership_type">—</span><span id="traj-gov-wrap"> · <span id="traj-gov" data-source="funding_agencies" data-field="governance">—</span></span></span>
         </p>
         <div class="scroll free">
           <table id="traj-table" data-source="funding_changes" data-row-key="event">
@@ -311,10 +311,10 @@
     <p class="lede">How each agency was classified, what the change directions mean, and how far to trust each figure.</p>
     <div class="grid">
       <div class="card" id="cat-card">
-        <h2>Funding categories</h2>
-        <p class="note">Who mainly pays for the agency. Counts are active agencies; the last column counts those confirmed by an official source.</p>
+        <h2>Structure</h2>
+        <p class="note">Public / state or private, by ownership. Counts are active agencies; the last column counts public / state agencies whose appointment rule is documented rather than inferred from ownership.</p>
         <table id="cat-table" data-source="cat_counts" data-row-key="category">
-          <thead><tr><th data-field="category">Category</th><th data-field="definition">Definition</th><th data-field="active" class="num">Active</th><th data-field="official" class="num hide-narrow">Official source</th></tr></thead>
+          <thead><tr><th data-field="category">Structure</th><th data-field="definition">Definition</th><th data-field="active" class="num">Active</th><th data-field="documented" class="num hide-narrow">Appointment documented</th></tr></thead>
           <tbody></tbody>
         </table>
       </div>
@@ -339,7 +339,9 @@
           <li>Every one of the <b data-source="fkpis" data-field="total" data-row="0" class="dash-skeleton">—</b> agencies was checked one by one on 13 October 2026: <b data-source="fkpis" data-field="ev_official" data-row="0" class="dash-skeleton">—</b> against an official source (the agency, a regulator, a company registry or a government document) and <b data-source="fkpis" data-field="ev_independent" data-row="0" class="dash-skeleton">—</b> against an independent source (State Media Monitor, an encyclopaedia or press). For <b data-source="fkpis" data-field="ev_none" data-row="0" class="dash-skeleton">—</b> no source could confirm the owner or even that the agency still operates; they are marked "Not confirmed" and mostly have status "Unclear".</li>
           <li>Many private agencies rest on a single secondary source, often Wikipedia, and owner data can be several years old; the notes column says so where it matters.</li>
           <li><b data-source="chg_kpis" data-field="unconfirmed" data-row="0" class="dash-skeleton">—</b> of <b data-source="chg_kpis" data-field="changes" data-row="0" class="dash-skeleton">—</b> logged changes have a date or detail that could not be confirmed; the rest cite a source.</li>
-          <li>Public-money shares come from different years and bases (budget grant, public-service contract, expert estimate); each one's basis is in its note. "Public, funding split not published" means the agency is state-owned but no source gives how much of its income is public money.</li>
+          <li>Public and state agencies are shown as one group because the line between them depends on law, practice and politics and could not be drawn consistently. "Management appointed by" records the formal rule only; it does not measure editorial independence. State Media Monitor's rating is shown when hovering that column.</li>
+          <li><b data-source="fkpis" data-field="inferred" data-row="0" class="dash-skeleton">—</b> active public / state agencies have no documented appointment rule; they are counted from state ownership alone.</li>
+          <li>Shares of income from public money are not shown. Published figures use different bases (budget grant, public-service contract, planned or executed budget, expert estimate) and years, and could not be compared reliably.</li>
           <li>The change log holds what the sources record. An agency with no entry may still have changed owner or funding, especially smaller private ones.</li>
           </ul>
       </div>
@@ -361,7 +363,7 @@
   </div>
   <div class="made" style="margin-bottom: 72px">
     <strong>HOW THIS WAS MADE</strong>
-    <p>Researched and compiled with AI assistance (Claude), checked row by row against the sources listed under "Definitions and sources", and reviewed by me. Data as of 13 October 2026. You can download the data: <a href="funding_agencies.csv">agencies (CSV)</a> and <a href="funding_changes.csv">changes (CSV)</a>.</p>
+    <p>Researched and compiled with AI assistance (Claude), checked row by row against the sources listed under "Definitions and sources", and reviewed by me. Agencies checked on 13 October 2026; classification updated on 16 October 2026. You can download the data: <a href="funding_agencies.csv">agencies (CSV)</a> and <a href="funding_changes.csv">changes (CSV)</a>.</p>
   </div>
 </div>
 </main>
