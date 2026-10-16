@@ -288,6 +288,87 @@
    "note": ""
   },
   {
+   "id": 144,
+   "acronym": "Kathpress",
+   "name": "Katholische Presseagentur Kathpress",
+   "en": "Catholic press agency",
+   "country": "Austria",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.kathpress.at",
+   "emails": [
+    {
+     "label": "Editorial",
+     "u": "redaktion",
+     "d": "kathpress.at"
+    },
+    {
+     "label": "Office",
+     "u": "buero",
+     "d": "kathpress.at"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+43 1 512 52 83"
+    }
+   ],
+   "sources": [
+    {
+     "t": "Kathpress: contact",
+     "u": "https://www.kathpress.at/site/kontakt"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 145,
+   "acronym": "pressetext",
+   "name": "pressetext Nachrichtenagentur",
+   "en": "",
+   "country": "Austria",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.pressetext.com",
+   "emails": [
+    {
+     "label": "Newsroom",
+     "u": "redaktion",
+     "d": "pressetext.com"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Vienna",
+     "n": "+43 1 81140 100"
+    },
+    {
+     "label": "Berlin",
+     "n": "+49 30 513022 500"
+    },
+    {
+     "label": "Zurich",
+     "n": "+41 44 533 80 83"
+    }
+   ],
+   "sources": [
+    {
+     "t": "pressetext: contact",
+     "u": "https://www.pressetext.com/company/contact"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "",
+   "also": [
+    "Germany",
+    "Switzerland"
+   ]
+  },
+  {
    "id": 120,
    "acronym": "APA",
    "name": "Azərbaycan Press Agentliyi",
@@ -564,6 +645,38 @@
    "note": ""
   },
   {
+   "id": 148,
+   "acronym": "Agence Europe",
+   "name": "Agence Europe",
+   "en": "EU affairs news agency",
+   "country": "Belgium",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://agenceurope.eu",
+   "emails": [
+    {
+     "label": "Sales and marketing",
+     "u": "info",
+     "d": "agenceurope.eu"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+32 2 737 94 94"
+    }
+   ],
+   "sources": [
+    {
+     "t": "Agence Europe: contact",
+     "u": "https://agenceurope.eu/en/contact-us.html"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
    "id": 149,
    "acronym": "Belga",
    "name": "Belga News Agency",
@@ -645,6 +758,32 @@
     {
      "t": "EANA member directory",
      "u": "https://newsalliance.org/members/federal-news-agency"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 150,
+   "acronym": "KTA",
+   "name": "Katolička tiskovna agencija BK BiH",
+   "en": "Catholic press agency",
+   "country": "Bosnia and Herzegovina",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.ktabkbih.net",
+   "emails": [],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+387 33 666 865"
+    }
+   ],
+   "sources": [
+    {
+     "t": "VZS: news agencies in BiH",
+     "u": "https://vzs.ba/en/news-agencies-in-bih"
     }
    ],
    "checked": "2026-10-16",
@@ -1060,6 +1199,38 @@
     {
      "t": "EANA member directory",
      "u": "https://newsalliance.org/members/hrvatska-izvjestajna-novinska-agencija-croatian-news-agency"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 160,
+   "acronym": "IKA",
+   "name": "Informativna katolička agencija",
+   "en": "Catholic information agency",
+   "country": "Croatia",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://ika.hkm.hr",
+   "emails": [
+    {
+     "label": "General",
+     "u": "ika",
+     "d": "ika.hr"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+385 1 563 5070"
+    }
+   ],
+   "sources": [
+    {
+     "t": "IKA: contact",
+     "u": "https://ika.hkm.hr/kontakt/"
     }
    ],
    "checked": "2026-10-16",
@@ -1519,6 +1690,97 @@
    "note": ""
   },
   {
+   "id": 170,
+   "acronym": "CAPA",
+   "name": "Agence CAPA",
+   "en": "",
+   "country": "France",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.capatv.com",
+   "emails": [
+    {
+     "label": "General",
+     "u": "infos",
+     "d": "capatv.com"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+33 1 40 45 47 00"
+    }
+   ],
+   "sources": [
+    {
+     "t": "FFAP member profile",
+     "u": "https://www.ffap.fr/adherents/capa-presse/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 174,
+   "acronym": "Sipa",
+   "name": "Sipa Press",
+   "en": "Photo agency",
+   "country": "France",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.sipa.com",
+   "emails": [
+    {
+     "label": "Sipa USA",
+     "u": "requests",
+     "d": "sipausa.com"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Sipa USA, New York",
+     "n": "+1 212 463 0150"
+    }
+   ],
+   "sources": [
+    {
+     "t": "DMLA member profile: Sipa",
+     "u": "https://dmla.org/sipa"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 175,
+   "acronym": "Sparknews",
+   "name": "Sparknews",
+   "en": "Solutions journalism agency",
+   "country": "France",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.sparknews.com",
+   "emails": [
+    {
+     "label": "General",
+     "u": "contact",
+     "d": "sparknews.com"
+    }
+   ],
+   "phones": [],
+   "sources": [
+    {
+     "t": "Sparknews: legal notice",
+     "u": "https://www.sparknews.com/mentions-legales"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
    "id": 18,
    "acronym": "AGP",
    "name": "Agence Gabonaise de Presse",
@@ -1709,6 +1971,65 @@
    "note": ""
   },
   {
+   "id": 180,
+   "acronym": "hpd",
+   "name": "Humanistischer Pressedienst",
+   "en": "Humanist press service",
+   "country": "Germany",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://hpd.de",
+   "emails": [
+    {
+     "label": "Editorial",
+     "u": "redaktion",
+     "d": "hpd.de"
+    }
+   ],
+   "phones": [],
+   "sources": [
+    {
+     "t": "hpd: imprint",
+     "u": "https://hpd.de/impressum"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 188,
+   "acronym": "IDEA",
+   "name": "IDEA Evangelische Nachrichtenagentur",
+   "en": "Evangelical news agency",
+   "country": "Germany",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.idea.de",
+   "emails": [
+    {
+     "label": "General",
+     "u": "idea",
+     "d": "idea.de"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+49 6441 915 0"
+    }
+   ],
+   "sources": [
+    {
+     "t": "IDEA: imprint",
+     "u": "https://www.idea.de/impressum"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
    "id": 181,
    "acronym": "KNA",
    "name": "Katholische Nachrichten-Agentur",
@@ -1735,6 +2056,38 @@
     {
      "t": "KNA: imprint",
      "u": "https://www.kna.de/impressum"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 191,
+   "acronym": "teleschau",
+   "name": "teleschau – der mediendienst",
+   "en": "Entertainment news service",
+   "country": "Germany",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.teleschau.de",
+   "emails": [
+    {
+     "label": "General",
+     "u": "info",
+     "d": "teleschau.de"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+49 89 143419 0"
+    }
+   ],
+   "sources": [
+    {
+     "t": "teleschau: imprint",
+     "u": "https://www.teleschau.de/impressum-datenschutz/"
     }
    ],
    "checked": "2026-10-16",
@@ -1931,6 +2284,33 @@
     {
      "t": "DPI: contact us",
      "u": "https://dpi.gov.gy/contact-us/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 197,
+   "acronym": "Magyar Kurír",
+   "name": "Magyar Kurír",
+   "en": "Hungarian Catholic news agency",
+   "country": "Hungary",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.magyarkurir.hu",
+   "emails": [
+    {
+     "label": "General",
+     "u": "mk",
+     "d": "katolikus.hu"
+    }
+   ],
+   "phones": [],
+   "sources": [
+    {
+     "t": "Magyar Kurír: imprint",
+     "u": "https://www.magyarkurir.hu/impresszum"
     }
    ],
    "checked": "2026-10-16",
@@ -2295,6 +2675,32 @@
    "note": ""
   },
   {
+   "id": 210,
+   "acronym": "Askanews",
+   "name": "Askanews",
+   "en": "",
+   "country": "Italy",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://askanews.it",
+   "emails": [],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+39 06 695391"
+    }
+   ],
+   "sources": [
+    {
+     "t": "FIEG member profile",
+     "u": "https://www.fieg.it/chisiamo.asp?sector=imp_imp&id=862"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
    "id": 204,
    "acronym": "Dire",
    "name": "Agenzia Dire",
@@ -2389,6 +2795,80 @@
     {
      "t": "LaPresse: contacts",
      "u": "https://www.lapresse.it/contatti/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 207,
+   "acronym": "Nova",
+   "name": "Agenzia Nova",
+   "en": "",
+   "country": "Italy",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.agenzianova.com",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "Agenzia Nova: about us",
+     "u": "https://www.agenzianova.com/p/495/about-us"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Agenzia Nova lists its contacts on its website; they could not be read automatically."
+  },
+  {
+   "id": 215,
+   "acronym": "Rome Reports",
+   "name": "Rome Reports",
+   "en": "Vatican TV news agency",
+   "country": "Italy",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.romereports.com",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "Rome Reports: contact",
+     "u": "https://www.romereports.com/en/contact/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Rome Reports takes messages through the contact form on its website."
+  },
+  {
+   "id": 208,
+   "acronym": "SIR",
+   "name": "Agenzia SIR",
+   "en": "Italian Catholic news agency",
+   "country": "Italy",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.agensir.it",
+   "emails": [
+    {
+     "label": "Editorial",
+     "u": "sir",
+     "d": "agensir.it"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+39 06 6604 841"
+    }
+   ],
+   "sources": [
+    {
+     "t": "SIR: contacts",
+     "u": "https://www.agensir.it/contatti/"
     }
    ],
    "checked": "2026-10-16",
@@ -3005,6 +3485,38 @@
    "note": ""
   },
   {
+   "id": 222,
+   "acronym": "IPN",
+   "name": "Agenția de presă IPN",
+   "en": "Info-Prim Neo",
+   "country": "Moldova",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://ipn.md",
+   "emails": [
+    {
+     "label": "General",
+     "u": "ipn",
+     "d": "ipn.md"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+373 79 302 178"
+    }
+   ],
+   "sources": [
+    {
+     "t": "IPN: contact",
+     "u": "https://ipn.md/en/contact/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
    "id": 224,
    "acronym": "Moldpres",
    "name": "Agenția Informațională de Stat Moldpres",
@@ -3198,6 +3710,33 @@
     {
      "t": "EANA member directory",
      "u": "https://newsalliance.org/members/algemeen-nederlands-persbureau"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 227,
+   "acronym": "BNO",
+   "name": "BNO News",
+   "en": "",
+   "country": "Netherlands",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://bnonews.com",
+   "emails": [
+    {
+     "label": "General",
+     "u": "contact",
+     "d": "bnonews.com"
+    }
+   ],
+   "phones": [],
+   "sources": [
+    {
+     "t": "BNO News: contact us",
+     "u": "https://bnonews.com/index.php/contact-us/"
     }
    ],
    "checked": "2026-10-16",
@@ -3544,6 +4083,38 @@
    "note": ""
   },
   {
+   "id": 234,
+   "acronym": "KAI",
+   "name": "Katolicka Agencja Informacyjna",
+   "en": "Catholic Information Agency",
+   "country": "Poland",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.ekai.pl",
+   "emails": [
+    {
+     "label": "Subscriptions",
+     "u": "marketing",
+     "d": "kai.com.pl"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Subscriptions",
+     "n": "+48 22 635 77 18"
+    }
+   ],
+   "sources": [
+    {
+     "t": "KAI: contact",
+     "u": "https://www.ekai.pl/contact/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
    "id": 235,
    "acronym": "PAP",
    "name": "Polska Agencja Prasowa",
@@ -3697,6 +4268,33 @@
    "note": ""
   },
   {
+   "id": 239,
+   "acronym": "Basilica",
+   "name": "Agenția de știri Basilica",
+   "en": "Romanian Orthodox Church news agency",
+   "country": "Romania",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://basilica.ro",
+   "emails": [
+    {
+     "label": "General",
+     "u": "info",
+     "d": "basilica.ro"
+    }
+   ],
+   "phones": [],
+   "sources": [
+    {
+     "t": "Basilica: contact",
+     "u": "https://basilica.ro/en/contact/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
    "id": 242,
    "acronym": "RADOR",
    "name": "Agenția de presă RADOR",
@@ -3727,6 +4325,43 @@
     {
      "t": "RADOR: contact",
      "u": "https://www.rador.ro/contact/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 259,
+   "acronym": "ASI",
+   "name": "Агентство социальной информации",
+   "en": "Agency for Social Information",
+   "country": "Russia",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://asi.org.ru",
+   "emails": [
+    {
+     "label": "Newsroom",
+     "u": "news",
+     "d": "asi.org.ru"
+    },
+    {
+     "label": "Partnerships",
+     "u": "pr",
+     "d": "asi.org.ru"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+7 495 799 55 63"
+    }
+   ],
+   "sources": [
+    {
+     "t": "ASI: contacts",
+     "u": "https://asi.org.ru/contacts/"
     }
    ],
    "checked": "2026-10-16",
@@ -4300,6 +4935,38 @@
    "note": "Covers Catalonia."
   },
   {
+   "id": 277,
+   "acronym": "Colpisa",
+   "name": "Agencia Colpisa",
+   "en": "Vocento news agency",
+   "country": "Spain",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.colpisa.com",
+   "emails": [
+    {
+     "label": "General",
+     "u": "colpisa",
+     "d": "colpisa.com"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+34 914 56 46 10"
+    }
+   ],
+   "sources": [
+    {
+     "t": "El Publicista: Colpisa Madrid",
+     "u": "https://www.elpublicista.es/comunicacion-y-rrpp1/colpisa-madrid"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
    "id": 272,
    "acronym": "EFE",
    "name": "Agencia EFE",
@@ -4416,6 +5083,38 @@
    "note": ""
   },
   {
+   "id": 279,
+   "acronym": "SINC",
+   "name": "Servicio de Información y Noticias Científicas",
+   "en": "Spanish science news agency",
+   "country": "Spain",
+   "kind": "Specialist news agency",
+   "ownership": "Public / State",
+   "eana": false,
+   "web": "https://www.agenciasinc.es",
+   "emails": [
+    {
+     "label": "Newsroom",
+     "u": "redaccion",
+     "d": "agenciasinc.es"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+34 91 425 18 20"
+    }
+   ],
+   "sources": [
+    {
+     "t": "SINC: contact",
+     "u": "https://agenciasinc.es/Quienes-somos/Contacto"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
    "id": 422,
    "acronym": "SUNA",
    "name": "وكالة السودان للأنباء",
@@ -4435,6 +5134,27 @@
    ],
    "checked": "2026-10-16",
    "note": "No phone number or email could be found."
+  },
+  {
+   "id": 283,
+   "acronym": "Newsworthy",
+   "name": "Newsworthy",
+   "en": "Data-driven local news agency",
+   "country": "Sweden",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.newsworthy.se",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "Newsworthy: contact",
+     "u": "https://www.newsworthy.se/kontakt"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Newsworthy lists only named staff contacts; see its contact page."
   },
   {
    "id": 284,
@@ -4539,6 +5259,27 @@
    ],
    "checked": "2026-10-16",
    "note": ""
+  },
+  {
+   "id": 289,
+   "acronym": "LID",
+   "name": "Landwirtschaftlicher Informationsdienst",
+   "en": "Swiss agricultural information service",
+   "country": "Switzerland",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.lid.ch",
+   "emails": [],
+   "phones": [],
+   "sources": [
+    {
+     "t": "LID: team",
+     "u": "https://www.lid.ch/kontakt/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "LID lists only named staff contacts; see its contact page."
   },
   {
    "id": 425,
@@ -5130,6 +5871,114 @@
    "note": ""
   },
   {
+   "id": 310,
+   "acronym": "Cavendish",
+   "name": "Cavendish Press",
+   "en": "Manchester news and picture agency",
+   "country": "United Kingdom",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://cavendish-press.co.uk",
+   "emails": [
+    {
+     "label": "Newsdesk",
+     "u": "newsdesk",
+     "d": "cavendish-press.co.uk"
+    }
+   ],
+   "phones": [],
+   "sources": [
+    {
+     "t": "Cavendish Press: contact",
+     "u": "https://cavendish-press.co.uk/contact/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 312,
+   "acronym": "IRN",
+   "name": "Independent Radio News",
+   "en": "",
+   "country": "United Kingdom",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.irn.co.uk",
+   "emails": [
+    {
+     "label": "General",
+     "u": "news",
+     "d": "irn.co.uk"
+    },
+    {
+     "label": "Newsdesk",
+     "u": "irn",
+     "d": "sky.uk"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Newsdesk",
+     "n": "+44 20 7032 4520"
+    },
+    {
+     "label": "General",
+     "n": "+44 20 7485 9800"
+    }
+   ],
+   "sources": [
+    {
+     "t": "IRN: contact us",
+     "u": "https://www.irn.co.uk/contact-us/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 313,
+   "acronym": "MLex",
+   "name": "MLex",
+   "en": "Regulatory and legal news agency",
+   "country": "United Kingdom",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.mlex.com",
+   "emails": [
+    {
+     "label": "Customer services",
+     "u": "customerservices",
+     "d": "mlex.com"
+    }
+   ],
+   "phones": [
+    {
+     "label": "UK",
+     "n": "+44 800 999 3237"
+    },
+    {
+     "label": "US",
+     "n": "+1 800 356 6547"
+    },
+    {
+     "label": "Hong Kong",
+     "n": "+852 2965 1424"
+    }
+   ],
+   "sources": [
+    {
+     "t": "MLex: contact",
+     "u": "https://www.mlex.com/mlex/about/contact"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "MLex publishes editorial contacts on a separate page of its website."
+  },
+  {
    "id": 314,
    "acronym": "PA Media",
    "name": "PA Media",
@@ -5182,6 +6031,158 @@
     {
      "t": "Thomson Reuters: media contacts",
      "u": "https://www.thomsonreuters.com/en/contact-us/media-contacts"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 315,
+   "acronym": "RNH",
+   "name": "Radio News Hub",
+   "en": "",
+   "country": "United Kingdom",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.radionewshub.com",
+   "emails": [
+    {
+     "label": "Sales",
+     "u": "sales",
+     "d": "radionewshub.com"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+44 20 4529 6860"
+    }
+   ],
+   "sources": [
+    {
+     "t": "Radio News Hub: contact",
+     "u": "https://www.radionewshub.com/contact"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 316,
+   "acronym": "Ross Parry",
+   "name": "Ross Parry Agency",
+   "en": "Yorkshire news and picture agency (part of SWNS)",
+   "country": "United Kingdom",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://nationalnews.co.uk",
+   "emails": [
+    {
+     "label": "Picture desk",
+     "u": "picturedesk",
+     "d": "rossparry.co.uk"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+44 113 236 1842"
+    }
+   ],
+   "sources": [
+    {
+     "t": "SWNS: office contacts",
+     "u": "https://nationalnews.co.uk/contact-swns/"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
+  },
+  {
+   "id": 317,
+   "acronym": "SNTV",
+   "name": "SNTV",
+   "en": "Sports News Television",
+   "country": "United Kingdom",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.sntv.com",
+   "emails": [],
+   "phones": [
+    {
+     "label": "International",
+     "n": "+44 330 054 3330"
+    },
+    {
+     "label": "UK",
+     "n": "+44 808 134 6420"
+    },
+    {
+     "label": "US",
+     "n": "+1 844 777 2006"
+    }
+   ],
+   "sources": [
+    {
+     "t": "SNTV: contact",
+     "u": "https://www.sntv.com/contact-us"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": "Editorial enquiries go through the contact form on the SNTV website."
+  },
+  {
+   "id": 318,
+   "acronym": "SWNS",
+   "name": "SWNS",
+   "en": "South West News Service",
+   "country": "United Kingdom",
+   "kind": "National news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://swns.com",
+   "emails": [
+    {
+     "label": "News",
+     "u": "news",
+     "d": "swns.com"
+    },
+    {
+     "label": "Pictures",
+     "u": "pix",
+     "d": "swns.com"
+    },
+    {
+     "label": "New York",
+     "u": "nynews",
+     "d": "swns.com"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Newsdesk",
+     "n": "+44 117 906 6500"
+    },
+    {
+     "label": "London",
+     "n": "+44 20 7684 3000"
+    },
+    {
+     "label": "New York",
+     "n": "+1 646 873 7565"
+    }
+   ],
+   "sources": [
+    {
+     "t": "SWNS: contact",
+     "u": "https://swns.com/contact/"
+    },
+    {
+     "t": "SWNS: office contacts",
+     "u": "https://nationalnews.co.uk/contact-swns/"
     }
    ],
    "checked": "2026-10-16",
@@ -5291,6 +6292,32 @@
    ],
    "checked": "2026-10-16",
    "note": "No phone number or email could be confirmed; see the agency’s website."
+  },
+  {
+   "id": 319,
+   "acronym": "Fides",
+   "name": "Agenzia Fides",
+   "en": "Vatican missionary news agency",
+   "country": "Vatican City",
+   "kind": "Specialist news agency",
+   "ownership": "Private",
+   "eana": false,
+   "web": "https://www.fides.org",
+   "emails": [],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+39 06 6988 0115"
+    }
+   ],
+   "sources": [
+    {
+     "t": "Fides: contacts",
+     "u": "https://www.fides.org/it/contacts"
+    }
+   ],
+   "checked": "2026-10-16",
+   "note": ""
   },
   {
    "id": 367,
