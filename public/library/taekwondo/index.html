@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
-<meta name="description" content="The history of taekwondo told belt by belt, from ancient Korean roots and the first schools in Seoul to the Olympics, with the two main branches, belt meanings and a quiz.">
+<meta name="description" content="The history of taekwondo told belt by belt, from ancient Korean roots and the first schools in Seoul to the Olympics, with the two main branches, belt meanings and a quiz. In English, Italian and Romanian.">
 <link rel="canonical" href="https://alexgiboi.com/library/taekwondo/">
 <meta property="og:title" content="The Way of Foot and Fist">
-<meta property="og:description" content="The history of taekwondo told belt by belt, from ancient Korean roots and the first schools in Seoul to the Olympics, with the two main branches, belt meanings and a quiz.">
+<meta property="og:description" content="The history of taekwondo told belt by belt, from ancient Korean roots and the first schools in Seoul to the Olympics, with the two main branches, belt meanings and a quiz. In English, Italian and Romanian.">
 <meta property="og:url" content="https://alexgiboi.com/library/taekwondo/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <title>The Way of Foot and Fist</title>
@@ -68,7 +68,11 @@ section { padding-block: 56px; border-top: 1px solid var(--line); display: grid;
 .intro { display: grid; gap: 12px; }
 
 /* Hero */
-.hero { padding-block: 40px 48px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 32px; align-items: center; }
+.langbar { display: flex; justify-content: flex-end; padding-block: 16px 0; }
+.lang { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; padding: 3px; background: var(--paper-2); }
+.lang button { font: 500 13px var(--mono); letter-spacing: .08em; border: 0; background: transparent; color: var(--ink-soft); padding: 6px 14px; border-radius: 999px; cursor: pointer; }
+.lang button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+.hero { padding-block: 16px 48px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 32px; align-items: center; }
 .hero h1 { font-family: var(--display); font-weight: 400; font-size: clamp(44px, 8vw, 88px); line-height: .95; }
 .hero h1 span { color: var(--red); }
 .hero .lede { font-size: 19px; margin-top: 18px; }
@@ -173,7 +177,15 @@ footer { padding-block: 32px 48px; border-top: 1px solid var(--line); font-size:
 </div></nav>
 
 <div class="wrap">
+<div class="langbar">
+  <div class="lang" role="group" aria-label="Limba / Lingua / Language">
+    <button type="button" id="btn-ro" data-lang="ro" aria-pressed="false">RO</button>
+    <button type="button" id="btn-it" data-lang="it" aria-pressed="false">IT</button>
+    <button type="button" id="btn-en" data-lang="en" aria-pressed="true">EN</button>
+  </div>
+</div>
 
+<div class="pane" data-pane="en" lang="en">
 <header class="hero">
   <div>
     <p class="label">A short history for a green belt</p>
@@ -202,7 +214,6 @@ footer { padding-block: 32px 48px; border-top: 1px solid var(--line); font-size:
     <h2 id="t-timeline">From ancient Korea to the Olympics</h2>
     <p>Each era below wears a belt colour, in the order a student earns them. The modern art was born in the green-belt era, when the first schools opened in Seoul.</p>
   </div>
-
   <div>
   <article class="era" id="white">
     <div class="era-head">
@@ -214,7 +225,6 @@ footer { padding-block: 32px 48px; border-top: 1px solid var(--line); font-size:
       <p>Korea was once split into three kingdoms: Goguryeo, Baekje and Silla. Wall paintings in Goguryeo tombs show men in fighting stances, and old records mention unarmed combat called <em>subak</em>. In Silla, young aristocrats trained as the <em>Hwarang</em>, a corps that studied martial skill alongside poetry and moral codes. Taekwondo looks back to these traditions as part of its Korean heritage.</p>
     </div>
   </article>
-
   <article class="era" id="yellow">
     <div class="era-head">
       <svg class="belt" viewBox="0 0 120 34" aria-hidden="true"><rect x="1" y="11" width="118" height="12" rx="2" fill="var(--belt-yellow)"/><path d="M52 6h16v22H52z" fill="var(--belt-yellow)"/></svg>
@@ -230,7 +240,6 @@ footer { padding-block: 32px 48px; border-top: 1px solid var(--line); font-size:
       </ul>
     </div>
   </article>
-
   <article class="era" id="green">
     <div class="era-head">
       <svg class="belt" viewBox="0 0 120 34" aria-hidden="true"><rect x="1" y="11" width="118" height="12" rx="2" fill="var(--belt-green)"/><path d="M52 6h16v22H52z" fill="var(--belt-green)"/></svg>
@@ -253,7 +262,6 @@ footer { padding-block: 32px 48px; border-top: 1px solid var(--line); font-size:
       </ul>
     </div>
   </article>
-
   <article class="era" id="blue">
     <div class="era-head">
       <svg class="belt" viewBox="0 0 120 34" aria-hidden="true"><rect x="1" y="11" width="118" height="12" rx="2" fill="var(--belt-blue)"/><path d="M52 6h16v22H52z" fill="var(--belt-blue)"/></svg>
@@ -269,7 +277,6 @@ footer { padding-block: 32px 48px; border-top: 1px solid var(--line); font-size:
       </ul>
     </div>
   </article>
-
   <article class="era" id="red">
     <div class="era-head">
       <svg class="belt" viewBox="0 0 120 34" aria-hidden="true"><rect x="1" y="11" width="118" height="12" rx="2" fill="var(--belt-red)"/><path d="M52 6h16v22H52z" fill="var(--belt-red)"/></svg>
@@ -286,7 +293,6 @@ footer { padding-block: 32px 48px; border-top: 1px solid var(--line); font-size:
       </ul>
     </div>
   </article>
-
   <article class="era" id="black">
     <div class="era-head">
       <svg class="belt" viewBox="0 0 120 34" aria-hidden="true"><rect x="1" y="11" width="118" height="12" rx="2" fill="var(--belt-black)"/><path d="M52 6h16v22H52z" fill="var(--belt-black)"/></svg>
@@ -379,8 +385,8 @@ footer { padding-block: 32px 48px; border-top: 1px solid var(--line); font-size:
     <h2 id="t-quiz">Green belt quiz</h2>
     <p>Six questions to test what you read. Tap an answer.</p>
   </div>
-  <div class="quiz" id="quiz"></div>
-  <p class="score" id="score" aria-live="polite">0 / 6</p>
+  <div class="quiz" data-quiz="en"></div>
+  <p class="score" data-score="en" aria-live="polite">0 / 6</p>
 </section>
 
 <section class="sources" aria-labelledby="t-sources">
@@ -402,37 +408,501 @@ footer { padding-block: 32px 48px; border-top: 1px solid var(--line); font-size:
 <footer>Made for a green belt · October 2026</footer>
 </div>
 
+<div class="pane" data-pane="it" lang="it" hidden>
+<header class="hero">
+  <div>
+    <p class="label">Breve storia per una cintura verde</p>
+    <h1>La via del <span>piede</span> e del pugno</h1>
+    <p class="lede">Il taekwondo è giovane come nome e antico come idea. Il nome risale al 1955, ma l'arte nasce dalle tradizioni marziali coreane, dal karate giapponese appreso durante l'occupazione e dal lavoro di alcuni maestri che aprirono scuole a Seul dopo il 1945. Questa pagina segue la storia cintura dopo cintura, dalla bianca alla nera.</p>
+  </div>
+  <div class="glyphs" aria-label="Le tre sillabe di taekwondo">
+    <div class="glyph"><b lang="ko">태</b><div><small>Tae · 跆</small><em>calciare, il piede</em></div></div>
+    <div class="glyph"><b lang="ko">권</b><div><small>Kwon · 拳</small><em>il pugno</em></div></div>
+    <div class="glyph"><b lang="ko">도</b><div><small>Do · 道</small><em>la via, il cammino</em></div></div>
+  </div>
+</header>
+
+<nav class="strip" aria-label="Vai a un'epoca">
+  <a href="#white-it"><i style="background:var(--belt-white)"></i><span>Radici</span></a>
+  <a href="#yellow-it"><i style="background:var(--belt-yellow)"></i><span>Taekkyeon</span></a>
+  <a href="#green-it"><i style="background:var(--belt-green)"></i><span>Kwan</span></a>
+  <a href="#blue-it"><i style="background:var(--belt-blue)"></i><span>Il nome</span></a>
+  <a href="#red-it"><i style="background:var(--belt-red)"></i><span>Due rami</span></a>
+  <a href="#black-it"><i style="background:var(--belt-black)"></i><span>Olimpiadi</span></a>
+</nav>
+
+<section aria-labelledby="t-timeline-it">
+  <div class="intro">
+    <p class="label">Parte 1</p>
+    <h2 id="t-timeline-it">Dall'antica Corea alle Olimpiadi</h2>
+    <p>Ogni epoca qui sotto porta il colore di una cintura, nell'ordine in cui un allievo le conquista. L'arte moderna nasce nell'epoca della cintura verde, quando a Seul aprono le prime scuole.</p>
+  </div>
+  <div>
+  <article class="era" id="white-it">
+    <div class="era-head">
+      <svg class="belt" viewBox="0 0 120 34" aria-hidden="true"><rect x="1" y="11" width="118" height="12" rx="2" fill="var(--belt-white)"/><path d="M52 6h16v22H52z" fill="var(--belt-white)"/></svg>
+      <div><p class="label">Cintura bianca</p><p class="when">ca. I sec. a.C. – X sec.</p></div>
+    </div>
+    <div class="era-body">
+      <h3>Le radici nei Tre Regni</h3>
+      <p>Un tempo la Corea era divisa in tre regni: Goguryeo, Baekje e Silla. Le pitture murali delle tombe di Goguryeo mostrano uomini in posizione di combattimento, e antiche cronache parlano di una lotta a mani nude chiamata <em>subak</em>. A Silla i giovani aristocratici si formavano negli <em>Hwarang</em>, un corpo che studiava l'arte marziale insieme alla poesia e a un codice morale. Il taekwondo guarda a queste tradizioni come parte della sua eredità coreana.</p>
+    </div>
+  </article>
+  <article class="era" id="yellow-it">
+    <div class="era-head">
+      <svg class="belt" viewBox="0 0 120 34" aria-hidden="true"><rect x="1" y="11" width="118" height="12" rx="2" fill="var(--belt-yellow)"/><path d="M52 6h16v22H52z" fill="var(--belt-yellow)"/></svg>
+      <div><p class="label">Cintura gialla</p><p class="when">1392 – 1945</p></div>
+    </div>
+    <div class="era-body">
+      <h3>Il taekkyeon, poi il silenzio</h3>
+      <p>Durante la dinastia Joseon il <em>taekkyeon</em> era un gioco fluido, quasi una danza, fatto di calci e spazzate e praticato nelle feste. È l'antenato coreano più evidente dei calci del taekwondo, e nel 2011 l'UNESCO lo ha iscritto nella lista del Patrimonio culturale immateriale.</p>
+      <ul class="facts">
+        <li><time>1910</time><span>Il Giappone annette la Corea. Nei 35 anni successivi le tradizioni marziali coreane scompaiono dalla vita quotidiana.</span></li>
+        <li><time>anni '30</time><span>Giovani coreani che studiano in Giappone imparano il karate. Diversi di loro fonderanno le prime scuole di taekwondo.</span></li>
+        <li><time>1945</time><span>La liberazione, alla fine della Seconda guerra mondiale. La Corea riconquista l'indipendenza.</span></li>
+      </ul>
+    </div>
+  </article>
+  <article class="era" id="green-it">
+    <div class="era-head">
+      <svg class="belt" viewBox="0 0 120 34" aria-hidden="true"><rect x="1" y="11" width="118" height="12" rx="2" fill="var(--belt-green)"/><path d="M52 6h16v22H52z" fill="var(--belt-green)"/></svg>
+      <div><p class="label">Cintura verde</p><p class="when">1944 – metà anni '50</p></div>
+    </div>
+    <div class="era-body">
+      <h3>I kwan: le scuole da cui tutto è cominciato</h3>
+      <p>Intorno alla liberazione alcuni maestri aprirono a Seul delle scuole chiamate <em>kwan</em> (관, «sala»). Insegnavano ciò che avevano imparato, per lo più karate con nomi coreani come <em>tang soo do</em> o <em>kong soo do</em>. Ogni scuola aveva il suo stile. Questi cinque sono di solito considerati i kwan originali:</p>
+      <div class="kwans">
+        <div class="kwan"><b>Song Moo Kwan</b><span>Ro Byung-jick · 1944</span></div>
+        <div class="kwan"><b>Chung Do Kwan</b><span>Lee Won-kuk · 1944<br>«Scuola dell'onda blu»</span></div>
+        <div class="kwan"><b>Jido Kwan</b><span>Nato come Yun Moo Kwan · Chun Sang-sup · 1946</span></div>
+        <div class="kwan"><b>Chang Moo Kwan</b><span>Nato presso lo YMCA di Seul · Yoon Byung-in · 1946–47</span></div>
+        <div class="kwan"><b>Moo Duk Kwan</b><span>Hwang Kee · 1945–47</span></div>
+      </div>
+      <ul class="facts">
+        <li><time>1950–53</time><span>La guerra di Corea. L'addestramento alle arti marziali si diffonde nell'esercito sudcoreano.</span></li>
+        <li><time>1952</time><span>Il presidente Syngman Rhee assiste a una dimostrazione degli ufficiali Choi Hong-hi e Nam Tae-hi. Nam rompe con un solo pugno una pila di 13 tegole, un gesto rimasto celebre. Rhee chiede a Choi di introdurre l'addestramento marziale in tutto l'esercito.</span></li>
+        <li><time>anni '50</time><span>Choi fonda l'Oh Do Kwan per addestrare i soldati, con Nam Tae-hi tra gli istruttori principali. Verso la metà degli anni '50 i kwan sono nove in tutto.</span></li>
+      </ul>
+    </div>
+  </article>
+  <article class="era" id="blue-it">
+    <div class="era-head">
+      <svg class="belt" viewBox="0 0 120 34" aria-hidden="true"><rect x="1" y="11" width="118" height="12" rx="2" fill="var(--belt-blue)"/><path d="M52 6h16v22H52z" fill="var(--belt-blue)"/></svg>
+      <div><p class="label">Cintura blu</p><p class="when">1955 – 1966</p></div>
+    </div>
+    <div class="era-body">
+      <h3>Un nome e la spinta all'unità</h3>
+      <p>I capi dei kwan cominciarono a incontrarsi per riunire i loro stili in un'unica arte coreana. L'<strong>11 aprile 1955</strong> una commissione di maestri e funzionari scelse «Taekwon-Do», un nome sostenuto dal generale Choi Hong-hi. Suonava coreano e richiamava l'antica arte del taekkyeon.</p>
+      <ul class="facts">
+        <li><time>1959–65</time><span>Nel 1959 si comincia a creare un'associazione nazionale. All'inizio si chiama Korea Tae Soo Do Association; nel 1965 prende il nome definitivo di Korea Taekwondo Association (KTA).</span></li>
+        <li><time>1959–'60</time><span>Maestri coreani girano Asia, Europa e America con le loro dimostrazioni. Alcuni istruttori si stabiliscono all'estero e aprono scuole.</span></li>
+        <li><time>1966</time><span>Il 22 marzo Choi fonda a Seul la International Taekwon-Do Federation (ITF) per diffondere l'arte nel mondo.</span></li>
+      </ul>
+    </div>
+  </article>
+  <article class="era" id="red-it">
+    <div class="era-head">
+      <svg class="belt" viewBox="0 0 120 34" aria-hidden="true"><rect x="1" y="11" width="118" height="12" rx="2" fill="var(--belt-red)"/><path d="M52 6h16v22H52z" fill="var(--belt-red)"/></svg>
+      <div><p class="label">Cintura rossa</p><p class="when">1966 – 2002</p></div>
+    </div>
+    <div class="era-body">
+      <h3>Due rami internazionali</h3>
+      <p>Diffondendosi nel mondo, il taekwondo si è sviluppato lungo due strade principali: da una parte l'ITF, dall'altra il Kukkiwon con la World Taekwondo Federation. Ognuno ha costruito le proprie forme, le proprie competizioni e il proprio sistema di cinture nere.</p>
+      <ul class="facts">
+        <li><time>1972</time><span>L'ITF trasferisce la sede a Toronto, in Canada. A Seul il 30 novembre apre il Kukkiwon, l'accademia nazionale del taekwondo.</span></li>
+        <li><time>1973</time><span>A maggio si svolgono al Kukkiwon i primi Campionati mondiali di taekwondo. Il 28 maggio vi nasce la World Taekwondo Federation (WTF), con 17 nazioni membri.</span></li>
+        <li><time>1980</time><span>Il 17 luglio il Comitato olimpico internazionale riconosce la WTF e apre la strada verso le Olimpiadi.</span></li>
+        <li><time>2002</time><span>Il generale Choi Hong-hi, fondatore dell'ITF, muore il 15 giugno a 83 anni. Il taekwon-do ITF prosegue nel mondo attraverso diverse federazioni.</span></li>
+      </ul>
+    </div>
+  </article>
+  <article class="era" id="black-it">
+    <div class="era-head">
+      <svg class="belt" viewBox="0 0 120 34" aria-hidden="true"><rect x="1" y="11" width="118" height="12" rx="2" fill="var(--belt-black)"/><path d="M52 6h16v22H52z" fill="var(--belt-black)"/></svg>
+      <div><p class="label">Cintura nera</p><p class="when">1988 – oggi</p></div>
+    </div>
+    <div class="era-body">
+      <h3>Uno sport olimpico</h3>
+      <ul class="facts">
+        <li><time>1988</time><span>Sport dimostrativo alle Olimpiadi di Seul, e di nuovo a Barcellona 1992.</span></li>
+        <li><time>2000</time><span>Sport olimpico con medaglie a Sydney e in tutti i Giochi successivi.</span></li>
+        <li><time>2017</time><span>A giugno la WTF cambia nome in World Taekwondo (WT).</span></li>
+        <li><time>2018</time><span>Il parlamento sudcoreano dichiara per legge il taekwondo arte marziale nazionale del Paese.</span></li>
+        <li><time>2021</time><span>Il para taekwondo debutta alle Paralimpiadi di Tokyo 2020.</span></li>
+        <li><time>Oggi</time><span>World Taekwondo conta 215 associazioni nazionali più una squadra di rifugiati. Il presidente Choue Chung-won è stato rieletto nell'ottobre 2025 per un mandato fino al 2029, e il prossimo torneo olimpico si terrà a Los Angeles nel 2028.</span></li>
+      </ul>
+    </div>
+  </article>
+  </div>
+</section>
+
+<section aria-labelledby="t-tree-it">
+  <div class="intro">
+    <p class="label">Parte 2</p>
+    <h2 id="t-tree-it">L'albero genealogico</h2>
+    <p>Un'arte, due rami principali. Se una scuola insegna le forme <em>Taegeuk</em> e il combattimento con corpetti elettronici, appartiene al ramo World Taekwondo e Kukkiwon, quello delle Olimpiadi. Se insegna i <em>tul</em> come Chon-Ji e Dan-Gun, è ITF.</p>
+  </div>
+  <div class="tree-scroll">
+    <div class="tree" role="img" aria-label="Genealogia: le tradizioni coreane e il karate portano ai kwan, poi al nome taekwondo e alla Korea Taekwondo Association, e infine a due rami: l'ITF, e il Kukkiwon con World Taekwondo.">
+      <div class="tier"><div class="node"><b>Tradizioni coreane</b><small>subak · taekkyeon</small></div><div class="node"><b>Karate giapponese</b><small>appreso negli anni '30–'40</small></div></div>
+      <div class="join"></div>
+      <div class="tier"><div class="node"><b>I nove kwan</b><small>Seul · 1944–anni '50</small></div></div>
+      <div class="join"></div>
+      <div class="tier"><div class="node"><b>Il nome «Taekwondo»</b><small>11 aprile 1955</small></div><div class="node"><b>Korea Taekwondo Association</b><small>1959–65</small></div></div>
+      <div class="join"></div>
+      <div class="fork">
+        <div>
+          <div class="node itf"><b>International Taekwon-Do Federation</b><small>Gen. Choi Hong-hi · 1966</small></div>
+          <div class="join"></div>
+          <div class="node itf"><b>Taekwon-Do ITF nel mondo</b><small>tul · campionati propri</small></div>
+        </div>
+        <div>
+          <div class="node wt"><b>Kukkiwon</b><small>Seul · 1972 · rilascia le cinture nere</small></div>
+          <div class="join"></div>
+          <div class="node wt"><b>World Taekwondo</b><small>1973 · sport olimpico</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="t-compare-it">
+  <div class="intro">
+    <p class="label">Parte 3</p>
+    <h2 id="t-compare-it">Come si distinguono i due rami</h2>
+  </div>
+  <div class="compare-scroll">
+    <table>
+      <thead><tr><th></th><th class="wt">World Taekwondo · Kukkiwon</th><th class="itf">ITF</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Grafia</th><td>Taekwondo</td><td>Taekwon-Do</td></tr>
+        <tr><th scope="row">Forme</th><td><em>Poomsae</em>: otto forme Taegeuk per le cinture colorate, poi le forme per cintura nera</td><td><em>Tul</em>: 24 forme, una per ogni ora del giorno, dedicate a personaggi e idee della storia coreana</td></tr>
+        <tr><th scope="row">Combattimento</th><td>Contatto pieno. Sensori elettronici nel corpetto e nel casco assegnano i punti dei calci; i pugni li valutano gli arbitri. Pugni solo al tronco. Il calcio girato alla testa vale di più: 5 punti.</td><td>Contatto controllato, con guanti e protezioni per i piedi. I pugni alla testa sono ammessi. I punti li assegnano i giudici.</td></tr>
+        <tr><th scope="row">Movimento</th><td>Guardia alta e rapida; accento su calci veloci e alti</td><td>Un movimento che sale e scende, detto «onda sinusoidale», per dare più potenza a ogni tecnica</td></tr>
+        <tr><th scope="row">Olimpiadi</th><td>Sì, dal 2000</td><td>No; organizza i propri campionati mondiali</td></tr>
+        <tr><th scope="row">Cinture nere</th><td>Certificate dal Kukkiwon di Seul</td><td>Certificate dalla federazione ITF a cui appartiene la scuola</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section aria-labelledby="t-belts-it">
+  <div class="intro">
+    <p class="label">Parte 4</p>
+    <h2 id="t-belts-it">Che cosa significano i colori</h2>
+    <p>Questi sono i significati della tradizione ITF del generale Choi, che molte scuole di entrambi i rami insegnano ancora. Alcune palestre aggiungono altri colori o strisce, quindi nella tua scuola potrebbero spiegarli in modo un po' diverso.</p>
+  </div>
+  <div class="meanings">
+    <div class="meaning"><i style="background:var(--belt-white)"></i><div><b>Bianca</b><span>Innocenza: un principiante che non sa ancora nulla.</span></div></div>
+    <div class="meaning"><i style="background:var(--belt-yellow)"></i><div><b>Gialla</b><span>La terra, in cui la pianta mette radici mentre si gettano le fondamenta.</span></div></div>
+    <div class="meaning"><i style="background:var(--belt-green)"></i><div><b>Verde</b><span>La crescita della pianta, mentre le abilità nel taekwondo cominciano a svilupparsi.</span></div></div>
+    <div class="meaning"><i style="background:var(--belt-blue)"></i><div><b>Blu</b><span>Il cielo, verso cui si allunga la pianta che cresce.</span></div></div>
+    <div class="meaning"><i style="background:var(--belt-red)"></i><div><b>Rossa</b><span>Pericolo: un invito all'allievo a mantenere il controllo, e un avvertimento all'avversario a stare lontano.</span></div></div>
+    <div class="meaning"><i style="background:var(--belt-black)"></i><div><b>Nera</b><span>L'opposto del bianco: maturità, abilità e forza davanti al buio e alla paura.</span></div></div>
+  </div>
+</section>
+
+<section aria-labelledby="t-quiz-it">
+  <div class="intro">
+    <p class="label">Parte 5</p>
+    <h2 id="t-quiz-it">Il quiz della cintura verde</h2>
+    <p>Sei domande per vedere che cosa ricordi. Tocca una risposta.</p>
+  </div>
+  <div class="quiz" data-quiz="it"></div>
+  <p class="score" data-score="it" aria-live="polite">0 / 6</p>
+</section>
+
+<section class="sources" aria-labelledby="t-sources-it">
+  <p class="label" id="t-sources-it">Fonti</p>
+  <ul>
+    <li><a href="https://en.wikipedia.org/wiki/Taekwondo">Taekwondo, Wikipedia</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/World_Taekwondo">World Taekwondo, Wikipedia</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/Korea_Taekwondo_Association">Korea Taekwondo Association, Wikipedia</a></li>
+    <li><a href="https://songmookwan.com/index.php/history/the-original-founding-kwans">Song Moo Kwan: the original founding kwans</a></li>
+    <li><a href="https://ich.unesco.org/en/RL/taekkyeon-a-traditional-korean-martial-art-00452">UNESCO: Taekkyeon, a traditional Korean martial art</a></li>
+    <li><a href="https://www.koreatimes.co.kr/sports/20180402/taekwondo-is-koreas-national-martial-art-now-by-law">Korea Times: Taekwondo is Korea's national martial art by law (2018)</a></li>
+    <li><a href="https://www.nbtkda.com/olympic-rules">Olympic kyorugi scoring rules</a></li>
+    <li><a href="https://www.koreajoongangdaily.com/sports/choue-chung-won-re-elected-as-president-of-world-taekwondo/12033480">Korea JoongAng Daily: Choue re-elected</a></li>
+    <li><a href="https://mundotaekwondo.com/president-choue-inspires-participants-at-world-taekwondo-2026-para-taekwondo-training-camp/">Mundo Taekwondo: 215 member associations (July 2026)</a></li>
+  </ul>
+  <p>Ricerca e pagina realizzate con l'aiuto di Claude (Anthropic), sulla base delle fonti pubbliche indicate sopra.</p>
+</section>
+
+<footer>Realizzato per una cintura verde · ottobre 2026</footer>
+</div>
+
+<div class="pane" data-pane="ro" lang="ro" hidden>
+<header class="hero">
+  <div>
+    <p class="label">O scurtă istorie pentru o centură verde</p>
+    <h1>Calea <span>piciorului</span> și a pumnului</h1>
+    <p class="lede">Taekwondo este tânăr ca nume și vechi ca idee. Numele datează din 1955, dar arta s-a născut din tradițiile marțiale coreene, din karateul japonez învățat în timpul ocupației și din munca unor maeștri care au deschis școli la Seul după 1945. Pagina aceasta urmărește povestea centură cu centură, de la albă la neagră.</p>
+  </div>
+  <div class="glyphs" aria-label="Cele trei silabe ale cuvântului taekwondo">
+    <div class="glyph"><b lang="ko">태</b><div><small>Tae · 跆</small><em>a lovi cu piciorul, piciorul</em></div></div>
+    <div class="glyph"><b lang="ko">권</b><div><small>Kwon · 拳</small><em>pumnul</em></div></div>
+    <div class="glyph"><b lang="ko">도</b><div><small>Do · 道</small><em>calea, drumul</em></div></div>
+  </div>
+</header>
+
+<nav class="strip" aria-label="Salt la o epocă">
+  <a href="#white-ro"><i style="background:var(--belt-white)"></i><span>Rădăcini</span></a>
+  <a href="#yellow-ro"><i style="background:var(--belt-yellow)"></i><span>Taekkyeon</span></a>
+  <a href="#green-ro"><i style="background:var(--belt-green)"></i><span>Kwan-uri</span></a>
+  <a href="#blue-ro"><i style="background:var(--belt-blue)"></i><span>Numele</span></a>
+  <a href="#red-ro"><i style="background:var(--belt-red)"></i><span>Două ramuri</span></a>
+  <a href="#black-ro"><i style="background:var(--belt-black)"></i><span>Olimpiade</span></a>
+</nav>
+
+<section aria-labelledby="t-timeline-ro">
+  <div class="intro">
+    <p class="label">Partea 1</p>
+    <h2 id="t-timeline-ro">Din Coreea antică până la Jocurile Olimpice</h2>
+    <p>Fiecare epocă de mai jos poartă culoarea unei centuri, în ordinea în care le obține un elev. Arta modernă s-a născut în epoca centurii verzi, când la Seul s-au deschis primele școli.</p>
+  </div>
+  <div>
+  <article class="era" id="white-ro">
+    <div class="era-head">
+      <svg class="belt" viewBox="0 0 120 34" aria-hidden="true"><rect x="1" y="11" width="118" height="12" rx="2" fill="var(--belt-white)"/><path d="M52 6h16v22H52z" fill="var(--belt-white)"/></svg>
+      <div><p class="label">Centura albă</p><p class="when">cca. sec. I î.Hr. – sec. X</p></div>
+    </div>
+    <div class="era-body">
+      <h3>Rădăcini în cele Trei Regate</h3>
+      <p>Coreea a fost cândva împărțită în trei regate: Goguryeo, Baekje și Silla. Picturile murale din mormintele Goguryeo arată bărbați în poziții de luptă, iar cronicile vechi pomenesc o luptă cu mâinile goale numită <em>subak</em>. În Silla, tinerii aristocrați se pregăteau în corpul <em>Hwarang</em>, unde studiau arta luptei alături de poezie și de un cod moral. Taekwondo privește aceste tradiții ca parte din moștenirea sa coreeană.</p>
+    </div>
+  </article>
+  <article class="era" id="yellow-ro">
+    <div class="era-head">
+      <svg class="belt" viewBox="0 0 120 34" aria-hidden="true"><rect x="1" y="11" width="118" height="12" rx="2" fill="var(--belt-yellow)"/><path d="M52 6h16v22H52z" fill="var(--belt-yellow)"/></svg>
+      <div><p class="label">Centura galbenă</p><p class="when">1392 – 1945</p></div>
+    </div>
+    <div class="era-body">
+      <h3>Taekkyeon, apoi tăcerea</h3>
+      <p>În timpul dinastiei Joseon, <em>taekkyeon</em> era un joc fluid, aproape un dans, cu lovituri de picior și secerări, jucat la sărbători. Este cel mai limpede strămoș coreean al loviturilor de picior din taekwondo, iar în 2011 UNESCO l-a înscris pe lista Patrimoniului cultural imaterial.</p>
+      <ul class="facts">
+        <li><time>1910</time><span>Japonia anexează Coreea. În următorii 35 de ani, tradițiile marțiale coreene dispar din viața de zi cu zi.</span></li>
+        <li><time>anii '30</time><span>Tineri coreeni care studiază în Japonia învață karate. Mai mulți dintre ei vor fonda primele școli de taekwondo.</span></li>
+        <li><time>1945</time><span>Eliberarea, la sfârșitul celui de-Al Doilea Război Mondial. Coreea își recapătă independența.</span></li>
+      </ul>
+    </div>
+  </article>
+  <article class="era" id="green-ro">
+    <div class="era-head">
+      <svg class="belt" viewBox="0 0 120 34" aria-hidden="true"><rect x="1" y="11" width="118" height="12" rx="2" fill="var(--belt-green)"/><path d="M52 6h16v22H52z" fill="var(--belt-green)"/></svg>
+      <div><p class="label">Centura verde</p><p class="when">1944 – mijlocul anilor '50</p></div>
+    </div>
+    <div class="era-body">
+      <h3>Kwan-urile: școlile cu care a început totul</h3>
+      <p>În jurul eliberării, câțiva maeștri au deschis la Seul școli numite <em>kwan</em> (관, „sală”). Predau ce învățaseră, mai ales karate cu nume coreene precum <em>tang soo do</em> sau <em>kong soo do</em>. Fiecare școală avea stilul ei. Acestea cinci sunt considerate de obicei kwan-urile originale:</p>
+      <div class="kwans">
+        <div class="kwan"><b>Song Moo Kwan</b><span>Ro Byung-jick · 1944</span></div>
+        <div class="kwan"><b>Chung Do Kwan</b><span>Lee Won-kuk · 1944<br>„Școala Valului Albastru”</span></div>
+        <div class="kwan"><b>Jido Kwan</b><span>La început Yun Moo Kwan · Chun Sang-sup · 1946</span></div>
+        <div class="kwan"><b>Chang Moo Kwan</b><span>Pornit la YMCA din Seul · Yoon Byung-in · 1946–47</span></div>
+        <div class="kwan"><b>Moo Duk Kwan</b><span>Hwang Kee · 1945–47</span></div>
+      </div>
+      <ul class="facts">
+        <li><time>1950–53</time><span>Războiul din Coreea. Pregătirea în arte marțiale se răspândește în armata sud-coreeană.</span></li>
+        <li><time>1952</time><span>Președintele Syngman Rhee urmărește o demonstrație a ofițerilor Choi Hong-hi și Nam Tae-hi. Nam sparge cu un singur pumn un teanc de 13 țigle, un moment rămas celebru. Rhee îi cere lui Choi să introducă pregătirea în arte marțiale în toată armata.</span></li>
+        <li><time>anii '50</time><span>Choi fondează Oh Do Kwan pentru pregătirea soldaților, cu Nam Tae-hi printre instructorii principali. Pe la mijlocul anilor '50 există nouă kwan-uri în total.</span></li>
+      </ul>
+    </div>
+  </article>
+  <article class="era" id="blue-ro">
+    <div class="era-head">
+      <svg class="belt" viewBox="0 0 120 34" aria-hidden="true"><rect x="1" y="11" width="118" height="12" rx="2" fill="var(--belt-blue)"/><path d="M52 6h16v22H52z" fill="var(--belt-blue)"/></svg>
+      <div><p class="label">Centura albastră</p><p class="when">1955 – 1966</p></div>
+    </div>
+    <div class="era-body">
+      <h3>Un nume și un pas spre unitate</h3>
+      <p>Conducătorii kwan-urilor au început să se întâlnească pentru a-și uni stilurile într-o singură artă coreeană. Pe <strong>11 aprilie 1955</strong>, o comisie de maeștri și oficiali a ales numele „Taekwon-Do”, susținut de generalul Choi Hong-hi. Suna coreean și amintea de vechea artă taekkyeon.</p>
+      <ul class="facts">
+        <li><time>1959–65</time><span>În 1959 începe crearea unei asociații naționale. La început se numește Korea Tae Soo Do Association, iar în 1965 primește numele definitiv, Korea Taekwondo Association (KTA).</span></li>
+        <li><time>1959–'60</time><span>Maeștri coreeni fac turnee de demonstrații în Asia, Europa și America. Unii instructori se stabilesc în străinătate și deschid școli.</span></li>
+        <li><time>1966</time><span>Pe 22 martie, Choi fondează la Seul International Taekwon-Do Federation (ITF), pentru a răspândi arta în lume.</span></li>
+      </ul>
+    </div>
+  </article>
+  <article class="era" id="red-ro">
+    <div class="era-head">
+      <svg class="belt" viewBox="0 0 120 34" aria-hidden="true"><rect x="1" y="11" width="118" height="12" rx="2" fill="var(--belt-red)"/><path d="M52 6h16v22H52z" fill="var(--belt-red)"/></svg>
+      <div><p class="label">Centura roșie</p><p class="when">1966 – 2002</p></div>
+    </div>
+    <div class="era-body">
+      <h3>Două ramuri internaționale</h3>
+      <p>Pe măsură ce s-a răspândit în lume, taekwondo s-a dezvoltat pe două drumuri principale: ITF, pe de o parte, și Kukkiwon împreună cu World Taekwondo Federation, pe de alta. Fiecare și-a construit propriile forme, competiții și sistem de centuri negre.</p>
+      <ul class="facts">
+        <li><time>1972</time><span>ITF își mută sediul la Toronto, în Canada. La Seul, pe 30 noiembrie, se deschide Kukkiwon, academia națională de taekwondo.</span></li>
+        <li><time>1973</time><span>În mai au loc la Kukkiwon primele Campionate Mondiale de Taekwondo. Pe 28 mai ia naștere acolo World Taekwondo Federation (WTF), cu 17 țări membre.</span></li>
+        <li><time>1980</time><span>Pe 17 iulie, Comitetul Olimpic Internațional recunoaște WTF și deschide drumul spre Jocurile Olimpice.</span></li>
+        <li><time>2002</time><span>Generalul Choi Hong-hi, fondatorul ITF, moare pe 15 iunie, la 83 de ani. Taekwon-do ITF continuă în lume prin mai multe federații.</span></li>
+      </ul>
+    </div>
+  </article>
+  <article class="era" id="black-ro">
+    <div class="era-head">
+      <svg class="belt" viewBox="0 0 120 34" aria-hidden="true"><rect x="1" y="11" width="118" height="12" rx="2" fill="var(--belt-black)"/><path d="M52 6h16v22H52z" fill="var(--belt-black)"/></svg>
+      <div><p class="label">Centura neagră</p><p class="when">1988 – azi</p></div>
+    </div>
+    <div class="era-body">
+      <h3>Un sport olimpic</h3>
+      <ul class="facts">
+        <li><time>1988</time><span>Sport demonstrativ la Jocurile Olimpice de la Seul și din nou la Barcelona, în 1992.</span></li>
+        <li><time>2000</time><span>Sport olimpic cu medalii la Sydney și la toate Jocurile de atunci încoace.</span></li>
+        <li><time>2017</time><span>În iunie, WTF își schimbă numele în World Taekwondo (WT).</span></li>
+        <li><time>2018</time><span>Parlamentul sud-coreean declară prin lege taekwondo drept artă marțială națională a țării.</span></li>
+        <li><time>2021</time><span>Para-taekwondo debutează la Jocurile Paralimpice de la Tokyo 2020.</span></li>
+        <li><time>Azi</time><span>World Taekwondo are 215 asociații naționale, plus o echipă a refugiaților. Președintele său, Choue Chung-won, a fost reales în octombrie 2025 pentru un mandat până în 2029, iar următorul turneu olimpic va avea loc la Los Angeles, în 2028.</span></li>
+      </ul>
+    </div>
+  </article>
+  </div>
+</section>
+
+<section aria-labelledby="t-tree-ro">
+  <div class="intro">
+    <p class="label">Partea 2</p>
+    <h2 id="t-tree-ro">Arborele genealogic</h2>
+    <p>O singură artă, două ramuri principale. Dacă o școală predă formele <em>Taegeuk</em> și lupta cu veste electronice, aparține ramurii World Taekwondo și Kukkiwon, cea de la Jocurile Olimpice. Dacă predă <em>tul</em>-uri precum Chon-Ji și Dan-Gun, este ITF.</p>
+  </div>
+  <div class="tree-scroll">
+    <div class="tree" role="img" aria-label="Genealogie: tradițiile coreene și karateul duc la kwan-uri, apoi la numele taekwondo și la Korea Taekwondo Association, iar de aici la două ramuri: ITF și Kukkiwon cu World Taekwondo.">
+      <div class="tier"><div class="node"><b>Tradiții coreene</b><small>subak · taekkyeon</small></div><div class="node"><b>Karate japonez</b><small>învățat în anii '30–'40</small></div></div>
+      <div class="join"></div>
+      <div class="tier"><div class="node"><b>Cele nouă kwan-uri</b><small>Seul · 1944–anii '50</small></div></div>
+      <div class="join"></div>
+      <div class="tier"><div class="node"><b>Numele „Taekwondo”</b><small>11 aprilie 1955</small></div><div class="node"><b>Korea Taekwondo Association</b><small>1959–65</small></div></div>
+      <div class="join"></div>
+      <div class="fork">
+        <div>
+          <div class="node itf"><b>International Taekwon-Do Federation</b><small>Gen. Choi Hong-hi · 1966</small></div>
+          <div class="join"></div>
+          <div class="node itf"><b>Taekwon-Do ITF în lume</b><small>tul-uri · campionate proprii</small></div>
+        </div>
+        <div>
+          <div class="node wt"><b>Kukkiwon</b><small>Seul · 1972 · acordă centurile negre</small></div>
+          <div class="join"></div>
+          <div class="node wt"><b>World Taekwondo</b><small>1973 · sport olimpic</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="t-compare-ro">
+  <div class="intro">
+    <p class="label">Partea 3</p>
+    <h2 id="t-compare-ro">Prin ce se deosebesc cele două ramuri</h2>
+  </div>
+  <div class="compare-scroll">
+    <table>
+      <thead><tr><th></th><th class="wt">World Taekwondo · Kukkiwon</th><th class="itf">ITF</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Scriere</th><td>Taekwondo</td><td>Taekwon-Do</td></tr>
+        <tr><th scope="row">Forme</th><td><em>Poomsae</em>: opt forme Taegeuk pentru centurile colorate, apoi formele pentru centura neagră</td><td><em>Tul</em>: 24 de forme, câte una pentru fiecare oră a zilei, dedicate unor personaje și idei din istoria Coreei</td></tr>
+        <tr><th scope="row">Luptă</th><td>Contact plin. Senzorii electronici din vestă și cască punctează loviturile de picior; pumnii sunt punctați de arbitri. Pumni doar la trunchi. Lovitura cu rotire la cap valorează cel mai mult: 5 puncte.</td><td>Contact controlat, cu mănuși și protecții pentru picioare. Pumnii la cap sunt permiși. Punctele le acordă arbitrii.</td></tr>
+        <tr><th scope="row">Mișcare</th><td>Gardă înaltă și rapidă; accent pe lovituri de picior rapide și înalte</td><td>O mișcare de urcare și coborâre, numită „undă sinusoidală”, care dă mai multă forță fiecărei tehnici</td></tr>
+        <tr><th scope="row">Olimpiade</th><td>Da, din 2000</td><td>Nu; are propriile campionate mondiale</td></tr>
+        <tr><th scope="row">Centuri negre</th><td>Certificate de Kukkiwon, la Seul</td><td>Certificate de federația ITF din care face parte școala</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section aria-labelledby="t-belts-ro">
+  <div class="intro">
+    <p class="label">Partea 4</p>
+    <h2 id="t-belts-ro">Ce înseamnă culorile</h2>
+    <p>Acestea sunt semnificațiile din tradiția ITF a generalului Choi, pe care multe școli din ambele ramuri le predau și azi. Unele cluburi adaugă alte culori sau dungi, așa că la școala ta s-ar putea să fie explicate puțin diferit.</p>
+  </div>
+  <div class="meanings">
+    <div class="meaning"><i style="background:var(--belt-white)"></i><div><b>Albă</b><span>Inocența: un începător care încă nu știe nimic.</span></div></div>
+    <div class="meaning"><i style="background:var(--belt-yellow)"></i><div><b>Galbenă</b><span>Pământul, în care planta prinde rădăcini în timp ce se pun bazele.</span></div></div>
+    <div class="meaning"><i style="background:var(--belt-green)"></i><div><b>Verde</b><span>Creșterea plantei, pe măsură ce abilitățile de taekwondo încep să se dezvolte.</span></div></div>
+    <div class="meaning"><i style="background:var(--belt-blue)"></i><div><b>Albastră</b><span>Cerul, spre care se înalță planta care crește.</span></div></div>
+    <div class="meaning"><i style="background:var(--belt-red)"></i><div><b>Roșie</b><span>Pericolul: un semn pentru elev să-și păstreze controlul și pentru adversar să stea departe.</span></div></div>
+    <div class="meaning"><i style="background:var(--belt-black)"></i><div><b>Neagră</b><span>Opusul albului: maturitate, pricepere și tărie în fața întunericului și a fricii.</span></div></div>
+  </div>
+</section>
+
+<section aria-labelledby="t-quiz-ro">
+  <div class="intro">
+    <p class="label">Partea 5</p>
+    <h2 id="t-quiz-ro">Testul centurii verzi</h2>
+    <p>Șase întrebări ca să vezi ce ai reținut. Atinge un răspuns.</p>
+  </div>
+  <div class="quiz" data-quiz="ro"></div>
+  <p class="score" data-score="ro" aria-live="polite">0 / 6</p>
+</section>
+
+<section class="sources" aria-labelledby="t-sources-ro">
+  <p class="label" id="t-sources-ro">Surse</p>
+  <ul>
+    <li><a href="https://en.wikipedia.org/wiki/Taekwondo">Taekwondo, Wikipedia</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/World_Taekwondo">World Taekwondo, Wikipedia</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/Korea_Taekwondo_Association">Korea Taekwondo Association, Wikipedia</a></li>
+    <li><a href="https://songmookwan.com/index.php/history/the-original-founding-kwans">Song Moo Kwan: the original founding kwans</a></li>
+    <li><a href="https://ich.unesco.org/en/RL/taekkyeon-a-traditional-korean-martial-art-00452">UNESCO: Taekkyeon, a traditional Korean martial art</a></li>
+    <li><a href="https://www.koreatimes.co.kr/sports/20180402/taekwondo-is-koreas-national-martial-art-now-by-law">Korea Times: Taekwondo is Korea's national martial art by law (2018)</a></li>
+    <li><a href="https://www.nbtkda.com/olympic-rules">Olympic kyorugi scoring rules</a></li>
+    <li><a href="https://www.koreajoongangdaily.com/sports/choue-chung-won-re-elected-as-president-of-world-taekwondo/12033480">Korea JoongAng Daily: Choue re-elected</a></li>
+    <li><a href="https://mundotaekwondo.com/president-choue-inspires-participants-at-world-taekwondo-2026-para-taekwondo-training-camp/">Mundo Taekwondo: 215 member associations (July 2026)</a></li>
+  </ul>
+  <p>Cercetare și pagină realizate cu ajutorul Claude (Anthropic), pe baza surselor publice de mai sus.</p>
+</section>
+
+<footer>Realizat pentru o centură verde · octombrie 2026</footer>
+</div>
+</div>
+
 <script>
 (function () {
-  var Q = [
-    { q: "What does the \"Do\" in taekwondo mean?", a: ["The kick", "The way", "The fist"], c: 1, f: "Tae is the foot, Kwon the fist, Do the way." },
-    { q: "In which year was the name taekwondo chosen?", a: ["1910", "1955", "1988"], c: 1, f: "On 11 April 1955." },
-    { q: "What were the first taekwondo schools called?", a: ["Dojos", "Kwans", "Dobok"], c: 1, f: "Kwan means hall. Dobok is the uniform you wear." },
-    { q: "Which old Korean game of kicks is a UNESCO heritage?", a: ["Taekkyeon", "Hapkido", "Ssireum"], c: 0, f: "Taekkyeon was listed in 2011." },
-    { q: "Which Olympics first gave medals in taekwondo?", a: ["Seoul 1988", "Sydney 2000", "Paris 2024"], c: 1, f: "Seoul 1988 was only a demonstration." },
-    { q: "What does the green belt stand for?", a: ["Danger", "The sky", "A growing plant"], c: 2, f: "Your skills are starting to grow!" }
-  ];
-  var box = document.getElementById("quiz"), scoreEl = document.getElementById("score"), score = 0;
-  Q.forEach(function (item, i) {
-    var d = document.createElement("div"); d.className = "q";
-    var p = document.createElement("p"); p.textContent = (i + 1) + ". " + item.q; d.appendChild(p);
-    var o = document.createElement("div"); o.className = "opts";
-    var fb = document.createElement("div"); fb.className = "fb"; fb.setAttribute("aria-live", "polite");
-    var done = false;
-    item.a.forEach(function (txt, j) {
-      var b = document.createElement("button"); b.type = "button"; b.id = "q" + i + "a" + j; b.textContent = txt;
-      b.addEventListener("click", function () {
-        if (done) return;
-        if (j === item.c) {
-          done = true; b.classList.add("right"); score++; scoreEl.textContent = score + " / " + Q.length;
-          fb.textContent = "Correct. " + item.f;
-          if (score === Q.length) scoreEl.textContent = "6 / 6 · Ready for blue!";
-        } else { b.classList.add("wrong"); fb.textContent = "Not quite, try again."; }
+  var D = {"en": {"q": [{"q": "What does the \"Do\" in taekwondo mean?", "a": ["The kick", "The way", "The fist"], "c": 1, "f": "Tae is the foot, Kwon the fist, Do the way."}, {"q": "In which year was the name taekwondo chosen?", "a": ["1910", "1955", "1988"], "c": 1, "f": "On 11 April 1955."}, {"q": "What were the first taekwondo schools called?", "a": ["Dojos", "Kwans", "Dobok"], "c": 1, "f": "Kwan means hall. Dobok is the uniform you wear."}, {"q": "Which old Korean game of kicks is a UNESCO heritage?", "a": ["Taekkyeon", "Hapkido", "Ssireum"], "c": 0, "f": "Taekkyeon was listed in 2011."}, {"q": "Which Olympics first gave medals in taekwondo?", "a": ["Seoul 1988", "Sydney 2000", "Paris 2024"], "c": 1, "f": "Seoul 1988 was only a demonstration."}, {"q": "What does the green belt stand for?", "a": ["Danger", "The sky", "A growing plant"], "c": 2, "f": "Your skills are starting to grow!"}], "ok": "Correct. ", "no": "Not quite, try again.", "done": "6 / 6 · Ready for blue!"}, "it": {"q": [{"q": "Che cosa significa «Do» in taekwondo?", "a": ["Il calcio", "La via", "Il pugno"], "c": 1, "f": "Tae è il piede, Kwon il pugno, Do la via."}, {"q": "In che anno è stato scelto il nome taekwondo?", "a": ["1910", "1955", "1988"], "c": 1, "f": "L'11 aprile 1955."}, {"q": "Come si chiamavano le prime scuole di taekwondo?", "a": ["Dojo", "Kwan", "Dobok"], "c": 1, "f": "Kwan significa sala. Il dobok è la divisa che indossi."}, {"q": "Quale antico gioco coreano di calci è patrimonio UNESCO?", "a": ["Taekkyeon", "Hapkido", "Ssireum"], "c": 0, "f": "Il taekkyeon è stato iscritto nel 2011."}, {"q": "In quali Olimpiadi il taekwondo ha assegnato le prime medaglie?", "a": ["Seul 1988", "Sydney 2000", "Parigi 2024"], "c": 1, "f": "A Seul 1988 era solo uno sport dimostrativo."}, {"q": "Che cosa rappresenta la cintura verde?", "a": ["Il pericolo", "Il cielo", "Una pianta che cresce"], "c": 2, "f": "Le tue abilità stanno cominciando a crescere!"}], "ok": "Esatto. ", "no": "Non proprio, riprova.", "done": "6 / 6 · Avanti verso la cintura blu!"}, "ro": {"q": [{"q": "Ce înseamnă „Do” în taekwondo?", "a": ["Lovitura", "Calea", "Pumnul"], "c": 1, "f": "Tae este piciorul, Kwon pumnul, Do calea."}, {"q": "În ce an a fost ales numele taekwondo?", "a": ["1910", "1955", "1988"], "c": 1, "f": "Pe 11 aprilie 1955."}, {"q": "Cum se numeau primele școli de taekwondo?", "a": ["Dojo-uri", "Kwan-uri", "Dobok"], "c": 1, "f": "Kwan înseamnă sală. Dobok este uniforma pe care o porți."}, {"q": "Ce joc coreean vechi, cu lovituri de picior, face parte din patrimoniul UNESCO?", "a": ["Taekkyeon", "Hapkido", "Ssireum"], "c": 0, "f": "Taekkyeon a fost înscris în 2011."}, {"q": "La ce Jocuri Olimpice s-au acordat primele medalii la taekwondo?", "a": ["Seul 1988", "Sydney 2000", "Paris 2024"], "c": 1, "f": "La Seul, în 1988, a fost doar sport demonstrativ."}, {"q": "Ce simbolizează centura verde?", "a": ["Pericolul", "Cerul", "O plantă care crește"], "c": 2, "f": "Abilitățile tale încep să crească!"}], "ok": "Corect. ", "no": "Nu chiar, mai încearcă.", "done": "6 / 6 · Înainte spre centura albastră!"}};
+  var OK = ["ro", "it", "en"];
+  document.querySelectorAll("[data-quiz]").forEach(function (box) {
+    var code = box.getAttribute("data-quiz"), L = D[code], score = 0;
+    var scoreEl = document.querySelector('[data-score="' + code + '"]');
+    L.q.forEach(function (item, i) {
+      var d = document.createElement("div"); d.className = "q";
+      var p = document.createElement("p"); p.textContent = (i + 1) + ". " + item.q; d.appendChild(p);
+      var o = document.createElement("div"); o.className = "opts";
+      var fb = document.createElement("div"); fb.className = "fb"; fb.setAttribute("aria-live", "polite");
+      var done = false;
+      item.a.forEach(function (txt, j) {
+        var b = document.createElement("button"); b.type = "button"; b.id = code + "-q" + i + "a" + j; b.textContent = txt;
+        b.addEventListener("click", function () {
+          if (done) return;
+          if (j === item.c) {
+            done = true; b.classList.add("right"); score++;
+            scoreEl.textContent = score === L.q.length ? L.done : score + " / " + L.q.length;
+            fb.textContent = L.ok + item.f;
+          } else { b.classList.add("wrong"); fb.textContent = L.no; }
+        });
+        o.appendChild(b);
       });
-      o.appendChild(b);
+      d.appendChild(o); d.appendChild(fb); box.appendChild(d);
     });
-    d.appendChild(o); d.appendChild(fb); box.appendChild(d);
   });
+  function setLang(l) {
+    document.documentElement.lang = l;
+    document.querySelectorAll(".pane").forEach(function (el) { el.hidden = el.getAttribute("data-pane") !== l; });
+    document.querySelectorAll(".lang button").forEach(function (b) { b.setAttribute("aria-pressed", b.getAttribute("data-lang") === l ? "true" : "false"); });
+  }
+  document.querySelectorAll(".lang button").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var l = b.getAttribute("data-lang");
+      try { localStorage.setItem("tkd-lang", l); } catch (e) {}
+      setLang(l);
+    });
+  });
+  var lang = "en", h = location.hash.replace("#", "");
+  if (OK.indexOf(h) > -1) lang = h;
+  else {
+    var s = null; try { s = localStorage.getItem("tkd-lang"); } catch (e) {}
+    if (OK.indexOf(s) > -1) lang = s;
+    else { var n = (navigator.language || "").slice(0, 2).toLowerCase(); if (n === "it" || n === "ro") lang = n; }
+  }
+  setLang(lang);
 })();
 </script>
 </body>
