@@ -9,6 +9,7 @@
 <meta property="og:title" content="The Way of Foot and Fist">
 <meta property="og:description" content="The history of taekwondo told belt by belt, from ancient Korean roots and the first schools in Seoul to the Olympics, with the two main branches, belt meanings and a quiz. In English, Italian and Romanian.">
 <meta property="og:url" content="https://alexgiboi.com/library/taekwondo/">
+<meta property="og:image" content="https://alexgiboi.com/library/taekwondo/sparring.jpg">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <title>The Way of Foot and Fist</title>
 <meta name="claude:viewport-fit-sides" content="cover">
@@ -72,17 +73,20 @@ section { padding-block: 56px; border-top: 1px solid var(--line); display: grid;
 .lang { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; padding: 3px; background: var(--paper-2); }
 .lang button { font: 500 13px var(--mono); letter-spacing: .08em; border: 0; background: transparent; color: var(--ink-soft); padding: 6px 14px; border-radius: 999px; cursor: pointer; }
 .lang button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
-.hero { padding-block: 16px 48px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 32px; align-items: center; }
+.hero { padding-block: 16px 48px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 360px); gap: 40px; align-items: center; }
 .hero h1 { font-family: var(--display); font-weight: 400; font-size: clamp(44px, 8vw, 88px); line-height: .95; }
 .hero h1 span { color: var(--red); }
 .hero .lede { font-size: 19px; margin-top: 18px; }
-.glyphs { display: grid; gap: 6px; }
-.glyph { display: grid; grid-template-columns: auto 1fr; gap: 14px; align-items: center; }
-.glyph b { font-family: var(--hangul); font-weight: 900; font-size: clamp(48px, 7vw, 72px); line-height: 1; }
+.glyphs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 28px; }
+.glyph { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 10px; align-items: center; }
+.glyph b { font-family: var(--hangul); font-weight: 900; font-size: clamp(40px, 5vw, 56px); line-height: 1; }
 .glyph:nth-child(1) b { color: var(--red); }
 .glyph:nth-child(2) b { color: var(--blue); }
 .glyph small { display: block; font-family: var(--mono); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); }
-.glyph em { font-style: normal; font-weight: 600; font-size: 17px; }
+.glyph em { font-style: normal; font-weight: 600; font-size: 15px; line-height: 1.35; display: block; }
+.hero-art { margin: 0; display: grid; gap: 8px; }
+.hero-art img { display: block; width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--line); }
+.hero-art figcaption { font-family: var(--mono); font-size: 11.5px; letter-spacing: .04em; color: var(--ink-soft); }
 
 /* Belt strip */
 .strip { display: grid; grid-template-columns: repeat(6, 1fr); gap: 4px; }
@@ -158,6 +162,8 @@ footer { padding-block: 32px 48px; border-top: 1px solid var(--line); font-size:
 
 @media (max-width: 760px) {
   .hero { grid-template-columns: 1fr; }
+  .hero-art { max-width: 440px; }
+  .glyph { grid-template-columns: 1fr; gap: 4px; }
   .era { grid-template-columns: 1fr; gap: 14px; }
   .era-head { grid-template-columns: auto 1fr; align-items: center; gap: 12px; }
   .meanings { grid-template-columns: 1fr; }
@@ -191,12 +197,16 @@ footer { padding-block: 32px 48px; border-top: 1px solid var(--line); font-size:
     <p class="label">A short history for a green belt</p>
     <h1>The way of <span>foot</span> and fist</h1>
     <p class="lede">Taekwondo is young as a name and old as an idea. The name dates from 1955, but it grew out of Korean fighting traditions, Japanese karate learned during the occupation, and the work of a handful of masters who opened schools in Seoul after 1945. This page follows that story belt by belt, from white to black.</p>
+    <div class="glyphs" aria-label="The three syllables of taekwondo">
+      <div class="glyph"><b lang="ko">태</b><div><small>Tae · 跆</small><em>to kick, the foot</em></div></div>
+      <div class="glyph"><b lang="ko">권</b><div><small>Kwon · 拳</small><em>the fist</em></div></div>
+      <div class="glyph"><b lang="ko">도</b><div><small>Do · 道</small><em>the way, the path</em></div></div>
+    </div>
   </div>
-  <div class="glyphs" aria-label="The three syllables of taekwondo">
-    <div class="glyph"><b lang="ko">태</b><div><small>Tae · 跆</small><em>to kick, the foot</em></div></div>
-    <div class="glyph"><b lang="ko">권</b><div><small>Kwon · 拳</small><em>the fist</em></div></div>
-    <div class="glyph"><b lang="ko">도</b><div><small>Do · 道</small><em>the way, the path</em></div></div>
-  </div>
+  <figure class="hero-art">
+    <picture><source srcset="sparring.webp" type="image/webp"><img src="sparring.jpg" width="832" height="1248" alt="Illustration in the style of a Korean ink painting: two girls in white doboks sparring, one with a green belt raising her knee, the other with a black belt throwing a high kick."></picture>
+    <figcaption>Illustration made with an AI image tool.</figcaption>
+  </figure>
 </header>
 
 <nav class="strip" aria-label="Jump to an era">
@@ -414,12 +424,16 @@ footer { padding-block: 32px 48px; border-top: 1px solid var(--line); font-size:
     <p class="label">Breve storia per una cintura verde</p>
     <h1>La via del <span>piede</span> e del pugno</h1>
     <p class="lede">Il taekwondo è giovane come nome e antico come idea. Il nome risale al 1955, ma l'arte nasce dalle tradizioni marziali coreane, dal karate giapponese appreso durante l'occupazione e dal lavoro di alcuni maestri che aprirono scuole a Seul dopo il 1945. Questa pagina segue la storia cintura dopo cintura, dalla bianca alla nera.</p>
+    <div class="glyphs" aria-label="Le tre sillabe di taekwondo">
+      <div class="glyph"><b lang="ko">태</b><div><small>Tae · 跆</small><em>calciare, il piede</em></div></div>
+      <div class="glyph"><b lang="ko">권</b><div><small>Kwon · 拳</small><em>il pugno</em></div></div>
+      <div class="glyph"><b lang="ko">도</b><div><small>Do · 道</small><em>la via, il cammino</em></div></div>
+    </div>
   </div>
-  <div class="glyphs" aria-label="Le tre sillabe di taekwondo">
-    <div class="glyph"><b lang="ko">태</b><div><small>Tae · 跆</small><em>calciare, il piede</em></div></div>
-    <div class="glyph"><b lang="ko">권</b><div><small>Kwon · 拳</small><em>il pugno</em></div></div>
-    <div class="glyph"><b lang="ko">도</b><div><small>Do · 道</small><em>la via, il cammino</em></div></div>
-  </div>
+  <figure class="hero-art">
+    <picture><source srcset="sparring.webp" type="image/webp"><img src="sparring.jpg" width="832" height="1248" alt="Illustrazione in stile pittura coreana a inchiostro: due ragazze in dobok bianco durante un combattimento, una con la cintura verde che solleva il ginocchio, l'altra con la cintura nera che tira un calcio alto."></picture>
+    <figcaption>Illustrazione realizzata con uno strumento di intelligenza artificiale.</figcaption>
+  </figure>
 </header>
 
 <nav class="strip" aria-label="Vai a un'epoca">
@@ -637,12 +651,16 @@ footer { padding-block: 32px 48px; border-top: 1px solid var(--line); font-size:
     <p class="label">O scurtă istorie pentru o centură verde</p>
     <h1>Calea <span>piciorului</span> și a pumnului</h1>
     <p class="lede">Taekwondo este tânăr ca nume și vechi ca idee. Numele datează din 1955, dar arta s-a născut din tradițiile marțiale coreene, din karateul japonez învățat în timpul ocupației și din munca unor maeștri care au deschis școli la Seul după 1945. Pagina aceasta urmărește povestea centură cu centură, de la albă la neagră.</p>
+    <div class="glyphs" aria-label="Cele trei silabe ale cuvântului taekwondo">
+      <div class="glyph"><b lang="ko">태</b><div><small>Tae · 跆</small><em>a lovi cu piciorul, piciorul</em></div></div>
+      <div class="glyph"><b lang="ko">권</b><div><small>Kwon · 拳</small><em>pumnul</em></div></div>
+      <div class="glyph"><b lang="ko">도</b><div><small>Do · 道</small><em>calea, drumul</em></div></div>
+    </div>
   </div>
-  <div class="glyphs" aria-label="Cele trei silabe ale cuvântului taekwondo">
-    <div class="glyph"><b lang="ko">태</b><div><small>Tae · 跆</small><em>a lovi cu piciorul, piciorul</em></div></div>
-    <div class="glyph"><b lang="ko">권</b><div><small>Kwon · 拳</small><em>pumnul</em></div></div>
-    <div class="glyph"><b lang="ko">도</b><div><small>Do · 道</small><em>calea, drumul</em></div></div>
-  </div>
+  <figure class="hero-art">
+    <picture><source srcset="sparring.webp" type="image/webp"><img src="sparring.jpg" width="832" height="1248" alt="Ilustrație în stilul picturii coreene cu tuș: două fete în dobok alb, în luptă; una, cu centura verde, ridică genunchiul, cealaltă, cu centura neagră, dă o lovitură înaltă."></picture>
+    <figcaption>Ilustrație realizată cu un instrument de inteligență artificială.</figcaption>
+  </figure>
 </header>
 
 <nav class="strip" aria-label="Salt la o epocă">
