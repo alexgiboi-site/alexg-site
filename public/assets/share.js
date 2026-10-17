@@ -47,7 +47,8 @@
     bar.setAttribute('role', 'group');
     bar.setAttribute('aria-label', S.label);
     if (bar.getAttribute('data-share') === 'end') bar.classList.add('share-end');
-    var html = '<span class="share-label" aria-hidden="true">' + S.label + '</span>';
+    // On phones the Share button says it all, so the small label only introduces the row of networks on wider screens.
+    var html = compact ? '' : '<span class="share-label" aria-hidden="true">' + S.label + '</span>';
     if (compact) {
       html += '<button type="button" class="share-btn is-primary" data-act="native">' + svg('share') + '<span>' + S.share + '</span></button>';
     } else {
