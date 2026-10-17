@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<meta name="description" content="The history of taekwondo told belt by belt, from ancient Korean roots and the first schools in Seoul to the Olympics, with the two main branches, belt meanings and a quiz.">
+<link rel="canonical" href="https://alexgiboi.com/library/taekwondo/">
+<meta property="og:title" content="The Way of Foot and Fist">
+<meta property="og:description" content="The history of taekwondo told belt by belt, from ancient Korean roots and the first schools in Seoul to the Olympics, with the two main branches, belt meanings and a quiz.">
+<meta property="og:url" content="https://alexgiboi.com/library/taekwondo/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<title>The Way of Foot and Fist</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=IBM+Plex+Mono:wght@500&family=Literata:opsz,wght@7..72,400;7..72,600&family=Noto+Serif+KR:wght@700;900&display=swap">
+<style>
+/* Layout: the history told as a belt journey, white to black */
+:root {
+  --paper: #f7f7f3;
+  --paper-2: #ecebe4;
+  --ink: #16191f;
+  --ink-soft: #4b5059;
+  --line: #d6d4cb;
+  --red: #c8102e;
+  --blue: #0047a0;
+  --belt-white: #fbfbf8;
+  --belt-yellow: #f2c230;
+  --belt-green: #2f8f4e;
+  --belt-blue: #1f5fbf;
+  --belt-red: #c8102e;
+  --belt-black: #141414;
+  --belt-edge: #9b988c;
+  --display: "Black Han Sans", "Arial Black", Impact, sans-serif;
+  --hangul: "Noto Serif KR", "Batang", "AppleMyungjo", serif;
+  --body: "Literata", Georgia, "Times New Roman", serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #14161b; --paper-2: #1d2027; --ink: #ecebe5; --ink-soft: #a9adb6; --line: #343842;
+    --red: #ef4b5f; --blue: #6f9cf0; --belt-black: #050505; --belt-edge: #5d616b; --belt-green: #3fae63; --belt-blue: #3f7fe0;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #14161b; --paper-2: #1d2027; --ink: #ecebe5; --ink-soft: #a9adb6; --line: #343842;
+  --red: #ef4b5f; --blue: #6f9cf0; --belt-black: #050505; --belt-edge: #5d616b; --belt-green: #3fae63; --belt-blue: #3f7fe0;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--paper); color: var(--ink);
+  font-family: var(--body); font-size: 17px; line-height: 1.6;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.wrap { max-width: 1040px; margin: 0 auto; }
+h1, h2, h3 { text-wrap: balance; margin: 0; }
+h2 { font-family: var(--display); font-weight: 400; font-size: clamp(30px, 5vw, 46px); line-height: 1.05; letter-spacing: .01em; }
+h3 { font-family: var(--body); font-weight: 600; font-size: 20px; line-height: 1.3; }
+p { margin: 0; max-width: 65ch; }
+.label { font-family: var(--mono); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-soft); }
+a { color: var(--blue); }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; }
+section { padding-block: 56px; border-top: 1px solid var(--line); display: grid; gap: 28px; }
+.intro { display: grid; gap: 12px; }
+
+/* Hero */
+.hero { padding-block: 40px 48px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 32px; align-items: center; }
+.hero h1 { font-family: var(--display); font-weight: 400; font-size: clamp(44px, 8vw, 88px); line-height: .95; }
+.hero h1 span { color: var(--red); }
+.hero .lede { font-size: 19px; margin-top: 18px; }
+.glyphs { display: grid; gap: 6px; }
+.glyph { display: grid; grid-template-columns: auto 1fr; gap: 14px; align-items: center; }
+.glyph b { font-family: var(--hangul); font-weight: 900; font-size: clamp(48px, 7vw, 72px); line-height: 1; }
+.glyph:nth-child(1) b { color: var(--red); }
+.glyph:nth-child(2) b { color: var(--blue); }
+.glyph small { display: block; font-family: var(--mono); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); }
+.glyph em { font-style: normal; font-weight: 600; font-size: 17px; }
+
+/* Belt strip */
+.strip { display: grid; grid-template-columns: repeat(6, 1fr); gap: 4px; }
+.strip a { text-decoration: none; color: inherit; display: grid; gap: 6px; }
+.strip i { display: block; height: 18px; border-radius: 3px; border: 1px solid var(--belt-edge); }
+.strip span { font-family: var(--mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); }
+
+/* Timeline */
+.era { display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 28px; padding-block: 28px; border-top: 1px dashed var(--line); }
+.era:first-of-type { border-top: 0; }
+.era-head { display: grid; gap: 8px; align-content: start; }
+.belt { width: 120px; height: 34px; }
+.belt rect, .belt path { stroke: var(--belt-edge); stroke-width: 1; }
+.era-head .when { font-family: var(--mono); font-size: 14px; color: var(--ink); }
+.era-body { display: grid; gap: 14px; min-width: 0; }
+.era-body h3 { font-size: 23px; }
+.facts { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.facts li { display: grid; grid-template-columns: 68px minmax(0, 1fr); gap: 12px; }
+.facts time { font-family: var(--mono); font-size: 13px; color: var(--ink-soft); padding-top: 3px; font-variant-numeric: tabular-nums; }
+.note { font-size: 15px; color: var(--ink-soft); border-left: 2px solid var(--line); padding-left: 12px; }
+
+/* Kwans */
+.kwans { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 12px; }
+.kwan { background: var(--paper-2); border-radius: 6px; padding: 14px 16px; display: grid; gap: 4px; }
+.kwan b { font-family: var(--display); font-weight: 400; font-size: 21px; letter-spacing: .01em; }
+.kwan span { font-size: 15px; color: var(--ink-soft); }
+
+/* Family tree */
+.tree-scroll { overflow-x: auto; }
+.tree { min-width: 640px; display: grid; gap: 0; }
+.tier { display: flex; justify-content: center; gap: 14px; flex-wrap: nowrap; }
+.node { border: 1.5px solid var(--ink); border-radius: 6px; padding: 8px 12px; text-align: center; background: var(--paper); font-size: 14px; line-height: 1.35; min-width: 0; }
+.node b { display: block; font-family: var(--body); font-weight: 600; font-size: 15px; }
+.node small { font-family: var(--mono); font-size: 11.5px; color: var(--ink-soft); }
+.node.wt { border-color: var(--blue); }
+.node.itf { border-color: var(--red); }
+.join { height: 28px; display: flex; justify-content: center; }
+.join::before { content: ""; width: 1.5px; background: var(--ink-soft); }
+.fork { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.fork > div { display: grid; justify-items: center; }
+
+/* Compare */
+.compare-scroll { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; min-width: 620px; font-size: 15.5px; }
+th, td { text-align: left; vertical-align: top; padding: 12px 14px; border-bottom: 1px solid var(--line); }
+thead th { font-family: var(--display); font-weight: 400; font-size: 22px; border-bottom: 2px solid var(--ink); }
+thead th.wt { color: var(--blue); }
+thead th.itf { color: var(--red); }
+tbody th { font-family: var(--mono); font-weight: 500; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); width: 130px; }
+
+/* Belt meanings */
+.meanings { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.meaning { display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 12px; align-items: start; padding: 12px; border-radius: 6px; }
+.meaning i { width: 40px; height: 14px; border-radius: 3px; border: 1px solid var(--belt-edge); margin-top: 6px; }
+.meaning b { display: block; }
+.meaning span { font-size: 15px; color: var(--ink-soft); }
+
+/* Quiz */
+.quiz { display: grid; gap: 18px; }
+.q { background: var(--paper-2); border-radius: 8px; padding: 18px; display: grid; gap: 12px; }
+.q p { font-weight: 600; }
+.opts { display: flex; flex-wrap: wrap; gap: 8px; }
+.opts button { font: inherit; font-size: 15px; padding: 8px 14px; border-radius: 999px; border: 1.5px solid var(--ink-soft); background: var(--paper); color: var(--ink); cursor: pointer; }
+.opts button:hover { border-color: var(--ink); }
+.opts button.right { background: var(--belt-green); border-color: var(--belt-green); color: #fff; }
+.opts button.wrong { border-color: var(--red); color: var(--red); text-decoration: line-through; }
+.fb { font-size: 15px; color: var(--ink-soft); min-height: 1.4em; }
+.score { font-family: var(--display); font-size: 26px; }
+
+.sources { font-size: 14px; color: var(--ink-soft); display: grid; gap: 8px; }
+.sources ul { margin: 0; padding-left: 18px; display: grid; gap: 4px; }
+footer { padding-block: 32px 48px; border-top: 1px solid var(--line); font-size: 14px; color: var(--ink-soft); }
+
+@media (max-width: 760px) {
+  .hero { grid-template-columns: 1fr; }
+  .era { grid-template-columns: 1fr; gap: 14px; }
+  .era-head { grid-template-columns: auto 1fr; align-items: center; gap: 12px; }
+  .meanings { grid-template-columns: 1fr; }
+  .strip span { font-size: 9.5px; letter-spacing: .04em; }
+  .facts li { grid-template-columns: 56px minmax(0, 1fr); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .opts button { transition: background .15s, border-color .15s; }
+}
+</style>
+</head>
+<body>
+<nav aria-label="Site" style="margin:0 -16px 8px;background:#102A5C;font-family:'IBM Plex Sans',system-ui,sans-serif;font-size:15px">
+<div style="max-width:1120px;margin:0 auto;padding:14px 16px;display:flex;flex-wrap:wrap;gap:8px 24px;align-items:center;justify-content:space-between">
+<a href="/" style="color:#fff;text-decoration:none;font-family:Georgia,serif;font-weight:700;font-size:19px">Alex Giboi</a>
+<a href="/library/" style="color:#F2B544;text-decoration:none;font-weight:600;padding:8px 0">← Library</a>
+</div></nav>
+
+<div class="wrap">
+
+<header class="hero">
+  <div>
+    <p class="label">A short history for a green belt</p>
+    <h1>The way of <span>foot</span> and fist</h1>
+    <p class="lede">Taekwondo is young as a name and old as an idea. The name dates from 1955, but it grew out of Korean fighting traditions, Japanese karate learned during the occupation, and the work of a handful of masters who opened schools in Seoul after 1945. This page follows that story belt by belt, from white to black.</p>
+  </div>
+  <div class="glyphs" aria-label="The three syllables of taekwondo">
+    <div class="glyph"><b lang="ko">태</b><div><small>Tae · 跆</small><em>to kick, the foot</em></div></div>
+    <div class="glyph"><b lang="ko">권</b><div><small>Kwon · 拳</small><em>the fist</em></div></div>
+    <div class="glyph"><b lang="ko">도</b><div><small>Do · 道</small><em>the way, the path</em></div></div>
+  </div>
+</header>
+
+<nav class="strip" aria-label="Jump to an era">
+  <a href="#white"><i style="background:var(--belt-white)"></i><span>Roots</span></a>
+  <a href="#yellow"><i style="background:var(--belt-yellow)"></i><span>Taekkyeon</span></a>
+  <a href="#green"><i style="background:var(--belt-green)"></i><span>Kwans</span></a>
+  <a href="#blue"><i style="background:var(--belt-blue)"></i><span>Naming</span></a>
+  <a href="#red"><i style="background:var(--belt-red)"></i><span>Two branches</span></a>
+  <a href="#black"><i style="background:var(--belt-black)"></i><span>Olympics</span></a>
+</nav>
+
+<section aria-labelledby="t-timeline">
+  <div class="intro">
+    <p class="label">Part 1</p>
+    <h2 id="t-timeline">From ancient Korea to the Olympics</h2>
+    <p>Each era below wears a belt colour, in the order a student earns them. The modern art was born in the green-belt era, when the first schools opened in Seoul.</p>
+  </div>
+
+  <div>
+  <article class="era" id="white">
+    <div class="era-head">
+      <svg class="belt" viewBox="0 0 120 34" aria-hidden="true"><rect x="1" y="11" width="118" height="12" rx="2" fill="var(--belt-white)"/><path d="M52 6h16v22H52z" fill="var(--belt-white)"/></svg>
+      <div><p class="label">White belt</p><p class="when">c. 1st century BC – 900s</p></div>
+    </div>
+    <div class="era-body">
+      <h3>Roots in the Three Kingdoms</h3>
+      <p>Korea was once split into three kingdoms: Goguryeo, Baekje and Silla. Wall paintings in Goguryeo tombs show men in fighting stances, and old records mention unarmed combat called <em>subak</em>. In Silla, young aristocrats trained as the <em>Hwarang</em>, a corps that studied martial skill alongside poetry and moral codes. Taekwondo looks back to these traditions as part of its Korean heritage.</p>
+    </div>
+  </article>
+
+  <article class="era" id="yellow">
+    <div class="era-head">
+      <svg class="belt" viewBox="0 0 120 34" aria-hidden="true"><rect x="1" y="11" width="118" height="12" rx="2" fill="var(--belt-yellow)"/><path d="M52 6h16v22H52z" fill="var(--belt-yellow)"/></svg>
+      <div><p class="label">Yellow belt</p><p class="when">1392 – 1945</p></div>
+    </div>
+    <div class="era-body">
+      <h3>Taekkyeon, then silence</h3>
+      <p>During the Joseon dynasty, <em>taekkyeon</em> was a flowing, dance-like game of kicks and sweeps, played at festivals. It is the clearest Korean ancestor of taekwondo's kicking, and UNESCO added it to its list of Intangible Cultural Heritage in 2011.</p>
+      <ul class="facts">
+        <li><time>1910</time><span>Japan annexes Korea. Over the next 35 years, Korean martial traditions fade from everyday life.</span></li>
+        <li><time>1930s</time><span>Young Koreans studying in Japan learn karate. Several of them will go on to found taekwondo's first schools.</span></li>
+        <li><time>1945</time><span>Liberation at the end of the Second World War. Korea regains its independence.</span></li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="era" id="green">
+    <div class="era-head">
+      <svg class="belt" viewBox="0 0 120 34" aria-hidden="true"><rect x="1" y="11" width="118" height="12" rx="2" fill="var(--belt-green)"/><path d="M52 6h16v22H52z" fill="var(--belt-green)"/></svg>
+      <div><p class="label">Green belt</p><p class="when">1944 – mid-1950s</p></div>
+    </div>
+    <div class="era-body">
+      <h3>The kwans: schools that started it all</h3>
+      <p>Around liberation, masters opened schools in Seoul called <em>kwans</em> (관, "hall"). They taught what they had learned, mostly karate with Korean names like <em>tang soo do</em> or <em>kong soo do</em>. Each school had its own style. These five are usually called the original kwans:</p>
+      <div class="kwans">
+        <div class="kwan"><b>Song Moo Kwan</b><span>Ro Byung-jick · 1944</span></div>
+        <div class="kwan"><b>Chung Do Kwan</b><span>Lee Won-kuk · 1944<br>"Blue Wave School"</span></div>
+        <div class="kwan"><b>Jido Kwan</b><span>Started as Yun Moo Kwan · Chun Sang-sup · 1946</span></div>
+        <div class="kwan"><b>Chang Moo Kwan</b><span>Started at the Seoul YMCA · Yoon Byung-in · 1946–47</span></div>
+        <div class="kwan"><b>Moo Duk Kwan</b><span>Hwang Kee · 1945–47</span></div>
+      </div>
+      <ul class="facts">
+        <li><time>1950–53</time><span>The Korean War. Martial arts training spreads through the South Korean army.</span></li>
+        <li><time>1952</time><span>President Syngman Rhee watches a demonstration by army officers Choi Hong-hi and Nam Tae-hi. Nam famously smashes a stack of 13 roof tiles with one punch. Rhee asks Choi to introduce martial arts training across the army.</span></li>
+        <li><time>1950s</time><span>Choi founds the Oh Do Kwan to train soldiers, with Nam Tae-hi as a lead instructor. By the mid-1950s there are nine kwans in all.</span></li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="era" id="blue">
+    <div class="era-head">
+      <svg class="belt" viewBox="0 0 120 34" aria-hidden="true"><rect x="1" y="11" width="118" height="12" rx="2" fill="var(--belt-blue)"/><path d="M52 6h16v22H52z" fill="var(--belt-blue)"/></svg>
+      <div><p class="label">Blue belt</p><p class="when">1955 – 1966</p></div>
+    </div>
+    <div class="era-body">
+      <h3>A name, and a push to unite</h3>
+      <p>The kwan leaders began meeting to merge their styles into one Korean art. On <strong>11 April 1955</strong> a naming board of masters and officials chose "Taekwon-Do", a name championed by General Choi Hong-hi. It sounded Korean and echoed the old art of taekkyeon.</p>
+      <ul class="facts">
+        <li><time>1959–65</time><span>Work begins on a national association in 1959. It is first called the Korea Tae Soo Do Association, and takes its lasting name, the Korea Taekwondo Association (KTA), in 1965.</span></li>
+        <li><time>1959–60s</time><span>Korean masters tour Asia, Europe and America giving demonstrations. Instructors settle abroad and open schools.</span></li>
+        <li><time>1966</time><span>On 22 March, Choi founds the International Taekwon-Do Federation (ITF) in Seoul to spread the art worldwide.</span></li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="era" id="red">
+    <div class="era-head">
+      <svg class="belt" viewBox="0 0 120 34" aria-hidden="true"><rect x="1" y="11" width="118" height="12" rx="2" fill="var(--belt-red)"/><path d="M52 6h16v22H52z" fill="var(--belt-red)"/></svg>
+      <div><p class="label">Red belt</p><p class="when">1966 – 2002</p></div>
+    </div>
+    <div class="era-body">
+      <h3>Two international branches</h3>
+      <p>As taekwondo spread around the world, it developed along two main paths: the ITF, and the Kukkiwon with the World Taekwondo Federation. Each built its own forms, competitions and black-belt system.</p>
+      <ul class="facts">
+        <li><time>1972</time><span>The ITF moves its headquarters to Toronto, Canada. In Seoul, the Kukkiwon, the national taekwondo academy, opens on 30 November.</span></li>
+        <li><time>1973</time><span>The first World Taekwondo Championships are held at the Kukkiwon in May. On 28 May the World Taekwondo Federation (WTF) is founded there, with 17 member nations.</span></li>
+        <li><time>1980</time><span>On 17 July the International Olympic Committee recognises the WTF, opening the road to the Olympics.</span></li>
+        <li><time>2002</time><span>General Choi Hong-hi, founder of the ITF, dies on 15 June, aged 83. ITF taekwon-do continues worldwide through several federations.</span></li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="era" id="black">
+    <div class="era-head">
+      <svg class="belt" viewBox="0 0 120 34" aria-hidden="true"><rect x="1" y="11" width="118" height="12" rx="2" fill="var(--belt-black)"/><path d="M52 6h16v22H52z" fill="var(--belt-black)"/></svg>
+      <div><p class="label">Black belt</p><p class="when">1988 – today</p></div>
+    </div>
+    <div class="era-body">
+      <h3>An Olympic sport</h3>
+      <ul class="facts">
+        <li><time>1988</time><span>Demonstration sport at the Seoul Olympics, and again at Barcelona 1992.</span></li>
+        <li><time>2000</time><span>Full Olympic medal sport at Sydney, and at every Games since.</span></li>
+        <li><time>2017</time><span>In June, the WTF renames itself World Taekwondo (WT).</span></li>
+        <li><time>2018</time><span>South Korea's parliament designates taekwondo by law as the country's national martial art.</span></li>
+        <li><time>2021</time><span>Para taekwondo debuts at the Tokyo 2020 Paralympics.</span></li>
+        <li><time>Today</time><span>World Taekwondo counts 215 national associations plus a Refugee Team. Its president, Choue Chung-won, was re-elected in October 2025 for a term to 2029, and the next Olympic tournament is Los Angeles 2028.</span></li>
+      </ul>
+    </div>
+  </article>
+  </div>
+</section>
+
+<section aria-labelledby="t-tree">
+  <div class="intro">
+    <p class="label">Part 2</p>
+    <h2 id="t-tree">The family tree</h2>
+    <p>One art, two main branches. If a school teaches <em>Taegeuk</em> forms and sparring with electronic chest protectors, it belongs to the World Taekwondo and Kukkiwon branch, the one used at the Olympics. If it teaches <em>tul</em> patterns like Chon-Ji and Dan-Gun, it is ITF.</p>
+  </div>
+  <div class="tree-scroll">
+    <div class="tree" role="img" aria-label="Lineage: Korean traditions and karate lead to the kwans, then the name taekwondo and the Korea Taekwondo Association, and on to two branches: the ITF, and the Kukkiwon with World Taekwondo.">
+      <div class="tier"><div class="node"><b>Korean traditions</b><small>subak · taekkyeon</small></div><div class="node"><b>Japanese karate</b><small>learned 1930s–40s</small></div></div>
+      <div class="join"></div>
+      <div class="tier"><div class="node"><b>The nine kwans</b><small>Seoul · 1944–1950s</small></div></div>
+      <div class="join"></div>
+      <div class="tier"><div class="node"><b>Name "Taekwondo"</b><small>11 April 1955</small></div><div class="node"><b>Korea Taekwondo Association</b><small>1959–65</small></div></div>
+      <div class="join"></div>
+      <div class="fork">
+        <div>
+          <div class="node itf"><b>International Taekwon-Do Federation</b><small>Gen. Choi Hong-hi · 1966</small></div>
+          <div class="join"></div>
+          <div class="node itf"><b>ITF Taekwon-Do worldwide</b><small>tul patterns · own championships</small></div>
+        </div>
+        <div>
+          <div class="node wt"><b>Kukkiwon</b><small>Seoul · 1972 · grants black belts</small></div>
+          <div class="join"></div>
+          <div class="node wt"><b>World Taekwondo</b><small>1973 · Olympic sport</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="t-compare">
+  <div class="intro">
+    <p class="label">Part 3</p>
+    <h2 id="t-compare">How the two branches differ</h2>
+  </div>
+  <div class="compare-scroll">
+    <table>
+      <thead><tr><th></th><th class="wt">World Taekwondo · Kukkiwon</th><th class="itf">ITF</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Spelling</th><td>Taekwondo</td><td>Taekwon-Do</td></tr>
+        <tr><th scope="row">Forms</th><td><em>Poomsae</em>: eight Taegeuk forms for coloured belts, then black-belt forms</td><td><em>Tul</em>: 24 patterns, one for each hour of the day, named after figures and ideas from Korean history</td></tr>
+        <tr><th scope="row">Sparring</th><td>Full contact. Electronic sensors in the chest protector and helmet score kicks; referees score punches. Punches only to the body. A spinning kick to the head scores most: 5 points.</td><td>Controlled contact with gloves and foot protectors. Punches to the head are allowed. Judges score the points.</td></tr>
+        <tr><th scope="row">Movement</th><td>Upright, quick stance; emphasis on fast, high kicks</td><td>A rising-and-falling "sine wave" motion to add power to each technique</td></tr>
+        <tr><th scope="row">Olympics</th><td>Yes, since 2000</td><td>No; holds its own world championships</td></tr>
+        <tr><th scope="row">Black belts</th><td>Certified by the Kukkiwon in Seoul</td><td>Certified by the ITF group the school belongs to</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section aria-labelledby="t-belts">
+  <div class="intro">
+    <p class="label">Part 4</p>
+    <h2 id="t-belts">What the colours mean</h2>
+    <p>These are the meanings from General Choi's ITF tradition, which many schools in both branches still teach. Some clubs add extra colours or stripes, so your own school may tell it slightly differently.</p>
+  </div>
+  <div class="meanings">
+    <div class="meaning"><i style="background:var(--belt-white)"></i><div><b>White</b><span>Innocence: a beginner with no knowledge yet.</span></div></div>
+    <div class="meaning"><i style="background:var(--belt-yellow)"></i><div><b>Yellow</b><span>The earth, where a plant takes root as the foundation is laid.</span></div></div>
+    <div class="meaning"><i style="background:var(--belt-green)"></i><div><b>Green</b><span>The plant's growth, as taekwondo skills begin to develop.</span></div></div>
+    <div class="meaning"><i style="background:var(--belt-blue)"></i><div><b>Blue</b><span>The sky (heaven), which the growing plant reaches toward.</span></div></div>
+    <div class="meaning"><i style="background:var(--belt-red)"></i><div><b>Red</b><span>Danger: a warning to the student to use control, and to the opponent to stay away.</span></div></div>
+    <div class="meaning"><i style="background:var(--belt-black)"></i><div><b>Black</b><span>The opposite of white: maturity, skill, and imperviousness to darkness and fear.</span></div></div>
+  </div>
+</section>
+
+<section aria-labelledby="t-quiz">
+  <div class="intro">
+    <p class="label">Part 5</p>
+    <h2 id="t-quiz">Green belt quiz</h2>
+    <p>Six questions to test what you read. Tap an answer.</p>
+  </div>
+  <div class="quiz" id="quiz"></div>
+  <p class="score" id="score" aria-live="polite">0 / 6</p>
+</section>
+
+<section class="sources" aria-labelledby="t-sources">
+  <p class="label" id="t-sources">Sources</p>
+  <ul>
+    <li><a href="https://en.wikipedia.org/wiki/Taekwondo">Taekwondo, Wikipedia</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/World_Taekwondo">World Taekwondo, Wikipedia</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/Korea_Taekwondo_Association">Korea Taekwondo Association, Wikipedia</a></li>
+    <li><a href="https://songmookwan.com/index.php/history/the-original-founding-kwans">Song Moo Kwan: the original founding kwans</a></li>
+    <li><a href="https://ich.unesco.org/en/RL/taekkyeon-a-traditional-korean-martial-art-00452">UNESCO: Taekkyeon, a traditional Korean martial art</a></li>
+    <li><a href="https://www.koreatimes.co.kr/sports/20180402/taekwondo-is-koreas-national-martial-art-now-by-law">Korea Times: Taekwondo is Korea's national martial art by law (2018)</a></li>
+    <li><a href="https://www.nbtkda.com/olympic-rules">Olympic kyorugi scoring rules</a></li>
+    <li><a href="https://www.koreajoongangdaily.com/sports/choue-chung-won-re-elected-as-president-of-world-taekwondo/12033480">Korea JoongAng Daily: Choue re-elected</a></li>
+    <li><a href="https://mundotaekwondo.com/president-choue-inspires-participants-at-world-taekwondo-2026-para-taekwondo-training-camp/">Mundo Taekwondo: 215 member associations (July 2026)</a></li>
+  </ul>
+  <p>Researched and built with the help of Claude (Anthropic), based on the public sources listed above.</p>
+</section>
+
+<footer>Made for a green belt · October 2026</footer>
+</div>
+
+<script>
+(function () {
+  var Q = [
+    { q: "What does the \"Do\" in taekwondo mean?", a: ["The kick", "The way", "The fist"], c: 1, f: "Tae is the foot, Kwon the fist, Do the way." },
+    { q: "In which year was the name taekwondo chosen?", a: ["1910", "1955", "1988"], c: 1, f: "On 11 April 1955." },
+    { q: "What were the first taekwondo schools called?", a: ["Dojos", "Kwans", "Dobok"], c: 1, f: "Kwan means hall. Dobok is the uniform you wear." },
+    { q: "Which old Korean game of kicks is a UNESCO heritage?", a: ["Taekkyeon", "Hapkido", "Ssireum"], c: 0, f: "Taekkyeon was listed in 2011." },
+    { q: "Which Olympics first gave medals in taekwondo?", a: ["Seoul 1988", "Sydney 2000", "Paris 2024"], c: 1, f: "Seoul 1988 was only a demonstration." },
+    { q: "What does the green belt stand for?", a: ["Danger", "The sky", "A growing plant"], c: 2, f: "Your skills are starting to grow!" }
+  ];
+  var box = document.getElementById("quiz"), scoreEl = document.getElementById("score"), score = 0;
+  Q.forEach(function (item, i) {
+    var d = document.createElement("div"); d.className = "q";
+    var p = document.createElement("p"); p.textContent = (i + 1) + ". " + item.q; d.appendChild(p);
+    var o = document.createElement("div"); o.className = "opts";
+    var fb = document.createElement("div"); fb.className = "fb"; fb.setAttribute("aria-live", "polite");
+    var done = false;
+    item.a.forEach(function (txt, j) {
+      var b = document.createElement("button"); b.type = "button"; b.id = "q" + i + "a" + j; b.textContent = txt;
+      b.addEventListener("click", function () {
+        if (done) return;
+        if (j === item.c) {
+          done = true; b.classList.add("right"); score++; scoreEl.textContent = score + " / " + Q.length;
+          fb.textContent = "Correct. " + item.f;
+          if (score === Q.length) scoreEl.textContent = "6 / 6 · Ready for blue!";
+        } else { b.classList.add("wrong"); fb.textContent = "Not quite, try again."; }
+      });
+      o.appendChild(b);
+    });
+    d.appendChild(o); d.appendChild(fb); box.appendChild(d);
+  });
+})();
+</script>
+</body>
+</html>
