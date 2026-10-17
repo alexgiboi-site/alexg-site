@@ -9,7 +9,14 @@
 <meta property="og:title" content="The Way of Foot and Fist">
 <meta property="og:description" content="The history of taekwondo told belt by belt, from ancient Korean roots and the first schools in Seoul to the Olympics, with the two main branches, belt meanings and a quiz. In English, Italian and Romanian.">
 <meta property="og:url" content="https://alexgiboi.com/library/taekwondo/">
-<meta property="og:image" content="https://alexgiboi.com/library/taekwondo/training.jpg">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Ion-Alexandru Giboi">
+<meta property="og:image" content="https://alexgiboi.com/library/taekwondo/share-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The way of foot and fist: the history of taekwondo, on alexgiboi.com">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/assets/share.css">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <title>The Way of Foot and Fist</title>
 <meta name="claude:viewport-fit-sides" content="cover">
@@ -69,7 +76,10 @@ section { padding-block: 56px; border-top: 1px solid var(--line); display: grid;
 .intro { display: grid; gap: 12px; }
 
 /* Hero */
-.langbar { display: flex; justify-content: flex-end; padding-block: 16px 0; }
+.langbar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px 24px; padding-block: 16px 0; }
+.langbar .lang { margin-left: auto; }
+.share { --share-accent: var(--ink); --share-primary-bg: var(--ink); --share-primary-fg: var(--paper); --share-radius: 6px; }
+.share-end { margin: 8px 0 48px; }
 .lang { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; padding: 3px; background: var(--paper-2); }
 .lang button { font: 500 13px var(--mono); letter-spacing: .08em; border: 0; background: transparent; color: var(--ink-soft); padding: 6px 14px; border-radius: 999px; cursor: pointer; }
 .lang button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
@@ -184,6 +194,7 @@ footer { padding-block: 32px 48px; border-top: 1px solid var(--line); font-size:
 
 <div class="wrap">
 <div class="langbar">
+  <div class="share" data-share></div>
   <div class="lang" role="group" aria-label="Limba / Lingua / Language">
     <button type="button" id="btn-ro" data-lang="ro" aria-pressed="false">RO</button>
     <button type="button" id="btn-it" data-lang="it" aria-pressed="false">IT</button>
@@ -871,6 +882,8 @@ footer { padding-block: 32px 48px; border-top: 1px solid var(--line); font-size:
 
 <footer>Realizat pentru o centură verde · octombrie 2026</footer>
 </div>
+
+<div class="share" data-share="end"></div>
 </div>
 
 <script>
@@ -923,5 +936,6 @@ footer { padding-block: 32px 48px; border-top: 1px solid var(--line); font-size:
   setLang(lang);
 })();
 </script>
+<script src="/assets/share.js" defer></script>
 </body>
 </html>

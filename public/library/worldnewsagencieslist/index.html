@@ -9,6 +9,15 @@
 <meta property="og:title" content="Private, public and state news agencies">
 <meta property="og:url" content="https://alexgiboi.com/library/worldnewsagencieslist/">
 <meta name="theme-color" content="#102A5C">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Ion-Alexandru Giboi">
+<meta property="og:description" content="Who owns and runs the world's news agencies: 456 agencies classified as public / state or private, who appoints their management, and 80 years of ownership and funding changes.">
+<meta property="og:image" content="https://alexgiboi.com/library/worldnewsagencieslist/share-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Private, public and state news agencies: a dataset by Ion-Alexandru Giboi">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/assets/share.css">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -112,6 +121,7 @@
 </style>
 
 <div class="ff">
+  <div class="share" data-share style="margin:8px 0 20px"></div>
   <nav class="tabs" role="tablist" aria-label="Pages">
     <button role="tab" id="tab-funding" data-page="funding" aria-selected="true">Who runs them</button>
     <button role="tab" id="tab-changes" data-page="changes" aria-selected="false">Ownership and funding changes</button>
@@ -361,6 +371,7 @@
 
 
   </div>
+  <div class="share" data-share="end"></div>
   <div class="made" style="margin-bottom: 72px">
     <strong>HOW THIS WAS MADE</strong>
     <p>Researched and compiled with AI assistance (Claude), checked row by row against the sources listed under "Definitions and sources", and reviewed by me. Agencies checked on 13 October 2026; classification updated on 16 October 2026. You can download the data: <a href="funding_agencies.csv">agencies (CSV)</a> and <a href="funding_changes.csv">changes (CSV)</a>.</p>
@@ -372,5 +383,6 @@
 <script>if(!window.d3){document.getElementById("dash-root").insertAdjacentHTML("afterbegin","<p class=\"noscript\">The charts could not load. You can still download the data below.</p>");}</script>
 <script src="dash-shim.js"></script>
 <script src="page.js"></script>
+<script src="/assets/share.js" defer></script>
 </body>
 </html>

@@ -3,6 +3,15 @@
 <meta property="og:title" content="The Ireland Episode">
 <meta property="og:description" content="A 29-minute audio episode on Ireland: landscape, Atlantic weather and history from the Ice Age to the tech boom, with chapters and a full transcript.">
 <meta property="og:url" content="https://alexgiboi.com/library/ireland-episode/">
+<title>The Ireland Episode</title>
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Ion-Alexandru Giboi">
+<meta property="og:image" content="https://alexgiboi.com/library/ireland-episode/share-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Ireland Episode: a 29-minute audio episode, on alexgiboi.com">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/assets/share.css">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 </head><body>
 <nav aria-label="Site" style="margin:0 -16px 8px;background:#102A5C;font-family:'IBM Plex Sans',system-ui,sans-serif;font-size:15px">
@@ -11,7 +20,6 @@
 <a href="/library/" style="color:#F2B544;text-decoration:none;font-weight:600;padding:8px 0">← Library</a>
 </div></nav>
 
-<title>The Ireland Episode</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Atkinson+Hyperlegible:wght@400;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -73,6 +81,7 @@ section p{margin:0;max-width:62ch}
 .chapters button:focus-visible,.turn:focus-visible{outline:2px solid var(--peat);outline-offset:2px}
 .ai-note{margin:14px 0 0;padding:12px 14px;border-radius:10px;background:var(--moss-soft);border-left:3px solid var(--moss);font-size:15px;color:var(--fg)}
 .ai-note b{font-weight:700}
+.share{--share-accent:var(--moss);--share-primary-bg:var(--moss);--share-primary-fg:var(--surface);--share-radius:999px;--share-pad:11px;--share-space:6px}
 footer{font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:14px}
 </style>
 
@@ -83,6 +92,7 @@ footer{font-size:13px;color:var(--muted);border-top:1px solid var(--line);paddin
     <p class="dek">Two hosts on Ireland's landscape, Atlantic weather and long history, from the Ice Age to the tech boom.</p>
     <p class="ai-note"><b>Made with AI.</b> This episode is an Audio Overview generated with NotebookLM. The two hosts, "John" and "Ava", are synthetic AI voices, not real people. The transcript was made with Notta and lightly tidied. Dates and figures are worth checking before you rely on them.</p>
   </header>
+  <div class="share share-top" data-share></div>
 
   <div class="player" role="region" aria-label="Player">
     <div class="ep"><span class="t">From Glaciers to Modern Tech</span><span class="m">Audio Overview generated with NotebookLM</span></div>
@@ -112,6 +122,8 @@ footer{font-size:13px;color:var(--muted);border-top:1px solid var(--line);paddin
     <p class="note" style="margin-top:6px">Transcribed with Notta and lightly tidied. Tap any line to jump there. The hosts improvise from a written script, so check specific dates and figures before relying on them.</p>
     <div class="tx" id="tx"></div>
   </section>
+
+  <div class="share" data-share="end"></div>
 
   <footer>Generated with NotebookLM. Your place in the episode is saved on this device, so you can pick up where you left off.</footer>
 </div>
@@ -161,4 +173,5 @@ a.addEventListener('timeupdate',()=>{
 });
 </script>
 
+<script src="/assets/share.js" defer></script>
 </body></html>

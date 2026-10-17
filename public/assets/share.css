@@ -1,0 +1,50 @@
+/* alexgiboi.com — share bar for Library posts.
+   Works on any page: it takes its colours and font from the surrounding text.
+   A page can tune it with --share-accent (hover/focus colour) and --share-radius. */
+.share {
+  --share-gap: var(--share-space, 8px);
+  display: flex; flex-wrap: wrap; align-items: center; gap: var(--share-gap);
+  min-height: 44px; margin: 0; color: inherit; font-family: inherit;
+}
+.share[hidden] { display: none !important; }
+.share-label {
+  margin-right: 6px;
+  font-family: 'IBM Plex Mono', ui-monospace, Menlo, Consolas, monospace;
+  font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase;
+  opacity: 0.75;
+}
+.share-list { display: contents; }
+.share-btn {
+  -webkit-appearance: none; appearance: none;
+  display: inline-flex; align-items: center; gap: 8px;
+  min-height: 44px; padding: 0 var(--share-pad, 14px); margin: 0;
+  font: inherit; font-size: 14px; font-weight: 600; line-height: 1; white-space: nowrap;
+  color: inherit; text-decoration: none; cursor: pointer;
+  background: transparent;
+  border: 1px solid rgba(128, 128, 128, 0.45);
+  border-color: color-mix(in srgb, currentColor 30%, transparent);
+  border-radius: var(--share-radius, 0);
+  transition: background-color .15s ease, border-color .15s ease, color .15s ease;
+}
+.share-btn:hover {
+  color: inherit;
+  background: rgba(128, 128, 128, 0.1);
+  background: color-mix(in srgb, currentColor 7%, transparent);
+  border-color: var(--share-accent, currentColor);
+}
+.share-btn:focus-visible { outline: 3px solid var(--share-accent, #1B9AE1); outline-offset: 2px; }
+.share-btn svg { width: 16px; height: 16px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.share-btn.is-primary {
+  background: var(--share-primary-bg, #102A5C); color: var(--share-primary-fg, #fff);
+  border-color: var(--share-primary-bg, #102A5C);
+}
+.share-btn.is-primary:hover { background: var(--share-primary-bg, #102A5C); color: var(--share-primary-fg, #fff); filter: brightness(1.15); }
+.share-btn.is-done { border-color: var(--share-accent, currentColor); }
+.share-status { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* The closing bar: a rule above it and a little more air */
+.share-end { margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(128, 128, 128, 0.35); border-top-color: color-mix(in srgb, currentColor 18%, transparent); }
+
+@media (prefers-reduced-motion: reduce) { .share-btn { transition: none; } }
+@media print { .share { display: none !important; } }
+.share-top { margin-top: 24px; }

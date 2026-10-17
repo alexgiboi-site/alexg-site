@@ -3,6 +3,15 @@
 <meta property="og:title" content="Who invented the telephone game?">
 <meta property="og:description" content="Research notes on the oldest traces of the telephone game and the names it goes by across Europe. In English, Romanian and Italian.">
 <meta property="og:url" content="https://alexgiboi.com/library/telephone-game/">
+<title>Telefono senza fili / fără fir</title>
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Ion-Alexandru Giboi">
+<meta property="og:image" content="https://alexgiboi.com/library/telephone-game/share-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Who invented the telephone game? Research notes by Ion-Alexandru Giboi">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/assets/share.css">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 </head><body>
 <nav aria-label="Site" style="margin:0 -16px 8px;background:#102A5C;font-family:'IBM Plex Sans',system-ui,sans-serif;font-size:15px">
@@ -11,7 +20,6 @@
 <a href="/library/" style="color:#F2B544;text-decoration:none;font-weight:600;padding:8px 0">← Library</a>
 </div></nav>
 
-<title>Telefono senza fili / fără fir</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap">
@@ -107,6 +115,7 @@ h2{font-family:var(--display);font-weight:400;font-size:clamp(26px,4vw,34px);lin
 @media (max-width:700px){.sources ol{columns:1}}
 .sources li{break-inside:avoid;margin-bottom:8px;color:var(--muted)}
 .sources a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:2px;overflow-wrap:anywhere}
+.share{--share-accent:var(--accent);--share-primary-bg:var(--accent);--share-primary-fg:var(--tile-ink);--share-radius:999px}
 footer{padding-top:28px;border-top:1px solid var(--line);font-size:14px;color:var(--muted);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 @media (prefers-reduced-motion:reduce){.tile rect{transition:none}}
 </style>
@@ -127,6 +136,7 @@ footer{padding-top:28px;border-top:1px solid var(--line);font-size:14px;color:va
     <p class="lede" data-t="lede"></p>
     <div class="chain" aria-hidden="true"><span data-t="c1"></span><i>›</i><span data-t="c2"></span><i>›</i><span data-t="c3"></span><i>›</i><span data-t="c4"></span></div>
   </header>
+  <div class="share share-top" data-share></div>
 
   <section id="harta">
     <h2 data-t="mapH"></h2>
@@ -177,6 +187,8 @@ footer{padding-top:28px;border-top:1px solid var(--line);font-size:14px;color:va
       <li><a href="https://sfonline.barnard.edu/women-and-community-in-early-modern-europe-approaches-and-perspectives/il-dialogo-de-giuochi-by-girolamo-bargagli-and-the-women-of-siena-culture-independence-and-politics/" target="_blank" rel="noopener">Elena Brizio: Il Dialogo de' giuochi by Girolamo Bargagli</a></li>
     </ol>
   </section>
+
+  <div class="share" data-share="end"></div>
 
   <footer>
     <span data-t="ai"></span>
@@ -402,4 +414,5 @@ sel={ro:"RO",it:"IT",en:"GB"}[lang];
 buildMap(); render();
 </script>
 
+<script src="/assets/share.js" defer></script>
 </body></html>
