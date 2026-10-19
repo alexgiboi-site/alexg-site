@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 <title>The Autumn 2026 Protests: France and Beyond — Ion-Alexandru Giboi</title>
-<meta name="description" content="Where the autumn 2026 protests turned violent in France, from the first school blockades to the 17 October national day, and the related protests across Europe. Every entry links to its source. In English, Italian and Romanian.">
+<meta name="description" content="Where the autumn 2026 protests turned violent in France, from the first school blockades to the 17 October national day, and the related protests elsewhere in Europe and the world. Every entry links to its source. In English, Italian and Romanian.">
 <link rel="canonical" href="https://alexgiboi.com/library/france-protests-2026/">
 <meta property="og:title" content="The Autumn 2026 Protests: France and Beyond">
-<meta property="og:description" content="Where the autumn 2026 protests turned violent in France, and the related protests across Europe. Every entry links to its source. In English, Italian and Romanian.">
+<meta property="og:description" content="Where the autumn 2026 protests turned violent in France, and the related protests elsewhere in Europe and the world. Every entry links to its source. In English, Italian and Romanian.">
 <meta property="og:url" content="https://alexgiboi.com/library/france-protests-2026/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Ion-Alexandru Giboi">
@@ -159,6 +159,10 @@ footer li{break-inside:avoid;margin-bottom:4px}
 .cty-item{display:flex;flex-direction:column;gap:5px;padding-top:8px;border-top:1px dashed var(--line)}
 .cty-item p b{font-weight:600}
 .marker.fr text{fill:var(--paper)}
+.water{fill:var(--surface);stroke:var(--land-edge);stroke-width:.6}
+.eubox{cursor:pointer}.eubox:focus{outline:none}.eubox:focus-visible rect{stroke-width:2.5}
+#viewSeg{align-self:flex-start}
+.grp{font-family:var(--f-mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding:12px 16px 6px;border-bottom:1px solid var(--line);background:var(--paper)}
 </style>
 </head>
 <body>
@@ -223,7 +227,9 @@ footer li{break-inside:avoid;margin-bottom:4px}
     <p class="lede" data-i="byLede"></p>
     <div class="grid">
       <div class="mapcol">
-        <div class="mapbox"><svg id="euMap" viewBox="0 0 516 464" role="img"></svg></div>
+        <div class="seg" id="viewSeg" role="group"><button type="button" id="v-world" data-v="world" aria-pressed="true"></button><button type="button" id="v-eu" data-v="eu" aria-pressed="false"></button></div>
+        <div class="mapbox" id="worldBox"><svg id="worldMap" viewBox="0 0 521 240" role="img"></svg></div>
+        <div class="mapbox" id="euBox" hidden><svg id="euMap" viewBox="0 0 516 464" role="img"></svg></div>
         <div class="legend" id="euLegend"></div>
         <p class="note" style="margin:0 4px" data-i="euNote"></p>
       </div>
@@ -298,10 +304,11 @@ const I18N={
  en:{
   eyebrow:"Library · Map · Oct 2026", h1:"The autumn 2026 protests: France and beyond",
   frH:"France: where the protests turned violent", byH:"Beyond France",
-  byLede:"Protests over school conditions, education budgets and the cost of living also rose in other European countries in the same weeks. This map is less detailed than the one for France: one entry per country, with the main events only. The colour shows whether organisers linked their protest to France.",
-  euNote:"Simplified outline of Europe, for orientation only. Select a country to read its entry, or France to go back to the detailed map. No related protests outside Europe could be dated and sourced reliably.",
+  byLede:"In the same weeks, protests over school conditions, education budgets and the cost of living also rose elsewhere in Europe and in Latin America, while young people in Brazil and India marched over their own national politics. This map is less detailed than the one for France: one entry per country, with the main events only. The colour shows whether organisers linked their protest to France.",
+  euNote:"Simplified outlines, for orientation only. Switch between the world and Europe views, select a country to read its entry, or select France in the Europe view to go back to the detailed map.",
+  vWorld:"World", vEu:"Europe", worldAria:"World map with a marker for each country where protests were reported in the same weeks", euBoxAria:"Show the Europe close-up", grpEu:"Europe", grpWorld:"Rest of the world",
   euAria:"Map of Europe with a marker for each country where related protests were reported", frMarker:"France: go to the detailed map", frLegend:"France, detailed above", euAll:"All countries", euCount:n=>n+(n===1?" country":" countries"), euClear:"Show all countries",
-  lede:"Since late September, protests over school conditions and the cost of living have swept France, and similar movements have risen elsewhere in Europe. The main map shows where the French unrest turned violent, from the first school blockades in Créteil on 21 September to the national day of action on <strong>Saturday 17 October</strong>, when about 550,000 people marched. Most marchers were peaceful. A second, lighter map covers related protests in other countries. Every entry links to its source.",
+  lede:"Since late September, protests over school conditions and the cost of living have swept France, and similar movements have risen elsewhere in Europe and the world. The main map shows where the French unrest turned violent, from the first school blockades in Créteil on 21 September to the national day of action on <strong>Saturday 17 October</strong>, when about 550,000 people marched. Most marchers were peaceful. A second, lighter map covers related protests in other countries. Every entry links to its source.",
   stamp1:"Last checked <b>19 Oct 2026, 13:30 CEST</b>", stamp2:"Events mapped", stamp3:"Every entry links to its source",
   period:"Period", type:"Type", pAll:"All", pBefore:"Blockades, 21 Sep–16 Oct", p17:"Sat 17 Oct", p18:"Sun 18 Oct",
   insetH:"Paris region close-up", insetNote:"Dashed box on the main map. Paris outline is approximate.",
@@ -328,7 +335,7 @@ const I18N={
    ["19 Oct","≈2,400","≈1,000<br><span class=\"note\">7 seriously</span>","Interior Ministry, via BBC, cited in "+A(WIKI,"Wikipedia")+" "+vf("en",1)]]),
   fgNote2:"Turnout on 17 Oct: 550,000 according to the authorities (110,000 in Paris), 800,000 according to organisers ("+A(U.cbs,"AP via CBS")+"). Earlier, on 1 Oct, the Interior Ministry reported 1,949 arrests in a single day of school blockades.",
   exEy:"Left off the map", exH:"Reports that were not included",
-  exList:"<li><b>An elderly couple robbed in Paris near the Élysée.</b> Only one outlet reported it, and only as unconfirmed.</li><li><b>A police officer killed in Nantes on 17 Oct.</b> He was hit by a car during a separate police operation; the driver was not connected to the protests.</li><li><b>A protester's death in Paris</b> after a cardiac arrest. Police gave no further details, so it cannot be placed or described reliably.</li><li><b>Burned cars on rue Saint-Denis, Paris.</b> Seen only in photo captions, with no report to cite.</li><li><b>University marches in Argentina</b> against funding cuts. AP reported them, but their date could not be confirmed, and they are not linked to the European protests.</li><li><b>Education protests in Germany and Austria.</b> Reported without enough detail on dates and places to map them.</li>",
+  exList:"<li><b>An elderly couple robbed in Paris near the Élysée.</b> Only one outlet reported it, and only as unconfirmed.</li><li><b>A police officer killed in Nantes on 17 Oct.</b> He was hit by a car during a separate police operation; the driver was not connected to the protests.</li><li><b>A protester's death in Paris</b> after a cardiac arrest. Police gave no further details, so it cannot be placed or described reliably.</li><li><b>Burned cars on rue Saint-Denis, Paris.</b> Seen only in photo captions, with no report to cite.</li><li><b>Rallies in the United States and pension protests in Turkey</b> in the same weeks. They concern national politics and pensions rather than education or living costs, and the available reports gave too few dates and places.</li><li><b>Education protests in Germany and Austria.</b> Reported without enough detail on dates and places to map them.</li>",
   mtEy:"Method", mtH:"How entries were checked",
   mtBody:"<p>Entries come from wire agencies (AFP, AP, Reuters), public broadcasters (France 24, ICI, BBC) and established national and regional newspapers. Each entry carries one of two labels:</p><ul><li>"+vf("en",0)+" The report itself was read, from the agency or the outlet that carried it.</li><li>"+vf("en",1)+" The facts come from another outlet's report, mostly Wikipedia's article on the French protests. The original report is named but was not opened. Treat these with more caution.</li></ul><p>Figures are given as the source gave them. Where sources disagree, the entry says so. Locations are placed at the city, square or school named in the report.</p>",
   srcH:"Sources", credit:"Researched and built with the help of Claude (Anthropic), based on the public sources listed above. <a href=\"/#contact\">Corrections welcome</a>."
@@ -336,10 +343,11 @@ const I18N={
  it:{
   eyebrow:"Biblioteca · Mappa · ott 2026", h1:"Le proteste dell'autunno 2026: la Francia e oltre",
   frH:"Francia: dove le proteste sono degenerate", byH:"Oltre la Francia",
-  byLede:"Nelle stesse settimane, proteste per le condizioni delle scuole, i bilanci dell'istruzione e il caro vita sono nate anche in altri Paesi europei. Questa mappa è meno dettagliata di quella sulla Francia: una voce per Paese, con i soli eventi principali. Il colore indica se gli organizzatori hanno collegato la protesta alla Francia.",
-  euNote:"Contorno semplificato dell'Europa, solo per orientarsi. Tocca un Paese per leggerne la voce, oppure la Francia per tornare alla mappa dettagliata. Fuori dall'Europa non sono state trovate proteste collegate databili e documentabili in modo affidabile.",
+  byLede:"Nelle stesse settimane, proteste per le condizioni delle scuole, i bilanci dell'istruzione e il caro vita sono nate anche altrove in Europa e in America Latina, mentre in Brasile e in India i giovani sono scesi in piazza per questioni di politica nazionale. Questa mappa è meno dettagliata di quella sulla Francia: una voce per Paese, con i soli eventi principali. Il colore indica se gli organizzatori hanno collegato la protesta alla Francia.",
+  euNote:"Contorni semplificati, solo per orientarsi. Passa dalla vista mondiale a quella europea, tocca un Paese per leggerne la voce, oppure tocca la Francia nella vista europea per tornare alla mappa dettagliata.",
+  vWorld:"Mondo", vEu:"Europa", worldAria:"Mappa del mondo con un segnaposto per ogni Paese in cui sono state segnalate proteste nelle stesse settimane", euBoxAria:"Mostra il dettaglio dell'Europa", grpEu:"Europa", grpWorld:"Resto del mondo",
   euAria:"Mappa dell'Europa con un segnaposto per ogni Paese in cui sono state segnalate proteste collegate", frMarker:"Francia: vai alla mappa dettagliata", frLegend:"Francia, in dettaglio sopra", euAll:"Tutti i Paesi", euCount:n=>n+(n===1?" Paese":" Paesi"), euClear:"Mostra tutti i Paesi",
-  lede:"Da fine settembre, le proteste per le condizioni delle scuole e il caro vita hanno attraversato la Francia, e movimenti simili sono nati altrove in Europa. La mappa principale mostra dove i disordini francesi sono degenerati in violenza, dai primi blocchi delle scuole a Créteil, il 21 settembre, alla giornata nazionale di mobilitazione di <strong>sabato 17 ottobre</strong>, quando hanno manifestato circa 550.000 persone. La maggior parte dei manifestanti è rimasta pacifica. Una seconda mappa, più sintetica, riguarda le proteste collegate in altri Paesi. Ogni voce rimanda alla sua fonte.",
+  lede:"Da fine settembre, le proteste per le condizioni delle scuole e il caro vita hanno attraversato la Francia, e movimenti simili sono nati altrove in Europa e nel mondo. La mappa principale mostra dove i disordini francesi sono degenerati in violenza, dai primi blocchi delle scuole a Créteil, il 21 settembre, alla giornata nazionale di mobilitazione di <strong>sabato 17 ottobre</strong>, quando hanno manifestato circa 550.000 persone. La maggior parte dei manifestanti è rimasta pacifica. Una seconda mappa, più sintetica, riguarda le proteste collegate in altri Paesi. Ogni voce rimanda alla sua fonte.",
   stamp1:"Ultimo controllo <b>19 ott 2026, 13:30 CEST</b>", stamp2:"Eventi sulla mappa", stamp3:"Ogni voce rimanda alla sua fonte",
   period:"Periodo", type:"Tipo", pAll:"Tutto", pBefore:"Blocchi, 21 set–16 ott", p17:"Sab 17 ott", p18:"Dom 18 ott",
   insetH:"Dettaglio: regione di Parigi", insetNote:"Riquadro tratteggiato sulla mappa principale. Il contorno di Parigi è approssimativo.",
@@ -366,7 +374,7 @@ const I18N={
    ["19 ott","≈2.400","≈1.000<br><span class=\"note\">7 gravi</span>","Ministero dell'Interno, via BBC, citato su "+A(WIKI,"Wikipedia")+" "+vf("it",1)]]),
   fgNote2:"Partecipazione il 17 ottobre: 550.000 secondo le autorità (110.000 a Parigi), 800.000 secondo gli organizzatori ("+A(U.cbs,"AP via CBS")+"). In precedenza, il 1° ottobre, il ministero dell'Interno aveva registrato 1.949 arresti in un solo giorno di blocchi delle scuole.",
   exEy:"Esclusi dalla mappa", exH:"Notizie non incluse",
-  exList:"<li><b>Una coppia di anziani derubata a Parigi vicino all'Eliseo.</b> Ne ha parlato un solo organo di stampa, e solo come notizia non confermata.</li><li><b>Un agente di polizia morto a Nantes il 17 ottobre.</b> È stato investito da un'auto durante un'operazione di polizia separata; il conducente non era legato alle proteste.</li><li><b>La morte di un manifestante a Parigi</b> dopo un arresto cardiaco. La polizia non ha fornito altri dettagli, quindi non è possibile collocarla né descriverla in modo affidabile.</li><li><b>Auto bruciate in rue Saint-Denis, a Parigi.</b> Viste solo nelle didascalie di alcune foto, senza un articolo da citare.</li><li><b>Cortei universitari in Argentina</b> contro i tagli ai fondi. Ne ha dato notizia AP, ma non è stato possibile stabilirne la data, e non sono legati alle proteste europee.</li><li><b>Proteste per l'istruzione in Germania e Austria.</b> Riportate senza dettagli sufficienti su date e luoghi per inserirle nella mappa.</li>",
+  exList:"<li><b>Una coppia di anziani derubata a Parigi vicino all'Eliseo.</b> Ne ha parlato un solo organo di stampa, e solo come notizia non confermata.</li><li><b>Un agente di polizia morto a Nantes il 17 ottobre.</b> È stato investito da un'auto durante un'operazione di polizia separata; il conducente non era legato alle proteste.</li><li><b>La morte di un manifestante a Parigi</b> dopo un arresto cardiaco. La polizia non ha fornito altri dettagli, quindi non è possibile collocarla né descriverla in modo affidabile.</li><li><b>Auto bruciate in rue Saint-Denis, a Parigi.</b> Viste solo nelle didascalie di alcune foto, senza un articolo da citare.</li><li><b>Manifestazioni negli Stati Uniti e proteste dei pensionati in Turchia</b> nelle stesse settimane. Riguardano la politica nazionale e le pensioni più che l'istruzione o il costo della vita, e gli articoli disponibili danno troppo poche date e luoghi.</li><li><b>Proteste per l'istruzione in Germania e Austria.</b> Riportate senza dettagli sufficienti su date e luoghi per inserirle nella mappa.</li>",
   mtEy:"Metodo", mtH:"Come sono state verificate le voci",
   mtBody:"<p>Le voci provengono da agenzie di stampa (AFP, AP, Reuters), emittenti pubbliche (France 24, ICI, BBC) e testate nazionali e regionali affermate. Ogni voce porta una di due etichette:</p><ul><li>"+vf("it",0)+" L'articolo è stato letto direttamente, dall'agenzia o dalla testata che lo ha pubblicato.</li><li>"+vf("it",1)+" I fatti provengono dall'articolo di un'altra testata, per lo più la voce di Wikipedia sulle proteste in Francia. L'originale è indicato ma non è stato consultato. Vanno considerati con più cautela.</li></ul><p>Le cifre sono riportate come le ha date la fonte. Dove le fonti divergono, la voce lo indica. I luoghi sono posizionati sulla città, piazza o scuola indicata nell'articolo.</p>",
   srcH:"Fonti", credit:"Ricerca e pagina realizzate con l'aiuto di Claude (Anthropic), sulla base delle fonti pubbliche indicate sopra. <a href=\"/#contact\">Le correzioni sono benvenute</a>."
@@ -374,10 +382,11 @@ const I18N={
  ro:{
   eyebrow:"Bibliotecă · Hartă · oct. 2026", h1:"Protestele din toamna lui 2026: Franța și restul lumii",
   frH:"Franța: unde protestele au degenerat", byH:"Dincolo de Franța",
-  byLede:"În aceleași săptămâni, proteste legate de condițiile din școli, bugetele educației și costul vieții au apărut și în alte țări europene. Această hartă este mai puțin detaliată decât cea pentru Franța: câte o intrare pentru fiecare țară, doar cu evenimentele principale. Culoarea arată dacă organizatorii și-au legat protestul de Franța.",
-  euNote:"Contur simplificat al Europei, doar pentru orientare. Atinge o țară pentru a citi intrarea, sau Franța pentru a reveni la harta detaliată. În afara Europei nu au fost găsite proteste înrudite care să poată fi datate și documentate în mod sigur.",
+  byLede:"În aceleași săptămâni, proteste legate de condițiile din școli, bugetele educației și costul vieții au apărut și în alte țări europene și în America Latină, iar în Brazilia și India tinerii au ieșit în stradă din motive de politică internă. Această hartă este mai puțin detaliată decât cea pentru Franța: câte o intrare pentru fiecare țară, doar cu evenimentele principale. Culoarea arată dacă organizatorii și-au legat protestul de Franța.",
+  euNote:"Contururi simplificate, doar pentru orientare. Comută între vederea lumii și cea a Europei, atinge o țară pentru a citi intrarea sau atinge Franța în vederea Europei pentru a reveni la harta detaliată.",
+  vWorld:"Lume", vEu:"Europa", worldAria:"Harta lumii cu câte un marcaj pentru fiecare țară în care au fost semnalate proteste în aceleași săptămâni", euBoxAria:"Arată detaliul Europei", grpEu:"Europa", grpWorld:"Restul lumii",
   euAria:"Harta Europei cu câte un marcaj pentru fiecare țară în care au fost semnalate proteste înrudite", frMarker:"Franța: mergi la harta detaliată", frLegend:"Franța, în detaliu mai sus", euAll:"Toate țările", euCount:n=>n+(n===1?" țară":" țări"), euClear:"Arată toate țările",
-  lede:"De la sfârșitul lui septembrie, protestele legate de condițiile din școli și de scumpiri au cuprins Franța, iar mișcări asemănătoare au apărut și în alte țări europene. Harta principală arată unde tulburările din Franța au degenerat în violență, de la primele blocade ale liceelor din Créteil, pe 21 septembrie, până la ziua națională de mobilizare de <strong>sâmbătă, 17 octombrie</strong>, când au manifestat aproximativ 550.000 de oameni. Majoritatea manifestanților au fost pașnici. O a doua hartă, mai sumară, cuprinde protestele înrudite din alte țări. Fiecare intrare are link către sursă.",
+  lede:"De la sfârșitul lui septembrie, protestele legate de condițiile din școli și de scumpiri au cuprins Franța, iar mișcări asemănătoare au apărut și în alte țări din Europa și din lume. Harta principală arată unde tulburările din Franța au degenerat în violență, de la primele blocade ale liceelor din Créteil, pe 21 septembrie, până la ziua națională de mobilizare de <strong>sâmbătă, 17 octombrie</strong>, când au manifestat aproximativ 550.000 de oameni. Majoritatea manifestanților au fost pașnici. O a doua hartă, mai sumară, cuprinde protestele înrudite din alte țări. Fiecare intrare are link către sursă.",
   stamp1:"Ultima verificare <b>19 oct. 2026, 13:30 CEST</b>", stamp2:"Evenimente pe hartă", stamp3:"Fiecare intrare are link către sursă",
   period:"Perioada", type:"Tip", pAll:"Toate", pBefore:"Blocade, 21 sept.–16 oct.", p17:"Sâm 17 oct.", p18:"Dum 18 oct.",
   insetH:"Detaliu: regiunea Paris", insetNote:"Chenarul punctat de pe harta principală. Conturul Parisului este aproximativ.",
@@ -404,7 +413,7 @@ const I18N={
    ["19 oct.","≈2.400","≈1.000<br><span class=\"note\">7 grav</span>","Ministerul de Interne, via BBC, citat pe "+A(WIKI,"Wikipedia")+" "+vf("ro",1)]]),
   fgNote2:"Participare pe 17 octombrie: 550.000 de persoane potrivit autorităților (110.000 la Paris), 800.000 potrivit organizatorilor ("+A(U.cbs,"AP via CBS")+"). Anterior, pe 1 octombrie, Ministerul de Interne raportase 1.949 de arestări într-o singură zi de blocade ale liceelor.",
   exEy:"Lăsate în afara hărții", exH:"Relatări care nu au fost incluse",
-  exList:"<li><b>Un cuplu de vârstnici jefuit la Paris, lângă Palatul Élysée.</b> A fost relatat de o singură publicație și doar ca informație neconfirmată.</li><li><b>Un polițist ucis la Nantes pe 17 octombrie.</b> A fost lovit de o mașină în timpul unei operațiuni separate a poliției; șoferul nu avea legătură cu protestele.</li><li><b>Decesul unui manifestant la Paris</b>, în urma unui stop cardiac. Poliția nu a oferit alte detalii, așa că nu poate fi localizat sau descris în mod sigur.</li><li><b>Mașini incendiate pe rue Saint-Denis, la Paris.</b> Apar doar în legendele unor fotografii, fără un articol care să poată fi citat.</li><li><b>Marșuri universitare în Argentina</b> împotriva reducerii fondurilor. AP a relatat despre ele, dar data nu a putut fi stabilită, iar ele nu au legătură cu protestele din Europa.</li><li><b>Proteste pentru educație în Germania și Austria.</b> Relatate fără suficiente detalii despre date și locuri pentru a fi puse pe hartă.</li>",
+  exList:"<li><b>Un cuplu de vârstnici jefuit la Paris, lângă Palatul Élysée.</b> A fost relatat de o singură publicație și doar ca informație neconfirmată.</li><li><b>Un polițist ucis la Nantes pe 17 octombrie.</b> A fost lovit de o mașină în timpul unei operațiuni separate a poliției; șoferul nu avea legătură cu protestele.</li><li><b>Decesul unui manifestant la Paris</b>, în urma unui stop cardiac. Poliția nu a oferit alte detalii, așa că nu poate fi localizat sau descris în mod sigur.</li><li><b>Mașini incendiate pe rue Saint-Denis, la Paris.</b> Apar doar în legendele unor fotografii, fără un articol care să poată fi citat.</li><li><b>Mitinguri în Statele Unite și proteste ale pensionarilor în Turcia</b> în aceleași săptămâni. Țin mai degrabă de politica internă și de pensii decât de educație sau de costul vieții, iar relatările disponibile oferă prea puține date și locuri.</li><li><b>Proteste pentru educație în Germania și Austria.</b> Relatate fără suficiente detalii despre date și locuri pentru a fi puse pe hartă.</li>",
   mtEy:"Metodă", mtH:"Cum au fost verificate intrările",
   mtBody:"<p>Intrările provin de la agenții de presă (AFP, AP, Reuters), radiodifuzori publici (France 24, ICI, BBC) și publicații naționale și regionale consacrate. Fiecare intrare are una dintre cele două etichete:</p><ul><li>"+vf("ro",0)+" Articolul a fost citit direct, de la agenție sau de la publicația care l-a preluat.</li><li>"+vf("ro",1)+" Faptele provin din articolul altei publicații, în principal pagina Wikipedia despre protestele din Franța. Originalul este menționat, dar nu a fost consultat. Tratează-le cu mai multă prudență.</li></ul><p>Cifrele sunt redate așa cum le-a dat sursa. Acolo unde sursele diferă, intrarea o menționează. Locațiile sunt plasate în orașul, piața sau liceul numite în articol.</p>",
   srcH:"Surse", credit:"Cercetare și pagină realizate cu ajutorul Claude (Anthropic), pe baza surselor publice de mai sus. <a href=\"/#contact\">Corecturile sunt binevenite</a>."
@@ -730,7 +739,13 @@ Object.assign(SRC,{
   ajAl:{n:"Al Jazeera",u:"https://www.aljazeera.com/amp/news/2026/10/14/fire-erupts-at-albanias-education-ministry-as-protests-enter-third-day"},
   tt:{n:"TT via Sweden Herald",u:"https://swedenherald.com/article/studentled-protests-spread-across-europe-inspired-by-france"},
   ds:{n:"Daily Sabah",u:"https://www.dailysabah.com/world/europe/student-protests-sweep-europe-amid-anger-over-costs-of-living"},
-  nat:{n:"The National via Yahoo News",u:"https://uk.news.yahoo.com/protests-spread-lisbon-milan-while-151014720.html"}
+  nat:{n:"The National via Yahoo News",u:"https://uk.news.yahoo.com/protests-spread-lisbon-milan-while-151014720.html"},
+  ajEs:{n:"Al Jazeera",u:"https://aljazeera.com/news/2026/10/5/spanish-prime-minister-pedro-sanchez-announces-snap-election"},
+  riot:{n:"The Rio Times",u:"https://www.riotimesonline.com/chile-strikes-students-health-workers-budget-2027-2026"},
+  reutAr:{n:"Reuters via GBM",u:"https://gbm.com/media/noticia/masiva-marcha-universitaria-reclama-a-milei-cumplir-con-ley-de-financiamiento-en-argentina/"},
+  ajBr:{n:"Al Jazeera",u:"https://www.aljazeera.com/gallery/2026/10/7/no-to-the-father-no-to-the-son-thousands-march-in-rio-against-bolsonaro-2"},
+  npr:{n:"WBUR Here & Now via KGOU",u:"https://www.kgou.org/politics-and-government/2026-10-13/indias-gen-z-protesters-fight-for-free-and-fair-elections"},
+  ped:{n:"Pedestrian",u:"https://www.pedestrian.tv/news/youth-protests-france-india-spain-chile-brazil-explained"}
 });
 const EU=[
  {k:"it",name:{en:"Italy",it:"Italia",ro:"Italia"},ll:[12.5,41.9],link:"linked",items:[
@@ -766,13 +781,56 @@ const EU=[
    it:"<b>Lisbona, 17 ottobre.</b> Nello stesso giorno delle proteste nazionali in Francia, migliaia di persone hanno manifestato in tutto il Portogallo per la casa, gli affitti e i salari bassi. Di sera centinaia si sono radunate in piazza Rossio, dove alcuni si sono scontrati con la polizia.",
    ro:"<b>Lisabona, 17 octombrie.</b> În aceeași zi cu protestele naționale din Franța, mii de oameni au mărșăluit în toată Portugalia față de problemele locuințelor, chirii și salariile mici. Seara, sute de oameni s-au adunat în Piața Rossio, unde unii s-au ciocnit cu poliția."}}]},
  {k:"es",name:{en:"Spain",it:"Spagna",ro:"Spania"},ll:[-3.7,40.42],link:"parallel",items:[
+  {src:["ajEs"],v:"checked",t:{en:"<b>Madrid, 3 Oct.</b> More than 70,000 people, according to the government, marched over housing costs after the televised eviction of an 87-year-old woman. After parliament rejected the government's housing relief measures, Prime Minister Pedro Sánchez called a snap election for 29 November.",
+   it:"<b>Madrid, 3 ottobre.</b> Oltre 70.000 persone, secondo il governo, hanno manifestato per il caro casa dopo lo sfratto, trasmesso in televisione, di una donna di 87 anni. Dopo che il Parlamento ha respinto le misure del governo sulla casa, il premier Pedro Sánchez ha convocato elezioni anticipate per il 29 novembre.",
+   ro:"<b>Madrid, 3 octombrie.</b> Peste 70.000 de oameni, potrivit guvernului, au manifestat față de costul locuințelor, după evacuarea, transmisă la televizor, a unei femei de 87 de ani. După ce parlamentul a respins măsurile guvernului privind locuințele, premierul Pedro Sánchez a convocat alegeri anticipate pentru 29 noiembrie."}},
   {src:["tt","ds"],v:"checked",t:{en:"<b>Madrid region, from 14 Oct.</b> Teachers began an indefinite strike, organised by the Marea Verde (Green Tide) movement.",
    it:"<b>Regione di Madrid, dal 14 ottobre.</b> Gli insegnanti hanno iniziato uno sciopero a tempo indeterminato, organizzato dal movimento Marea Verde.",
    ro:"<b>Regiunea Madrid, de la 14 octombrie.</b> Profesorii au început o grevă pe termen nelimitat, organizată de mișcarea Marea Verde."}}]},
  {k:"ie",name:{en:"Ireland",it:"Irlanda",ro:"Irlanda"},ll:[-6.26,53.35],link:"parallel",items:[
   {src:["axios"],v:"cited",orig:"RTÉ",t:{en:"<b>Dublin, early Oct.</b> Thousands of university students demanded lower fees, more funding for higher education and affordable accommodation.",
    it:"<b>Dublino, inizio ottobre.</b> Migliaia di studenti universitari hanno chiesto tasse più basse, più fondi per l'università e alloggi accessibili.",
-   ro:"<b>Dublin, începutul lui octombrie.</b> Mii de studenți au cerut taxe mai mici, mai multe fonduri pentru universități și locuințe accesibile."}}]}
+   ro:"<b>Dublin, începutul lui octombrie.</b> Mii de studenți au cerut taxe mai mici, mai multe fonduri pentru universități și locuințe accesibile."}}]},
+ {k:"cl",w:1,name:{en:"Chile",it:"Cile",ro:"Chile"},ll:[-70.65,-33.45],link:"parallel",items:[
+  {src:["riot"],v:"checked",t:{en:"<b>Santiago, 1 Oct.</b> The Confederation of Students of Chile led a national strike and march against possible education cuts in the 2027 budget, joined by unions and teachers. Clashes broke out near the start of the march; police used water cannon and tear gas, and at least 12 people were arrested, according to a first count.",
+   it:"<b>Santiago, 1° ottobre.</b> La Confederazione degli studenti del Cile ha guidato uno sciopero nazionale e un corteo contro i possibili tagli all'istruzione nel bilancio 2027, con l'adesione di sindacati e insegnanti. Vicino alla partenza del corteo sono scoppiati scontri; la polizia ha usato idranti e lacrimogeni e, secondo un primo bilancio, almeno 12 persone sono state arrestate.",
+   ro:"<b>Santiago, 1 octombrie.</b> Confederația Studenților din Chile a condus o grevă națională și un marș împotriva posibilelor reduceri din bugetul educației pentru 2027, cu sprijinul sindicatelor și al profesorilor. Lângă punctul de plecare al marșului au izbucnit ciocniri; poliția a folosit tunuri cu apă și gaze lacrimogene, iar, potrivit unui prim bilanț, cel puțin 12 persoane au fost arestate."}}]},
+ {k:"ar",w:1,name:{en:"Argentina",it:"Argentina",ro:"Argentina"},ll:[-58.39,-34.61],link:"parallel",items:[
+  {src:["reutAr"],v:"checked",t:{en:"<b>Buenos Aires, 15 Oct.</b> Tens of thousands marched outside Congress, and in Rosario and Córdoba, demanding that the government apply a law restoring the university funding cut since 2023. University of Buenos Aires officials estimate staff have lost about 30% of their pay.",
+   it:"<b>Buenos Aires, 15 ottobre.</b> Decine di migliaia di persone hanno manifestato davanti al Congresso, oltre che a Rosario e Córdoba, chiedendo al governo di applicare una legge che ripristina i fondi universitari tagliati dal 2023. Secondo l'Università di Buenos Aires, il personale ha perso circa il 30% dello stipendio.",
+   ro:"<b>Buenos Aires, 15 octombrie.</b> Zeci de mii de oameni au manifestat în fața Congresului, precum și la Rosario și Córdoba, cerând guvernului să aplice o lege care restabilește fondurile universităților, tăiate din 2023. Potrivit Universității din Buenos Aires, personalul a pierdut aproximativ 30% din salariu."}}]},
+ {k:"br",w:1,name:{en:"Brazil",it:"Brasile",ro:"Brazilia"},ll:[-43.18,-22.91],link:"separate",items:[
+  {src:["ajBr"],v:"checked",t:{en:"<b>Rio de Janeiro, 7 Oct.</b> Thousands joined a student-led march against presidential candidate Flávio Bolsonaro, days after he came first in the election's first round. Organisers framed it as a defence of public education and democracy. No clashes were reported. The run-off is on 25 October.",
+   it:"<b>Rio de Janeiro, 7 ottobre.</b> Migliaia di persone hanno partecipato a un corteo guidato dagli studenti contro il candidato presidenziale Flávio Bolsonaro, pochi giorni dopo il suo primo posto al primo turno. Gli organizzatori lo hanno presentato come una difesa dell'istruzione pubblica e della democrazia. Non sono stati segnalati scontri. Il ballottaggio è il 25 ottobre.",
+   ro:"<b>Rio de Janeiro, 7 octombrie.</b> Mii de oameni au participat la un marș condus de studenți împotriva candidatului la președinție Flávio Bolsonaro, la câteva zile după ce acesta a ieșit pe primul loc în primul tur. Organizatorii l-au prezentat ca pe o apărare a educației publice și a democrației. Nu au fost semnalate ciocniri. Turul al doilea are loc pe 25 octombrie."}}]},
+ {k:"in",w:1,name:{en:"India",it:"India",ro:"India"},ll:[77.21,28.61],link:"separate",items:[
+  {src:["npr","ped"],v:"checked",t:{en:"<b>New Delhi, from 10 Oct.</b> Thousands of mostly young protesters, led by the Cockroach Janta Party, demanded the resignation of the Chief Election Commissioner over a revision of voter rolls that removed more than 130 million names. Police detained protesters, including the movement's leaders, who were released the next day.",
+   it:"<b>Nuova Delhi, dal 10 ottobre.</b> Migliaia di manifestanti, per lo più giovani, guidati dal Cockroach Janta Party, hanno chiesto le dimissioni del capo della Commissione elettorale per una revisione delle liste elettorali che ha cancellato oltre 130 milioni di nomi. La polizia ha fermato numerosi manifestanti, tra cui i leader del movimento, rilasciati il giorno dopo.",
+   ro:"<b>New Delhi, de la 10 octombrie.</b> Mii de protestatari, majoritatea tineri, conduși de Cockroach Janta Party, au cerut demisia șefului Comisiei Electorale din cauza unei revizuiri a listelor electorale care a eliminat peste 130 de milioane de nume. Poliția a reținut numeroși protestatari, inclusiv liderii mișcării, eliberați a doua zi."}}]}
+];
+/* coarse world outline, lon/lat */
+const WORLD=[
+ [[-168,66],[-162,70],[-156,71.3],[-140,69.6],[-128,70],[-115,68.5],[-95,72],[-82,73],[-80,66],[-87,63],[-94,59],[-90,57],[-82,55],[-79,51.5],[-78,58],[-70,61],[-64,60],[-61,56],[-56,52],[-60,48],[-66,45],[-70,43],[-70,41.5],[-74,40.5],[-76,38],[-76,35],[-81,31.5],[-80,27],[-80.5,25.2],[-82,26.5],[-83,29.8],[-89,30],[-94,29.5],[-97.5,26],[-97.5,22],[-96,19],[-91,18.5],[-90.3,21],[-87,21.5],[-88,16],[-84,15.5],[-83.5,11],[-79.5,9],[-77.5,8.5],[-78,7.5],[-80,7.5],[-83,8.5],[-86,11.5],[-92,14.5],[-95,16],[-105,19.5],[-110,24],[-113,29],[-117,32.5],[-120.6,34.5],[-122.5,37.5],[-124.2,40.5],[-124,46],[-124.7,48.4],[-123,49],[-127,51],[-130,54.5],[-135,58],[-140,60],[-148,60.5],[-152,59],[-158,57],[-163,55],[-158,58.5],[-162,60],[-165,62],[-163,64]],
+ [[-55,60],[-43,60],[-35,66],[-22,70],[-18,77],[-20,82],[-40,83.5],[-60,82],[-72,78],[-68,76],[-58,75.5],[-55,70],[-52,66]],
+ [[-77.5,8.5],[-72,12],[-63,10.7],[-60,8.5],[-52,5],[-50,1],[-44,-2.5],[-35,-5],[-35,-9],[-39,-13.5],[-39,-18],[-41,-22],[-44.5,-23.2],[-48.5,-26],[-48.8,-28.5],[-53,-33.7],[-57,-36],[-56.7,-38.5],[-62,-39],[-65,-41],[-63.8,-42.5],[-65.5,-45],[-67.5,-46.5],[-65.8,-48],[-69,-50.5],[-68.5,-52.4],[-70,-53],[-74,-52],[-75.5,-48],[-74,-44],[-73.5,-37.5],[-71.5,-32],[-71.4,-27],[-70.2,-18.5],[-71.4,-17.7],[-76,-14],[-79.5,-7.5],[-81.2,-6],[-80,-2.5],[-80,0.5],[-78.8,1.5],[-77.5,4],[-77.4,7]],
+ [[-17,21],[-16,24.5],[-13,27.8],[-9.8,30],[-9.5,32.5],[-6.8,34],[-5.9,35.8],[-2,35.1],[1,36.5],[3,36.8],[8.6,36.9],[10.2,37.3],[11.1,36.9],[10.5,36],[11,35.2],[10,34],[11.5,33],[15.2,32.3],[19,30.3],[20,32],[23,32.7],[25,31.6],[29,30.9],[32.3,31.3],[34,31.2],[34.5,28],[33,28],[35.5,24],[37.2,21],[38.5,18],[39.5,15.5],[43.2,12.6],[44,10.5],[51.2,11.8],[51,10],[48,4.5],[44,-1],[40.5,-2.5],[39.3,-6],[40.5,-11],[40.5,-15],[35.5,-24],[32.8,-26],[32.5,-28.6],[30.5,-31],[27.5,-33.5],[22,-34.2],[18.5,-34.2],[17.8,-32.5],[15,-27],[14.5,-22.5],[11.8,-17],[12.2,-13],[13.5,-11],[11.9,-5],[9,-1],[9.8,3.5],[8.5,4.5],[5,4.3],[2,6.3],[-2,4.8],[-7.5,4.4],[-11,7],[-13.3,9],[-15,11],[-16.8,13.5],[-17.5,14.7],[-16.5,16],[-16,19]],
+ [[49.3,-12],[50.5,-15.5],[49.5,-17.5],[47.2,-24.9],[44.2,-24.5],[43.3,-21.5],[44.4,-16.2],[47.5,-13.8]],
+ [[-9.5,37],[-9,43],[-1.8,43.4],[-1.2,46],[-4.5,48.4],[1.6,50.9],[4.5,52.5],[8.6,53.9],[8.2,57],[10.6,57.7],[10.9,54.4],[14,54],[21,55.3],[24,57.5],[28,59.5],[22,60],[21.5,61.8],[25.4,65.3],[22,65.6],[17.3,61],[18.9,59.4],[16.6,57],[13,55.4],[11,58.5],[10.7,59.9],[6,58],[5,61],[10,64],[15.7,68.6],[25.8,71.1],[33,69.3],[41,67],[44,68.5],[54,68.5],[60,69.5],[68,68.5],[73,72.5],[80,73.5],[87,75],[100,77.5],[113,73.7],[129,71.8],[140,72.5],[150,71.5],[160,69.7],[170,70],[180,68.5],[180,65],[172,61],[163,59],[156,51],[155.5,57],[150,59.5],[142,59],[136,54.5],[141,52.5],[140,48],[135,43],[130,42.5],[129.5,35.5],[126.5,34.5],[126,37.5],[124.5,39.8],[121,40.8],[122,37.5],[120.5,36],[121.5,32],[122,30],[119.5,25],[116,22.8],[111,21.5],[108.5,21.6],[106,19.5],[106.5,17],[109,13],[109,11.5],[105,8.6],[104.8,10.5],[100.5,13.5],[99.2,10],[100.5,7],[103.5,1.5],[101,2.8],[98.5,8],[98.2,10.5],[97.5,16.5],[94.5,16],[94,19],[92,21.5],[90,22],[87,21.5],[86.9,20],[85,19.2],[80.2,15.5],[80.3,13],[79.8,10.3],[77.5,8.1],[76.5,9.5],[74.8,12.8],[73.4,16],[72.8,19],[72.6,21.3],[70.2,22.5],[68.5,23.5],[66.7,25.4],[61.6,25.2],[57.3,25.8],[56.3,27],[54,26.6],[51.5,27.9],[50,30],[48,30],[48.6,29],[50.2,26.2],[51.6,25.2],[51.6,24],[54,24.2],[56.2,26.2],[56.4,24.8],[58.8,23.5],[59.8,22.4],[57.8,19],[55,17],[52,15.8],[48.5,14],[45,12.8],[43.4,12.7],[42.7,16],[41,19.5],[39,21.5],[38,24],[35,28],[34.3,31.2],[35,33],[36,35],[36,36.6],[32.5,36.1],[30.6,36.8],[29.6,36.2],[28.2,36.7],[27.3,37],[26.4,38.4],[26.8,39.4],[26,40.3],[26.6,40.6],[23,40.6],[22.6,40],[23.3,39.2],[22.9,38.6],[24,38.2],[22.9,36.5],[21.7,36.8],[21.1,37.8],[20.2,39.6],[19.4,40.4],[19.4,41.9],[17,43.2],[15.2,44.2],[13.7,45.6],[12.4,45.4],[12.3,44.5],[13.6,43.6],[16.1,41.4],[18.5,40.1],[16.6,38],[15.65,37.95],[15.7,40],[14.3,40.8],[12.2,41.8],[10.5,43.1],[8.9,44.4],[7.5,43.8],[5.4,43.2],[3.1,43.05],[3.2,41.9],[2.2,41.4],[0,40],[-0.5,38.3],[-2.1,36.7],[-5.35,36.15],[-7.4,37.2]],
+ [[-5.7,50.05],[1.4,51.15],[1.75,52.5],[-0.1,54],[-2.1,56],[-1.8,57.6],[-3.3,58.6],[-5,58.6],[-5.8,56.5],[-3,53.3],[-4.6,53.3],[-5.3,51.8],[-3.2,51.5]],
+ [[-6,52.2],[-6,54],[-7.4,55.4],[-10,54.2],[-10.3,52.1],[-8.2,51.8]],
+ [[-24,65.5],[-22,66.4],[-16,66.5],[-13.6,65.2],[-15,64.3],[-18,63.4],[-22.5,63.8]],
+ [[113.5,-22],[114,-26.5],[115,-34],[118,-35],[123.5,-34],[129,-31.6],[135.5,-34.8],[138,-35.5],[140,-37.8],[144,-38.4],[146.5,-39],[150,-37.5],[153.5,-28],[153,-25],[150.5,-22.5],[146,-19],[145.4,-14.7],[143.5,-12.7],[142,-10.8],[141.5,-13],[141.5,-17],[139.5,-17.5],[136,-15],[136.8,-12],[132,-11.3],[129.5,-15],[127,-13.8],[124,-16.5],[122,-18.5],[119,-20]],
+ [[130,31.5],[131.5,34],[135,35.7],[137,37],[140,40],[141.5,41.5],[140.5,43],[144,44],[145.5,43.3],[143,42],[141,40.5],[141,38],[140.8,36],[139.8,35],[137,34.6],[135,33.5],[132,33.2]],
+ [[109.5,1.5],[111,2.8],[113.5,3.5],[116,6.9],[119,5],[118,1],[116.5,-3],[114.5,-4],[110.5,-3],[109,-0.5]],
+ [[95.3,5.6],[98,4],[100.5,1],[104,-1.5],[106,-5.8],[102,-4],[98.7,-0.5],[96,3]],
+ [[105.2,-6.8],[108,-6.3],[114.5,-7.8],[112,-8.4],[106,-7.4]],
+ [[131,-1.5],[135,-3.3],[138,-1.6],[141,-2.6],[146,-5],[150.5,-10.5],[147,-10],[143,-9.5],[141,-9.2],[137.8,-5.3],[132.5,-4]],
+ [[79.9,9.8],[81.8,7.5],[81,6],[80,6.2]],
+ [[172.7,-34.5],[178,-37.6],[176,-41.5],[174.5,-41.3],[171.2,-44.5],[166.5,-46.2],[168.5,-46.6],[174.3,-41.7],[175,-39.5],[173.8,-39.2]]
+];
+const WATER=[
+ [[28,41.3],[28.2,43.3],[29.7,45.3],[31,46.6],[33.5,44.5],[36.5,45.3],[38,47],[39.3,47.1],[37.5,44.7],[41.6,41.6],[41,41],[36,41.7],[33,42],[31,41.2]],
+ [[47,44.8],[49.5,46.5],[53,47],[53.2,45.3],[51,44.5],[52.8,41.8],[53.9,40.5],[53.9,37.3],[51,36.8],[49,38],[49.5,40.3],[47.5,42.5]]
 ];
 /* simplified outlines for the Europe view, lon/lat */
 const EU_LAND=[
@@ -790,6 +848,12 @@ const PE=proj(-12,61,17.2,Math.cos(47*Math.PI/180));
 const eu=document.getElementById("euMap");
 EU_LAND.forEach(poly=>el("path",{d:pathOf(poly,PE),class:"land"},eu));
 const euG=el("g",{},eu);
+const PW=proj(-125,72,1.86,1);
+const wm=document.getElementById("worldMap");
+WORLD.forEach(poly=>el("path",{d:pathOf(poly,PW),class:"land"},wm));
+WATER.forEach(poly=>el("path",{d:pathOf(poly,PW),class:"water"},wm));
+const wG=el("g",{},wm);
+let euView="world";
 let euSel=null;
 function renderEU(){
   euG.replaceChildren();
@@ -802,7 +866,7 @@ function renderEU(){
   const ft=el("text",{x:fx[0],y:fx[1]+3.6,"text-anchor":"middle"},fg);ft.textContent="FR";
   const go=()=>document.getElementById("france").scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"});
   fg.addEventListener("click",go);fg.addEventListener("keydown",ev=>{if(ev.key==="Enter"||ev.key===" "){ev.preventDefault();go()}});
-  EU.forEach(c=>{
+  EU.filter(c=>!c.w).forEach(c=>{
     const xy=PE(c.ll), r=7+c.items.length*1.6;
     const g=el("g",{class:"marker"+(euSel===c.k?" sel":""),tabindex:"0",role:"button","aria-label":L(c.name)+": "+L(LINKS[c.link])},euG);
     el("circle",{class:"ring",cx:xy[0],cy:xy[1],r:r+3.5,fill:"none"},g);
@@ -812,6 +876,28 @@ function renderEU(){
     const pick=()=>{euSel=euSel===c.k?null:c.k;renderEU()};
     g.addEventListener("click",pick);g.addEventListener("keydown",ev=>{if(ev.key==="Enter"||ev.key===" "){ev.preventDefault();pick()}});
   });
+  /* world view */
+  wG.replaceChildren();
+  wm.setAttribute("aria-label",T("worldAria"));
+  const a=PW([-12,61]),z=PW([32,34]);
+  const ebx=el("g",{class:"eubox",tabindex:"0",role:"button","aria-label":T("euBoxAria")},wG);
+  el("rect",{x:a[0],y:a[1],width:z[0]-a[0],height:z[1]-a[1],class:"inset-frame"},ebx);
+  const bl=el("text",{x:a[0],y:a[1]-5,class:"city-label"},ebx);bl.textContent=T("vEu");
+  const zoom=()=>{euView="eu";renderEU()};
+  ebx.addEventListener("click",zoom);ebx.addEventListener("keydown",ev=>{if(ev.key==="Enter"||ev.key===" "){ev.preventDefault();zoom()}});
+  const fw=PW([2.35,46.6]);el("circle",{cx:fw[0],cy:fw[1],r:4.5,fill:"var(--ink)",stroke:"var(--surface)","stroke-width":1.5},wG);
+  EU.forEach(c=>{
+    const xy=PW(c.ll), r=c.w?7+c.items.length*1.6:4;
+    const g=el("g",{class:"marker"+(euSel===c.k?" sel":""),tabindex:c.w?"0":"-1",role:"button","aria-label":L(c.name)+": "+L(LINKS[c.link])},wG);
+    el("circle",{class:"ring",cx:xy[0],cy:xy[1],r:r+3,fill:"none"},g);
+    el("circle",{class:"m",cx:xy[0],cy:xy[1],r:r,fill:"var(--l-"+c.link+")"},g);
+    if(c.w){const side=c.k==="cl"?"l":"r";const lt=el("text",{x:side==="l"?xy[0]-r-5:xy[0]+r+5,y:xy[1]+4,class:"city-label","text-anchor":side==="l"?"end":"start"},wG);lt.textContent=L(c.name)}
+    const pick=()=>{euSel=euSel===c.k?null:c.k;renderEU()};
+    g.addEventListener("click",pick);g.addEventListener("keydown",ev=>{if(ev.key==="Enter"||ev.key===" "){ev.preventDefault();pick()}});
+  });
+  document.getElementById("worldBox").hidden=euView!=="world";
+  document.getElementById("euBox").hidden=euView!=="eu";
+  document.querySelectorAll("#viewSeg button").forEach(b=>{b.setAttribute("aria-pressed",b.dataset.v===euView?"true":"false");b.textContent=T(b.dataset.v==="world"?"vWorld":"vEu")});
   const leg=document.getElementById("euLegend");leg.replaceChildren();
   ["linked","parallel","separate"].forEach(k=>{const s=document.createElement("span");const i=document.createElement("i");i.style.setProperty("--c","var(--l-"+k+")");s.append(i,L(LINKS[k]));leg.appendChild(s)});
   const fs=document.createElement("span");const fi=document.createElement("i");fi.style.setProperty("--c","var(--ink)");fs.append(fi,T("frLegend"));leg.appendChild(fs);
@@ -820,7 +906,10 @@ function renderEU(){
   document.getElementById("euCount").textContent=T("euCount")(list.length);
   const cb=document.getElementById("euClear");cb.hidden=!euSel;cb.textContent=T("euClear");
   const box=document.getElementById("euItems");box.replaceChildren();
+  let lastGrp=null;
   list.forEach(c=>{
+    const grp=c.w?"w":"e";
+    if(!euSel&&grp!==lastGrp){const hd=document.createElement("div");hd.className="grp";hd.textContent=T(grp==="w"?"grpWorld":"grpEu");box.appendChild(hd);lastGrp=grp}
     const a=document.createElement("article");a.className="item";a.style.setProperty("--c","var(--l-"+c.link+")");
     const bar=document.createElement("div");bar.className="bar";a.appendChild(bar);
     const b=document.createElement("div");b.className="body";
@@ -842,6 +931,7 @@ function renderEU(){
   });
 }
 document.getElementById("euClear").addEventListener("click",()=>{euSel=null;renderEU()});
+document.querySelectorAll("#viewSeg button").forEach(b=>b.addEventListener("click",()=>{euView=b.dataset.v;renderEU()}));
 
 /* sources list */
 const used=new Set();EU.forEach(c=>c.items.forEach(it=>it.src.forEach(k=>used.add(k))));EV.forEach(e=>e.src.forEach(s=>used.add(s)));["cnn","cbs","embassy"].forEach(s=>used.add(s));
