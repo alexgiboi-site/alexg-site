@@ -1,0 +1,689 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>France Protest Hotspots — Ion-Alexandru Giboi</title>
+<meta name="description" content="Where France's autumn 2026 protests turned violent, from the first school blockades to the 17 October national day: a map with the source behind every entry, plus notes for travellers. In English, Italian and Romanian.">
+<link rel="canonical" href="https://alexgiboi.com/library/france-protests-2026/">
+<meta property="og:title" content="France Protest Hotspots">
+<meta property="og:description" content="Where France's autumn 2026 protests turned violent, from the first school blockades to the 17 October national day: a map with the source behind every entry. In English, Italian and Romanian.">
+<meta property="og:url" content="https://alexgiboi.com/library/france-protests-2026/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Ion-Alexandru Giboi">
+<meta property="og:image" content="https://alexgiboi.com/library/france-protests-2026/share-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="France Protest Hotspots: a sourced map of the autumn 2026 unrest, on alexgiboi.com">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#102A5C">
+<link rel="stylesheet" href="/assets/share.css">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,500..800&family=IBM+Plex+Mono:wght@400;500&family=Public+Sans:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+/* Layout: wire-desk briefing. Map + dateline feed side by side, reference sections below in one reading column. */
+:root{
+  --paper:#EEF1F4; --surface:#FFFFFF; --ink:#172033; --muted:#566074; --line:#D3D9E1; --land:#DCE2EA; --land-edge:#AEB8C6;
+  --accent:#1F4FBF; --accent-soft:#E3EAFB;
+  --t-building:#C2263A; --t-arson:#D9530B; --t-looting:#6741D9; --t-injury:#A86A0C; --t-clash:#0B7285; --t-school:#5F6B7D; --t-march:#2B8A3E;
+  --ok:#2B8A3E; --warn:#A86A0C;
+  --f-display:"Archivo","Arial Narrow",Arial,sans-serif;
+  --f-body:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#0E131B; --surface:#151C27; --ink:#E5E9F0; --muted:#9AA4B5; --line:#283244; --land:#1D2533; --land-edge:#3A4659;
+  --accent:#86A6FF; --accent-soft:#1D2A4A;
+  --t-building:#FF6B7C; --t-arson:#FF8B4D; --t-looting:#A68CFF; --t-injury:#E3B04B; --t-clash:#3BC9DB; --t-school:#A3ADBD; --t-march:#5FD47A;
+  --ok:#5FD47A; --warn:#E3B04B; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#0E131B; --surface:#151C27; --ink:#E5E9F0; --muted:#9AA4B5; --line:#283244; --land:#1D2533; --land-edge:#3A4659;
+  --accent:#86A6FF; --accent-soft:#1D2A4A;
+  --t-building:#FF6B7C; --t-arson:#FF8B4D; --t-looting:#A68CFF; --t-injury:#E3B04B; --t-clash:#3BC9DB; --t-school:#A3ADBD; --t-march:#5FD47A;
+  --ok:#5FD47A; --warn:#E3B04B; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.55;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 56px}
+.wrap{max-width:1180px;margin:0 auto;display:flex;flex-direction:column;gap:28px}
+a{color:var(--accent);text-underline-offset:2px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0;font-stretch:80%}
+h1{font-size:clamp(30px,5vw,48px);line-height:1.02;font-weight:800;letter-spacing:-.01em}
+h2{font-size:24px;font-weight:750}
+h3{font-size:17px;font-weight:700;font-stretch:90%}
+.eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.lede{max-width:68ch;color:var(--ink);margin:10px 0 0}
+.lede strong{font-weight:600}
+header{display:flex;flex-direction:column;gap:6px;border-bottom:2px solid var(--ink);padding-bottom:18px}
+.stamp{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:10px;font-family:var(--f-mono);font-size:12.5px;color:var(--muted)}
+.stamp b{color:var(--ink);font-weight:500}
+
+/* controls */
+.controls{display:flex;flex-direction:column;gap:12px}
+.ctl-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.ctl-label{font-family:var(--f-mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);min-width:64px}
+.seg{display:flex;flex-wrap:wrap;gap:0;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--surface)}
+.seg button{border:0;border-right:1px solid var(--line);background:transparent;color:var(--ink);font:500 13.5px var(--f-body);padding:8px 12px;cursor:pointer}
+.seg button:last-child{border-right:0}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.chip{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:5px 11px;font:500 13px var(--f-body);cursor:pointer}
+.chip .dot{width:9px;height:9px;border-radius:50%;background:var(--c)}
+.chip[aria-pressed="false"]{opacity:.45}
+.chip[aria-pressed="false"] .dot{background:transparent;box-shadow:inset 0 0 0 1.5px var(--c)}
+
+/* main grid */
+.grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:24px;align-items:start}
+@media (max-width:900px){.grid{grid-template-columns:1fr}}
+.mapcol{display:flex;flex-direction:column;gap:12px;min-width:0}
+.mapbox{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px}
+.mapbox svg{display:block;width:100%;height:auto}
+.inset-head{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;align-items:baseline;padding:2px 4px 6px}
+.note{font-size:12.5px;color:var(--muted)}
+.land{fill:var(--land);stroke:var(--land-edge);stroke-width:1;stroke-linejoin:round}
+.inset-frame{fill:none;stroke:var(--accent);stroke-width:1.2;stroke-dasharray:3 3}
+.city-label{font:600 11.5px var(--f-body);fill:var(--ink);paint-order:stroke;stroke:var(--surface);stroke-width:3px;stroke-linejoin:round;pointer-events:none}
+.marker{cursor:pointer}
+.marker circle.m{stroke:var(--surface);stroke-width:2}
+.marker text{font:600 10.5px var(--f-mono);fill:#fff;pointer-events:none}
+.marker.sel circle.ring{stroke:var(--ink);stroke-width:2;fill:none}
+.marker:focus{outline:none}
+.marker:focus-visible circle.ring{stroke:var(--accent);stroke-width:3;fill:none}
+.paris-shape{fill:var(--land);stroke:var(--land-edge);stroke-dasharray:4 3}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:12.5px;color:var(--muted);padding:0 4px}
+.legend span{display:inline-flex;gap:6px;align-items:center}
+.legend i{width:9px;height:9px;border-radius:50%;background:var(--c);display:inline-block}
+
+/* feed */
+.feed{display:flex;flex-direction:column;gap:10px;min-width:0}
+.feed-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
+.feed-head .count{font-family:var(--f-mono);font-size:12.5px;color:var(--muted)}
+.linkbtn{background:none;border:0;padding:0;color:var(--accent);font:500 13.5px var(--f-body);cursor:pointer;text-decoration:underline;text-underline-offset:2px}
+.items{display:flex;flex-direction:column;gap:0;background:var(--surface);border:1px solid var(--line);border-radius:10px;max-height:820px;overflow:auto}
+@media (max-width:900px){.items{max-height:none}}
+.item{display:grid;grid-template-columns:4px minmax(0,1fr);gap:14px;padding:14px 16px 14px 0;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:0}
+.item .bar{background:var(--c);border-radius:0 3px 3px 0}
+.item .body{display:flex;flex-direction:column;gap:6px;min-width:0}
+.dateline{font-family:var(--f-mono);font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.dateline b{color:var(--ink);font-weight:500}
+.item p{margin:0}
+.meta{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;font-size:12.5px;color:var(--muted)}
+.tag{display:inline-flex;align-items:center;gap:6px;font-weight:600;color:var(--ink)}
+.tag i{width:8px;height:8px;border-radius:50%;background:var(--c)}
+.vf{font-family:var(--f-mono);font-size:11px;letter-spacing:.04em;text-transform:uppercase;border:1px solid currentColor;border-radius:4px;padding:1px 6px}
+.vf.checked{color:var(--ok)}
+.vf.cited{color:var(--warn)}
+.empty{padding:28px 18px;color:var(--muted)}
+
+/* reference sections */
+.ref{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px}
+@media (max-width:900px){.ref{grid-template-columns:1fr}}
+section.panel{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px 22px;display:flex;flex-direction:column;gap:12px;min-width:0}
+section.panel.travel{border-color:var(--accent);background:linear-gradient(var(--accent-soft),var(--accent-soft)) top/100% 4px no-repeat,var(--surface)}
+.panel p,.panel li{max-width:68ch}
+.panel ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:7px}
+.tablewrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:13.5px}
+th,td{text-align:left;padding:8px 10px 8px 0;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:var(--f-mono);font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);font-weight:500}
+td.num{font-variant-numeric:tabular-nums;font-weight:600;white-space:nowrap}
+.spread{grid-column:1/-1}
+footer{font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px;display:flex;flex-direction:column;gap:8px}
+footer ol{margin:0;padding-left:20px;columns:2;column-gap:28px}
+@media (max-width:700px){footer ol{columns:1}}
+footer li{break-inside:avoid;margin-bottom:4px}
+@media (prefers-reduced-motion:no-preference){.marker circle.m{transition:r .2s}}
+</style>
+
+<style>
+.sitebar{background:#102A5C;font-family:'IBM Plex Sans',system-ui,sans-serif;font-size:15px;margin-left:calc(-1*max(16px,env(safe-area-inset-left,0px)));margin-right:calc(-1*max(16px,env(safe-area-inset-right,0px)))}
+.sitebar>div{max-width:1180px;margin:0 auto;padding-block:14px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-wrap:wrap;gap:8px 24px;align-items:center;justify-content:space-between}
+.sitebar a.home{color:#fff;text-decoration:none;font-family:Georgia,serif;font-weight:700;font-size:19px}
+.sitebar a.lib{color:#F2B544;text-decoration:none;font-weight:600;padding:8px 0}
+.langbar{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px 24px;padding-block:18px 0}
+.langbar .lang{margin-left:auto}
+.lang{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:3px;background:var(--surface)}
+.lang button{font:500 13px var(--f-mono);letter-spacing:.08em;border:0;background:transparent;color:var(--muted);padding:6px 14px;border-radius:999px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.share{--share-accent:var(--accent)}
+.made{font-size:13.5px;color:var(--muted)}
+</style>
+</head>
+<body>
+<nav class="sitebar" aria-label="Site"><div>
+<a class="home" href="/">Alex Giboi</a>
+<a class="lib" href="/library/">← Library</a>
+</div></nav>
+
+<div class="wrap">
+  <div class="langbar">
+    <div class="share" data-share></div>
+    <div class="lang" role="group" aria-label="Limba / Lingua / Language">
+      <button type="button" id="btn-ro" data-lang="ro" aria-pressed="false">RO</button>
+      <button type="button" id="btn-it" data-lang="it" aria-pressed="false">IT</button>
+      <button type="button" id="btn-en" data-lang="en" aria-pressed="true">EN</button>
+    </div>
+  </div>
+  <header>
+    <span class="eyebrow" data-i="eyebrow"></span>
+    <h1 data-i="h1"></h1>
+    <p class="lede" data-i="lede"></p>
+    <div class="stamp"><span data-i="stamp1"></span><span><span data-i="stamp2"></span> <b id="totalCount">–</b></span><span data-i="stamp3"></span></div>
+  </header>
+
+  <div class="controls" role="group">
+    <div class="ctl-row">
+      <span class="ctl-label" data-i="period"></span>
+      <div class="seg" id="periodSeg">
+        <button type="button" id="p-all" data-p="all" aria-pressed="true"></button>
+        <button type="button" id="p-before" data-p="before" aria-pressed="false"></button>
+        <button type="button" id="p-17" data-p="17" aria-pressed="false"></button>
+        <button type="button" id="p-18" data-p="18" aria-pressed="false"></button>
+      </div>
+    </div>
+    <div class="ctl-row" id="typeRow"><span class="ctl-label" data-i="type"></span></div>
+  </div>
+
+  <div class="grid">
+    <div class="mapcol">
+      <div class="mapbox"><svg id="mainMap" viewBox="0 0 520 520" role="img"></svg></div>
+      <div class="mapbox">
+        <div class="inset-head"><h3 data-i="insetH"></h3><span class="note" data-i="insetNote"></span></div>
+        <svg id="insetMap" viewBox="0 0 330 200" role="img"></svg>
+      </div>
+      <div class="legend" id="legend"></div>
+      <p class="note" style="margin:0 4px" data-i="mapNote"></p>
+    </div>
+
+    <div class="feed">
+      <div class="feed-head">
+        <h2 id="feedTitle"></h2>
+        <span class="count" id="feedCount"></span>
+      </div>
+      <button type="button" class="linkbtn" id="clearSel" hidden></button>
+      <div class="items" id="items" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <div class="ref">
+    <section class="panel travel">
+      <span class="eyebrow" data-i="trEy"></span>
+      <h2 data-i="trH"></h2>
+      <ul data-i="trList"></ul>
+      <p class="note" data-i="trNote"></p>
+    </section>
+
+    <section class="panel">
+      <span class="eyebrow" data-i="fgEy"></span>
+      <h2 data-i="fgH"></h2>
+      <p class="note" data-i="fgNote"></p>
+      <div class="tablewrap"><table data-i="fgTable"></table></div>
+      <p class="note" data-i="fgNote2"></p>
+    </section>
+
+    <section class="panel">
+      <span class="eyebrow" data-i="exEy"></span>
+      <h2 data-i="exH"></h2>
+      <ul data-i="exList"></ul>
+    </section>
+
+    <section class="panel">
+      <span class="eyebrow" data-i="mtEy"></span>
+      <h2 data-i="mtH"></h2>
+      <div data-i="mtBody" style="display:flex;flex-direction:column;gap:12px"></div>
+    </section>
+  </div>
+
+  <footer>
+    <span class="eyebrow" data-i="srcH"></span>
+    <ol id="sourceList"></ol>
+    <span class="made" data-i="credit"></span>
+  </footer>
+  <div class="share" data-share="end"></div>
+</div>
+
+<script>
+(function(){
+const A=(u,t)=>'<a href="'+u+'" target="_blank" rel="noopener">'+t+'</a>';
+const WIKI="https://en.wikipedia.org/wiki/2026_French_student_protests";
+const U={
+  emb:"https://fr.usembassy.gov/demonstration-alert-u-s-embassy-paris-france-october-17-2026/",
+  ch:"https://www.eda.admin.ch/eda/en/fdfa/representations-and-travel-advice.html",
+  it:"https://www.viaggiaresicuri.it/",
+  ro:"https://www.mae.ro/travel-alerts",
+  uk:"https://www.gov.uk/foreign-travel-advice/france",
+  us:"https://travel.state.gov/",
+  cnn:"https://www.cnn.com/2026/10/17/europe/half-million-protesters-sweep-france-in-youth-unrest-latam-intl",
+  aj:"https://www.aljazeera.com/news/2026/10/18/paris-left-reeling-as-student-led-protests-turn-chaotic",
+  ici:"https://www.ici.fr/ile-de-france/paris-75/paris/mobilisation-du-17-octobre-le-difficile-bilan-des-degats-a-paris-une-cellule-d-aide-aux-commerces-mise-en-place-4435615",
+  cbs:"https://www.cbsnews.com/news/protests-france-rising-living-costs-students/"
+};
+const VC={en:["checked","cited"],it:["verificato","citato"],ro:["verificat","citat"]};
+const vf=(l,k)=>'<span class="vf '+(k?"cited":"checked")+'">'+VC[l][k?1:0]+'</span>';
+function table(l,h,r){
+  return '<thead><tr>'+h.map(x=>'<th>'+x+'</th>').join('')+'</tr></thead><tbody>'+
+   r.map(x=>'<tr><td>'+x[0]+'</td><td class="num">'+x[1]+'</td><td class="num">'+x[2]+'</td><td>'+x[3]+'</td></tr>').join('')+'</tbody>';
+}
+const I18N={
+ en:{
+  eyebrow:"Library · Map · Oct 2026", h1:"France Protest Hotspots",
+  lede:"Where the autumn 2026 unrest in France turned violent, from the first school blockades in Créteil on 21 September to the national day of action on <strong>Saturday 17 October</strong>, when about 550,000 people marched against the cost of living. Most marchers were peaceful. This map shows the places where public buildings were attacked, shops looted, fires set or people seriously hurt, with the report behind each entry.",
+  stamp1:"Last checked <b>19 Oct 2026, 13:30 CEST</b>", stamp2:"Events mapped", stamp3:"Every entry links to its source",
+  period:"Period", type:"Type", pAll:"All", pBefore:"Blockades, 21 Sep–16 Oct", p17:"Sat 17 Oct", p18:"Sun 18 Oct",
+  insetH:"Paris region close-up", insetNote:"Dashed box on the main map. Paris outline is approximate.",
+  mapNote:"Simplified outline, drawn for orientation only. Marker size grows with the number of entries; colour shows the most serious type in that place. Select a marker to read its entries.",
+  mapAria:"Map of metropolitan France with markers for each city where incidents were reported", insetAria:"Close-up map of the Paris region",
+  noInset:"No Paris-region entries for this filter",
+  allPlaces:"All places", clear:"Show all places", one:"1 entry", many:n=>n+" entries", order:", newest first", entriesAria:n=>n+(n===1?" entry":" entries"),
+  empty:"No entries match these filters. Choose another period or switch on more types.",
+  vfChecked:"We read the report itself", vfCited:"From reporting cited in Wikipedia; original not opened", orig:"original",
+  months:["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],
+  trEy:"For travellers · as of 19 Oct", trH:"Planning a trip to France",
+  trList:"<li>Ahead of 17 October, the US Embassy in Paris warned that marches could disrupt travel routes and that demonstrations can trigger last-minute closures of metro and rail. "+A(U.emb,"US Embassy alert")+"</li>"+
+   "<li>Unrest carried into Sunday 18 October: a new rally at Place de la République in Paris saw tensions, and the BBC reported that looting and clashes continued on a smaller scale in Paris and Lyon (cited in "+A(WIKI,"Wikipedia")+").</li>"+
+   "<li>Places visitors know that were damaged: the Hôtel de Ville in Limoges (a listed historic monument), the tourist office pavilion on Place Bellecour in Lyon, the Grand'Place in Lille and Place de la République in Paris.</li>"+
+   "<li>Stay away from marches and gatherings, allow extra time on public transport, and follow police instructions.</li>"+
+   "<li>Check your own government's advice before you go: "+A(U.ch,"Switzerland (FDFA)")+", "+A(U.it,"Italy (Viaggiare Sicuri)")+", "+A(U.ro,"Romania (MAE)")+", "+A(U.uk,"United Kingdom (FCDO)")+", "+A(U.us,"United States")+".</li>",
+  trNote:"This section goes out of date fastest. Use it as a starting point, not as current advice.",
+  fgEy:"National figures", fgH:"How the count moved",
+  fgNote:"Arrest and injury totals for 17 October rose as more reports came in. Each row is the figure as published at that time.",
+  fgTable:table("en",["Published","Arrests","Officers injured","Source"],[
+   ["17 Oct, daytime","≈400","–","AP, cited in "+A(WIKI,"Wikipedia")+" "+vf("en",1)],
+   ["17–18 Oct","1,200","150","PM Lecornu, via "+A(U.cnn,"CNN")+" "+vf("en",0)],
+   ["18 Oct","≈1,800<br><span class=\"note\">855 in Paris</span>","500+<br><span class=\"note\">incl. firefighters</span>","Interior Minister Nuñez, via "+A(U.aj,"Al Jazeera")+"; Paris figure from the police prefecture via "+A(U.ici,"ICI")+" "+vf("en",0)],
+   ["19 Oct","≈2,400","≈1,000<br><span class=\"note\">7 seriously</span>","Interior Ministry, via BBC, cited in "+A(WIKI,"Wikipedia")+" "+vf("en",1)]]),
+  fgNote2:"Turnout on 17 Oct: 550,000 according to the authorities (110,000 in Paris), 800,000 according to organisers ("+A(U.cbs,"AP via CBS")+"). Earlier, on 1 Oct, the Interior Ministry reported 1,949 arrests in a single day of school blockades.",
+  exEy:"Left off the map", exH:"Reports we did not include",
+  exList:"<li><b>An elderly couple robbed in Paris near the Élysée.</b> Only one outlet reported it, and only as unconfirmed.</li><li><b>A police officer killed in Nantes on 17 Oct.</b> He was hit by a car during a separate police operation; the driver was not connected to the protests.</li><li><b>A protester's death in Paris</b> after a cardiac arrest. Police gave no further details, so we cannot place or describe it reliably.</li><li><b>Burned cars on rue Saint-Denis, Paris.</b> Seen only in photo captions, with no report to cite.</li>",
+  mtEy:"Method", mtH:"How entries were checked",
+  mtBody:"<p>Entries come from wire agencies (AFP, AP, Reuters), public broadcasters (France 24, ICI, BBC) and established national and regional newspapers. Each entry carries one of two labels:</p><ul><li>"+vf("en",0)+" We read the report itself, from the agency or the outlet that carried it.</li><li>"+vf("en",1)+" The facts come from reporting cited in Wikipedia's article on the protests. The original report is named but we have not opened it. Treat these with more caution.</li></ul><p>Figures are given as the source gave them. Where sources disagree, the entry says so. Locations are placed at the city, square or school named in the report.</p>",
+  srcH:"Sources", credit:"Researched and built with the help of Claude (Anthropic), from the reports linked on each entry. <a href=\"/#contact\">Corrections welcome</a>."
+ },
+ it:{
+  eyebrow:"Biblioteca · Mappa · ott 2026", h1:"Proteste in Francia: i punti caldi",
+  lede:"Dove i disordini dell'autunno 2026 in Francia sono degenerati in violenza: dai primi blocchi delle scuole a Créteil, il 21 settembre, alla giornata nazionale di mobilitazione di <strong>sabato 17 ottobre</strong>, quando circa 550.000 persone hanno manifestato contro il caro vita. La maggior parte dei manifestanti è rimasta pacifica. La mappa mostra i luoghi in cui sono stati attaccati edifici pubblici, saccheggiati negozi, appiccati incendi o in cui persone sono rimaste gravemente ferite, con la fonte di ogni voce.",
+  stamp1:"Ultimo controllo <b>19 ott 2026, 13:30 CEST</b>", stamp2:"Eventi sulla mappa", stamp3:"Ogni voce rimanda alla sua fonte",
+  period:"Periodo", type:"Tipo", pAll:"Tutto", pBefore:"Blocchi, 21 set–16 ott", p17:"Sab 17 ott", p18:"Dom 18 ott",
+  insetH:"Dettaglio: regione di Parigi", insetNote:"Riquadro tratteggiato sulla mappa principale. Il contorno di Parigi è approssimativo.",
+  mapNote:"Contorno semplificato, disegnato solo per orientarsi. La dimensione del segnaposto cresce con il numero di voci; il colore indica il tipo più grave in quel luogo. Seleziona un segnaposto per leggerne le voci.",
+  mapAria:"Mappa della Francia metropolitana con un segnaposto per ogni città in cui sono stati segnalati episodi", insetAria:"Mappa di dettaglio della regione di Parigi",
+  noInset:"Nessuna voce per la regione di Parigi con questo filtro",
+  allPlaces:"Tutti i luoghi", clear:"Mostra tutti i luoghi", one:"1 voce", many:n=>n+" voci", order:", dalla più recente", entriesAria:n=>n+(n===1?" voce":" voci"),
+  empty:"Nessuna voce corrisponde ai filtri. Scegli un altro periodo o attiva altri tipi.",
+  vfChecked:"Abbiamo letto direttamente l'articolo", vfCited:"Da articoli citati su Wikipedia; originale non consultato", orig:"originale",
+  months:["","gen","feb","mar","apr","mag","giu","lug","ago","set","ott","nov","dic"],
+  trEy:"Per chi viaggia · al 19 ottobre", trH:"Se state pianificando un viaggio in Francia",
+  trList:"<li>In vista del 17 ottobre, l'Ambasciata degli Stati Uniti a Parigi ha avvertito che i cortei potevano ostacolare gli spostamenti e che le manifestazioni possono provocare chiusure improvvise di metro e treni. "+A(U.emb,"Avviso dell'Ambasciata USA")+"</li>"+
+   "<li>Le tensioni sono proseguite domenica 18 ottobre: un nuovo raduno in Place de la République a Parigi è stato teso, e la BBC ha riferito che saccheggi e scontri sono continuati su scala minore a Parigi e Lione (citato su "+A(WIKI,"Wikipedia")+").</li>"+
+   "<li>Luoghi noti ai visitatori che sono stati danneggiati: l'Hôtel de Ville di Limoges (monumento storico tutelato), il padiglione dell'ufficio del turismo in Place Bellecour a Lione, la Grand'Place di Lille e Place de la République a Parigi.</li>"+
+   "<li>State lontani da cortei e assembramenti, prevedete più tempo per i trasporti pubblici e seguite le indicazioni della polizia.</li>"+
+   "<li>Prima di partire, consultate le indicazioni del vostro governo: "+A(U.ch,"Svizzera (DFAE)")+", "+A(U.it,"Italia (Viaggiare Sicuri)")+", "+A(U.ro,"Romania (MAE)")+", "+A(U.uk,"Regno Unito (FCDO)")+", "+A(U.us,"Stati Uniti")+".</li>",
+  trNote:"Questa sezione è la prima a diventare obsoleta. Usatela come punto di partenza, non come indicazione aggiornata.",
+  fgEy:"Dati nazionali", fgH:"Come sono cambiati i numeri",
+  fgNote:"I totali di arresti e feriti del 17 ottobre sono cresciuti man mano che arrivavano nuovi dati. Ogni riga riporta la cifra pubblicata in quel momento.",
+  fgTable:table("it",["Pubblicato","Arresti","Agenti feriti","Fonte"],[
+   ["17 ott, in giornata","≈400","–","AP, citato su "+A(WIKI,"Wikipedia")+" "+vf("it",1)],
+   ["17–18 ott","1.200","150","Il premier Lecornu, via "+A(U.cnn,"CNN")+" "+vf("it",0)],
+   ["18 ott","≈1.800<br><span class=\"note\">855 a Parigi</span>","500+<br><span class=\"note\">inclusi i vigili del fuoco</span>","Il ministro dell'Interno Nuñez, via "+A(U.aj,"Al Jazeera")+"; il dato di Parigi è della prefettura di polizia, via "+A(U.ici,"ICI")+" "+vf("it",0)],
+   ["19 ott","≈2.400","≈1.000<br><span class=\"note\">7 gravi</span>","Ministero dell'Interno, via BBC, citato su "+A(WIKI,"Wikipedia")+" "+vf("it",1)]]),
+  fgNote2:"Partecipazione il 17 ottobre: 550.000 secondo le autorità (110.000 a Parigi), 800.000 secondo gli organizzatori ("+A(U.cbs,"AP via CBS")+"). In precedenza, il 1° ottobre, il ministero dell'Interno aveva registrato 1.949 arresti in un solo giorno di blocchi delle scuole.",
+  exEy:"Esclusi dalla mappa", exH:"Notizie che non abbiamo incluso",
+  exList:"<li><b>Una coppia di anziani derubata a Parigi vicino all'Eliseo.</b> Ne ha parlato un solo organo di stampa, e solo come notizia non confermata.</li><li><b>Un agente di polizia morto a Nantes il 17 ottobre.</b> È stato investito da un'auto durante un'operazione di polizia separata; il conducente non era legato alle proteste.</li><li><b>La morte di un manifestante a Parigi</b> dopo un arresto cardiaco. La polizia non ha fornito altri dettagli, quindi non possiamo collocarla né descriverla in modo affidabile.</li><li><b>Auto bruciate in rue Saint-Denis, a Parigi.</b> Viste solo nelle didascalie di alcune foto, senza un articolo da citare.</li>",
+  mtEy:"Metodo", mtH:"Come abbiamo verificato le voci",
+  mtBody:"<p>Le voci provengono da agenzie di stampa (AFP, AP, Reuters), emittenti pubbliche (France 24, ICI, BBC) e testate nazionali e regionali affermate. Ogni voce porta una di due etichette:</p><ul><li>"+vf("it",0)+" Abbiamo letto direttamente l'articolo, dall'agenzia o dalla testata che lo ha pubblicato.</li><li>"+vf("it",1)+" I fatti provengono da articoli citati nella voce di Wikipedia sulle proteste. L'originale è indicato ma non lo abbiamo consultato. Vanno considerati con più cautela.</li></ul><p>Le cifre sono riportate come le ha date la fonte. Dove le fonti divergono, la voce lo indica. I luoghi sono posizionati sulla città, piazza o scuola indicata nell'articolo.</p>",
+  srcH:"Fonti", credit:"Ricerca e pagina realizzate con l'aiuto di Claude (Anthropic), sulla base degli articoli indicati per ogni voce. <a href=\"/#contact\">Le correzioni sono benvenute</a>."
+ },
+ ro:{
+  eyebrow:"Bibliotecă · Hartă · oct. 2026", h1:"Protestele din Franța: punctele fierbinți",
+  lede:"Locurile în care tulburările din toamna lui 2026 din Franța au degenerat în violență: de la primele blocade ale liceelor din Créteil, pe 21 septembrie, până la ziua națională de mobilizare de <strong>sâmbătă, 17 octombrie</strong>, când aproximativ 550.000 de oameni au manifestat împotriva scumpirilor. Majoritatea manifestanților au fost pașnici. Harta arată locurile în care au fost atacate clădiri publice, au fost jefuite magazine, s-au pus focuri sau au fost rănite grav persoane, cu sursa fiecărei intrări.",
+  stamp1:"Ultima verificare <b>19 oct. 2026, 13:30 CEST</b>", stamp2:"Evenimente pe hartă", stamp3:"Fiecare intrare are link către sursă",
+  period:"Perioada", type:"Tip", pAll:"Toate", pBefore:"Blocade, 21 sept.–16 oct.", p17:"Sâm 17 oct.", p18:"Dum 18 oct.",
+  insetH:"Detaliu: regiunea Paris", insetNote:"Chenarul punctat de pe harta principală. Conturul Parisului este aproximativ.",
+  mapNote:"Contur simplificat, doar pentru orientare. Mărimea marcajului crește cu numărul de intrări; culoarea arată tipul cel mai grav din acel loc. Selectați un marcaj pentru a citi intrările.",
+  mapAria:"Harta Franței metropolitane cu câte un marcaj pentru fiecare oraș în care au fost semnalate incidente", insetAria:"Hartă de detaliu a regiunii Paris",
+  noInset:"Nicio intrare pentru regiunea Paris cu acest filtru",
+  allPlaces:"Toate locurile", clear:"Arată toate locurile", one:"1 intrare", many:n=>n+" intrări", order:", cele mai recente primele", entriesAria:n=>n+(n===1?" intrare":" intrări"),
+  empty:"Nicio intrare nu corespunde filtrelor. Alegeți altă perioadă sau activați mai multe tipuri.",
+  vfChecked:"Am citit direct articolul", vfCited:"Din articole citate pe Wikipedia; originalul nu a fost consultat", orig:"original",
+  months:["","ian.","feb.","mar.","apr.","mai","iun.","iul.","aug.","sept.","oct.","nov.","dec."],
+  trEy:"Pentru călători · la 19 octombrie", trH:"Dacă plănuiți o călătorie în Franța",
+  trList:"<li>Înainte de 17 octombrie, Ambasada SUA la Paris a avertizat că marșurile pot perturba traseele de călătorie și că manifestațiile pot duce la închideri de ultim moment ale metroului și trenurilor. "+A(U.emb,"Alerta Ambasadei SUA")+"</li>"+
+   "<li>Tensiunile au continuat duminică, 18 octombrie: o nouă adunare în Place de la République din Paris a fost tensionată, iar BBC a relatat că jafurile și ciocnirile au continuat la scară mai mică la Paris și Lyon (citat pe "+A(WIKI,"Wikipedia")+").</li>"+
+   "<li>Locuri cunoscute de turiști care au fost avariate: Hôtel de Ville din Limoges (monument istoric clasat), pavilionul oficiului de turism din Place Bellecour, Lyon, Grand'Place din Lille și Place de la République din Paris.</li>"+
+   "<li>Evitați marșurile și adunările, lăsați-vă timp în plus pentru transportul public și urmați instrucțiunile poliției.</li>"+
+   "<li>Înainte de plecare, verificați recomandările guvernului dumneavoastră: "+A(U.ro,"România (MAE)")+", "+A(U.ch,"Elveția (DFAE)")+", "+A(U.it,"Italia (Viaggiare Sicuri)")+", "+A(U.uk,"Regatul Unit (FCDO)")+", "+A(U.us,"Statele Unite")+".</li>",
+  trNote:"Această secțiune se învechește cel mai repede. Folosiți-o ca punct de plecare, nu ca recomandare actuală.",
+  fgEy:"Cifre la nivel național", fgH:"Cum au evoluat cifrele",
+  fgNote:"Totalurile de arestări și răniți pentru 17 octombrie au crescut pe măsură ce au apărut noi date. Fiecare rând arată cifra publicată la momentul respectiv.",
+  fgTable:table("ro",["Publicat","Arestări","Polițiști răniți","Sursă"],[
+   ["17 oct., în cursul zilei","≈400","–","AP, citat pe "+A(WIKI,"Wikipedia")+" "+vf("ro",1)],
+   ["17–18 oct.","1.200","150","Premierul Lecornu, via "+A(U.cnn,"CNN")+" "+vf("ro",0)],
+   ["18 oct.","≈1.800<br><span class=\"note\">855 la Paris</span>","500+<br><span class=\"note\">inclusiv pompieri</span>","Ministrul de Interne Nuñez, via "+A(U.aj,"Al Jazeera")+"; cifra pentru Paris de la prefectura de poliție, via "+A(U.ici,"ICI")+" "+vf("ro",0)],
+   ["19 oct.","≈2.400","≈1.000<br><span class=\"note\">7 grav</span>","Ministerul de Interne, via BBC, citat pe "+A(WIKI,"Wikipedia")+" "+vf("ro",1)]]),
+  fgNote2:"Participare pe 17 octombrie: 550.000 de persoane potrivit autorităților (110.000 la Paris), 800.000 potrivit organizatorilor ("+A(U.cbs,"AP via CBS")+"). Anterior, pe 1 octombrie, Ministerul de Interne raportase 1.949 de arestări într-o singură zi de blocade ale liceelor.",
+  exEy:"Lăsate în afara hărții", exH:"Relatări pe care nu le-am inclus",
+  exList:"<li><b>Un cuplu de vârstnici jefuit la Paris, lângă Palatul Élysée.</b> A fost relatat de o singură publicație și doar ca informație neconfirmată.</li><li><b>Un polițist ucis la Nantes pe 17 octombrie.</b> A fost lovit de o mașină în timpul unei operațiuni separate a poliției; șoferul nu avea legătură cu protestele.</li><li><b>Decesul unui manifestant la Paris</b>, în urma unui stop cardiac. Poliția nu a oferit alte detalii, așa că nu îl putem localiza sau descrie în mod sigur.</li><li><b>Mașini incendiate pe rue Saint-Denis, la Paris.</b> Apar doar în legendele unor fotografii, fără un articol care să poată fi citat.</li>",
+  mtEy:"Metodă", mtH:"Cum am verificat intrările",
+  mtBody:"<p>Intrările provin de la agenții de presă (AFP, AP, Reuters), radiodifuzori publici (France 24, ICI, BBC) și publicații naționale și regionale consacrate. Fiecare intrare are una dintre cele două etichete:</p><ul><li>"+vf("ro",0)+" Am citit direct articolul, de la agenție sau de la publicația care l-a preluat.</li><li>"+vf("ro",1)+" Faptele provin din articole citate în pagina Wikipedia despre proteste. Originalul este menționat, dar nu l-am consultat. Tratați-le cu mai multă prudență.</li></ul><p>Cifrele sunt redate așa cum le-a dat sursa. Acolo unde sursele diferă, intrarea o menționează. Locațiile sunt plasate în orașul, piața sau liceul numite în articol.</p>",
+  srcH:"Surse", credit:"Cercetare și pagină realizate cu ajutorul Claude (Anthropic), pe baza articolelor indicate la fiecare intrare. <a href=\"/#contact\">Corecturile sunt binevenite</a>."
+ }
+};
+const TYPES={
+  building:{rank:1,en:"Public building attacked",it:"Edificio pubblico attaccato",ro:"Clădire publică atacată"},
+  arson:{rank:2,en:"Fire set",it:"Incendio appiccato",ro:"Incendiu provocat"},
+  injury:{rank:3,en:"Serious injury",it:"Ferito grave",ro:"Rănire gravă"},
+  looting:{rank:4,en:"Looting",it:"Saccheggi",ro:"Jafuri"},
+  clash:{rank:5,en:"Clashes with police",it:"Scontri con la polizia",ro:"Ciocniri cu poliția"},
+  school:{rank:6,en:"School blockade",it:"Blocco delle scuole",ro:"Blocadă la liceu"},
+  march:{rank:7,en:"Mass march",it:"Corteo di massa",ro:"Marș de masă"}
+};
+const GL={"Paris region":{en:"Paris region",it:"Regione di Parigi",ro:"Regiunea Paris"},"Lyon":{it:"Lione"},"Marseille":{it:"Marsiglia",ro:"Marsilia"},"Paris":{it:"Parigi"}};
+const SRC={
+  f24:{n:"AFP via France 24",u:"https://www.france24.com/en/live-news/20261017-fire-rages-at-town-hall-in-france-s-limoges-after-protests-authorities"},
+  ibt:{n:"IBTimes UK",u:"https://www.ibtimes.co.uk/limoges-city-hall-fire-france-protests-1826211"},
+  aj18:{n:"Al Jazeera",u:U.aj},
+  cbs:{n:"AP via CBS News",u:U.cbs},
+  cnn:{n:"CNN",u:U.cnn},
+  iciParis:{n:"ICI Paris",u:U.ici},
+  fn:{n:"FashionNetwork",u:"https://fr.fashionnetwork.com/news/Manifestations-du-17-octobre-en-marge-des-corteges-plus-de-1-500-magasins-pilles-et-vandalises-dans-plusieurs-villes-de-france,1876695.html"},
+  echo:{n:"AFP via L'Écho touristique",u:"https://www.lechotouristique.com/france/une-antenne-de-l-office-de-tourisme-de-lyon-saccagee-et-incendiee"},
+  lyc:{n:"Lyon Capitale",u:"https://www.lyoncapitale.fr/actualite/lyon-loffice-de-tourisme-de-bellecour-incendie-en-marge-de-la-mobilisation"},
+  e1:{n:"Europe 1",u:"https://www.europe1.fr/police-justice/emeutes-a-bordeaux-la-residence-prefectorale-saccagee-le-raid-declenche-1157664"},
+  afpLille:{n:"AFP via Boursorama",u:"https://www.boursorama.com/bourse/actualites/degradations-a-la-mairie-de-lille-brievement-envahie-et-magasins-saccages-16eb20d935e970af32da8c5c9c88f409"},
+  iciLille:{n:"ICI Nord",u:"https://www.ici.fr/hauts-de-france/nord-59/lille/mobilisation-du-17-octobre-des-premieres-tensions-a-lille-entre-forces-de-l-ordre-et-manifestants-7548967"},
+  wiki:{n:"Wikipedia: 2026 French student protests",u:WIKI},
+  sud:{n:"AFP via Sud Radio",u:"https://www.sudradio.fr/societe/un-lycee-en-partie-saccage-pres-de-bordeaux-et-des-violences-apres-la-manifestation"},
+  armen:{n:"BBC via Armenpress",u:"https://armenpress.am/en/article/1262201/amp"},
+  kt:{n:"AFP via Kuwait Times",u:"https://kuwaittimes.com/article/51127/world/france-suspends-stun-grenades-at-student-protests/"},
+  actu:{n:"actu.fr",u:"https://actu.fr/ile-de-france/creteil_94028/on-demande-juste-un-lycee-qui-fonctionne-plusieurs-lycees-d-ile-de-france-bloque-par-les-eleves_64817015.html"},
+  embassy:{n:"US Embassy & Consulates in France",u:U.emb}
+};
+const CC={en:"City centre",it:"Centro città",ro:"Centrul orașului"};
+/* g = map group; ig = group in the Paris-region inset. Text fields are {en,it,ro} or a plain string used in every language. */
+const EV=[
+ {d:"2026-09-21",g:"Paris region",ig:"Créteil",place:"Créteil",spot:"Lycée Antoine-de-Saint-Exupéry",t:"school",src:["actu","wiki"],v:"cited",
+  title:{en:"The movement starts in Créteil",it:"Il movimento nasce a Créteil",ro:"Mișcarea pornește din Créteil"},
+  text:{en:"Pupils protest over unfilled teaching posts, overcrowded classes and rooms short of tables. Within days, blockades spread to schools across Seine-Saint-Denis and Val-de-Marne.",
+   it:"Gli studenti protestano per le cattedre scoperte, le classi sovraffollate e le aule senza banchi a sufficienza. In pochi giorni i blocchi si estendono alle scuole della Seine-Saint-Denis e della Val-de-Marne.",
+   ro:"Elevii protestează față de posturile de profesori neocupate, clasele supraaglomerate și sălile fără suficiente bănci. În câteva zile, blocadele se extind la liceele din Seine-Saint-Denis și Val-de-Marne."}},
+ {d:"2026-09-28",g:"Paris region",ig:"Saint-Ouen-l'Aumône",place:"Saint-Ouen-l'Aumône",spot:"Val-d'Oise",t:"injury",src:["kt","wiki"],v:"cited",
+  title:{en:"Pupil's jaw broken by tear gas grenade",it:"Mascella rotta da un lacrimogeno",ro:"Elev cu maxilarul rupt de o grenadă lacrimogenă"},
+  text:{en:"A 14-year-old was hit in the face by a tear gas grenade fired at close range and lost several teeth. A police officer was charged over the incident on 6 October.",
+   it:"Un ragazzo di 14 anni è stato colpito al volto da una granata lacrimogena sparata a distanza ravvicinata e ha perso diversi denti. Il 6 ottobre un agente è stato incriminato per l'episodio.",
+   ro:"Un băiat de 14 ani a fost lovit în față de o grenadă lacrimogenă trasă de la mică distanță și și-a pierdut mai mulți dinți. Pe 6 octombrie, un polițist a fost pus sub acuzare pentru incident."}},
+ {d:"2026-09-30",g:"Tours",place:"Tours",spot:"Lycée Grandmont",t:"injury",src:["wiki"],v:"cited",
+  title:{en:"Student loses the use of an eye",it:"Uno studente perde l'uso di un occhio",ro:"Un elev își pierde vederea la un ochi"},
+  text:{en:"A 16-year-old was injured during a blockade. The Tours prosecutor said the injury was consistent with a rubber-bullet (LBD) round, and the police inspectorate opened an inquiry.",
+   it:"Un sedicenne è rimasto ferito durante un blocco. La procura di Tours ha detto che la ferita è compatibile con un proiettile di gomma (LBD) e l'ispettorato di polizia ha aperto un'indagine.",
+   ro:"Un tânăr de 16 ani a fost rănit în timpul unei blocade. Procurorul din Tours a declarat că rana corespunde unui proiectil de cauciuc (LBD), iar inspectoratul poliției a deschis o anchetă."}},
+ {d:"2026-10-01",g:"Nantes",place:"Nantes",spot:"Lycée Nelson-Mandela",t:"arson",src:["wiki"],v:"cited",orig:"franceinfo, Ouest-France",
+  title:{en:"Fire spreads into a school entrance hall",it:"Un incendio raggiunge l'atrio di una scuola",ro:"Un incendiu ajunge în holul unui liceu"},
+  text:{en:"A deliberate fire started on the façade and reached the entrance hall. About 50 firefighters attended; no one was hurt. The school said it would stay shut until the All Saints' holiday.",
+   it:"Un incendio doloso è partito dalla facciata e ha raggiunto l'atrio. Sono intervenuti circa 50 vigili del fuoco; nessun ferito. La scuola ha comunicato che resterà chiusa fino alle vacanze di Ognissanti.",
+   ro:"Un incendiu provocat intenționat a pornit de pe fațadă și a ajuns în holul de la intrare. Au intervenit aproximativ 50 de pompieri; nu au existat victime. Liceul a anunțat că rămâne închis până la vacanța de Ziua Tuturor Sfinților."}},
+ {d:"2026-10-01",g:"Marseille",place:{en:"Marseille, 15th arr.",it:"Marsiglia, 15° arr.",ro:"Marsilia, arondismentul 15"},spot:"Lycée Saint-Exupéry",t:"arson",src:["wiki"],v:"cited",orig:"BFM, RTL, franceinfo",
+  title:{en:"Fire engine set alight",it:"Camion dei pompieri dato alle fiamme",ro:"Autospecială de pompieri incendiată"},
+  text:{en:"Crowds forced the crew of a marine firefighters' engine, called to a rubbish fire, to leave the vehicle, which was then burned. One firefighter was slightly hurt.",
+   it:"La folla ha costretto l'equipaggio di un'autopompa dei marinai-pompieri, chiamata per un incendio di rifiuti, ad abbandonare il mezzo, che è stato poi bruciato. Un vigile del fuoco è rimasto leggermente ferito.",
+   ro:"Mulțimea a forțat echipajul unei autospeciale a pompierilor marinei, chemată la un foc de gunoaie, să părăsească vehiculul, care a fost apoi incendiat. Un pompier a fost ușor rănit."}},
+ {d:"2026-10-01",g:"Marseille",place:{en:"Marseille, 14th arr.",it:"Marsiglia, 14° arr.",ro:"Marsilia, arondismentul 14"},spot:"Lycée La Floride",t:"arson",src:["wiki"],v:"cited",orig:"Marsactu, Reuters",
+  title:{en:"Bus burned; city network halted",it:"Bus incendiato; rete cittadina ferma",ro:"Autobuz incendiat; transportul din oraș, oprit"},
+  text:{en:"A bus was set on fire beside the school and a driver assaulted. The transport operator RTM stopped its entire network after attacks on buses near schools in the north and east of the city.",
+   it:"Un autobus è stato incendiato accanto alla scuola e un autista aggredito. L'azienda dei trasporti RTM ha fermato l'intera rete dopo gli attacchi ai bus vicino alle scuole nel nord e nell'est della città.",
+   ro:"Un autobuz a fost incendiat lângă liceu, iar un șofer a fost agresat. Operatorul de transport RTM a oprit întreaga rețea după atacuri asupra autobuzelor din apropierea liceelor din nordul și estul orașului."}},
+ {d:"2026-10-01",g:"Rennes",place:"Rennes",spot:"Lycée Bréquigny",t:"school",src:["wiki"],v:"cited",orig:"Ouest-France",
+  title:{en:"School entered and main gate burned",it:"Scuola invasa e cancello principale bruciato",ro:"Liceu invadat, poarta principală incendiată"},
+  text:{en:"People got into the building, broke windows and set fire to the gate on avenue Georges-Graff. Seven people were arrested.",
+   it:"Alcune persone sono entrate nell'edificio, hanno rotto finestre e dato fuoco al cancello su avenue Georges-Graff. Sette persone sono state arrestate.",
+   ro:"Mai multe persoane au intrat în clădire, au spart geamuri și au dat foc porții de pe avenue Georges-Graff. Șapte persoane au fost arestate."}},
+ {d:"2026-10-02",g:"Paris region",ig:"Paris",place:{en:"Paris, 13th arr.",it:"Parigi, 13° arr.",ro:"Paris, arondismentul 13"},spot:"Lycée Gaston-Bachelard",t:"arson",src:["wiki"],v:"cited",orig:"Le Figaro, Le Parisien, franceinfo",
+  title:{en:"Bin fire blows out school windows",it:"Un incendio di cassonetti fa esplodere le vetrate di una scuola",ro:"Un incendiu de tomberon sparge geamurile unui liceu"},
+  text:{en:"A bin fire spread to the façade early in the morning and the entrance windows burst. Paris firefighters put it out at about 07:55. Fires were also set at gates of schools in the 15th.",
+   it:"Un cassonetto in fiamme ha propagato il fuoco alla facciata nelle prime ore del mattino e le vetrate dell'ingresso sono esplose. I vigili del fuoco di Parigi l'hanno spento verso le 7:55. Incendi sono stati appiccati anche ai cancelli di scuole del 15° arrondissement.",
+   ro:"Focul pornit într-un tomberon s-a extins la fațadă dis-de-dimineață, iar geamurile de la intrare au explodat. Pompierii din Paris l-au stins în jurul orei 7:55. Au fost incendiate și porțile unor licee din arondismentul 15."}},
+ {d:"2026-10-02",g:"Paris region",ig:"Meaux",place:"Meaux",spot:"Lycée Henri-Moissan",t:"arson",src:["wiki"],v:"cited",orig:"RTL",
+  title:{en:"Serious fire at a school",it:"Grave incendio in una scuola",ro:"Incendiu grav la un liceu"},
+  text:{en:"The headteacher said the façade, entrance hall, part of the canteen and some boarding rooms burned, with damage running into millions of euros.",
+   it:"Secondo il preside, sono bruciati la facciata, l'atrio, parte della mensa e alcune camere del convitto, con danni per milioni di euro.",
+   ro:"Potrivit directorului, au ars fațada, holul de la intrare, o parte din cantină și câteva camere din internat, iar pagubele se ridică la milioane de euro."}},
+ {d:"2026-10-02",g:"Lyon",place:{en:"Lyon",it:"Lione",ro:"Lyon"},spot:{en:"Lycée Édouard-Herriot, Foch district",it:"Lycée Édouard-Herriot, quartiere Foch",ro:"Lycée Édouard-Herriot, cartierul Foch"},t:"clash",src:["wiki"],v:"cited",orig:"Le Figaro, AFP",
+  title:{en:"Mortar fire and tear gas by a school",it:"Mortaretti e lacrimogeni vicino a una scuola",ro:"Petarde și gaze lacrimogene lângă un liceu"},
+  text:{en:"Firework mortars were fired around 10:00 and police answered with tear gas. 44 schools in the Rhône department were closed that day.",
+   it:"Verso le 10:00 sono stati lanciati mortaretti pirotecnici e la polizia ha risposto con i lacrimogeni. Quel giorno nel dipartimento del Rodano erano chiuse 44 scuole.",
+   ro:"În jurul orei 10:00 au fost trase petarde de tip mortier, iar poliția a răspuns cu gaze lacrimogene. În acea zi, 44 de licee din departamentul Rhône au fost închise."}},
+ {d:"2026-10-05",g:"Lens",place:"Lens",spot:"Lycée Auguste-Béhal",t:"injury",src:["kt","armen"],v:"checked",
+  title:{en:"Teenager's hand blown off by police grenade",it:"Un ragazzo perde una mano per una granata della polizia",ro:"Un adolescent își pierde mâna din cauza unei grenade a poliției"},
+  text:{en:"A 15-year-old lost his hand when a police grenade exploded during a blockade. Authorities said he picked it up; students said he was hit directly. Two days later the Interior Minister suspended stun grenades at school protests.",
+   it:"Un quindicenne ha perso una mano quando una granata della polizia è esplosa durante un blocco. Le autorità hanno detto che l'aveva raccolta; gli studenti, che è stato colpito direttamente. Due giorni dopo il ministro dell'Interno ha sospeso l'uso delle granate stordenti alle proteste studentesche.",
+   ro:"Un băiat de 15 ani și-a pierdut mâna când o grenadă a poliției a explodat în timpul unei blocade. Autoritățile au spus că a ridicat-o de jos; elevii, că a fost lovit direct. Două zile mai târziu, ministrul de Interne a suspendat folosirea grenadelor asurzitoare la protestele elevilor."}},
+ {d:"2026-10-06",g:"Paris region",ig:"Paris",place:{en:"Paris, 5th arr.",it:"Parigi, 5° arr.",ro:"Paris, arondismentul 5"},spot:{en:"Sorbonne",it:"Sorbona",ro:"Sorbona"},t:"march",src:["wiki"],v:"cited",orig:"Euronews, The Conversation",
+  title:{en:"Third national day; universities join",it:"Terza giornata nazionale; si uniscono le università",ro:"A treia zi națională; universitățile se alătură"},
+  text:{en:"Schools and campuses including the Sorbonne were blocked from early morning. The government counted 250,000 marchers nationwide; unions said 450,000.",
+   it:"Dal primo mattino sono state bloccate scuole e università, tra cui la Sorbona. Il governo ha contato 250.000 manifestanti in tutto il Paese; i sindacati 450.000.",
+   ro:"Licee și campusuri, inclusiv Sorbona, au fost blocate de dimineață. Guvernul a numărat 250.000 de manifestanți la nivel național; sindicatele, 450.000."}},
+ {d:"2026-10-08",g:"Bordeaux",place:{en:"Lormont, near Bordeaux",it:"Lormont, vicino a Bordeaux",ro:"Lormont, lângă Bordeaux"},spot:"Lycée Les Iris",t:"school",src:["sud"],v:"checked",
+  title:{en:"School partly ransacked",it:"Scuola in parte devastata",ro:"Liceu parțial devastat"},
+  text:{en:"An intrusion during the student day left damage estimated at several hundred thousand euros: smashed windows, overturned desks and broken computers.",
+   it:"Un'intrusione durante la giornata studentesca ha causato danni stimati in diverse centinaia di migliaia di euro: finestre rotte, banchi rovesciati e computer distrutti.",
+   ro:"O intruziune în ziua de mobilizare a elevilor a provocat pagube estimate la câteva sute de mii de euro: geamuri sparte, bănci răsturnate și calculatoare distruse."}},
+ {d:"2026-10-08",g:"Bordeaux",place:"Bordeaux",spot:CC,t:"arson",src:["sud"],v:"checked",
+  title:{en:"Fire outside a police station",it:"Incendio davanti a un commissariato",ro:"Incendiu în fața unei secții de poliție"},
+  text:{en:"After a calm march of 2,800 people (prefecture figure), groups lit bin fires in the centre. A fire set outside a branch of the central police station damaged its façade.",
+   it:"Dopo un corteo tranquillo di 2.800 persone (dato della prefettura), alcuni gruppi hanno incendiato cassonetti in centro. Un fuoco appiccato davanti a una sede del commissariato centrale ne ha danneggiato la facciata.",
+   ro:"După un marș liniștit de 2.800 de persoane (cifra prefecturii), grupuri de persoane au dat foc tomberoanelor din centru. Un foc aprins în fața unei filiale a comisariatului central i-a avariat fațada."}},
+ {d:"2026-10-13",g:"Paris region",ig:"Saint-Denis",place:"Saint-Denis",spot:"Lycée Paul-Éluard",t:"march",src:["wiki"],v:"cited",
+  title:{en:"Fifth national day of action",it:"Quinta giornata nazionale di mobilitazione",ro:"A cincea zi națională de mobilizare"},
+  text:{en:"The Interior Ministry counted 161,500 marchers nationwide; youth unions said 480,000. Greta Thunberg visited demonstrators outside this school, an early centre of the movement.",
+   it:"Il ministero dell'Interno ha contato 161.500 manifestanti in tutto il Paese; i sindacati studenteschi 480.000. Greta Thunberg ha fatto visita ai manifestanti davanti a questa scuola, uno dei primi centri del movimento.",
+   ro:"Ministerul de Interne a numărat 161.500 de manifestanți la nivel național; sindicatele de tineret, 480.000. Greta Thunberg i-a vizitat pe manifestanții din fața acestui liceu, unul dintre primele centre ale mișcării."}},
+ {d:"2026-10-17",g:"Limoges",place:"Limoges",spot:"Hôtel de Ville, Place Jacques-Chirac",t:"building",src:["f24","ibt"],v:"checked",
+  title:{en:"Historic town hall largely destroyed by fire",it:"Lo storico municipio quasi distrutto dal fuoco",ro:"Primăria istorică, distrusă în mare parte de foc"},
+  text:{en:"Masked people torched a municipal police car outside, broke windows and set the building alight. The roof collapsed and the regional prefect said the building was largely lost. Inaugurated in 1883, it was listed as a historic monument in 1975. Shops in the centre were also looted. Reports differ on when the fire started.",
+   it:"Persone a volto coperto hanno incendiato un'auto della polizia municipale davanti all'edificio, rotto le finestre e appiccato il fuoco all'interno. Il tetto è crollato e il prefetto ha detto che l'edificio è in gran parte perduto. Inaugurato nel 1883, era classificato monumento storico dal 1975. Anche alcuni negozi del centro sono stati saccheggiati. Le fonti divergono sull'ora d'inizio dell'incendio.",
+   ro:"Persoane mascate au incendiat o mașină a poliției municipale în fața clădirii, au spart geamurile și au dat foc în interior. Acoperișul s-a prăbușit, iar prefectul a declarat că clădirea este în mare parte pierdută. Inaugurată în 1883, era clasată monument istoric din 1975. Au fost jefuite și magazine din centru. Sursele diferă privind ora la care a izbucnit incendiul."}},
+ {d:"2026-10-17",g:"Paris region",ig:"Paris",place:{en:"Paris, 3rd/10th/11th arr.",it:"Parigi, 3°/10°/11° arr.",ro:"Paris, arondismentele 3/10/11"},spot:"Place de la République",t:"looting",src:["aj18","cbs"],v:"checked",
+  title:{en:"Shops looted, kiosk burned, Marianne defaced",it:"Negozi saccheggiati, edicola bruciata, Marianne imbrattata",ro:"Magazine jefuite, chioșc incendiat, statuia Marianne vandalizată"},
+  text:{en:"Masked groups smashed shop windows and left with stolen goods. A newspaper kiosk burned and the Marianne monument was covered in graffiti, its base partly dismantled.",
+   it:"Gruppi a volto coperto hanno sfondato vetrine e sono fuggiti con la merce rubata. Un'edicola è andata a fuoco e il monumento a Marianne è stato coperto di scritte, con la base in parte smontata.",
+   ro:"Grupuri mascate au spart vitrine și au plecat cu bunuri furate. Un chioșc de ziare a ars, iar monumentul Marianne a fost acoperit cu graffiti, cu soclul parțial demontat."}},
+ {d:"2026-10-17",g:"Paris region",ig:"Paris",place:{en:"Paris, citywide",it:"Parigi, tutta la città",ro:"Paris, în tot orașul"},spot:{en:"Police prefecture figures",it:"Dati della prefettura di polizia",ro:"Cifrele prefecturii de poliție"},t:"looting",src:["iciParis"],v:"checked",
+  title:{en:"Dozens of businesses looted; record arrests",it:"Decine di attività saccheggiate; arresti record",ro:"Zeci de afaceri jefuite; număr record de arestări"},
+  text:{en:"Pharmacies, bars, IT and clothing shops, supermarkets and luxury stores were hit within hours. The police prefecture reported 855 arrests in Paris, a record. About 1,000 city cleaning staff were deployed on Sunday.",
+   it:"In poche ore sono state colpite farmacie, bar, negozi di informatica e di abbigliamento, supermercati e boutique di lusso. La prefettura di polizia ha registrato 855 arresti a Parigi, un record. Domenica sono stati impiegati circa 1.000 addetti alla pulizia della città.",
+   ro:"În doar câteva ore au fost vizate farmacii, baruri, magazine de IT și de haine, supermarketuri și magazine de lux. Prefectura de poliție a raportat 855 de arestări la Paris, un record. Duminică au fost mobilizați aproximativ 1.000 de angajați ai serviciului de salubritate al orașului."}},
+ {d:"2026-10-17",g:"Paris region",ig:"Paris",place:{en:"Paris, 10th arr.",it:"Parigi, 10° arr.",ro:"Paris, arondismentul 10"},spot:{en:"Near Gare du Nord",it:"Vicino alla Gare du Nord",ro:"Lângă Gare du Nord"},t:"clash",src:["cnn"],v:"checked",
+  title:{en:"Stand-off with riot police by the station",it:"Faccia a faccia con la polizia vicino alla stazione",ro:"Confruntare cu forțele de ordine lângă gară"},
+  text:{en:"Masked protesters faced riot police in a street near Gare du Nord, one of the city's main rail hubs.",
+   it:"Manifestanti a volto coperto hanno fronteggiato la polizia antisommossa in una strada vicino alla Gare du Nord, uno dei principali nodi ferroviari della città.",
+   ro:"Protestatari mascați s-au confruntat cu polițiștii antirevoltă pe o stradă de lângă Gare du Nord, unul dintre principalele noduri feroviare ale orașului."}},
+ {d:"2026-10-17",g:"Paris region",ig:"Paris",place:{en:"Paris",it:"Parigi",ro:"Paris"},spot:{en:"10th arr. town hall to Place de Clichy",it:"Dal municipio del 10° arr. a Place de Clichy",ro:"De la primăria arondismentului 10 la Place de Clichy"},t:"march",src:["aj18","cnn"],v:"checked",
+  title:{en:"The main march itself was peaceful",it:"Il corteo principale è stato pacifico",ro:"Marșul principal a fost pașnic"},
+  text:{en:"About 110,000 people marched in Paris. A student who walked the full route described it as peaceful from start to finish; police used tear gas before the march started.",
+   it:"A Parigi hanno sfilato circa 110.000 persone. Una studentessa che ha percorso l'intero tragitto lo ha descritto come pacifico dall'inizio alla fine; la polizia ha usato i lacrimogeni già prima della partenza.",
+   ro:"Aproximativ 110.000 de oameni au mărșăluit la Paris. O studentă care a parcurs tot traseul l-a descris ca fiind pașnic de la început până la sfârșit; poliția a folosit gaze lacrimogene încă dinainte de pornirea marșului."}},
+ {d:"2026-10-17",g:"Marseille",place:{en:"Marseille",it:"Marsiglia",ro:"Marsilia"},spot:{en:"Hôtel de Ville and Vieux-Port",it:"Hôtel de Ville e Vieux-Port",ro:"Hôtel de Ville și Vieux-Port"},t:"building",src:["aj18","fn"],v:"checked",
+  title:{en:"City hall doors forced; shops looted",it:"Forzate le porte del municipio; negozi saccheggiati",ro:"Ușile primăriei, forțate; magazine jefuite"},
+  text:{en:"A group forced the doors of the city hall and got inside before being pushed out. Dozens of shops around the Vieux-Port were looted, according to the prefecture.",
+   it:"Un gruppo ha forzato le porte del municipio ed è entrato prima di essere respinto. Decine di negozi intorno al Vieux-Port sono stati saccheggiati, secondo la prefettura.",
+   ro:"Un grup a forțat ușile primăriei și a intrat înainte de a fi scos afară. Zeci de magazine din jurul Vieux-Port au fost jefuite, potrivit prefecturii."}},
+ {d:"2026-10-17",g:"Lyon",place:{en:"Lyon",it:"Lione",ro:"Lyon"},spot:"Place Bellecour",t:"arson",src:["echo","lyc"],v:"checked",
+  title:{en:"Tourist office pavilion set on fire",it:"Dato alle fiamme il padiglione dell'ufficio del turismo",ro:"Pavilionul oficiului de turism, incendiat"},
+  text:{en:"Hooded groups ransacked and set fire to the tourist office pavilion on Place Bellecour while throwing projectiles and firework mortars at police, who used tear gas and a water cannon. Firefighters reached the blaze shortly after 15:00. Neighbouring shops were damaged.",
+   it:"Gruppi incappucciati hanno devastato e incendiato il padiglione dell'ufficio del turismo in Place Bellecour, lanciando oggetti e mortaretti contro la polizia, che ha risposto con lacrimogeni e un idrante. I vigili del fuoco hanno raggiunto l'incendio poco dopo le 15:00. Danneggiati anche i negozi vicini.",
+   ro:"Grupuri cu glugi au devastat și au incendiat pavilionul oficiului de turism din Place Bellecour, aruncând obiecte și petarde spre poliție, care a răspuns cu gaze lacrimogene și un tun cu apă. Pompierii au ajuns la incendiu puțin după ora 15:00. Au fost avariate și magazinele din apropiere."}},
+ {d:"2026-10-17",g:"Bordeaux",place:"Bordeaux",spot:{en:"Prefect's official residence",it:"Residenza ufficiale della prefetta",ro:"Reședința oficială a prefectei"},t:"building",src:["e1"],v:"checked",
+  title:{en:"Prefect's residence ransacked",it:"Devastata la residenza della prefetta",ro:"Reședința prefectei, devastată"},
+  text:{en:"People broke into the official residence of the Gironde prefect, and the RAID police unit was called in. The prefect also condemned the looting of shops in the centre. Clashes continued near the city hall.",
+   it:"Alcune persone sono entrate nella residenza ufficiale della prefetta della Gironda ed è stata chiamata l'unità speciale RAID. La prefetta ha condannato anche i saccheggi dei negozi del centro. Gli scontri sono proseguiti vicino al municipio.",
+   ro:"Mai multe persoane au pătruns în reședința oficială a prefectei departamentului Gironde, iar unitatea de intervenție RAID a fost chemată. Prefecta a condamnat și jefuirea magazinelor din centru. Ciocnirile au continuat lângă primărie."}},
+ {d:"2026-10-17",g:"Lille",place:"Lille",spot:{en:"Hôtel de Ville and Grand'Place",it:"Hôtel de Ville e Grand'Place",ro:"Hôtel de Ville și Grand'Place"},t:"building",src:["afpLille","iciLille"],v:"checked",
+  title:{en:"City hall entered; fires on the Grand'Place",it:"Invaso il municipio; incendi sulla Grand'Place",ro:"Primăria, invadată; incendii pe Grand'Place"},
+  text:{en:"Protesters forced several entrances of the city hall and caused damage inside. The Apple Store was broken into and looted. A fire broke out in the building housing the McDonald's on the Grand'Place, and another near the Majestic cinema forced residents to evacuate.",
+   it:"I manifestanti hanno forzato diversi ingressi del municipio e causato danni all'interno. L'Apple Store è stato scassinato e saccheggiato. Un incendio è scoppiato nell'edificio del McDonald's sulla Grand'Place e un altro, vicino al cinema Majestic, ha costretto gli abitanti a evacuare.",
+   ro:"Protestatarii au forțat mai multe intrări ale primăriei și au provocat pagube în interior. Apple Store a fost spart și jefuit. Un incendiu a izbucnit în clădirea în care se află McDonald's de pe Grand'Place, iar altul, lângă cinematograful Majestic, i-a obligat pe locatari să evacueze."}},
+ {d:"2026-10-17",g:"Rennes",place:"Rennes",spot:CC,t:"looting",src:["fn"],v:"checked",
+  title:{en:"Dozens of shops looted",it:"Decine di negozi saccheggiati",ro:"Zeci de magazine jefuite"},
+  text:{en:"Several dozen shops were targeted by looters, including the Galeries Lafayette department store.",
+   it:"Diverse decine di negozi sono stati presi di mira dai saccheggiatori, tra cui i grandi magazzini Galeries Lafayette.",
+   ro:"Câteva zeci de magazine au fost ținta jefuitorilor, inclusiv magazinul universal Galeries Lafayette."}},
+ {d:"2026-10-17",g:"Saint-Étienne",place:"Saint-Étienne",spot:CC,t:"injury",src:["wiki"],v:"cited",orig:"Le Monde",
+  title:{en:"Protester loses a hand",it:"Un manifestante perde una mano",ro:"Un manifestant își pierde mâna"},
+  text:{en:"A 17-year-old demonstrator lost his hand. The Interior Minister said an investigation had opened and did not confirm reports that a police grenade caused it.",
+   it:"Un manifestante di 17 anni ha perso una mano. Il ministro dell'Interno ha detto che è stata aperta un'indagine e non ha confermato che la causa sia stata una granata della polizia.",
+   ro:"Un manifestant de 17 ani și-a pierdut mâna. Ministrul de Interne a declarat că a fost deschisă o anchetă și nu a confirmat că o grenadă a poliției ar fi cauzat rănirea."}},
+ {d:"2026-10-18",g:"Paris region",ig:"Paris",place:{en:"Paris",it:"Parigi",ro:"Paris"},spot:"Place de la République",t:"clash",src:["iciParis"],v:"checked",
+  title:{en:"Tensions at a new rally the next day",it:"Tensioni a un nuovo raduno il giorno dopo",ro:"Tensiuni la o nouă adunare a doua zi"},
+  text:{en:"A new gathering on Sunday afternoon at Place de la République saw tensions, the day after the looting.",
+   it:"Domenica pomeriggio un nuovo raduno in Place de la République è stato teso, il giorno dopo i saccheggi.",
+   ro:"Duminică după-amiază, o nouă adunare în Place de la République a fost tensionată, la o zi după jafuri."}}
+];
+const PLACES={
+ "Paris region":[2.35,48.86],"Limoges":[1.261,45.833],"Lyon":[4.832,45.758],"Marseille":[5.37,43.296],"Bordeaux":[-0.56,44.85],
+ "Lille":[3.063,50.637],"Rennes":[-1.68,48.111],"Nantes":[-1.553,47.218],"Tours":[0.684,47.394],"Lens":[2.833,50.432],"Saint-Étienne":[4.387,45.44]
+};
+const LABEL_SIDE={"Lens":"l","Saint-Étienne":"l","Bordeaux":"l","Limoges":"l","Rennes":"l","Nantes":"l"};
+const INSET={"Paris":[2.348,48.858],"Saint-Denis":[2.357,48.936],"Créteil":[2.455,48.79],"Meaux":[2.879,48.96],"Saint-Ouen-l'Aumône":[2.111,49.044]};
+const INSET_SIDE={"Meaux":"l"};
+
+/* simplified outline of metropolitan France and Corsica, lon/lat */
+const FR=[[2.54,51.09],[2.9,50.7],[3.3,50.53],[3.6,50.48],[4.0,50.35],[4.2,50.27],[4.15,49.98],[4.48,49.94],[4.85,49.79],[4.87,50.15],[5.4,49.62],[5.9,49.5],[6.36,49.47],[6.73,49.17],[7.1,49.15],[7.6,49.06],[8.2,48.97],[7.8,48.6],[7.6,48.1],[7.55,47.6],[7.0,47.45],[6.9,47.35],[6.45,46.95],[6.1,46.6],[6.1,46.25],[5.97,46.2],[6.25,46.35],[6.8,46.4],[6.85,46.05],[7.04,45.93],[6.8,45.7],[7.15,45.4],[6.75,45.0],[7.0,44.7],[6.85,44.5],[7.0,44.2],[7.5,44.13],[7.53,43.78],[7.25,43.7],[6.9,43.45],[6.6,43.17],[6.2,43.1],[5.9,43.08],[5.37,43.2],[5.0,43.38],[4.6,43.4],[4.1,43.52],[3.5,43.27],[3.1,43.05],[3.05,42.5],[2.5,42.35],[1.75,42.45],[1.45,42.6],[0.7,42.85],[0.0,42.7],[-0.75,42.95],[-1.45,43.05],[-1.78,43.37],[-1.52,43.5],[-1.25,44.2],[-1.25,44.65],[-1.18,45.5],[-1.25,45.9],[-1.15,46.3],[-1.8,46.5],[-2.1,46.9],[-2.15,47.28],[-2.5,47.5],[-3.1,47.55],[-3.5,47.75],[-4.37,47.8],[-4.4,47.95],[-4.7,48.05],[-4.5,48.3],[-4.77,48.5],[-4.6,48.62],[-4.0,48.72],[-3.5,48.82],[-3.0,48.8],[-2.6,48.55],[-2.0,48.65],[-1.6,48.62],[-1.55,48.75],[-1.6,49.2],[-1.85,49.65],[-1.25,49.7],[-1.2,49.4],[-0.9,49.38],[-0.2,49.3],[0.1,49.47],[0.2,49.7],[0.7,49.87],[1.4,50.07],[1.6,50.35],[1.58,50.85],[1.9,51.0]];
+const CORSE=[[9.4,43.0],[9.55,42.6],[9.4,41.95],[9.2,41.4],[8.8,41.6],[8.6,41.9],[8.6,42.3],[8.85,42.6],[9.25,42.72]];
+
+const NS="http://www.w3.org/2000/svg";
+function el(n,a,p){const e=document.createElementNS(NS,n);for(const k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
+function proj(lon0,lat0,k,cos){return ([lon,lat])=>[(lon-lon0)*cos*k,(lat0-lat)*k]}
+const PM=proj(-5.2,51.35,50.7,Math.cos(46.5*Math.PI/180));
+const PI=proj(1.95,49.12,456,Math.cos(48.9*Math.PI/180));
+const pathOf=(pts,P)=>"M"+pts.map(p=>P(p).map(v=>v.toFixed(1)).join(",")).join("L")+"Z";
+
+let lang="en";
+(function(){const h=(location.hash||"").slice(1);if(I18N[h]){lang=h;return}
+  let s=null;try{s=localStorage.getItem("fph-lang")}catch(e){}
+  if(I18N[s]){lang=s;return}
+  const n=(navigator.language||"").slice(0,2).toLowerCase();if(n==="it"||n==="ro")lang=n})();
+const T=k=>I18N[lang][k];
+const L=v=>typeof v==="string"?v:(v[lang]||v.en);
+const gName=g=>GL[g]?(GL[g][lang]||g):g;
+
+let state={period:"all",types:new Set(Object.keys(TYPES)),sel:null,selInset:null};
+function inPeriod(e){if(state.period==="all")return true;if(state.period==="before")return e.d<"2026-10-17";if(state.period==="17")return e.d==="2026-10-17";return e.d==="2026-10-18"}
+const visible=()=>EV.filter(e=>inPeriod(e)&&state.types.has(e.t));
+function worst(list){return list.slice().sort((a,b)=>TYPES[a.t].rank-TYPES[b.t].rank)[0].t}
+function fmtDate(d){const p=d.split("-");return (+p[2])+" "+T("months")[+p[1]]}
+
+/* static map layers */
+const main=document.getElementById("mainMap"), inset=document.getElementById("insetMap");
+el("path",{d:pathOf(FR,PM)+pathOf(CORSE,PM),class:"land"},main);
+(function(){const a=PM([1.95,49.12]),b=PM([3.05,48.68]);el("rect",{x:a[0],y:a[1],width:b[0]-a[0],height:b[1]-a[1],class:"inset-frame"},main)})();
+el("rect",{x:0,y:0,width:330,height:200,fill:"var(--land)",rx:6},inset);
+(function(){const c=PI([2.345,48.857]);el("ellipse",{cx:c[0],cy:c[1],rx:0.09*0.657*456,ry:0.045*456,class:"paris-shape"},inset)})();
+const mainG=el("g",{},main), insetG=el("g",{},inset);
+
+function marker(parent,xy,list,key,sel,onPick,label,side){
+  const n=list.length, r=7+Math.sqrt(n)*3.2, t=worst(list);
+  const g=el("g",{class:"marker"+(sel?" sel":""),tabindex:"0",role:"button","aria-label":label+": "+T("entriesAria")(n)},parent);
+  el("circle",{class:"ring",cx:xy[0],cy:xy[1],r:r+3.5,fill:"none"},g);
+  el("circle",{class:"m",cx:xy[0],cy:xy[1],r:r,fill:"var(--t-"+t+")"},g);
+  if(n>1){const tx=el("text",{x:xy[0],y:xy[1]+3.6,"text-anchor":"middle"},g);tx.textContent=n}
+  const lx=side==="l"?xy[0]-r-5:xy[0]+r+5;
+  const lt=el("text",{x:lx,y:xy[1]+4,class:"city-label","text-anchor":side==="l"?"end":"start"},parent);lt.textContent=label;
+  g.addEventListener("click",()=>onPick(key));
+  g.addEventListener("keydown",ev=>{if(ev.key==="Enter"||ev.key===" "){ev.preventDefault();onPick(key)}});
+}
+
+function renderMaps(){
+  mainG.replaceChildren(); insetG.replaceChildren();
+  main.setAttribute("aria-label",T("mapAria")); inset.setAttribute("aria-label",T("insetAria"));
+  const vis=visible();
+  const byG={}; vis.forEach(e=>(byG[e.g]=byG[e.g]||[]).push(e));
+  Object.keys(byG).sort((a,b)=>byG[b].length-byG[a].length).forEach(g=>{
+    marker(mainG,PM(PLACES[g]),byG[g],g,state.sel===g&&!state.selInset,k=>{state.sel=k;state.selInset=null;render()},gName(g),LABEL_SIDE[g]||"r");
+  });
+  const byI={}; vis.filter(e=>e.ig).forEach(e=>(byI[e.ig]=byI[e.ig]||[]).push(e));
+  Object.keys(byI).forEach(k=>{
+    marker(insetG,PI(INSET[k]),byI[k],k,state.selInset===k,kk=>{state.sel="Paris region";state.selInset=kk;render()},gName(k),INSET_SIDE[k]||"r");
+  });
+  if(!Object.keys(byI).length){const t=el("text",{x:165,y:104,"text-anchor":"middle",class:"city-label"},insetG);t.textContent=T("noInset")}
+}
+
+function renderFeed(){
+  let list=visible();
+  if(state.sel)list=list.filter(e=>e.g===state.sel);
+  if(state.selInset)list=list.filter(e=>e.ig===state.selInset);
+  list.sort((a,b)=>a.d<b.d?1:a.d>b.d?-1:TYPES[a.t].rank-TYPES[b.t].rank);
+  document.getElementById("feedTitle").textContent=state.selInset?gName(state.selInset):(state.sel?gName(state.sel):T("allPlaces"));
+  document.getElementById("feedCount").textContent=(list.length===1?T("one"):T("many")(list.length))+T("order");
+  const cb=document.getElementById("clearSel"); cb.hidden=!state.sel; cb.textContent=T("clear");
+  const box=document.getElementById("items"); box.replaceChildren();
+  if(!list.length){const p=document.createElement("p");p.className="empty";p.textContent=T("empty");box.appendChild(p);return}
+  list.forEach(e=>{
+    const a=document.createElement("article");a.className="item";a.style.setProperty("--c","var(--t-"+e.t+")");
+    const bar=document.createElement("div");bar.className="bar";a.appendChild(bar);
+    const b=document.createElement("div");b.className="body";
+    const dl=document.createElement("div");dl.className="dateline";
+    const bb=document.createElement("b");bb.textContent=L(e.place);dl.append(bb," · "+fmtDate(e.d)+" · "+L(e.spot));
+    const h=document.createElement("h3");h.textContent=L(e.title);
+    const p=document.createElement("p");p.textContent=L(e.text);
+    const m=document.createElement("div");m.className="meta";
+    const tag=document.createElement("span");tag.className="tag";tag.style.setProperty("--c","var(--t-"+e.t+")");const ti=document.createElement("i");tag.append(ti,TYPES[e.t][lang]);m.appendChild(tag);
+    const v=document.createElement("span");v.className="vf "+e.v;v.textContent=VC[lang][e.v==="checked"?0:1];v.title=e.v==="checked"?T("vfChecked"):T("vfCited");m.appendChild(v);
+    const s=document.createElement("span");
+    e.src.forEach((k,i)=>{if(i)s.append(", ");const l=document.createElement("a");l.href=SRC[k].u;l.target="_blank";l.rel="noopener";l.textContent=SRC[k].n;s.appendChild(l)});
+    if(e.orig)s.append(" ("+T("orig")+": "+e.orig+")");
+    m.appendChild(s);
+    b.append(dl,h,p,m);a.appendChild(b);box.appendChild(a);
+  });
+}
+
+const row=document.getElementById("typeRow"), legend=document.getElementById("legend");
+function renderStatic(){
+  document.documentElement.lang=lang;
+  document.querySelectorAll("[data-i]").forEach(n=>{n.innerHTML=T(n.dataset.i)});
+  document.getElementById("p-all").textContent=T("pAll");
+  document.getElementById("p-before").textContent=T("pBefore");
+  document.getElementById("p-17").textContent=T("p17");
+  document.getElementById("p-18").textContent=T("p18");
+  document.querySelectorAll(".lang button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.lang===lang?"true":"false"));
+  row.querySelectorAll(".chip").forEach(c=>{c.lastChild.textContent=TYPES[c.dataset.t][lang]});
+  legend.replaceChildren();
+  Object.keys(TYPES).forEach(k=>{const Ls=document.createElement("span");const i=document.createElement("i");i.style.setProperty("--c","var(--t-"+k+")");Ls.append(i,TYPES[k][lang]);legend.appendChild(Ls)});
+}
+function render(){renderMaps();renderFeed()}
+
+/* controls */
+Object.keys(TYPES).forEach(k=>{
+  const c=document.createElement("button");c.type="button";c.className="chip";c.id="type-"+k;c.dataset.t=k;c.setAttribute("aria-pressed","true");c.style.setProperty("--c","var(--t-"+k+")");
+  const d=document.createElement("span");d.className="dot";c.append(d,document.createTextNode(""));
+  c.addEventListener("click",()=>{if(state.types.has(k))state.types.delete(k);else state.types.add(k);c.setAttribute("aria-pressed",state.types.has(k));render()});
+  row.appendChild(c);
+});
+document.querySelectorAll("#periodSeg button").forEach(btn=>btn.addEventListener("click",()=>{
+  state.period=btn.dataset.p;document.querySelectorAll("#periodSeg button").forEach(b=>b.setAttribute("aria-pressed",b===btn?"true":"false"));
+  if(state.sel&&!visible().some(e=>e.g===state.sel)){state.sel=null;state.selInset=null}
+  render();
+}));
+document.querySelectorAll(".lang button").forEach(btn=>btn.addEventListener("click",()=>{
+  lang=btn.dataset.lang;
+  try{localStorage.setItem("fph-lang",lang)}catch(e){}
+  try{history.replaceState(null,"","#"+lang)}catch(e){}
+  renderStatic();render();
+}));
+document.getElementById("clearSel").addEventListener("click",()=>{state.sel=null;state.selInset=null;render()});
+
+/* sources list */
+const used=new Set();EV.forEach(e=>e.src.forEach(s=>used.add(s)));["cnn","cbs","embassy"].forEach(s=>used.add(s));
+const ol=document.getElementById("sourceList");
+[...used].map(k=>SRC[k]).sort((a,b)=>a.n.localeCompare(b.n)).forEach(s=>{const li=document.createElement("li");const a=document.createElement("a");a.href=s.u;a.target="_blank";a.rel="noopener";a.textContent=s.n;li.appendChild(a);ol.appendChild(li)});
+renderStatic();
+document.getElementById("totalCount").textContent=EV.length;
+render();
+})();
+</script>
+<script src="/assets/share.js" defer></script>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "7d9db5e07c304e999664d641552d4d91"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
