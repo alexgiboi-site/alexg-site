@@ -124,6 +124,10 @@ header{display:flex;flex-direction:column;gap:6px;border-bottom:2px solid var(--
 .ref{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px}
 @media (max-width:900px){.ref{grid-template-columns:1fr}}
 section.panel{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px 22px;display:flex;flex-direction:column;gap:12px;min-width:0}
+section.panel.updates{border-left:4px solid var(--accent)}
+.upd h3{font-family:var(--f-mono);font-size:12.5px;font-weight:500;letter-spacing:.04em;color:var(--muted);margin:0 0 8px}
+.upd ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:8px}
+.upd li{max-width:80ch}
 section.panel.travel{border-color:var(--accent);background:linear-gradient(var(--accent-soft),var(--accent-soft)) top/100% 4px no-repeat,var(--surface)}
 .panel p,.panel li{max-width:68ch}
 .panel ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:7px}
@@ -186,6 +190,12 @@ footer li{break-inside:avoid;margin-bottom:4px}
     <p class="lede" data-i="lede"></p>
     <div class="stamp"><span data-i="stamp1"></span><span><span data-i="stamp2"></span> <b id="totalCount">–</b></span><span data-i="stamp3"></span></div>
   </header>
+
+  <section class="panel updates" id="updates" aria-labelledby="updH">
+    <span class="eyebrow" data-i="updEy"></span>
+    <h2 id="updH" data-i="updH"></h2>
+    <div data-i="updList"></div>
+  </section>
 
   <h2 class="sec-title" id="france" data-i="frH"></h2>
   <div class="controls" role="group">
@@ -294,6 +304,19 @@ const U={
   ici:"https://www.ici.fr/ile-de-france/paris-75/paris/mobilisation-du-17-octobre-le-difficile-bilan-des-degats-a-paris-une-cellule-d-aide-aux-commerces-mise-en-place-4435615",
   cbs:"https://www.cbsnews.com/news/protests-france-rising-living-costs-students/"
 };
+const UP={
+  infodur:"https://www.linfodurable.fr/violences-couvre-feux-partiels-dans-plusieurs-villes-dont-paris-lyon-lille-bordeaux-et-nice-59472",
+  ess:"https://www.lessentiel.lu/fr/story/crises-en-france-la-nuit-a-ete-calme-des-couvre-feux-encore-prevus-mardi-soir-103644650",
+  reu:"https://www.onmanorama.com/news/world/2026/10/20/france-imposes-curfews-in-parts-of-paris-other-cities-after-weekend-of-riots.html",
+  mm:"https://www.malaymail.com/news/world/2026/10/20/curfews-imposed-in-paris-lille-lyon-as-france-reels-from-weekend-protest-violence/239798",
+  lcp:"https://lcp.fr/actualites/2513-gardes-a-vue-les-violences-du-17-octobre-s-invitent-dans-une-audition-de-gerald",
+  ansaV:"https://www.ansa.it/sito/notizie/cronaca/2026/10/19/a-palazzo-chigi-il-vertice-sullordine-pubblico.-domani-il-cdm-atteso-un-decreto-legge_397d8359-98ac-4ba2-840f-a55dcb988745.html",
+  ansaM:"https://www.ansa.it/sito/notizie/cronaca/2026/10/19/il-movimento-17-ottobre-annuncia-mobilitazione-permanente-meloni-convoca-un-vertice_0d0d286f-7f8f-420a-9737-2566da0ba8a2.html",
+  rtbfLg:"https://www.rtbf.be/article/emeutes-a-liege-le-recit-d-une-longue-soiree-de-debats-entre-majorite-et-opposition-au-conseil-communal-11802729",
+  efeAl:"https://www.eluniverso.com/internacional/europa/incendian-tribunal-en-albania-en-el-septimo-dia-de-protestas-nota/",
+  lusaAl:"https://observador.pt/2026/10/19/manifestantes-incendeiam-tribunal-de-recurso-em-tirana-no-setimo-dia-de-protestos-estudantis-na-albania/",
+  lusaLx:"https://www.jornaldenegocios.pt/economia/detalhe/acampada-de-lisboa-contesta-ilegalidade-do-protesto-que-tem-juntado-centenas-de-pessoas"
+};
 const VC={en:["checked","cited"],it:["verificato","citato"],ro:["verificat","citat"]};
 const vf=(l,k)=>'<span class="vf '+(k?"cited":"checked")+'">'+VC[l][k?1:0]+'</span>';
 function table(l,h,r){
@@ -309,7 +332,16 @@ const I18N={
   vWorld:"World", vEu:"Europe", worldAria:"World map with a marker for each country where protests were reported in the same weeks", euBoxAria:"Show the Europe close-up", grpEu:"Europe", grpWorld:"Rest of the world",
   euAria:"Map of Europe with a marker for each country where related protests were reported", frMarker:"France: go to the detailed map", frLegend:"France, detailed above", euAll:"All countries", euCount:n=>n+(n===1?" country":" countries"), euClear:"Show all countries",
   lede:"Since late September, protests over school conditions and the cost of living have swept France, and similar movements have risen elsewhere in Europe and the world. The main map shows where the French unrest turned violent, from the first school blockades in Créteil on 21 September to the national day of action on <strong>Saturday 17 October</strong>, when about 550,000 people marched. Most marchers were peaceful. A second, lighter map covers related protests in other countries. Every entry links to its source.",
-  stamp1:"Last checked <b>19 Oct 2026, 13:30 CEST</b>", stamp2:"Events mapped", stamp3:"Every entry links to its source",
+  stamp1:"Last checked <b>20 Oct 2026, 08:45 CEST</b>", updEy:"Updates", updH:"What changed since the last check",
+  updList:"<div class=\"upd\"><h3>Updated 20 Oct</h3><ul>"+
+   "<li><b>France, curfews.</b> Partial night curfews took effect on 19–20 October in parts of Paris (Place de la République and Les Halles, 23:00–06:00, with demonstrations banned in some areas from 20:00), Lyon, Nice, Bordeaux, Lille and nearby towns; several apply only to minors. On Tuesday morning Prime Minister Lecornu said the curfews had helped keep the night calm and that prefects would decide on new ones for Tuesday night. ("+A(UP.infodur,"AFP via L'Info durable")+", "+A(UP.ess,"AFP via L'essentiel")+", "+A(UP.reu,"Reuters")+")</li>"+
+   "<li><b>France, figures.</b> On the evening of 19 October Justice Minister Darmanin said 2,513 people had been taken into police custody since Saturday and that dozens had been jailed pending trial (67 according to AFP, more than 70 according to LCP); about fifty judicial investigations had been opened, including in Limoges. The government counts at least 3,000 shops affected and is paying for a short-time work scheme for them. A new row has been added to the figures table. ("+A(UP.lcp,"LCP")+", "+A(UP.mm,"AFP via Malay Mail")+", "+A(UP.reu,"Reuters")+")</li>"+
+   "<li><b>France, next dates.</b> Unions are invited to the Prime Minister's office on Wednesday 21 October, and Lecornu is due in Limoges on Friday 23 October. The yellow vest coordination has called an “act II” for Saturday 24 October, and unions have called strikes and rallies for 5 November. ("+A(UP.ess,"AFP via L'essentiel")+", "+A(UP.reu,"Reuters")+")</li>"+
+   "<li><b>Italy.</b> After a public-order summit chaired by Prime Minister Meloni on 19 October, the cabinet is due to meet on 20 October at 17:30 to consider a decree-law on street disorder. In Milan, damage from the weekend's unrest is put provisionally at more than €1 million; about 50 people were arrested, 11 of them adults. ("+A(UP.ansaV,"ANSA")+", "+A(UP.ansaM,"ANSA")+")</li>"+
+   "<li><b>Belgium.</b> Liège's mayor, Willy Demeyer, told the city council on 19 October that 327 people had been arrested during the unrest, 170 of them minors, and that 44 police officers had been injured. ("+A(UP.rtbfLg,"RTBF")+")</li>"+
+   "<li><b>Albania.</b> On 19 October, the seventh day of student protests, hooded protesters broke into the Court of Appeal in Tirana and set it on fire. The Health Ministry counted 303 people injured in the first six days, 190 of them police officers; more than 240 protesters had been detained. ("+A(UP.efeAl,"EFE")+", "+A(UP.lusaAl,"Lusa")+")</li>"+
+   "<li><b>Portugal.</b> A housing protest camp of about a hundred tents has stood on Rossio Square in Lisbon since Saturday 17 October. Police call it illegal and say they will eventually have to act; organisers cite the constitutional right of assembly. ("+A(UP.lusaLx,"Lusa")+")</li></ul></div>",
+  stamp2:"Events mapped", stamp3:"Every entry links to its source",
   period:"Period", type:"Type", pAll:"All", pBefore:"Blockades, 21 Sep–16 Oct", p17:"Sat 17 Oct", p18:"Sun 18 Oct",
   insetH:"Paris region close-up", insetNote:"Dashed box on the main map. Paris outline is approximate.",
   mapNote:"Simplified outline, drawn for orientation only. Marker size grows with the number of entries; colour shows the most serious type in that place. Select a marker to read its entries.",
@@ -319,8 +351,9 @@ const I18N={
   empty:"No entries match these filters. Choose another period or switch on more types.",
   vfChecked:"Read in the original report", vfCited:"Relayed from another outlet's report; original not opened", orig:"original",
   months:["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],
-  trEy:"For travellers · as of 19 Oct", trH:"Planning a trip to France",
-  trList:"<li>Ahead of 17 October, the US Embassy in Paris warned that marches could disrupt travel routes and that demonstrations can trigger last-minute closures of metro and rail. "+A(U.emb,"US Embassy alert")+"</li>"+
+  trEy:"For travellers · as of 20 Oct", trH:"Planning a trip to France",
+  trList:"<li>Since the night of 19–20 October, partial night curfews apply in parts of Paris (Place de la République and Les Halles, 23:00–06:00) and other cities, some only for minors, and demonstrations are banned in some Paris areas from 20:00. Prefects decide new ones day by day. "+A(UP.infodur,"AFP")+"</li>"+
+   "<li>Ahead of 17 October, the US Embassy in Paris warned that marches could disrupt travel routes and that demonstrations can trigger last-minute closures of metro and rail. "+A(U.emb,"US Embassy alert")+"</li>"+
    "<li>Unrest carried into Sunday 18 October: a new rally at Place de la République in Paris saw tensions, and the BBC reported that looting and clashes continued on a smaller scale in Paris and Lyon (cited in "+A(WIKI,"Wikipedia")+").</li>"+
    "<li>Places visitors know that were damaged: the Hôtel de Ville in Limoges (a listed historic monument), the tourist office pavilion on Place Bellecour in Lyon, the Grand'Place in Lille and Place de la République in Paris.</li>"+
    "<li>Stay away from marches and gatherings, allow extra time on public transport, and follow police instructions.</li>"+
@@ -332,7 +365,8 @@ const I18N={
    ["17 Oct, daytime","≈400","–","AP, cited in "+A(WIKI,"Wikipedia")+" "+vf("en",1)],
    ["17–18 Oct","1,200","150","PM Lecornu, via "+A(U.cnn,"CNN")+" "+vf("en",0)],
    ["18 Oct","≈1,800<br><span class=\"note\">855 in Paris</span>","500+<br><span class=\"note\">incl. firefighters</span>","Interior Minister Nuñez, via "+A(U.aj,"Al Jazeera")+"; Paris figure from the police prefecture via "+A(U.ici,"ICI")+" "+vf("en",0)],
-   ["19 Oct","≈2,400","≈1,000<br><span class=\"note\">7 seriously</span>","Interior Ministry, via BBC, cited in "+A(WIKI,"Wikipedia")+" "+vf("en",1)]]),
+   ["19 Oct","≈2,400","≈1,000<br><span class=\"note\">7 seriously</span>","Interior Ministry, via BBC, cited in "+A(WIKI,"Wikipedia")+" "+vf("en",1)],
+   ["19 Oct, evening","2,513<br><span class=\"note\">in police custody</span>","–","Justice Minister Darmanin, via "+A(UP.lcp,"LCP")+" and "+A(UP.mm,"AFP")+" "+vf("en",0)]]),
   fgNote2:"Turnout on 17 Oct: 550,000 according to the authorities (110,000 in Paris), 800,000 according to organisers ("+A(U.cbs,"AP via CBS")+"). Earlier, on 1 Oct, the Interior Ministry reported 1,949 arrests in a single day of school blockades.",
   exEy:"Left off the map", exH:"Reports that were not included",
   exList:"<li><b>An elderly couple robbed in Paris near the Élysée.</b> Only one outlet reported it, and only as unconfirmed.</li><li><b>A police officer killed in Nantes on 17 Oct.</b> He was hit by a car during a separate police operation; the driver was not connected to the protests.</li><li><b>A protester's death in Paris</b> after a cardiac arrest. Police gave no further details, so it cannot be placed or described reliably.</li><li><b>Burned cars on rue Saint-Denis, Paris.</b> Seen only in photo captions, with no report to cite.</li><li><b>Rallies in the United States and pension protests in Turkey</b> in the same weeks. They concern national politics and pensions rather than education or living costs, and the available reports gave too few dates and places.</li><li><b>Education protests in Germany and Austria.</b> Reported without enough detail on dates and places to map them.</li>",
@@ -348,7 +382,16 @@ const I18N={
   vWorld:"Mondo", vEu:"Europa", worldAria:"Mappa del mondo con un segnaposto per ogni Paese in cui sono state segnalate proteste nelle stesse settimane", euBoxAria:"Mostra il dettaglio dell'Europa", grpEu:"Europa", grpWorld:"Resto del mondo",
   euAria:"Mappa dell'Europa con un segnaposto per ogni Paese in cui sono state segnalate proteste collegate", frMarker:"Francia: vai alla mappa dettagliata", frLegend:"Francia, in dettaglio sopra", euAll:"Tutti i Paesi", euCount:n=>n+(n===1?" Paese":" Paesi"), euClear:"Mostra tutti i Paesi",
   lede:"Da fine settembre, le proteste per le condizioni delle scuole e il caro vita hanno attraversato la Francia, e movimenti simili sono nati altrove in Europa e nel mondo. La mappa principale mostra dove i disordini francesi sono degenerati in violenza, dai primi blocchi delle scuole a Créteil, il 21 settembre, alla giornata nazionale di mobilitazione di <strong>sabato 17 ottobre</strong>, quando hanno manifestato circa 550.000 persone. La maggior parte dei manifestanti è rimasta pacifica. Una seconda mappa, più sintetica, riguarda le proteste collegate in altri Paesi. Ogni voce rimanda alla sua fonte.",
-  stamp1:"Ultimo controllo <b>19 ott 2026, 13:30 CEST</b>", stamp2:"Eventi sulla mappa", stamp3:"Ogni voce rimanda alla sua fonte",
+  stamp1:"Ultimo controllo <b>20 ott 2026, 08:45 CEST</b>", updEy:"Aggiornamenti", updH:"Cosa è cambiato dall'ultimo controllo",
+  updList:"<div class=\"upd\"><h3>Aggiornato il 20 ott</h3><ul>"+
+   "<li><b>Francia, coprifuoco.</b> Nella notte tra il 19 e il 20 ottobre sono entrati in vigore coprifuoco notturni parziali in alcune zone di Parigi (Place de la République e Les Halles, dalle 23 alle 6, con divieto di manifestare in alcune aree dalle 20), Lione, Nizza, Bordeaux, Lille e comuni vicini; diversi riguardano solo i minorenni. Martedì mattina il premier Lecornu ha detto che i coprifuoco hanno contribuito alla calma della notte e che i prefetti decideranno nuovi coprifuoco per martedì sera. ("+A(UP.infodur,"AFP via L'Info durable")+", "+A(UP.ess,"AFP via L'essentiel")+", "+A(UP.reu,"Reuters")+")</li>"+
+   "<li><b>Francia, i numeri.</b> La sera del 19 ottobre il ministro della Giustizia Darmanin ha detto che da sabato 2.513 persone sono state poste in stato di fermo e che decine sono finite in carcere in attesa di giudizio (67 secondo AFP, più di 70 secondo LCP); sono state aperte una cinquantina di inchieste giudiziarie, anche a Limoges. Il governo conta almeno 3.000 negozi colpiti e finanzia per loro la cassa integrazione. Nella tabella dei dati è stata aggiunta una nuova riga. ("+A(UP.lcp,"LCP")+", "+A(UP.mm,"AFP via Malay Mail")+", "+A(UP.reu,"Reuters")+")</li>"+
+   "<li><b>Francia, prossime date.</b> I sindacati sono convocati dal primo ministro mercoledì 21 ottobre e Lecornu è atteso a Limoges venerdì 23 ottobre. Il coordinamento dei gilet gialli ha indetto un «atto II» per sabato 24 ottobre e i sindacati hanno proclamato scioperi e manifestazioni per il 5 novembre. ("+A(UP.ess,"AFP via L'essentiel")+", "+A(UP.reu,"Reuters")+")</li>"+
+   "<li><b>Italia.</b> Dopo un vertice sull'ordine pubblico presieduto dalla premier Meloni il 19 ottobre, il Consiglio dei ministri è convocato per il 20 ottobre alle 17:30 per esaminare un decreto-legge sui disordini di piazza. A Milano i danni dei disordini del fine settimana sono stimati in via provvisoria in oltre un milione di euro; circa 50 persone sono state arrestate, di cui 11 maggiorenni. ("+A(UP.ansaV,"ANSA")+", "+A(UP.ansaM,"ANSA")+")</li>"+
+   "<li><b>Belgio.</b> Il 19 ottobre il sindaco di Liegi, Willy Demeyer, ha riferito al consiglio comunale che durante i disordini sono state arrestate 327 persone, di cui 170 minorenni, e che 44 agenti sono rimasti feriti. ("+A(UP.rtbfLg,"RTBF")+")</li>"+
+   "<li><b>Albania.</b> Il 19 ottobre, settimo giorno di proteste studentesche, manifestanti incappucciati hanno fatto irruzione nella Corte d'appello di Tirana e le hanno dato fuoco. Il ministero della Salute ha contato 303 feriti nei primi sei giorni, di cui 190 agenti; più di 240 manifestanti sono stati fermati. ("+A(UP.efeAl,"EFE")+", "+A(UP.lusaAl,"Lusa")+")</li>"+
+   "<li><b>Portogallo.</b> Dal 17 ottobre un accampamento di protesta per la casa, con circa un centinaio di tende, occupa piazza del Rossio a Lisbona. La polizia lo considera illegale e avverte che prima o poi dovrà intervenire; gli organizzatori invocano il diritto costituzionale di riunione. ("+A(UP.lusaLx,"Lusa")+")</li></ul></div>",
+  stamp2:"Eventi sulla mappa", stamp3:"Ogni voce rimanda alla sua fonte",
   period:"Periodo", type:"Tipo", pAll:"Tutto", pBefore:"Blocchi, 21 set–16 ott", p17:"Sab 17 ott", p18:"Dom 18 ott",
   insetH:"Dettaglio: regione di Parigi", insetNote:"Riquadro tratteggiato sulla mappa principale. Il contorno di Parigi è approssimativo.",
   mapNote:"Contorno semplificato, disegnato solo per orientarsi. La dimensione del segnaposto cresce con il numero di voci; il colore indica il tipo più grave in quel luogo. Tocca un segnaposto per leggerne le voci.",
@@ -358,8 +401,9 @@ const I18N={
   empty:"Nessuna voce corrisponde ai filtri. Scegli un altro periodo o attiva altri tipi.",
   vfChecked:"Letto nell'articolo originale", vfCited:"Ripreso dall'articolo di un'altra testata; originale non consultato", orig:"originale",
   months:["","gen","feb","mar","apr","mag","giu","lug","ago","set","ott","nov","dic"],
-  trEy:"Per chi viaggia · al 19 ottobre", trH:"Se stai pianificando un viaggio in Francia",
-  trList:"<li>In vista del 17 ottobre, l'Ambasciata degli Stati Uniti a Parigi ha avvertito che i cortei potevano ostacolare gli spostamenti e che le manifestazioni possono provocare chiusure improvvise di metro e treni. "+A(U.emb,"Avviso dell'Ambasciata USA")+"</li>"+
+  trEy:"Per chi viaggia · al 20 ottobre", trH:"Se stai pianificando un viaggio in Francia",
+  trList:"<li>Dalla notte tra il 19 e il 20 ottobre sono in vigore coprifuoco notturni parziali in alcune zone di Parigi (Place de la République e Les Halles, dalle 23 alle 6) e di altre città, in alcuni casi solo per i minorenni, e in alcune zone di Parigi è vietato manifestare dalle 20. I prefetti decidono giorno per giorno. "+A(UP.infodur,"AFP")+"</li>"+
+   "<li>In vista del 17 ottobre, l'Ambasciata degli Stati Uniti a Parigi ha avvertito che i cortei potevano ostacolare gli spostamenti e che le manifestazioni possono provocare chiusure improvvise di metro e treni. "+A(U.emb,"Avviso dell'Ambasciata USA")+"</li>"+
    "<li>Le tensioni sono proseguite domenica 18 ottobre: un nuovo raduno in Place de la République a Parigi è stato teso, e la BBC ha riferito che saccheggi e scontri sono continuati su scala minore a Parigi e Lione (citato su "+A(WIKI,"Wikipedia")+").</li>"+
    "<li>Luoghi noti ai visitatori che sono stati danneggiati: l'Hôtel de Ville di Limoges (monumento storico tutelato), il padiglione dell'ufficio del turismo in Place Bellecour a Lione, la Grand'Place di Lille e Place de la République a Parigi.</li>"+
    "<li>Stai lontano da cortei e assembramenti, prevedi più tempo per i trasporti pubblici e segui le indicazioni della polizia.</li>"+
@@ -371,7 +415,8 @@ const I18N={
    ["17 ott, in giornata","≈400","–","AP, citato su "+A(WIKI,"Wikipedia")+" "+vf("it",1)],
    ["17–18 ott","1.200","150","Il premier Lecornu, via "+A(U.cnn,"CNN")+" "+vf("it",0)],
    ["18 ott","≈1.800<br><span class=\"note\">855 a Parigi</span>","500+<br><span class=\"note\">inclusi i vigili del fuoco</span>","Il ministro dell'Interno Nuñez, via "+A(U.aj,"Al Jazeera")+"; il dato di Parigi è della prefettura di polizia, via "+A(U.ici,"ICI")+" "+vf("it",0)],
-   ["19 ott","≈2.400","≈1.000<br><span class=\"note\">7 gravi</span>","Ministero dell'Interno, via BBC, citato su "+A(WIKI,"Wikipedia")+" "+vf("it",1)]]),
+   ["19 ott","≈2.400","≈1.000<br><span class=\"note\">7 gravi</span>","Ministero dell'Interno, via BBC, citato su "+A(WIKI,"Wikipedia")+" "+vf("it",1)],
+   ["19 ott, sera","2.513<br><span class=\"note\">in stato di fermo</span>","–","Il ministro della Giustizia Darmanin, via "+A(UP.lcp,"LCP")+" e "+A(UP.mm,"AFP")+" "+vf("it",0)]]),
   fgNote2:"Partecipazione il 17 ottobre: 550.000 secondo le autorità (110.000 a Parigi), 800.000 secondo gli organizzatori ("+A(U.cbs,"AP via CBS")+"). In precedenza, il 1° ottobre, il ministero dell'Interno aveva registrato 1.949 arresti in un solo giorno di blocchi delle scuole.",
   exEy:"Esclusi dalla mappa", exH:"Notizie non incluse",
   exList:"<li><b>Una coppia di anziani derubata a Parigi vicino all'Eliseo.</b> Ne ha parlato un solo organo di stampa, e solo come notizia non confermata.</li><li><b>Un agente di polizia morto a Nantes il 17 ottobre.</b> È stato investito da un'auto durante un'operazione di polizia separata; il conducente non era legato alle proteste.</li><li><b>La morte di un manifestante a Parigi</b> dopo un arresto cardiaco. La polizia non ha fornito altri dettagli, quindi non è possibile collocarla né descriverla in modo affidabile.</li><li><b>Auto bruciate in rue Saint-Denis, a Parigi.</b> Viste solo nelle didascalie di alcune foto, senza un articolo da citare.</li><li><b>Manifestazioni negli Stati Uniti e proteste dei pensionati in Turchia</b> nelle stesse settimane. Riguardano la politica nazionale e le pensioni più che l'istruzione o il costo della vita, e gli articoli disponibili danno troppo poche date e luoghi.</li><li><b>Proteste per l'istruzione in Germania e Austria.</b> Riportate senza dettagli sufficienti su date e luoghi per inserirle nella mappa.</li>",
@@ -387,7 +432,16 @@ const I18N={
   vWorld:"Global", vEu:"Europa", worldAria:"Harta lumii cu câte un marcaj pentru fiecare țară în care au fost semnalate proteste în aceleași săptămâni", euBoxAria:"Arată detaliul Europei", grpEu:"Europa", grpWorld:"Restul lumii",
   euAria:"Harta Europei cu câte un marcaj pentru fiecare țară în care au fost semnalate proteste înrudite", frMarker:"Franța: mergi la harta detaliată", frLegend:"Franța, în detaliu mai sus", euAll:"Toate țările", euCount:n=>n+(n===1?" țară":" țări"), euClear:"Arată toate țările",
   lede:"De la sfârșitul lui septembrie, protestele legate de condițiile din școli și de scumpiri au cuprins Franța, iar mișcări asemănătoare au apărut și în alte țări din Europa și din lume. Harta principală arată unde tulburările din Franța au degenerat în violență, de la primele blocade ale liceelor din Créteil, pe 21 septembrie, până la ziua națională de mobilizare de <strong>sâmbătă, 17 octombrie</strong>, când au manifestat aproximativ 550.000 de oameni. Majoritatea manifestanților au fost pașnici. O a doua hartă, mai sumară, cuprinde protestele înrudite din alte țări. Fiecare intrare are link către sursă.",
-  stamp1:"Ultima verificare <b>19 oct. 2026, 13:30 CEST</b>", stamp2:"Evenimente pe hartă", stamp3:"Fiecare intrare are link către sursă",
+  stamp1:"Ultima verificare <b>20 oct. 2026, 08:45 CEST</b>", updEy:"Actualizări", updH:"Ce s-a schimbat de la ultima verificare",
+  updList:"<div class=\"upd\"><h3>Actualizat pe 20 oct.</h3><ul>"+
+   "<li><b>Franța, restricții de circulație pe timp de noapte.</b> În noaptea de 19 spre 20 octombrie au intrat în vigoare restricții parțiale de circulație pe timp de noapte în unele zone din Paris (Place de la République și Les Halles, între 23:00 și 6:00, iar în unele zone manifestațiile sunt interzise de la ora 20:00), Lyon, Nisa, Bordeaux, Lille și localități învecinate; mai multe se aplică doar minorilor. Marți dimineață, premierul Lecornu a declarat că aceste restricții au contribuit la liniștea din timpul nopții și că prefecții vor decide noi restricții pentru marți seară. ("+A(UP.infodur,"AFP via L'Info durable")+", "+A(UP.ess,"AFP via L'essentiel")+", "+A(UP.reu,"Reuters")+")</li>"+
+   "<li><b>Franța, cifrele.</b> În seara de 19 octombrie, ministrul Justiției, Darmanin, a anunțat că, de sâmbătă încoace, 2.513 persoane au fost reținute de poliție și că zeci de persoane au fost arestate preventiv (67 potrivit AFP, peste 70 potrivit LCP); au fost deschise aproximativ cincizeci de anchete judiciare, inclusiv la Limoges. Guvernul numără cel puțin 3.000 de magazine afectate și plătește pentru ele un program de șomaj tehnic. În tabelul cu cifre a fost adăugat un rând nou. ("+A(UP.lcp,"LCP")+", "+A(UP.mm,"AFP via Malay Mail")+", "+A(UP.reu,"Reuters")+")</li>"+
+   "<li><b>Franța, următoarele date.</b> Sindicatele sunt invitate la sediul premierului miercuri, 21 octombrie, iar Lecornu este așteptat la Limoges vineri, 23 octombrie. Coordonarea „vestelor galbene” a convocat un „act II” pentru sâmbătă, 24 octombrie, iar sindicatele au anunțat greve și mitinguri pentru 5 noiembrie. ("+A(UP.ess,"AFP via L'essentiel")+", "+A(UP.reu,"Reuters")+")</li>"+
+   "<li><b>Italia.</b> După o reuniune pe tema ordinii publice condusă de premierul Meloni pe 19 octombrie, Consiliul de Miniștri urmează să se întrunească pe 20 octombrie, la ora 17:30, pentru a examina o ordonanță de urgență privind tulburările din stradă. La Milano, pagubele produse în weekend sunt estimate provizoriu la peste un milion de euro; aproximativ 50 de persoane au fost arestate, dintre care 11 adulți. ("+A(UP.ansaV,"ANSA")+", "+A(UP.ansaM,"ANSA")+")</li>"+
+   "<li><b>Belgia.</b> Pe 19 octombrie, primarul orașului Liège, Willy Demeyer, a declarat în consiliul local că în timpul tulburărilor au fost arestate 327 de persoane, dintre care 170 de minori, și că 44 de polițiști au fost răniți. ("+A(UP.rtbfLg,"RTBF")+")</li>"+
+   "<li><b>Albania.</b> Pe 19 octombrie, a șaptea zi de proteste studențești, manifestanți cu glugă au pătruns în Curtea de Apel din Tirana și i-au dat foc. Ministerul Sănătății a numărat 303 răniți în primele șase zile, dintre care 190 de polițiști; peste 240 de manifestanți au fost reținuți. ("+A(UP.efeAl,"EFE")+", "+A(UP.lusaAl,"Lusa")+")</li>"+
+   "<li><b>Portugalia.</b> Din 17 octombrie, o tabără de protest pentru locuințe, cu aproximativ o sută de corturi, ocupă piața Rossio din Lisabona. Poliția o consideră ilegală și avertizează că va trebui să intervină la un moment dat; organizatorii invocă dreptul constituțional la întrunire. ("+A(UP.lusaLx,"Lusa")+")</li></ul></div>",
+  stamp2:"Evenimente pe hartă", stamp3:"Fiecare intrare are link către sursă",
   period:"Perioada", type:"Tip", pAll:"Toate", pBefore:"Blocade, 21 sept.–16 oct.", p17:"Sâm 17 oct.", p18:"Dum 18 oct.",
   insetH:"Detaliu: regiunea Paris", insetNote:"Chenarul punctat de pe harta principală. Conturul Parisului este aproximativ.",
   mapNote:"Contur simplificat, doar pentru orientare. Mărimea marcajului crește cu numărul de intrări; culoarea arată tipul cel mai grav din acel loc. Atinge un marcaj pentru a citi intrările.",
@@ -397,8 +451,9 @@ const I18N={
   empty:"Nicio intrare nu corespunde filtrelor. Alege altă perioadă sau activează mai multe tipuri.",
   vfChecked:"Citit în articolul original", vfCited:"Preluat din articolul altei publicații; originalul nu a fost consultat", orig:"original",
   months:["","ian.","feb.","mar.","apr.","mai","iun.","iul.","aug.","sept.","oct.","nov.","dec."],
-  trEy:"Pentru călători · la 19 octombrie", trH:"Dacă plănuiești o călătorie în Franța",
-  trList:"<li>Înainte de 17 octombrie, Ambasada SUA la Paris a avertizat că marșurile pot perturba traseele de călătorie și că manifestațiile pot duce la închideri de ultim moment ale metroului și trenurilor. "+A(U.emb,"Alerta Ambasadei SUA")+"</li>"+
+  trEy:"Pentru călători · la 20 octombrie", trH:"Dacă plănuiești o călătorie în Franța",
+  trList:"<li>Din noaptea de 19 spre 20 octombrie se aplică restricții parțiale de circulație pe timp de noapte în unele zone din Paris (Place de la République și Les Halles, între 23:00 și 6:00) și din alte orașe, în unele cazuri doar pentru minori, iar în unele zone din Paris manifestațiile sunt interzise de la ora 20:00. Prefecții decid zi de zi. "+A(UP.infodur,"AFP")+"</li>"+
+   "<li>Înainte de 17 octombrie, Ambasada SUA la Paris a avertizat că marșurile pot perturba traseele de călătorie și că manifestațiile pot duce la închideri de ultim moment ale metroului și trenurilor. "+A(U.emb,"Alerta Ambasadei SUA")+"</li>"+
    "<li>Tensiunile au continuat duminică, 18 octombrie: o nouă adunare în Place de la République din Paris a fost tensionată, iar BBC a relatat că jafurile și ciocnirile au continuat la scară mai mică la Paris și Lyon (citat pe "+A(WIKI,"Wikipedia")+").</li>"+
    "<li>Locuri cunoscute de turiști care au fost avariate: Hôtel de Ville din Limoges (monument istoric), pavilionul oficiului de turism din Place Bellecour, Lyon, Grand'Place din Lille și Place de la République din Paris.</li>"+
    "<li>Evită marșurile și adunările, lasă-ți timp în plus pentru transportul public și urmează instrucțiunile poliției.</li>"+
@@ -410,7 +465,8 @@ const I18N={
    ["17 oct., în cursul zilei","≈400","–","AP, citat pe "+A(WIKI,"Wikipedia")+" "+vf("ro",1)],
    ["17–18 oct.","1.200","150","Premierul Lecornu, via "+A(U.cnn,"CNN")+" "+vf("ro",0)],
    ["18 oct.","≈1.800<br><span class=\"note\">855 la Paris</span>","500+<br><span class=\"note\">inclusiv pompieri</span>","Ministrul de Interne Nuñez, via "+A(U.aj,"Al Jazeera")+"; cifra pentru Paris de la prefectura de poliție, via "+A(U.ici,"ICI")+" "+vf("ro",0)],
-   ["19 oct.","≈2.400","≈1.000<br><span class=\"note\">7 grav</span>","Ministerul de Interne, via BBC, citat pe "+A(WIKI,"Wikipedia")+" "+vf("ro",1)]]),
+   ["19 oct.","≈2.400","≈1.000<br><span class=\"note\">7 grav</span>","Ministerul de Interne, via BBC, citat pe "+A(WIKI,"Wikipedia")+" "+vf("ro",1)],
+   ["19 oct., seara","2.513<br><span class=\"note\">reținuți de poliție</span>","–","Ministrul Justiției Darmanin, via "+A(UP.lcp,"LCP")+" și "+A(UP.mm,"AFP")+" "+vf("ro",0)]]),
   fgNote2:"Participare pe 17 octombrie: 550.000 de persoane potrivit autorităților (110.000 la Paris), 800.000 potrivit organizatorilor ("+A(U.cbs,"AP via CBS")+"). Anterior, pe 1 octombrie, Ministerul de Interne raportase 1.949 de arestări într-o singură zi de blocade ale liceelor.",
   exEy:"Lăsate în afara hărții", exH:"Relatări care nu au fost incluse",
   exList:"<li><b>Un cuplu de vârstnici jefuit la Paris, lângă Palatul Élysée.</b> A fost relatat de o singură publicație și doar ca informație neconfirmată.</li><li><b>Un polițist ucis la Nantes pe 17 octombrie.</b> A fost lovit de o mașină în timpul unei operațiuni separate a poliției; șoferul nu avea legătură cu protestele.</li><li><b>Decesul unui manifestant la Paris</b>, în urma unui stop cardiac. Poliția nu a oferit alte detalii, așa că nu poate fi localizat sau descris în mod sigur.</li><li><b>Mașini incendiate pe rue Saint-Denis, la Paris.</b> Apar doar în legendele unor fotografii, fără un articol care să poată fi citat.</li><li><b>Mitinguri în Statele Unite și proteste ale pensionarilor în Turcia</b> în aceleași săptămâni. Țin mai degrabă de politica internă și de pensii decât de educație sau de costul vieții, iar relatările disponibile oferă prea puține date și locuri.</li><li><b>Proteste pentru educație în Germania și Austria.</b> Relatate fără suficiente detalii despre date și locuri pentru a fi puse pe hartă.</li>",
@@ -447,7 +503,18 @@ const SRC={
   armen:{n:"BBC via Armenpress",u:"https://armenpress.am/en/article/1262201/amp"},
   kt:{n:"AFP via Kuwait Times",u:"https://kuwaittimes.com/article/51127/world/france-suspends-stun-grenades-at-student-protests/"},
   actu:{n:"actu.fr",u:"https://actu.fr/ile-de-france/creteil_94028/on-demande-juste-un-lycee-qui-fonctionne-plusieurs-lycees-d-ile-de-france-bloque-par-les-eleves_64817015.html"},
-  embassy:{n:"US Embassy & Consulates in France",u:U.emb}
+  embassy:{n:"US Embassy & Consulates in France",u:U.emb},
+  u_infodur:{n:"AFP via L'Info durable",u:UP.infodur},
+  u_ess:{n:"AFP via L'essentiel",u:UP.ess},
+  u_reu:{n:"Reuters via Onmanorama",u:UP.reu},
+  u_mm:{n:"AFP via Malay Mail",u:UP.mm},
+  u_lcp:{n:"LCP",u:UP.lcp},
+  u_ansaV:{n:"ANSA (Rome)",u:UP.ansaV},
+  u_ansaM:{n:"ANSA (Milan)",u:UP.ansaM},
+  u_rtbfLg:{n:"RTBF",u:UP.rtbfLg},
+  u_efeAl:{n:"EFE via El Universo",u:UP.efeAl},
+  u_lusaAl:{n:"Lusa via Observador",u:UP.lusaAl},
+  u_lusaLx:{n:"Lusa via Jornal de Negócios",u:UP.lusaLx}
 };
 const CC={en:"City centre",it:"Centro città",ro:"Centrul orașului"};
 /* g = map group; ig = group in the Paris-region inset. Text fields are {en,it,ro} or a plain string used in every language. */
@@ -757,7 +824,10 @@ const EU=[
    ro:"<b>16 octombrie, „No Meloni Day”.</b> Elevi și studenți au mărșăluit în peste 40 de piețe împotriva decretului guvernului privind școala, care include o limită a numărului de elevi străini pe clasă. La Torino s-au aruncat pietre spre poliție, iar la Roma petarde spre Ministerul Educației; la Verona, 21 de elevi, dintre care 20 minori, au fost duși la poliție."}},
   {src:["sky","onm"],v:"checked",t:{en:"<b>Milan, 17–18 Oct.</b> A march against the cost of living ended in clashes around Piazza del Duomo and the Galleria Vittorio Emanuele II. Stones and firecrackers were thrown; police used tear gas and a water cannon. The emergency service took five young people to hospital with minor injuries. Disorder resumed the next day and Prime Minister Meloni called a government meeting.",
    it:"<b>Milano, 17–18 ottobre.</b> Un corteo contro il carovita è finito in scontri intorno a piazza Duomo e alla Galleria Vittorio Emanuele II, con lancio di sassi e petardi; la polizia ha usato lacrimogeni e un idrante. Il 118 ha portato in ospedale cinque giovani con ferite lievi. I disordini sono ripresi il giorno dopo e la presidente del Consiglio Meloni ha convocato un vertice di governo.",
-   ro:"<b>Milano, 17–18 octombrie.</b> Un marș împotriva scumpirilor s-a încheiat cu ciocniri în jurul Piazza del Duomo și al Galleria Vittorio Emanuele II. S-au aruncat pietre și petarde; poliția a folosit gaze lacrimogene și un tun cu apă. Serviciul de urgență a dus la spital cinci tineri cu răni ușoare. Dezordinea a reluat a doua zi, iar premierul Meloni a convocat o reuniune a guvernului."}}]},
+   ro:"<b>Milano, 17–18 octombrie.</b> Un marș împotriva scumpirilor s-a încheiat cu ciocniri în jurul Piazza del Duomo și al Galleria Vittorio Emanuele II. S-au aruncat pietre și petarde; poliția a folosit gaze lacrimogene și un tun cu apă. Serviciul de urgență a dus la spital cinci tineri cu răni ușoare. Dezordinea a reluat a doua zi, iar premierul Meloni a convocat o reuniune a guvernului."}},
+  {src:["u_ansaV","u_ansaM"],v:"checked",t:{en:"<b>Rome and Milan, 19 Oct.</b> Prime Minister Meloni chaired a public-order summit, and the cabinet was called for 20 October to consider a decree-law on street disorder. In Milan, damage from the weekend's unrest was put provisionally at more than €1 million; about 50 people were arrested, 11 of them adults.",
+   it:"<b>Roma e Milano, 19 ottobre.</b> La premier Meloni ha presieduto un vertice sull'ordine pubblico e il Consiglio dei ministri è stato convocato per il 20 ottobre per esaminare un decreto-legge sui disordini di piazza. A Milano i danni dei disordini del fine settimana sono stati stimati in via provvisoria in oltre un milione di euro; circa 50 persone sono state arrestate, di cui 11 maggiorenni.",
+   ro:"<b>Roma și Milano, 19 octombrie.</b> Premierul Meloni a condus o reuniune pe tema ordinii publice, iar Consiliul de Miniștri a fost convocat pe 20 octombrie pentru a examina o ordonanță de urgență privind tulburările din stradă. La Milano, pagubele produse în weekend au fost estimate provizoriu la peste un milion de euro; aproximativ 50 de persoane au fost arestate, dintre care 11 adulți."}}]},
  {k:"be",name:{en:"Belgium",it:"Belgio",ro:"Belgia"},ll:[4.35,50.85],link:"parallel",items:[
   {src:["brt","axios"],v:"checked",t:{en:"<b>Liège, from 1 Oct.</b> Secondary-school pupils protested cuts and reforms in French-speaking education. On 6 Oct groups smashed school windows and burned bins and e-scooters; police used tear gas. Local media counted at least 139 arrests in Liège in the first week.",
    it:"<b>Liegi, dal 1° ottobre.</b> Gli studenti delle superiori hanno protestato contro tagli e riforme nell'istruzione francofona. Il 6 ottobre alcuni gruppi hanno rotto finestre di scuole e bruciato cassonetti e monopattini; la polizia ha usato i lacrimogeni. I media locali hanno contato almeno 139 arresti a Liegi nella prima settimana.",
@@ -767,7 +837,10 @@ const EU=[
    ro:"<b>Bruxelles, 9 octombrie.</b> Elevii și studenții s-au alăturat unei greve naționale a sindicatelor împotriva reducerilor bugetare. Poliția a numărat aproximativ 30.000 de manifestanți. Grupuri mascate s-au ciocnit cu poliția lângă Gara Centrală; 21 de persoane au fost reținute, dintre care 13 minori."}},
   {src:["onm"],v:"checked",t:{en:"<b>Brussels, 17 Oct.</b> Several hundred mostly young protesters clashed with police. The Interior Minister, Bernard Quintin, said it had gone beyond peaceful protest.",
    it:"<b>Bruxelles, 17 ottobre.</b> Diverse centinaia di manifestanti, per lo più giovani, si sono scontrati con la polizia. Il ministro dell'Interno Bernard Quintin ha detto che si era andati oltre la protesta pacifica.",
-   ro:"<b>Bruxelles, 17 octombrie.</b> Câteva sute de protestatari, majoritatea tineri, s-au ciocnit cu poliția. Ministrul de Interne, Bernard Quintin, a spus că s-a depășit limita unui protest pașnic."}}]},
+   ro:"<b>Bruxelles, 17 octombrie.</b> Câteva sute de protestatari, majoritatea tineri, s-au ciocnit cu poliția. Ministrul de Interne, Bernard Quintin, a spus că s-a depășit limita unui protest pașnic."}},
+  {src:["u_rtbfLg"],v:"checked",t:{en:"<b>Liège, 19 Oct.</b> Mayor Willy Demeyer told the city council that 327 people had been arrested during the unrest, 170 of them minors, and that 44 police officers had been injured.",
+   it:"<b>Liegi, 19 ottobre.</b> Il sindaco Willy Demeyer ha riferito al consiglio comunale che durante i disordini sono state arrestate 327 persone, di cui 170 minorenni, e che 44 agenti sono rimasti feriti.",
+   ro:"<b>Liège, 19 octombrie.</b> Primarul Willy Demeyer a declarat în consiliul local că în timpul tulburărilor au fost arestate 327 de persoane, dintre care 170 de minori, și că 44 de polițiști au fost răniți."}}]},
  {k:"gr",name:{en:"Greece",it:"Grecia",ro:"Grecia"},ll:[23.73,37.98],link:"linked",items:[
   {src:["tovima"],v:"checked",t:{en:"<b>Athens, 13 Oct.</b> University students pitched dozens of tents on Syntagma Square, outside Parliament, and rallied at the Finance Ministry over rents and living costs. Organisers named the student protests in France as their inspiration.",
    it:"<b>Atene, 13 ottobre.</b> Gli studenti universitari hanno piantato decine di tende in piazza Syntagma, davanti al Parlamento, e hanno manifestato davanti al ministero delle Finanze contro affitti e caro vita. Gli organizzatori hanno indicato le proteste studentesche in Francia come fonte d'ispirazione.",
@@ -775,11 +848,17 @@ const EU=[
  {k:"al",name:{en:"Albania",it:"Albania",ro:"Albania"},ll:[19.82,41.33],link:"separate",items:[
   {src:["reuAl","ajAl"],v:"checked",t:{en:"<b>Tirana, 13–14 Oct.</b> Tens of thousands of students marched over university conditions, costs and job prospects. A fire was set inside the Education Ministry and bank branches were burned; police used tear gas and water cannon and made 16 arrests over the overnight violence. The protests grew out of a months-long movement against the government and spread to Elbasan and Shkodër.",
    it:"<b>Tirana, 13–14 ottobre.</b> Decine di migliaia di studenti hanno manifestato per le condizioni delle università, i costi e le prospettive di lavoro. È stato appiccato un incendio all'interno del ministero dell'Istruzione e sono state bruciate alcune filiali bancarie; la polizia ha usato lacrimogeni e idranti e ha arrestato 16 persone per le violenze notturne. Le proteste nascono da un movimento antigovernativo in corso da mesi e si sono estese a Elbasan e Scutari.",
-   ro:"<b>Tirana, 13–14 octombrie.</b> Zeci de mii de studenți au protestat față de condițiile din universități, costuri și lipsa perspectivelor de muncă. A fost pus foc în interiorul Ministerului Educației și au fost incendiate sucursale bancare; poliția a folosit gaze lacrimogene și tunuri cu apă și a arestat 16 persoane pentru violențele din timpul nopții. Protestele au pornit dintr-o mișcare antiguvernamentală care durează de luni de zile și s-au extins la Elbasan și Shkodër."}}]},
+   ro:"<b>Tirana, 13–14 octombrie.</b> Zeci de mii de studenți au protestat față de condițiile din universități, costuri și lipsa perspectivelor de muncă. A fost pus foc în interiorul Ministerului Educației și au fost incendiate sucursale bancare; poliția a folosit gaze lacrimogene și tunuri cu apă și a arestat 16 persoane pentru violențele din timpul nopții. Protestele au pornit dintr-o mișcare antiguvernamentală care durează de luni de zile și s-au extins la Elbasan și Shkodër."}},
+  {src:["u_efeAl","u_lusaAl"],v:"checked",t:{en:"<b>Tirana, 19 Oct.</b> On the seventh day of student protests, hooded protesters broke into the Court of Appeal and set it on fire. The Health Ministry counted 303 people injured in the first six days, 190 of them police officers; more than 240 protesters had been detained.",
+   it:"<b>Tirana, 19 ottobre.</b> Nel settimo giorno di proteste studentesche, manifestanti incappucciati hanno fatto irruzione nella Corte d'appello e le hanno dato fuoco. Il ministero della Salute ha contato 303 feriti nei primi sei giorni, di cui 190 agenti; più di 240 manifestanti sono stati fermati.",
+   ro:"<b>Tirana, 19 octombrie.</b> În a șaptea zi de proteste studențești, manifestanți cu glugă au pătruns în Curtea de Apel și i-au dat foc. Ministerul Sănătății a numărat 303 răniți în primele șase zile, dintre care 190 de polițiști; peste 240 de manifestanți au fost reținuți."}}]},
  {k:"pt",name:{en:"Portugal",it:"Portogallo",ro:"Portugalia"},ll:[-9.14,38.72],link:"parallel",items:[
   {src:["nat","onm"],v:"checked",t:{en:"<b>Lisbon, 17 Oct.</b> On the same day as the French national protests, thousands marched across Portugal over housing, rents and low wages. Hundreds rallied at night on Rossio Square, where some clashed with police.",
    it:"<b>Lisbona, 17 ottobre.</b> Nello stesso giorno delle proteste nazionali in Francia, migliaia di persone hanno manifestato in tutto il Portogallo per la casa, gli affitti e i salari bassi. Di sera centinaia si sono radunate in piazza Rossio, dove alcuni si sono scontrati con la polizia.",
-   ro:"<b>Lisabona, 17 octombrie.</b> În aceeași zi cu protestele naționale din Franța, mii de oameni au mărșăluit în toată Portugalia față de problemele locuințelor, chirii și salariile mici. Seara, sute de oameni s-au adunat în Piața Rossio, unde unii s-au ciocnit cu poliția."}}]},
+   ro:"<b>Lisabona, 17 octombrie.</b> În aceeași zi cu protestele naționale din Franța, mii de oameni au mărșăluit în toată Portugalia față de problemele locuințelor, chirii și salariile mici. Seara, sute de oameni s-au adunat în Piața Rossio, unde unii s-au ciocnit cu poliția."}},
+  {src:["u_lusaLx"],v:"checked",t:{en:"<b>Lisbon, from 17 Oct.</b> A housing protest camp of about a hundred tents has stood on Rossio Square since Saturday 17 October. Police call it illegal and say they will eventually have to act; organisers cite the constitutional right of assembly.",
+   it:"<b>Lisbona, dal 17 ottobre.</b> Da sabato 17 ottobre un accampamento di protesta per la casa, con circa un centinaio di tende, occupa piazza del Rossio. La polizia lo considera illegale e avverte che prima o poi dovrà intervenire; gli organizzatori invocano il diritto costituzionale di riunione.",
+   ro:"<b>Lisabona, de la 17 octombrie.</b> De sâmbătă, 17 octombrie, o tabără de protest pentru locuințe, cu aproximativ o sută de corturi, ocupă piața Rossio. Poliția o consideră ilegală și avertizează că va trebui să intervină la un moment dat; organizatorii invocă dreptul constituțional la întrunire."}}]},
  {k:"es",name:{en:"Spain",it:"Spagna",ro:"Spania"},ll:[-3.7,40.42],link:"parallel",items:[
   {src:["ajEs"],v:"checked",t:{en:"<b>Madrid, 3 Oct.</b> More than 70,000 people, according to the government, marched over housing costs after the televised eviction of an 87-year-old woman. After parliament rejected the government's housing relief measures, Prime Minister Pedro Sánchez called a snap election for 29 November.",
    it:"<b>Madrid, 3 ottobre.</b> Oltre 70.000 persone, secondo il governo, hanno manifestato per il caro casa dopo lo sfratto, trasmesso in televisione, di una donna di 87 anni. Dopo che il Parlamento ha respinto le misure del governo sulla casa, il premier Pedro Sánchez ha convocato elezioni anticipate per il 29 novembre.",
@@ -934,7 +1013,7 @@ document.getElementById("euClear").addEventListener("click",()=>{euSel=null;rend
 document.querySelectorAll("#viewSeg button").forEach(b=>b.addEventListener("click",()=>{euView=b.dataset.v;renderEU()}));
 
 /* sources list */
-const used=new Set();EU.forEach(c=>c.items.forEach(it=>it.src.forEach(k=>used.add(k))));EV.forEach(e=>e.src.forEach(s=>used.add(s)));["cnn","cbs","embassy"].forEach(s=>used.add(s));
+const used=new Set();EU.forEach(c=>c.items.forEach(it=>it.src.forEach(k=>used.add(k))));EV.forEach(e=>e.src.forEach(s=>used.add(s)));["cnn","cbs","embassy","u_infodur","u_ess","u_reu","u_mm","u_lcp"].forEach(s=>used.add(s));
 const ol=document.getElementById("sourceList");
 [...used].map(k=>SRC[k]).sort((a,b)=>a.n.localeCompare(b.n)).forEach(s=>{const li=document.createElement("li");const a=document.createElement("a");a.href=s.u;a.target="_blank";a.rel="noopener";a.textContent=s.n;li.appendChild(a);ol.appendChild(li)});
 renderStatic();
