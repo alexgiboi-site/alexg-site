@@ -20,3 +20,11 @@ Cloudflare Web Analytics (cookieless). Every HTML page includes this snippet jus
 ```html
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "7d9db5e07c304e999664d641552d4d91"}'></script><!-- End Cloudflare Web Analytics -->
 ```
+
+## Adding a Library post
+
+Whenever a new piece goes into `library/`:
+
+1. Add it at the top of the list in `public/library/index.html` (newest first).
+2. Update the homepage's "Latest from the library" cards in `public/index.html` so they show the three newest posts, in English, with short descriptions in the same style as the existing cards.
+3. Add the page to `sitemap.xml`.
