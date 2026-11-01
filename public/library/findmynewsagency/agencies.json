@@ -1,6 +1,6 @@
 {
  "edition": "National news agencies of most countries, the big international agencies, and private, regional and specialist agencies worldwide",
- "updated": "2026-10-16",
+ "updated": "2026-11-01",
  "agencies": [
   {
    "id": 58,
@@ -212,15 +212,24 @@
    "eana": false,
    "web": "https://www.angop.ao",
    "emails": [],
-   "phones": [],
+   "phones": [
+    {
+     "label": "Headquarters",
+     "n": "+244 222 446 901"
+    }
+   ],
    "sources": [
+    {
+     "t": "ANGOP: about the agency",
+     "u": "https://angop.ao/en/edt/info"
+    },
     {
      "t": "ANGOP website",
      "u": "https://www.angop.ao/en/terms-and-conditions/"
     }
    ],
-   "checked": "2026-10-16",
-   "note": "No phone number or email could be confirmed; see the agency’s website."
+   "checked": "2026-11-01",
+   "note": ""
   },
   {
    "id": 327,
@@ -546,7 +555,7 @@
      "u": "https://newsalliance.org/members/austria-presse-agentur"
     }
    ],
-   "checked": "2026-10-16",
+   "checked": "2026-11-01",
    "note": ""
   },
   {
@@ -990,7 +999,7 @@
      "u": "https://www.belga.be/contact-us"
     }
    ],
-   "checked": "2026-10-16",
+   "checked": "2026-11-01",
    "note": "Belga publishes its email addresses on its contact page."
   },
   {
@@ -1145,15 +1154,24 @@
    "eana": false,
    "web": "https://dailynews.gov.bw",
    "emails": [],
-   "phones": [],
+   "phones": [
+    {
+     "label": "Daily News headquarters",
+     "n": "+267 365 3500"
+    }
+   ],
    "sources": [
     {
      "t": "Daily News: about us",
      "u": "https://dailynews.gov.bw/content/65385/about-us"
+    },
+    {
+     "t": "Daily News: contact us",
+     "u": "https://dailynews.gov.bw/contact-us/65456"
     }
    ],
-   "checked": "2026-10-16",
-   "note": "BOPA publishes the Daily News; it takes messages through the contact page on that website."
+   "checked": "2026-11-01",
+   "note": "BOPA publishes the Daily News; the number is the Daily News headquarters line."
   },
   {
    "id": 340,
@@ -1431,7 +1449,7 @@
      "u": "https://bta.bg/en/contacts"
     }
    ],
-   "checked": "2026-10-16",
+   "checked": "2026-11-01",
    "note": ""
   },
   {
@@ -1979,7 +1997,7 @@
      "u": "https://cna.org.cy/en/contact"
     }
    ],
-   "checked": "2026-10-16",
+   "checked": "2026-11-01",
    "note": ""
   },
   {
@@ -2011,7 +2029,7 @@
      "u": "https://newsalliance.org/members/czech-news-agency"
     }
    ],
-   "checked": "2026-10-16",
+   "checked": "2026-11-01",
    "note": ""
   },
   {
@@ -2024,16 +2042,31 @@
    "ownership": "Public / State",
    "eana": false,
    "web": "https://www.aip.ci",
-   "emails": [],
-   "phones": [],
+   "emails": [
+    {
+     "label": "General",
+     "u": "info",
+     "d": "aip.ci"
+    }
+   ],
+   "phones": [
+    {
+     "label": "Switchboard",
+     "n": "+225 27 20 30 34 80"
+    },
+    {
+     "label": "Management",
+     "n": "+225 27 20 30 34 89"
+    }
+   ],
    "sources": [
     {
      "t": "AIP: about us",
      "u": "https://www.aip.ci/qui-sommes-nous/"
     }
    ],
-   "checked": "2026-10-16",
-   "note": "No phone number or email could be confirmed; see the agency’s website."
+   "checked": "2026-11-01",
+   "note": ""
   },
   {
    "id": 12,
@@ -2389,12 +2422,12 @@
      "u": "https://www.sttinfo.fi/uutishuone/3654/stt"
     },
     {
-     "t": "STT restructuring, 30 Sep 2026",
+     "t": "STT restructuring, 30 Sep 2026 (updated 29 Oct 2026)",
      "u": "https://www.sttinfo.fi/tiedote/72371605/stt-suunnittelee-uudelleenjarjestelya-nykymuotoinen-liiketoiminta-saattaa-paattya?lang=fi"
     }
    ],
-   "checked": "2026-10-16",
-   "note": "STT announced on 30 September 2026 that its news and photo agency business may end in its current form, possibly in March 2027."
+   "checked": "2026-11-01",
+   "note": "STT’s board decided on 29 October 2026 to wind down its news and picture agency operations; services continue as normal until the end of March 2027."
   },
   {
    "id": 168,
@@ -2775,7 +2808,7 @@
      "u": "https://www.dpa.com/en/imprint/"
     }
    ],
-   "checked": "2026-10-16",
+   "checked": "2026-11-01",
    "note": ""
   },
   {
@@ -4634,10 +4667,6 @@
     {
      "label": "Switchboard",
      "n": "+383 38 249 721"
-    },
-    {
-     "label": "Mobile",
-     "n": "+383 44 507 766"
     }
    ],
    "sources": [
@@ -4646,7 +4675,7 @@
      "u": "https://abnase.com/kosova-press/"
     }
    ],
-   "checked": "2026-10-16",
+   "checked": "2026-11-01",
    "note": ""
   },
   {
