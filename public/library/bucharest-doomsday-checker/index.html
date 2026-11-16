@@ -146,6 +146,14 @@ footer{color:var(--muted);font-size:13px;max-width:90ch}
 .made{font-size:13.5px}
 #sugg li.nomatch{cursor:default;color:var(--muted)}
 .mk>*{transform-box:fill-box;transform-origin:center;transform:scale(var(--ms,1))}
+:root{--street:#34445a;--lake:#0b4f80}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--street:#c3d0de;--lake:#8fc4ee}}
+:root[data-theme=dark]{--street:#c3d0de;--lake:#8fc4ee}
+#q,#q::placeholder,#tq::placeholder{text-overflow:ellipsis}
+.tip{white-space:normal;max-width:260px;text-align:left;width:max-content}
+.attr{position:absolute;right:10px;bottom:2px;font-size:10px;line-height:1;color:var(--muted);opacity:.9}
+.attr a{color:inherit;text-decoration:none}
+.scale{bottom:18px}
 </style>
 </head>
 <body>
@@ -216,6 +224,7 @@ footer{color:var(--muted);font-size:13px;max-width:90ch}
       <div class="north" aria-hidden="true"><svg width="14" height="16" viewBox="0 0 14 16"><path d="M7 0L13 15L7 11L1 15z" fill="var(--ink)"/></svg>N</div>
       <div class="legend" id="legend"></div>
       <div class="scale" id="scale"></div>
+      <div class="attr"><a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">&copy; OpenStreetMap contributors</a></div>
       <div class="tip" id="tip"></div>
     </div>
   </section>
@@ -264,7 +273,7 @@ en: {
   useEy: "In practice", useH: "How it can be used",
   use: "<p><b>As a starting point for a household plan.</b> Type your street to see your grade, then read the three parts behind it: how close you are to strategic sites, how far the nearest emergency hospital is, and how many civil protection shelters are within a kilometre. The “Supplies and services nearby” list shows the closest pharmacies, supermarkets, fuel stations, and the nearest fire, metro and police stations. That helps with practical questions: where to stock up, where to meet if the household is separated, which way to go first.</p><p><b>To compare places.</b> Check two addresses before renting or buying, or see how the area where a relative lives compares with yours. Teachers, journalists and local planners can use the sector table and the neighbourhood ranking, and the sliders under “Adjust the model” show how much the ranking depends on the assumptions.</p><p><b>With care.</b> A grade is relative: it ranks Bucharest’s areas against each other and says nothing about how likely any event is. Before relying on a shelter, confirm its location and access with the local authorities. For real guidance, follow the Romanian authorities (DSU / IGSU).</p>",
   find: "Find a street or neighbourhood",
-  ph: "e.g. Calea Victoriei, Drumul Taberei, Floreasca",
+  ph: "e.g. Calea Victoriei, Floreasca",
   hint: "Street names repeat across the city, so each match shows its sector. Or click anywhere on the map.",
   noMatch: "No match. Try part of the name.",
   kArea: "Area", kStreet: "Street", sector: "Sector",
@@ -312,7 +321,7 @@ it: {
   useEy: "In pratica", useH: "A cosa può servire",
   use: "<p><b>Come punto di partenza per il piano della famiglia.</b> Scrivi la tua via per vedere il voto, poi leggi le tre componenti che lo determinano: quanto sei vicino ai siti strategici, quanto dista il pronto soccorso più vicino e quanti rifugi di protezione civile ci sono entro un chilometro. L’elenco “Approvvigionamenti e servizi vicini” mostra le farmacie, i supermercati e i distributori più vicini, oltre alle stazioni dei vigili del fuoco, della metro e della polizia. Aiuta a rispondere a domande pratiche: dove fare scorta, dove ritrovarsi se la famiglia è separata, da che parte andare per prima cosa.</p><p><b>Per confrontare i luoghi.</b> Controlla due indirizzi prima di affittare o comprare, oppure guarda come si colloca la zona in cui vive un parente rispetto alla tua. Insegnanti, giornalisti e pianificatori locali possono usare la tabella dei settori e la classifica dei quartieri, mentre i cursori di “Modifica il modello” mostrano quanto la classifica dipenda dalle ipotesi.</p><p><b>Con prudenza.</b> Il voto è relativo: mette a confronto le zone di Bucarest tra loro e non dice nulla sulla probabilità di un evento. Prima di contare su un rifugio, verifica ubicazione e accesso con le autorità locali. Per le indicazioni vere e proprie, segui le autorità rumene (DSU / IGSU).</p>",
   find: "Cerca una via o un quartiere",
-  ph: "es. Calea Victoriei, Drumul Taberei, Floreasca",
+  ph: "es. Calea Victoriei, Floreasca",
   hint: "I nomi delle vie si ripetono in città, quindi ogni risultato indica il settore. Oppure clicca un punto qualsiasi della mappa.",
   noMatch: "Nessun risultato. Prova con una parte del nome.",
   kArea: "Zona", kStreet: "Via", sector: "Settore",
@@ -360,7 +369,7 @@ ro: {
   useEy: "În practică", useH: "La ce poate folosi",
   use: "<p><b>Ca punct de pornire pentru planul familiei.</b> Scrie strada ta ca să vezi clasificarea, apoi citește cele trei componente din spatele ei: cât de aproape ești de obiective strategice, cât de departe este cel mai apropiat spital cu urgențe și câte adăposturi de protecție civilă sunt pe o rază de un kilometru. Lista „Aprovizionare și servicii în apropiere” arată cele mai apropiate farmacii, supermarketuri și benzinării, plus stațiile de pompieri, de metrou și secțiile de poliție din apropiere. Te ajută la întrebări practice: unde îți faci proviziile, unde vă întâlniți dacă familia se desparte, în ce direcție pornești mai întâi.</p><p><b>Ca să compari locuri.</b> Verifică două adrese înainte să închiriezi sau să cumperi, sau vezi cum stă zona în care locuiește o rudă față de a ta. Profesorii, jurnaliștii și planificatorii locali pot folosi tabelul sectoarelor și clasamentul cartierelor, iar cursoarele de la „Ajustează modelul” arată cât depinde clasamentul de ipoteze.</p><p><b>Cu grijă.</b> Clasificarea este relativă: compară zonele Bucureștiului între ele și nu spune nimic despre cât de probabil este un eveniment. Înainte să te bazezi pe un adăpost, confirmă-i locația și accesul la autoritățile locale. Pentru indicații reale, urmează recomandările autorităților române (DSU / IGSU).</p>",
   find: "Caută o stradă sau un cartier",
-  ph: "ex. Calea Victoriei, Drumul Taberei, Floreasca",
+  ph: "ex. Calea Victoriei, Floreasca",
   hint: "Numele străzilor se repetă în oraș, așa că fiecare rezultat arată sectorul. Sau dă clic oriunde pe hartă.",
   noMatch: "Niciun rezultat. Încearcă o parte din nume.",
   kArea: "Zonă", kStreet: "Stradă", sector: "Sector",
@@ -433,16 +442,17 @@ const CATS = {
   R: { label: "Rail hub", w: 1, color: "#566573" }
 };
 const norm0 = t => t.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/ș|ş/g, "s").replace(/ț|ţ/g, "t");
-const trunc = (s, n) => { s = (s || "").trim(); return s.length >= n ? s + "…" : s; };
+const dia = s => String(s).replace(/\u015f/g, "\u0219").replace(/\u015e/g, "\u0218").replace(/\u0163/g, "\u021b").replace(/\u0162/g, "\u021a");
+const trunc = (s, n) => { s = dia((s || "").trim()); if (s.length <= n) return s; const c = s.lastIndexOf(" ", n); return s.slice(0, c > n * .6 ? c : n) + "…"; };
 const seen = new Set();
 const SITES = [];
 D.sites.forEach(s => {
   const k = s[1] + "," + s[2];
   if (seen.has(k)) return; seen.add(k);            // drop duplicate entries at the same spot
   const [la, lo] = ll(s[1], s[2]);
-  SITES.push({ c: s[0], la, lo, n: trunc(s[3], 34) });
+  SITES.push({ c: s[0], la, lo, n: trunc(s[3], 48) });
 });
-const HOSP = D.hosp.map(h => { const [la, lo] = ll(h[0], h[1]); return { la, lo, er: !!h[2] && !/Expertiz/i.test(h[3]), n: trunc(h[3], 40) }; });
+const HOSP = D.hosp.map(h => { const [la, lo] = ll(h[0], h[1]); return { la, lo, er: !!h[2] && !/Expertiz/i.test(h[3]), n: trunc(h[3], 80) }; });
 const ERS = HOSP.filter(h => h.er);
 const SHEL = [];
 for (let i = 0; i < SHELTERS.length; i += 6) {
@@ -470,6 +480,13 @@ function line(x0, y0, x1, y1) {
     if (e2 >= dy) { err += dy; x0 += sx; }
     if (e2 <= dx) { err += dx; y0 += sy; }
   }
+}
+function dp(pts, tol) {
+  if (pts.length < 3) return pts;
+  const d = (p, a, b) => { const dx = b[1] - a[1], dy = b[0] - a[0], L = dx * dx + dy * dy; if (!L) return Math.hypot(p[0] - a[0], p[1] - a[1]); const t = Math.max(0, Math.min(1, ((p[1] - a[1]) * dx + (p[0] - a[0]) * dy) / L)); return Math.hypot(p[1] - (a[1] + t * dx), p[0] - (a[0] + t * dy)); };
+  let m = 0, k = 0; for (let i = 1; i < pts.length - 1; i++) { const v = d(pts[i], pts[0], pts[pts.length - 1]); if (v > m) { m = v; k = i; } }
+  if (m <= tol) return [pts[0], pts[pts.length - 1]];
+  return dp(pts.slice(0, k + 1), tol).slice(0, -1).concat(dp(pts.slice(k), tol));
 }
 const LINES = D.lines.map(l => l.map(p => ll(p[0], p[1])));
 LINES.forEach(l => { for (let i = 0; i < l.length - 1; i++) line(rx(l[i][1]), ry(l[i][0]), rx(l[i + 1][1]), ry(l[i + 1][0])); });
@@ -592,7 +609,7 @@ function drawStatic() {
   const wp = p => { const [la, lo] = ll(p[0], p[1]); return px(lo).toFixed(1) + "," + py(la).toFixed(1); };
   X.lakes.forEach(l => el("polygon", { points: l[1].map(wp).join(" "), fill: "#4aa3df", opacity: .75, stroke: "#2c7fb8", "stroke-width": 1 }, gWater));
   X.river.forEach(l => el("polyline", { points: l.map(wp).join(" "), fill: "none", stroke: "#3b8fd0", "stroke-width": 2.4, "vector-effect": "non-scaling-stroke", "stroke-linejoin": "round", "stroke-linecap": "round", opacity: .9 }, gWater));
-  LINES.forEach(l => el("polyline", { points: l.map(p => px(p[1]).toFixed(1) + "," + py(p[0]).toFixed(1)).join(" "), fill: "none", stroke: "var(--map-line)", "stroke-width": 1.4, "stroke-linejoin": "round", "vector-effect": "non-scaling-stroke" }, gBord));
+  LINES.forEach(l0 => { const l = dp(l0, .00012); el("polyline", { points: l.map(p => px(p[1]).toFixed(1) + "," + py(p[0]).toFixed(1)).join(" "), fill: "none", stroke: "var(--map-line)", "stroke-width": 1.4, "stroke-linejoin": "round", "vector-effect": "non-scaling-stroke" }, gBord); });
   SHEL.forEach(s => el("circle", { cx: px(s.lo).toFixed(1), cy: py(s.la).toFixed(1), r: 2, fill: "#1abc9c", opacity: .8 }, gShel));
   FIRE.forEach(s => el("rect", { x: px(s.lo) - 3, y: py(s.la) - 3, width: 6, height: 6, fill: "#e67e22" }, gFire));
   HOSP.forEach((h, i) => { const g = el("g", {}, gHosp); const x = px(h.lo), y = py(h.la), t = h.er ? 6 : 4;
@@ -611,6 +628,7 @@ const fineCache = new Map(), SVC = [[PHARM, "ph", "#2e9e5b", "+"], [SUPER, "sm",
 function visExt() { const m = svg.getScreenCTM(); if (!m) return [VB[0], VB[1], VB[0] + VB[2], VB[1] + VB[3]]; const r = svg.getBoundingClientRect(), i = m.inverse(), a = new DOMPoint(r.left, r.top).matrixTransform(i), b = new DOMPoint(r.right, r.bottom).matrixTransform(i); return [a.x, a.y, b.x, b.y]; }
 function drawFine() {
   gFine.textContent = "";
+  if (!document.getElementById("smf")) { const df = el("defs", {}, svg), f = el("filter", { id: "smf", x: "-2%", y: "-2%", width: "104%", height: "104%" }, df); el("feGaussianBlur", { stdDeviation: (CELL * S / 4 * .32).toFixed(2) }, f); gFine.setAttribute("filter", "url(#smf)"); }
   if (VB[2] > 420 || !NORM) return;
   const w = CELL * S / 4, v = visExt(), paths = GR.map(() => []);
   for (let j = Math.floor(v[1] / w); j <= Math.floor(v[3] / w); j++) for (let i = Math.floor(v[0] / w); i <= Math.floor(v[2] / w); i++) {
@@ -618,7 +636,7 @@ function drawFine() {
     if (g === undefined) { const la = toLat((j + .5) * w), lo = toLon((i + .5) * w); g = inCity(la, lo) ? GR.indexOf(grade(score(raw(la, lo)).c)) : -1; fineCache.set(k, g); }
     if (g >= 0) paths[g].push(`M${(i * w).toFixed(1)} ${(j * w).toFixed(1)}h${(w + .4).toFixed(1)}v${(w + .4).toFixed(1)}h${(-(w + .4)).toFixed(1)}z`);
   }
-  paths.forEach((p, g) => { if (p.length) el("path", { d: p.join(""), fill: `var(--g${GR[g]})`, opacity: .9, "shape-rendering": "crispEdges" }, gFine); });
+  paths.forEach((p, g) => { if (p.length) el("path", { d: p.join(""), fill: `var(--g${GR[g]})`, opacity: .9 }, gFine); });
 }
 function drawSvc() {
   gSvc.textContent = "";
@@ -642,15 +660,16 @@ function draw() {
 
 /* ---------- pin and result ---------- */
 let pin = null;
-const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const esc = s => dia(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const dark = g => g === "C" || g === "D" ? " dark" : "";
 function nearestSub(la, lo) { let b = null, bd = 1e9; SUBS.forEach(s => { const d = km(la, lo, s.la, s.lo); if (d < bd) { bd = d; b = s; } }); return bd < 1.5 ? b : null; }
 function showPin(la, lo, label) {
   pin = { la, lo, label };
   gPin.textContent = "";
   const x = px(lo), y = py(la);
-  el("circle", { cx: x, cy: y, r: 11, fill: "none", stroke: "var(--ink)", "stroke-width": 2.5 }, gPin);
-  el("circle", { cx: x, cy: y, r: 3, fill: "var(--ink)" }, gPin);
+  el("circle", { cx: x, cy: y, r: 11, fill: "none", stroke: "#fff", "stroke-width": 6, opacity: .95 }, gPin);
+  el("circle", { cx: x, cy: y, r: 11, fill: "none", stroke: "#18212b", "stroke-width": 2.6 }, gPin);
+  el("circle", { cx: x, cy: y, r: 3.2, fill: "#18212b", stroke: "#fff", "stroke-width": 1.6 }, gPin);
   const res = document.getElementById("result");
   const cr = document.getElementById("chipread");
   if (!inCity(la, lo)) { cr.hidden = true; res.innerHTML = `<h2>${T("outH")}</h2><p class="small" style="margin:0">${T("outP")}</p>`; return; }
@@ -741,37 +760,37 @@ const LANDMARKS = []; LMK.forEach(([re, name]) => { const s = SITES.find(x => re
 const LAKELAB = {}; X.lakes.forEach(l => { const pts = l[1].map(p => ll(p[0], p[1])); const la = pts.reduce((a, p) => a + p[0], 0) / pts.length, lo = pts.reduce((a, p) => a + p[1], 0) / pts.length; if (!LAKELAB[l[0]] || pts.length > LAKELAB[l[0]].n) LAKELAB[l[0]] = { la, lo, n: pts.length }; });
 function drawLabels() {
   gLab.textContent = "";
-  const r = svg.getBoundingClientRect(), u = 1 / Math.max(.3, ppu()); // map units per screen pixel
-  const TX = (txt, x, y, o) => { const t = el("text", { x: x.toFixed(1), y: y.toFixed(1), "text-anchor": "middle", fill: o.fill || "var(--ink)", "font-size": (o.size * u).toFixed(1), "font-weight": o.w || 600, "stroke-width": ((o.sw || 3) * u).toFixed(1), opacity: o.op || 1, "font-style": o.it ? "italic" : "normal", "letter-spacing": o.ls || 0 }, gLab); t.textContent = txt; return t; };
-  if (VB[2] > 240) SECS.forEach(s => { const x = px(s.lo), y = py(s.la); TX(T("sector").toUpperCase(), x, y - 30 * u, { size: 11, w: 700, ls: ".12em", op: .85 }); TX(String(s.k), x, y + 18 * u, { size: 44, w: 700, op: .8, sw: 4 }); });
-  LANDMARKS.forEach(m => TX(T(m.name), px(m.lo), py(m.la) - 9 * u, { size: 11, w: 700 }));
-  if (VB[2] < 720) Object.entries(LAKELAB).forEach(([n, l]) => TX(n, px(l.lo), py(l.la) + 4 * u, { size: 11, it: true, fill: "#0b4f80", w: 600 }));
-  const placed = [];
-  if (VB[2] < 560) {
-    SUBS.forEach(s => {
-      const x = px(s.lo), y = py(s.la);
-      if (x < VB[0] || x > VB[0] + VB[2] || y < VB[1] || y > VB[1] + VB[3]) return;
-      if (placed.some(p => Math.abs(p[0] - x) < s.name.length * 3.6 * u + p[2] && Math.abs(p[1] - y) < 13 * u)) return;
-      placed.push([x, y, s.name.length * 3.6 * u]);
-      TX(s.name, x, y, { size: 11, w: 500, fill: "var(--ink)", op: .9, sw: 3 });
-    });
-  }
+  const u = 1 / Math.max(.3, ppu()), vis = visExt(), ms = parseFloat(svg.style.getPropertyValue("--ms")) || 1;
+  const placed = [], inset = 8 * u, safe = [vis[0] + inset, vis[1] + inset, vis[2] - inset, vis[3] - inset];
+  const hit = (a, b) => a[0] < b[2] && a[2] > b[0] && a[1] < b[3] && a[3] > b[1];
+  const m0 = svg.getScreenCTM(), inv = m0 ? m0.inverse() : null;
+  if (inv) [".zoom", ".legend", "#scale", ".attr", "#chipread"].forEach(q => { const e = document.querySelector("#mapbox " + q); if (!e || e.hidden) return; const r = e.getBoundingClientRect(); if (!r.width) return; const a = new DOMPoint(r.left - 6, r.top - 6).matrixTransform(inv), b = new DOMPoint(r.right + 6, r.bottom + 6).matrixTransform(inv); placed.push([a.x, a.y, b.x, b.y]); });
+  const LB = (txt, x, y, o) => { const t = el("text", { x: x.toFixed(1), y: y.toFixed(1), "text-anchor": "middle", fill: o.fill || "var(--ink)", "font-size": (o.size * u).toFixed(1), "font-weight": o.w || 600, "stroke-width": ((o.sw || 3) * u).toFixed(1), opacity: o.op || 1, "font-style": o.it ? "italic" : "normal", "letter-spacing": o.ls || 0 }, gLab); t.textContent = txt; return t; };
+  const put = (txt, x, y, o, force) => {
+    txt = dia(txt); const w = txt.length * o.size * .56 * u + 6 * u, h = o.size * 1.25 * u, b = [x - w / 2, y - h * .8, x + w / 2, y + h * .3];
+    if (!force && (b[0] < safe[0] || b[2] > safe[2] || b[1] < safe[1] || b[3] > safe[3])) return false;
+    if (!force && placed.some(p => hit(p, b))) return false;
+    placed.push(b); LB(txt, x, y, o); return true;
+  };
+  if (VB[2] > 240) SECS.forEach(s => { const x = px(s.lo), y = py(s.la); put("SECTOR", x, y - 30 * u, { size: 11, w: 700, ls: ".12em", op: .85 }, true); put(String(s.k), x, y + 18 * u, { size: 44, w: 700, op: .8, sw: 4 }, true); });
+  if (pin) { const x = px(pin.lo), y = py(pin.la), r = 15 * ms + 3; placed.push([x - r, y - r, x + r, y + r]); }
+  const used = new Set(), nk = s => dia(s).toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  LANDMARKS.forEach(m => { const nm = T(m.name); if (put(nm, px(m.lo), py(m.la) - 9 * u, { size: 11, w: 700 })) used.add(nk(nm)); });
+  if (VB[2] < 720) Object.entries(LAKELAB).forEach(([n, l]) => { if (put(n, px(l.lo), py(l.la) + 4 * u, { size: 11, it: true, fill: "var(--lake)", w: 600 })) used.add(nk(n)); });
+  if (VB[2] < 560) SUBS.forEach(s => { if (used.has(nk(s.name))) return; const x = px(s.lo), y = py(s.la); if (x < vis[0] || x > vis[2] || y < vis[1] || y > vis[3]) return; if (put(s.name, x, y, { size: 11, w: 500, op: .92 })) used.add(nk(s.name)); });
   if (VB[2] < 230) {
-    const vis = visExt(); let n = 0;
+    let n = 0; const cap = VB[2] < 130 ? 26 : 10;
     [...STREETS].sort((a, b) => b.w - a.w).forEach(s => {
-      if (n >= (VB[2] < 130 ? 40 : 18)) return;
+      if (n >= cap) return;
       const x = px(s.lo), y = py(s.la);
       if (x < vis[0] || x > vis[2] || y < vis[1] || y > vis[3]) return;
-      const wd = s.name.length * 3.4 * u + 16 * u;
-      if (placed.some(p => Math.abs(p[0] - x) < (wd + p[2]) / 2 && Math.abs(p[1] - y) < 22 * u)) return;
-      placed.push([x, y, wd]); n++;
-      el("circle", { cx: x.toFixed(1), cy: y.toFixed(1), r: (1.9 * u).toFixed(2), fill: "#46566a", stroke: "#fff", "stroke-width": (.8 * u).toFixed(2) }, gLab);
-      TX(s.name, x, y + 11 * u, { size: 10, w: 500, it: true, fill: "#34445a", op: .95, sw: 3 });
+      if (!put(s.name, x, y + 9 * u, { size: 9, w: 500, it: true, fill: "var(--street)", op: .9, sw: 3 })) return;
+      n++; el("circle", { cx: x.toFixed(1), cy: y.toFixed(1), r: (1.6 * u).toFixed(2), fill: "var(--street)", stroke: "var(--surface)", "stroke-width": (.8 * u).toFixed(2) }, gLab);
     });
   }
   const sc = document.getElementById("scale"), pxPerKm = ppu() * S;
   let k = [0.1, 0.2, 0.5, 1, 2, 5].find(v => v * pxPerKm >= 60) || 5;
-  sc.innerHTML = `<span>${k < 1 ? k * 1000 + " m" : dec(k) + " km"}</span><i style="width:${(k * pxPerKm).toFixed(0)}px"></i>`;
+  sc.innerHTML = `<span>${k < 1 ? k * 1000 + " m" : k + " km"}</span><i style="width:${(k * pxPerKm).toFixed(0)}px"></i>`;
 }
 const setVB = () => { svg.setAttribute("viewBox", VB.map(v => v.toFixed(1)).join(" ")); svg.style.setProperty("--ms", Math.max(.3, Math.min(1, Math.pow(VB[2] / 953, .55))).toFixed(3)); drawLabels(); drawFine(); drawSvc(); };
 function zoom(f, cx, cy) {
