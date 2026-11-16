@@ -145,6 +145,7 @@ footer{color:var(--muted);font-size:13px;max-width:90ch}
 .story p{margin:0;max-width:68ch}
 .made{font-size:13.5px}
 #sugg li.nomatch{cursor:default;color:var(--muted)}
+.mk>*{transform-box:fill-box;transform-origin:center;transform:scale(var(--ms,1))}
 </style>
 </head>
 <body>
@@ -275,7 +276,7 @@ en: {
   sl_M: "Military sites", sl_A: "Airports and airbases", sl_E: "Heat and power plants", sl_G: "Government", sl_T: "Telecom and broadcast", sl_R: "Rail hub",
   sl_rad: "Site influence radius (km)", sl_wE: "Share: strategic sites (%)", sl_wH: "Share: hospital access (%)", sl_wS: "Share: shelters (%)",
   cat_M: "Military site", cat_A: "Airport or airbase", cat_E: "Heat and power plant", cat_G: "Government", cat_T: "Telecom or broadcast", cat_R: "Rail hub",
-  emerg: " (emergency)",
+  emerg: " (emergency)", ly_svc: "Services (zoom in)", svc_ph: "Pharmacy", svc_sm: "Supermarket", svc_fu: "Fuel station", svc_mt: "Metro station", svc_pol: "Police station",
   lm0: "Palace of Parliament", lm1: "Gara de Nord", lm2: "Băneasa airport", lm3: "Otopeni airport", lm4: "City Hall",
   zin: "Zoom in", zout: "Zoom out", zfit: "Reset view",
   mapAria: "Map of Bucharest coloured by relative emergency exposure, grades A to G",
@@ -292,11 +293,11 @@ en: {
   rankH: "Neighbourhood ranking", filt: "Filter", filtPh: "Type a name",
   tNb: "Neighbourhood", tGrade: "Grade", tScore: "Score", tExp: "Exposure", tEr: "Nearest ER (km)", tSh: "Shelters ≤1 km",
   n1H: "How the grade is built",
-  n1: "<li><b>Exposure to strategic sites.</b> Military sites, airports, heat and power plants, ministries and Parliament, telecom towers and Gara de Nord. Each adds to a cell’s exposure, and the effect fades to zero at the chosen radius.</li><li><b>Distance to an emergency hospital.</b> Further away scores worse.</li><li><b>Civil protection shelters within 1 km.</b> More shelters nearby scores better.</li><li>The three parts are blended with the weights in “Adjust the model”, then the city’s cells are split into seven equal-width bands, A to G.</li>",
+  n1: "<li><b>Exposure to strategic sites.</b> Military sites, airports, heat and power plants, ministries and Parliament, telecom towers and Gara de Nord. Each adds to a cell’s exposure, and the effect fades to zero at the chosen radius.</li><li><b>Distance to an emergency hospital.</b> Further away scores worse.</li><li><b>Civil protection shelters within 1 km.</b> More shelters nearby scores better.</li><li>The three parts are blended with the weights in “Adjust the model”, then the city’s cells are split into seven equal-width bands, A to G.</li><li>Zoomed in, the map is recalculated on a finer 100 m grid, so the shading is more detailed than the 400 m cells of the full view.</li>",
   n2H: "What it leaves out",
   n2: "<li>Population density, building structure and geography are not included. Bucharest is flat, so there are no natural barriers to rate.</li><li>OpenStreetMap is volunteer-built. A missing shelter, hospital or site on the map is missing here too.</li><li>A hospital counts as an emergency hospital when its OpenStreetMap name says “Urgență” or it carries an emergency tag. Some hospitals with emergency units may be missed.</li><li>Grades are relative. A “G” in Bucharest says nothing about how it compares with another city.</li>",
   n3H: "Data and credits",
-  n3: "<li>Map data © OpenStreetMap contributors (ODbL), pulled via Overpass on 16 Nov 2026, including street names, pharmacies, supermarkets, fuel stations, metro and police stations.</li><li>Pharmacies, supermarkets and fuel stations within 50 m of each other are counted once. Street search jumps to the middle of the best-mapped stretch of each street in each sector. Long streets run through several areas, so the pin is a starting point, not the whole street. The supplies and services readout is informational and not part of the grade.</li><li>The <span class=\"nsh\"></span> shelters are the entries mapped from the <a href=\"https://igsu.ro/Resources/Documente_Generale/Situatia_adaposturilor_de_protectie_civila.pdf\" target=\"_blank\" rel=\"noopener\">IGSU civil protection shelter list</a>.</li><li>Idea from the UK “Doomsday” postcode checker by Serhii Kashevko. This is an independent build with its own method and data.</li>",
+  n3: "<li>Map data © OpenStreetMap contributors (ODbL), pulled via Overpass on 16 Nov 2026, including street names, pharmacies, supermarkets, fuel stations, metro and police stations.</li><li>Pharmacies, supermarkets and fuel stations within 50 m of each other are counted once. Street search jumps to the middle of the best-mapped stretch of each street in each sector. Long streets run through several areas, so the pin is a starting point, not the whole street. The supplies and services readout is informational and not part of the grade. Street names shown when you zoom in mark that same point.</li><li>The <span class=\"nsh\"></span> shelters are the entries mapped from the <a href=\"https://igsu.ro/Resources/Documente_Generale/Situatia_adaposturilor_de_protectie_civila.pdf\" target=\"_blank\" rel=\"noopener\">IGSU civil protection shelter list</a>.</li><li>Idea from the UK “Doomsday” postcode checker by Serhii Kashevko. This is an independent build with its own method and data.</li>",
   disc: "Unofficial tool for general awareness. It does not predict any event and is no substitute for guidance from the Romanian authorities (DSU / IGSU).",
   credit: "Researched and built with the help of Claude (Anthropic), using OpenStreetMap and the public sources above. <a href=\"/#contact\">Corrections welcome</a>."
 },
@@ -323,7 +324,7 @@ it: {
   sl_M: "Siti militari", sl_A: "Aeroporti e basi aeree", sl_E: "Centrali termiche ed elettriche", sl_G: "Governo e istituzioni", sl_T: "Telecomunicazioni e radiotelevisione", sl_R: "Nodo ferroviario",
   sl_rad: "Raggio d’influenza dei siti (km)", sl_wE: "Peso: siti strategici (%)", sl_wH: "Peso: accesso agli ospedali (%)", sl_wS: "Peso: rifugi (%)",
   cat_M: "Sito militare", cat_A: "Aeroporto o base aerea", cat_E: "Centrale termica ed elettrica", cat_G: "Governo e istituzioni", cat_T: "Telecomunicazioni o radiotelevisione", cat_R: "Nodo ferroviario",
-  emerg: " (pronto soccorso)",
+  emerg: " (pronto soccorso)", ly_svc: "Servizi (ingrandisci)", svc_ph: "Farmacia", svc_sm: "Supermercato", svc_fu: "Distributore di carburante", svc_mt: "Stazione della metro", svc_pol: "Stazione di polizia",
   lm0: "Palazzo del Parlamento", lm1: "Gara de Nord", lm2: "Aeroporto di Băneasa", lm3: "Aeroporto di Otopeni", lm4: "Municipio",
   zin: "Ingrandisci", zout: "Riduci", zfit: "Reimposta la vista",
   mapAria: "Mappa di Bucarest colorata in base all’esposizione relativa alle emergenze, voti da A a G",
@@ -340,11 +341,11 @@ it: {
   rankH: "Classifica dei quartieri", filt: "Filtra", filtPh: "Scrivi un nome",
   tNb: "Quartiere", tGrade: "Voto", tScore: "Punteggio", tExp: "Esposizione", tEr: "PS più vicino (km)", tSh: "Rifugi ≤1 km",
   n1H: "Come si costruisce il voto",
-  n1: "<li><b>Esposizione ai siti strategici.</b> Siti militari, aeroporti, centrali termiche ed elettriche, ministeri e Parlamento, torri di telecomunicazione e Gara de Nord. Ognuno aumenta l’esposizione di una cella, e l’effetto si azzera al raggio scelto.</li><li><b>Distanza dal pronto soccorso.</b> Più è lontano, peggiore è il punteggio.</li><li><b>Rifugi di protezione civile entro 1 km.</b> Più rifugi ci sono vicino, meglio è.</li><li>Le tre componenti si combinano con i pesi di “Modifica il modello”; poi le celle della città vengono divise in sette fasce di uguale ampiezza, da A a G.</li>",
+  n1: "<li><b>Esposizione ai siti strategici.</b> Siti militari, aeroporti, centrali termiche ed elettriche, ministeri e Parlamento, torri di telecomunicazione e Gara de Nord. Ognuno aumenta l’esposizione di una cella, e l’effetto si azzera al raggio scelto.</li><li><b>Distanza dal pronto soccorso.</b> Più è lontano, peggiore è il punteggio.</li><li><b>Rifugi di protezione civile entro 1 km.</b> Più rifugi ci sono vicino, meglio è.</li><li>Le tre componenti si combinano con i pesi di “Modifica il modello”; poi le celle della città vengono divise in sette fasce di uguale ampiezza, da A a G.</li><li>Con lo zoom la mappa viene ricalcolata su una griglia più fine, di 100 m, quindi le sfumature sono più dettagliate rispetto alle celle da 400 m della vista completa.</li>",
   n2H: "Cosa non include",
   n2: "<li>Densità di popolazione, struttura degli edifici e geografia non sono inclusi. Bucarest è pianeggiante, quindi non ci sono barriere naturali da valutare.</li><li>OpenStreetMap è costruita da volontari. Un rifugio, un ospedale o un sito che manca sulla mappa manca anche qui.</li><li>Un ospedale conta come ospedale con pronto soccorso quando il suo nome su OpenStreetMap contiene “Urgență” o ha un’etichetta di emergenza. Alcuni ospedali con un’unità di emergenza potrebbero non essere rilevati.</li><li>I voti sono relativi. Una “G” a Bucarest non dice nulla su come la città si confronti con un’altra.</li>",
   n3H: "Dati e crediti",
-  n3: "<li>Dati della mappa © contributori di OpenStreetMap (ODbL), ottenuti tramite Overpass il 16 nov 2026, compresi nomi delle vie, farmacie, supermercati, distributori, stazioni della metro e della polizia.</li><li>Farmacie, supermercati e distributori a meno di 50 m l’uno dall’altro sono contati una sola volta. La ricerca per via porta al centro del tratto meglio mappato di ciascuna via in ciascun settore. Le vie lunghe attraversano più zone, quindi il segnaposto è un punto di partenza, non l’intera via. L’elenco di approvvigionamenti e servizi è solo informativo e non entra nel voto.</li><li>I <span class=\"nsh\"></span> rifugi sono le voci mappate a partire dall’<a href=\"https://igsu.ro/Resources/Documente_Generale/Situatia_adaposturilor_de_protectie_civila.pdf\" target=\"_blank\" rel=\"noopener\">elenco dei rifugi di protezione civile dell’IGSU</a>.</li><li>L’idea nasce dal “Doomsday” postcode checker britannico di Serhii Kashevko. Questa è una realizzazione indipendente, con metodo e dati propri.</li>",
+  n3: "<li>Dati della mappa © contributori di OpenStreetMap (ODbL), ottenuti tramite Overpass il 16 nov 2026, compresi nomi delle vie, farmacie, supermercati, distributori, stazioni della metro e della polizia.</li><li>Farmacie, supermercati e distributori a meno di 50 m l’uno dall’altro sono contati una sola volta. La ricerca per via porta al centro del tratto meglio mappato di ciascuna via in ciascun settore. Le vie lunghe attraversano più zone, quindi il segnaposto è un punto di partenza, non l’intera via. L’elenco di approvvigionamenti e servizi è solo informativo e non entra nel voto. I nomi delle vie visibili con lo zoom indicano lo stesso punto.</li><li>I <span class=\"nsh\"></span> rifugi sono le voci mappate a partire dall’<a href=\"https://igsu.ro/Resources/Documente_Generale/Situatia_adaposturilor_de_protectie_civila.pdf\" target=\"_blank\" rel=\"noopener\">elenco dei rifugi di protezione civile dell’IGSU</a>.</li><li>L’idea nasce dal “Doomsday” postcode checker britannico di Serhii Kashevko. Questa è una realizzazione indipendente, con metodo e dati propri.</li>",
   disc: "Strumento non ufficiale, a scopo di sensibilizzazione generale. Non prevede alcun evento e non sostituisce le indicazioni delle autorità rumene (DSU / IGSU).",
   credit: "Ricerca e pagina realizzate con l’aiuto di Claude (Anthropic), con OpenStreetMap e le fonti pubbliche indicate sopra. <a href=\"/#contact\">Le correzioni sono benvenute</a>."
 },
@@ -371,7 +372,7 @@ ro: {
   sl_M: "Obiective militare", sl_A: "Aeroporturi și baze aeriene", sl_E: "Centrale termice și electrice", sl_G: "Instituții guvernamentale", sl_T: "Telecomunicații și radiodifuziune", sl_R: "Nod feroviar",
   sl_rad: "Raza de influență a obiectivelor (km)", sl_wE: "Pondere: obiective strategice (%)", sl_wH: "Pondere: acces la spital (%)", sl_wS: "Pondere: adăposturi (%)",
   cat_M: "Obiectiv militar", cat_A: "Aeroport sau bază aeriană", cat_E: "Centrală termică și electrică", cat_G: "Instituție guvernamentală", cat_T: "Telecomunicații sau radiodifuziune", cat_R: "Nod feroviar",
-  emerg: " (urgențe)",
+  emerg: " (urgențe)", ly_svc: "Servicii (mărește)", svc_ph: "Farmacie", svc_sm: "Supermarket", svc_fu: "Benzinărie", svc_mt: "Stație de metrou", svc_pol: "Secție de poliție",
   lm0: "Palatul Parlamentului", lm1: "Gara de Nord", lm2: "Aeroportul Băneasa", lm3: "Aeroportul Otopeni", lm4: "Primăria Capitalei",
   zin: "Mărește", zout: "Micșorează", zfit: "Resetează vizualizarea",
   mapAria: "Harta Bucureștiului colorată după expunerea relativă la urgențe, clasificare de la A la G",
@@ -388,11 +389,11 @@ ro: {
   rankH: "Clasamentul cartierelor", filt: "Filtrează", filtPh: "Scrie un nume",
   tNb: "Cartier", tGrade: "Clasă", tScore: "Scor", tExp: "Expunere", tEr: "UPU cel mai apropiat (km)", tSh: "Adăposturi ≤1 km",
   n1H: "Cum se construiește clasificarea",
-  n1: "<li><b>Expunerea la obiective strategice.</b> Unități militare, aeroporturi, centrale termice și electrice, ministere și Parlament, turnuri de telecomunicații și Gara de Nord. Fiecare crește expunerea unei celule, iar efectul scade la zero la raza aleasă.</li><li><b>Distanța până la un spital cu urgențe.</b> Cu cât e mai departe, cu atât scorul e mai slab.</li><li><b>Adăposturi de protecție civilă pe o rază de 1 km.</b> Cu cât sunt mai multe în apropiere, cu atât scorul e mai bun.</li><li>Cele trei componente se combină cu ponderile din „Ajustează modelul”, apoi celulele orașului sunt împărțite în șapte intervale egale, de la A la G.</li>",
+  n1: "<li><b>Expunerea la obiective strategice.</b> Unități militare, aeroporturi, centrale termice și electrice, ministere și Parlament, turnuri de telecomunicații și Gara de Nord. Fiecare crește expunerea unei celule, iar efectul scade la zero la raza aleasă.</li><li><b>Distanța până la un spital cu urgențe.</b> Cu cât e mai departe, cu atât scorul e mai slab.</li><li><b>Adăposturi de protecție civilă pe o rază de 1 km.</b> Cu cât sunt mai multe în apropiere, cu atât scorul e mai bun.</li><li>Cele trei componente se combină cu ponderile din „Ajustează modelul”, apoi celulele orașului sunt împărțite în șapte intervale egale, de la A la G.</li><li>Când mărești harta, ea este recalculată pe o grilă mai fină, de 100 m, așa că nuanțele sunt mai detaliate decât celulele de 400 m din vederea de ansamblu.</li>",
   n2H: "Ce nu include",
   n2: "<li>Densitatea populației, structura clădirilor și geografia nu sunt incluse. Bucureștiul este un oraș de câmpie, deci nu există bariere naturale de evaluat.</li><li>OpenStreetMap este construită de voluntari. Un adăpost, un spital sau un obiectiv care lipsește de pe hartă lipsește și aici.</li><li>Un spital este considerat spital cu urgențe când numele lui din OpenStreetMap conține „Urgență” sau are o etichetă de urgență. Unele spitale cu unități de urgență pot lipsi.</li><li>Clasificarea este relativă. Un „G” în București nu spune nimic despre cum se compară orașul cu altul.</li>",
   n3H: "Date și credite",
-  n3: "<li>Date hartă © contribuitorii OpenStreetMap (ODbL), obținute prin Overpass la 16 nov. 2026, inclusiv numele străzilor, farmacii, supermarketuri, benzinării, stații de metrou și secții de poliție.</li><li>Farmaciile, supermarketurile și benzinăriile aflate la mai puțin de 50 m una de alta sunt numărate o singură dată. Căutarea după stradă duce în mijlocul porțiunii celei mai bine cartografiate din fiecare stradă, în fiecare sector. Străzile lungi traversează mai multe zone, deci marcajul este un punct de pornire, nu întreaga stradă. Lista de aprovizionare și servicii are doar rol informativ și nu intră în clasificare.</li><li>Cele <span class=\"nsh\"></span> de adăposturi sunt intrările cartografiate din <a href=\"https://igsu.ro/Resources/Documente_Generale/Situatia_adaposturilor_de_protectie_civila.pdf\" target=\"_blank\" rel=\"noopener\">lista adăposturilor de protecție civilă a IGSU</a>.</li><li>Ideea pornește de la verificatorul britanic „Doomsday” după codul poștal, creat de Serhii Kashevko. Aceasta este o realizare independentă, cu metodă și date proprii.</li>",
+  n3: "<li>Date hartă © contribuitorii OpenStreetMap (ODbL), obținute prin Overpass la 16 nov. 2026, inclusiv numele străzilor, farmacii, supermarketuri, benzinării, stații de metrou și secții de poliție.</li><li>Farmaciile, supermarketurile și benzinăriile aflate la mai puțin de 50 m una de alta sunt numărate o singură dată. Căutarea după stradă duce în mijlocul porțiunii celei mai bine cartografiate din fiecare stradă, în fiecare sector. Străzile lungi traversează mai multe zone, deci marcajul este un punct de pornire, nu întreaga stradă. Lista de aprovizionare și servicii are doar rol informativ și nu intră în clasificare. Numele străzilor afișate la mărire marchează același punct.</li><li>Cele <span class=\"nsh\"></span> de adăposturi sunt intrările cartografiate din <a href=\"https://igsu.ro/Resources/Documente_Generale/Situatia_adaposturilor_de_protectie_civila.pdf\" target=\"_blank\" rel=\"noopener\">lista adăposturilor de protecție civilă a IGSU</a>.</li><li>Ideea pornește de la verificatorul britanic „Doomsday” după codul poștal, creat de Serhii Kashevko. Aceasta este o realizare independentă, cu metodă și date proprii.</li>",
   disc: "Instrument neoficial, pentru informare generală. Nu prezice niciun eveniment și nu înlocuiește indicațiile autorităților române (DSU / IGSU).",
   credit: "Cercetare și pagină realizate cu ajutorul Claude (Anthropic), pe baza OpenStreetMap și a surselor publice de mai sus. <a href=\"/#contact\">Corecturile sunt binevenite</a>."
 }
@@ -557,7 +558,7 @@ function recalc() {
   BREAKS = { min: Math.min(...cs), max: Math.max(...cs) };
   cells.forEach(c => c.g = grade(c.s.c));
   SUBS.forEach(s => { s.r = raw(s.la, s.lo); s.s = score(s.r); s.g = grade(s.s.c); });
-  sectorStats(); draw(); renderTable(); renderSectors(); if (pin) showPin(pin.la, pin.lo, pin.label);
+  sectorStats(); fineCache.clear(); draw(); drawFine(); drawSvc(); renderTable(); renderSectors(); if (pin) showPin(pin.la, pin.lo, pin.label);
 }
 
 let SECS = [];
@@ -582,14 +583,15 @@ document.querySelector("#sectbl tbody").addEventListener("click", e => {
 const svg = document.getElementById("map");
 const NS = "http://www.w3.org/2000/svg";
 const el = (n, a, p) => { const e = document.createElementNS(NS, n); for (const k in a) e.setAttribute(k, a[k]); if (p) p.appendChild(e); return e; };
-const gCells = el("g", { id: "gc" }, svg), gWater = el("g", {}, svg), gBord = el("g", {}, svg), gShel = el("g", {}, svg), gFire = el("g", {}, svg),
-  gHosp = el("g", {}, svg), gSite = el("g", {}, svg), gLab = el("g", {}, svg), gPin = el("g", {}, svg);
-const LAYERS = { cells: ["ly_cells", gCells, true], bord: ["ly_bord", gBord, true], water: ["ly_water", gWater, true], lab: ["ly_lab", gLab, true], shel: ["ly_shel", gShel, false], hosp: ["ly_hosp", gHosp, true], site: ["ly_site", gSite, true], fire: ["ly_fire", gFire, false] };
+const gCells = el("g", { id: "gc" }, svg), gCoarse = el("g", {}, gCells), gFine = el("g", {}, gCells), gWater = el("g", {}, svg), gBord = el("g", {}, svg), gShel = el("g", {}, svg), gFire = el("g", {}, svg),
+  gHosp = el("g", {}, svg), gSite = el("g", {}, svg), gSvc = el("g", {}, svg), gLab = el("g", {}, svg), gPin = el("g", {}, svg);
+[gShel, gFire, gHosp, gSite, gSvc, gPin].forEach(g => g.classList.add("mk"));
+const LAYERS = { cells: ["ly_cells", gCells, true], bord: ["ly_bord", gBord, true], water: ["ly_water", gWater, true], lab: ["ly_lab", gLab, true], shel: ["ly_shel", gShel, false], hosp: ["ly_hosp", gHosp, true], site: ["ly_site", gSite, true], fire: ["ly_fire", gFire, false], svc: ["ly_svc", gSvc, false] };
 
 function drawStatic() {
   const wp = p => { const [la, lo] = ll(p[0], p[1]); return px(lo).toFixed(1) + "," + py(la).toFixed(1); };
   X.lakes.forEach(l => el("polygon", { points: l[1].map(wp).join(" "), fill: "#4aa3df", opacity: .75, stroke: "#2c7fb8", "stroke-width": 1 }, gWater));
-  X.river.forEach(l => el("polyline", { points: l.map(wp).join(" "), fill: "none", stroke: "#3b8fd0", "stroke-width": 2.6, "stroke-linejoin": "round", "stroke-linecap": "round", opacity: .9 }, gWater));
+  X.river.forEach(l => el("polyline", { points: l.map(wp).join(" "), fill: "none", stroke: "#3b8fd0", "stroke-width": 2.4, "vector-effect": "non-scaling-stroke", "stroke-linejoin": "round", "stroke-linecap": "round", opacity: .9 }, gWater));
   LINES.forEach(l => el("polyline", { points: l.map(p => px(p[1]).toFixed(1) + "," + py(p[0]).toFixed(1)).join(" "), fill: "none", stroke: "var(--map-line)", "stroke-width": 1.4, "stroke-linejoin": "round", "vector-effect": "non-scaling-stroke" }, gBord));
   SHEL.forEach(s => el("circle", { cx: px(s.lo).toFixed(1), cy: py(s.la).toFixed(1), r: 2, fill: "#1abc9c", opacity: .8 }, gShel));
   FIRE.forEach(s => el("rect", { x: px(s.lo) - 3, y: py(s.la) - 3, width: 6, height: 6, fill: "#e67e22" }, gFire));
@@ -605,11 +607,37 @@ function drawStatic() {
     sh.setAttribute("stroke", "#fff"); sh.setAttribute("stroke-width", 1.2);
     sh.dataset.s = i; gSite.appendChild(sh); });
 }
+const fineCache = new Map(), SVC = [[PHARM, "ph", "#2e9e5b", "+"], [SUPER, "sm", "#7b4fb5", "S"], [FUEL, "fu", "#b9702a", "F"], [METRO, "mt", "#1d4e9e", "M"], [POLICE, "pol", "#455a64", "P"]];
+function visExt() { const m = svg.getScreenCTM(); if (!m) return [VB[0], VB[1], VB[0] + VB[2], VB[1] + VB[3]]; const r = svg.getBoundingClientRect(), i = m.inverse(), a = new DOMPoint(r.left, r.top).matrixTransform(i), b = new DOMPoint(r.right, r.bottom).matrixTransform(i); return [a.x, a.y, b.x, b.y]; }
+function drawFine() {
+  gFine.textContent = "";
+  if (VB[2] > 420 || !NORM) return;
+  const w = CELL * S / 4, v = visExt(), paths = GR.map(() => []);
+  for (let j = Math.floor(v[1] / w); j <= Math.floor(v[3] / w); j++) for (let i = Math.floor(v[0] / w); i <= Math.floor(v[2] / w); i++) {
+    const k = i + "," + j; let g = fineCache.get(k);
+    if (g === undefined) { const la = toLat((j + .5) * w), lo = toLon((i + .5) * w); g = inCity(la, lo) ? GR.indexOf(grade(score(raw(la, lo)).c)) : -1; fineCache.set(k, g); }
+    if (g >= 0) paths[g].push(`M${(i * w).toFixed(1)} ${(j * w).toFixed(1)}h${(w + .4).toFixed(1)}v${(w + .4).toFixed(1)}h${(-(w + .4)).toFixed(1)}z`);
+  }
+  paths.forEach((p, g) => { if (p.length) el("path", { d: p.join(""), fill: `var(--g${GR[g]})`, opacity: .9, "shape-rendering": "crispEdges" }, gFine); });
+}
+function drawSvc() {
+  gSvc.textContent = "";
+  if (VB[2] > 300) return;
+  const v = visExt(), pad = 8;
+  SVC.forEach(([arr, kind, col, ch]) => arr.forEach(p => {
+    const x = px(p.lo), y = py(p.la);
+    if (x < v[0] - pad || x > v[2] + pad || y < v[1] - pad || y > v[3] + pad) return;
+    const g = el("g", {}, gSvc); g.dataset.x = kind + "|" + p.n;
+    el("circle", { cx: x.toFixed(1), cy: y.toFixed(1), r: 3.6, fill: col, stroke: "#fff", "stroke-width": 1 }, g);
+    el("text", { x: x.toFixed(1), y: (y + 2).toFixed(1), "text-anchor": "middle", "font-size": 5.6, "font-weight": 700, fill: "#fff", "pointer-events": "none" }, g).textContent = ch;
+  }));
+}
+const svcTip = s => { const i = s.indexOf("|"), k = s.slice(0, i), n = s.slice(i + 1); return T("svc_" + k) + (n ? ": " + n : ""); };
 function draw() {
-  gCells.textContent = "";
+  gCoarse.textContent = "";
   const w = CELL * S;
   drawLabels();
-  cells.forEach(c => { const r = el("rect", { x: (c.x * w).toFixed(1), y: (c.y * w).toFixed(1), width: (w + .6).toFixed(1), height: (w + .6).toFixed(1), fill: `var(--g${c.g})`, opacity: .9 }, gCells); });
+  cells.forEach(c => { const r = el("rect", { x: (c.x * w).toFixed(1), y: (c.y * w).toFixed(1), width: (w + .6).toFixed(1), height: (w + .6).toFixed(1), fill: `var(--g${c.g})`, opacity: .9 }, gCoarse); });
 }
 
 /* ---------- pin and result ---------- */
@@ -718,8 +746,8 @@ function drawLabels() {
   if (VB[2] > 240) SECS.forEach(s => { const x = px(s.lo), y = py(s.la); TX(T("sector").toUpperCase(), x, y - 30 * u, { size: 11, w: 700, ls: ".12em", op: .85 }); TX(String(s.k), x, y + 18 * u, { size: 44, w: 700, op: .8, sw: 4 }); });
   LANDMARKS.forEach(m => TX(T(m.name), px(m.lo), py(m.la) - 9 * u, { size: 11, w: 700 }));
   if (VB[2] < 720) Object.entries(LAKELAB).forEach(([n, l]) => TX(n, px(l.lo), py(l.la) + 4 * u, { size: 11, it: true, fill: "#0b4f80", w: 600 }));
+  const placed = [];
   if (VB[2] < 560) {
-    const placed = [];
     SUBS.forEach(s => {
       const x = px(s.lo), y = py(s.la);
       if (x < VB[0] || x > VB[0] + VB[2] || y < VB[1] || y > VB[1] + VB[3]) return;
@@ -728,13 +756,26 @@ function drawLabels() {
       TX(s.name, x, y, { size: 11, w: 500, fill: "var(--ink)", op: .9, sw: 3 });
     });
   }
+  if (VB[2] < 230) {
+    const vis = visExt(); let n = 0;
+    [...STREETS].sort((a, b) => b.w - a.w).forEach(s => {
+      if (n >= (VB[2] < 130 ? 40 : 18)) return;
+      const x = px(s.lo), y = py(s.la);
+      if (x < vis[0] || x > vis[2] || y < vis[1] || y > vis[3]) return;
+      const wd = s.name.length * 3.4 * u + 16 * u;
+      if (placed.some(p => Math.abs(p[0] - x) < (wd + p[2]) / 2 && Math.abs(p[1] - y) < 22 * u)) return;
+      placed.push([x, y, wd]); n++;
+      el("circle", { cx: x.toFixed(1), cy: y.toFixed(1), r: (1.9 * u).toFixed(2), fill: "#46566a", stroke: "#fff", "stroke-width": (.8 * u).toFixed(2) }, gLab);
+      TX(s.name, x, y + 11 * u, { size: 10, w: 500, it: true, fill: "#34445a", op: .95, sw: 3 });
+    });
+  }
   const sc = document.getElementById("scale"), pxPerKm = ppu() * S;
   let k = [0.1, 0.2, 0.5, 1, 2, 5].find(v => v * pxPerKm >= 60) || 5;
   sc.innerHTML = `<span>${k < 1 ? k * 1000 + " m" : dec(k) + " km"}</span><i style="width:${(k * pxPerKm).toFixed(0)}px"></i>`;
 }
-const setVB = () => { svg.setAttribute("viewBox", VB.map(v => v.toFixed(1)).join(" ")); drawLabels(); };
+const setVB = () => { svg.setAttribute("viewBox", VB.map(v => v.toFixed(1)).join(" ")); svg.style.setProperty("--ms", Math.max(.3, Math.min(1, Math.pow(VB[2] / 953, .55))).toFixed(3)); drawLabels(); drawFine(); drawSvc(); };
 function zoom(f, cx, cy) {
-  const w = Math.max(160, Math.min(FULL[2], VB[2] * f)), h = w * FULL[3] / FULL[2];
+  const w = Math.max(90, Math.min(FULL[2], VB[2] * f)), h = w * FULL[3] / FULL[2];
   cx = cx ?? VB[0] + VB[2] / 2; cy = cy ?? VB[1] + VB[3] / 2;
   VB = [Math.max(0, Math.min(FULL[2] - w, cx - (cx - VB[0]) * w / VB[2])), Math.max(0, Math.min(FULL[3] - h, cy - (cy - VB[1]) * h / VB[3])), w, h];
   setVB();
@@ -751,8 +792,8 @@ let drag = null;
 svg.addEventListener("pointerdown", e => { drag = { x: e.clientX, y: e.clientY, vb: VB.slice(), moved: false }; svg.setPointerCapture(e.pointerId); });
 svg.addEventListener("pointermove", e => {
   const tip = document.getElementById("tip");
-  const t = e.target.closest("[data-h],[data-s]");
-  if (t && !drag) { const r = document.getElementById("mapbox").getBoundingClientRect(); tip.textContent = t.dataset.h !== undefined ? HOSP[+t.dataset.h].n + (HOSP[+t.dataset.h].er ? T("emerg") : "") : T("cat_" + SITES[+t.dataset.s].c) + (SITES[+t.dataset.s].n ? ": " + SITES[+t.dataset.s].n : ""); tip.style.left = (e.clientX - r.left) + "px"; tip.style.top = (e.clientY - r.top) + "px"; tip.style.display = "block"; } else tip.style.display = "none";
+  const t = e.target.closest("[data-h],[data-s],[data-x]");
+  if (t && !drag) { const r = document.getElementById("mapbox").getBoundingClientRect(); tip.textContent = t.dataset.x !== undefined ? svcTip(t.dataset.x) : t.dataset.h !== undefined ? HOSP[+t.dataset.h].n + (HOSP[+t.dataset.h].er ? T("emerg") : "") : T("cat_" + SITES[+t.dataset.s].c) + (SITES[+t.dataset.s].n ? ": " + SITES[+t.dataset.s].n : ""); tip.style.left = (e.clientX - r.left) + "px"; tip.style.top = (e.clientY - r.top) + "px"; tip.style.display = "block"; } else tip.style.display = "none";
   if (!drag) return;
   const k = 1 / ppu(), dx = e.clientX - drag.x, dy = e.clientY - drag.y;
   if (Math.abs(dx) + Math.abs(dy) > 4) drag.moved = true;
