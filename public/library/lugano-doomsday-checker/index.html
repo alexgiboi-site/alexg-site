@@ -622,7 +622,7 @@ function draw() {
   gCells.textContent = "";
   const w = CELL * S;
   drawLabels();
-  cells.forEach(c => { const r = el("rect", { x: (c.x * w).toFixed(1), y: (c.y * w).toFixed(1), width: (w + .6).toFixed(1), height: (w + .6).toFixed(1), fill: `var(--g${c.g})`, opacity: .9 }, gCells); });
+  cells.forEach(c => { const r = el("rect", { x: (c.x * w).toFixed(1), y: (c.y * w).toFixed(1), width: (w + .6).toFixed(1), height: (w + .6).toFixed(1), fill: `var(--g${c.g})`, "shape-rendering": "crispEdges" }, gCells); }); gCells.style.opacity = .9;
 }
 
 /* ---------- pin and result ---------- */
@@ -634,8 +634,8 @@ function showPin(la, lo, label) {
   pin = { la, lo, label };
   gPin.textContent = "";
   const x = px(lo), y = py(la);
-  el("circle", { cx: x, cy: y, r: 11, fill: "none", stroke: "var(--ink)", "stroke-width": 2.5 }, gPin);
-  el("circle", { cx: x, cy: y, r: 3, fill: "var(--ink)" }, gPin); scaleMarks();
+  el("circle", { cx: x, cy: y, r: 9, fill: "none", stroke: "#fff", "stroke-width": 5 }, gPin); el("circle", { cx: x, cy: y, r: 9, fill: "none", stroke: "#17202b", "stroke-width": 2.2 }, gPin);
+  el("circle", { cx: x, cy: y, r: 2.6, fill: "#17202b", stroke: "#fff", "stroke-width": 1.2 }, gPin); scaleMarks();
   const res = document.getElementById("result");
   const cr = document.getElementById("chipread");
   if (!inCity(la, lo)) { cr.hidden = true; res.innerHTML = `<h2>${T("outH")}</h2><p class="small" style="margin:0">${T("outP")}</p>`; return; }
@@ -728,16 +728,18 @@ const LANDMARKS = []; LMK.forEach(([re, name]) => { const s = SITES.find(x => re
 const LAKELAB = {}; X.lakes.forEach(l => { const pts = l[1].map(p => ll(p[0], p[1])).filter(p => p[0] > LAT_MIN && p[0] < LAT_MAX && p[1] > LON_MIN && p[1] < LON_MAX); if (!pts.length) return; const la = pts.reduce((a, p) => a + p[0], 0) / pts.length, lo = pts.reduce((a, p) => a + p[1], 0) / pts.length; if (!LAKELAB[l[0]] || pts.length > LAKELAB[l[0]].n) LAKELAB[l[0]] = { la, lo, n: pts.length }; });
 function drawLabels() {
   gLab.textContent = "";
+  const MK = [...HOSP, ...SITES].map(m => [px(m.lo), py(m.la)]);
   const r = svg.getBoundingClientRect(), u = 1 / Math.max(.3, ppu()); // map units per screen pixel
   const TX = (txt, x, y, o) => { const t = el("text", { x: x.toFixed(1), y: y.toFixed(1), "text-anchor": "middle", fill: o.fill || "var(--ink)", "font-size": (o.size * u).toFixed(1), "font-weight": o.w || 600, "stroke-width": ((o.sw || 3) * u).toFixed(1), opacity: o.op || 1, "font-style": o.it ? "italic" : "normal", "letter-spacing": o.ls || 0 }, gLab); t.textContent = txt; return t; };
   if (VB[2] > 110) { const pl = []; SECS.slice().sort((a, b) => QUART[b.k - 1].pop - QUART[a.k - 1].pop).forEach(s => { if (s.la === undefined) return; const x = px(s.lo), y = py(s.la), hw = s.name.length * 3.2 * u; if (pl.some(p => Math.abs(p[0] - x) < hw + p[2] && Math.abs(p[1] - y) < 10 * u)) return; pl.push([x, y, hw]); TX(s.name.toUpperCase(), x, y, { size: 9, w: 700, ls: ".06em", op: .8, sw: 3 }); }); }
-  LANDMARKS.forEach(m => TX(I18N.en[m.name] ? T(m.name) : m.name, px(m.lo), py(m.la) - 9 * u, { size: 11, w: 700 }));
+  LANDMARKS.forEach(m => TX(I18N.en[m.name] ? T(m.name) : m.name, px(m.lo), py(m.la) - 17 * u, { size: 11, w: 700 }));
   if (VB[2] < 600) Object.entries(LAKELAB).forEach(([n, l]) => TX(n, px(l.lo), py(l.la) + 4 * u, { size: 11, it: true, fill: "#0b4f80", w: 600 }));
   if (VB[2] < 110) {
     const placed = [];
     SUBS.forEach(s => {
       const x = px(s.lo), y = py(s.la);
       if (x < VB[0] || x > VB[0] + VB[2] || y < VB[1] || y > VB[1] + VB[3]) return;
+      if (MK.some(m => Math.abs(m[0] - x) < s.name.length * 3.2 * u + 12 * u && Math.abs(m[1] - y) < 14 * u)) return;
       if (placed.some(p => Math.abs(p[0] - x) < s.name.length * 3.6 * u + p[2] && Math.abs(p[1] - y) < 13 * u)) return;
       placed.push([x, y, s.name.length * 3.6 * u]);
       TX(s.name, x, y, { size: 11, w: 500, fill: "var(--ink)", op: .9, sw: 3 });
@@ -755,7 +757,7 @@ function scaleMarks() {
     e.setAttribute("transform", `translate(${x} ${y}) scale(${k.toFixed(3)}) translate(${-x} ${-y})`);
   }));
 }
-const setVB = () => { svg.setAttribute("viewBox", VB.map(v => v.toFixed(1)).join(" ")); drawLabels(); scaleMarks(); };
+const setVB = () => { svg.setAttribute("viewBox", VB.map(v => v.toFixed(1)).join(" ")); drawLabels(); scaleMarks(); gSite.style.opacity = VB[2] < 70 ? .45 : 1; };
 function zoom(f, cx, cy) {
   const w = Math.max(40, Math.min(FULL[2], VB[2] * f)), h = w * FULL[3] / FULL[2];
   cx = cx ?? VB[0] + VB[2] / 2; cy = cy ?? VB[1] + VB[3] / 2;
@@ -765,8 +767,9 @@ function zoom(f, cx, cy) {
 function focusOn(la, lo, ww) { const w = ww || 90, h = w * FULL[3] / FULL[2]; VB = [Math.max(FULL[0], Math.min(FULL[0] + FULL[2] - w, px(lo) - w / 2)), Math.max(FULL[1], Math.min(FULL[1] + FULL[3] - h, py(la) - h / 2)), w, h]; setVB(); }
 const ppu = () => { const m = svg.getScreenCTM(); return m ? m.a : svg.getBoundingClientRect().width / VB[2]; }; // screen px per map unit (accounts for letterboxing)
 const evPt = e => { const m = svg.getScreenCTM(); if (!m) return [VB[0], VB[1]]; const p = new DOMPoint(e.clientX, e.clientY).matrixTransform(m.inverse()); return [p.x, p.y]; };
-document.getElementById("zin").onclick = () => zoom(.6);
-document.getElementById("zout").onclick = () => zoom(1 / .6);
+const zc = () => { if (pin) { const x = px(pin.lo), y = py(pin.la); if (x > VB[0] && x < VB[0] + VB[2] && y > VB[1] && y < VB[1] + VB[3]) return [x, y]; } return [undefined, undefined]; };
+document.getElementById("zin").onclick = () => zoom(.6, ...zc());
+document.getElementById("zout").onclick = () => zoom(1 / .6, ...zc());
 window.addEventListener("resize", drawLabels);
 document.getElementById("zfit").onclick = () => { VB = FULL.slice(); setVB(); };
 svg.addEventListener("wheel", e => { e.preventDefault(); const [x, y] = evPt(e); zoom(e.deltaY < 0 ? .8 : 1.25, x, y); }, { passive: false });
@@ -831,7 +834,9 @@ drawStatic();
 recalc();
 setVB();
 const start = SUBS.find(s => s.name === "Lugano") || SUBS[0];
-showPin(start.la, start.lo, start.name);
+let sla = start.la, slo = start.lo;
+if (!isBuilt(sla, slo)) { let best = null, bd = 1e9; for (let dy = -1.5; dy <= 1.5; dy += .1) for (let dx = -1.5; dx <= 1.5; dx += .1) { const la = start.la - dy / KY, lo = start.lo + dx / KX; if (inCity(la, lo) && isBuilt(la, lo) && Math.hypot(dx, dy) < bd) { bd = Math.hypot(dx, dy); best = [la, lo]; } } if (best) { sla = best[0]; slo = best[1]; } }
+showPin(sla, slo, start.name);
 </script>
 <script src="/assets/share.js" defer></script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "7d9db5e07c304e999664d641552d4d91"}'></script><!-- End Cloudflare Web Analytics -->
