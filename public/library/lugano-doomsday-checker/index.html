@@ -145,6 +145,7 @@ footer{color:var(--muted);font-size:13px;max-width:90ch}
 .story p{margin:0;max-width:68ch}
 .made{font-size:13.5px}
 #sugg li.nomatch{cursor:default;color:var(--muted)}
+.mk>*{transform-box:fill-box;transform-origin:center;transform:scale(var(--ms,1))}
 </style>
 </head>
 <body>
@@ -713,7 +714,7 @@ const SEARCH = [
   ...STREETS.map(p => ({ kind: "Street", name: p.name, key: p.key, la: p.la, lo: p.lo, sec: p.sec }))
 ];
 const qi = document.getElementById("q"), sg = document.getElementById("sugg"); let sgItems = [], sgOn = -1;
-function pick(it) { sg.hidden = true; qi.setAttribute("aria-expanded", "false"); const dn = it.name + (it.nb ? T("nbSuf") : ""); qi.value = dn; showPin(it.la, it.lo, dn); focusOn(it.la, it.lo, it.kind === "Street" ? 45 : 80); }
+function pick(it) { sg.hidden = true; qi.setAttribute("aria-expanded", "false"); const dn = it.name + (it.nb ? T("nbSuf") : ""); qi.value = dn; showPin(it.la, it.lo, dn); focusOn(it.la, it.lo, it.kind === "Street" ? 28 : 70); }
 function paint() { [...sg.children].forEach((li, i) => li.classList.toggle("on", i === sgOn)); }
 function suggest() {
   const AB = { vle: "viale", pza: "piazza", str: "strada", cso: "corso", vic: "vicolo" };
@@ -765,7 +766,7 @@ function drawLabels() {
     RD.filter(r => r.n && r.bm && r.bm[0] > VB[0] && r.bm[0] < VB[0] + VB[2] && r.bm[1] > VB[1] && r.bm[1] < VB[1] + VB[3] && r.bl * ppu() > r.n.length * 5.4).sort((a, b) => a.c - b.c || b.bl - a.bl).forEach(r => {
       if (n > 70 || rp.some(p => Math.hypot(p[0] - r.bm[0], p[1] - r.bm[1]) < 26 * u)) return; rp.push(r.bm); n++;
       let a = r.bm[2] * 180 / Math.PI; if (a > 90) a -= 180; if (a < -90) a += 180;
-      const t = el("text", { x: r.bm[0].toFixed(1), y: r.bm[1].toFixed(1), "text-anchor": "middle", "dominant-baseline": "central", fill: "#33404c", "font-size": (9.5 * u).toFixed(2), "font-weight": 500, stroke: "#fff", "stroke-width": (3 * u).toFixed(2), "paint-order": "stroke", transform: `rotate(${a.toFixed(1)} ${r.bm[0].toFixed(1)} ${r.bm[1].toFixed(1)})` }, gLab); t.textContent = r.n; });
+      const t = el("text", { x: r.bm[0].toFixed(1), y: r.bm[1].toFixed(1), "text-anchor": "middle", "dominant-baseline": "central", fill: "var(--ink)", "font-size": (9.5 * u).toFixed(2), "font-weight": 500, "stroke-width": (3 * u).toFixed(2), transform: `rotate(${a.toFixed(1)} ${r.bm[0].toFixed(1)} ${r.bm[1].toFixed(1)})` }, gLab); t.textContent = r.n; });
   }
   const sc = document.getElementById("scale"), pxPerKm = ppu() * S;
   let k = [0.1, 0.2, 0.5, 1, 2, 5, 10].find(v => v * pxPerKm >= 60) || 10;
@@ -781,7 +782,7 @@ function scaleMarks() {
 }
 const setVB = () => { svg.setAttribute("viewBox", VB.map(v => v.toFixed(1)).join(" ")); drawLabels(); scaleMarks(); gSite.style.opacity = VB[2] < 70 ? .45 : 1; [...gRoad.children].forEach(e => { if (+e.dataset.c >= 3) e.style.display = VB[2] < 110 ? "" : "none"; }); };
 function zoom(f, cx, cy) {
-  const w = Math.max(40, Math.min(FULL[2], VB[2] * f)), h = w * FULL[3] / FULL[2];
+  const w = Math.max(9, Math.min(FULL[2], VB[2] * f)), h = w * FULL[3] / FULL[2];
   cx = cx ?? VB[0] + VB[2] / 2; cy = cy ?? VB[1] + VB[3] / 2;
   VB = [Math.max(FULL[0], Math.min(FULL[0] + FULL[2] - w, cx - (cx - VB[0]) * w / VB[2])), Math.max(FULL[1], Math.min(FULL[1] + FULL[3] - h, cy - (cy - VB[1]) * h / VB[3])), w, h];
   setVB();
