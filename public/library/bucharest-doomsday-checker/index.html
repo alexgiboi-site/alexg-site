@@ -686,9 +686,9 @@ const qi = document.getElementById("q"), sg = document.getElementById("sugg"); l
 function pick(it) { sg.hidden = true; qi.setAttribute("aria-expanded", "false"); qi.value = it.name; showPin(it.la, it.lo, it.name); focusOn(it.la, it.lo, it.kind === "Street" ? 200 : 420); }
 function paint() { [...sg.children].forEach((li, i) => li.classList.toggle("on", i === sgOn)); }
 function suggest() {
-  const v = norm(qi.value.trim());
+  const AB = { bd: "bulevardul", bld: "bulevardul", bdul: "bulevardul", str: "strada", sos: "soseaua", cal: "calea", al: "aleea", dr: "drumul", int: "intrarea", pta: "piata", pt: "piata", sp: "splaiul", spl: "splaiul" };
+  const words = norm(qi.value).replace(/[.,]/g, " ").split(/\s+/).filter(Boolean).map(w => AB[w] || w), v = words.join(" ");
   if (v.length < 2) { sg.hidden = true; return; }
-  const words = v.split(/\s+/);
   const sc = it => { const k = it.key; if (k === v) return 0; if (k.startsWith(v)) return 1; if (words.every(w => k.split(/\s+/).some(x => x.startsWith(w)))) return 2; if (words.every(w => k.includes(w))) return 3; return 9; };
   sgItems = SEARCH.map(it => [sc(it), it]).filter(x => x[0] < 9).sort((a, b) => a[0] - b[0] || (a[1].kind === "Area" ? -1 : 0) - (b[1].kind === "Area" ? -1 : 0) || a[1].name.localeCompare(b[1].name, "ro") || a[1].sec - b[1].sec).slice(0, 12).map(x => x[1]);
   sgOn = -1;
