@@ -601,8 +601,8 @@ const LAYERS = { cells: ["ly_cells", gCells, true], bord: ["ly_bord", gBord, tru
 
 function drawStatic() {
   const wp = p => { const [la, lo] = ll(p[0], p[1]); return px(lo).toFixed(1) + "," + py(la).toFixed(1); };
-  X.lakes.forEach(l => el("polygon", { points: l[1].map(wp).join(" "), fill: "#4aa3df", opacity: .75, stroke: "#2c7fb8", "stroke-width": 1 }, gWater));
-  X.river.forEach(l => el("polyline", { points: l.map(wp).join(" "), fill: "none", stroke: "#3b8fd0", "stroke-width": 2.6, "stroke-linejoin": "round", "stroke-linecap": "round", opacity: .9 }, gWater));
+  X.lakes.forEach(l => el("polygon", { points: l[1].map(wp).join(" "), fill: "#4aa3df", opacity: .75, stroke: "#2c7fb8", "stroke-width": 1, "vector-effect": "non-scaling-stroke" }, gWater));
+  X.river.forEach(l => el("polyline", { points: l.map(wp).join(" "), fill: "none", stroke: "#3b8fd0", "stroke-width": 2.2, "vector-effect": "non-scaling-stroke", "stroke-linejoin": "round", "stroke-linecap": "round", opacity: .9 }, gWater));
   const dw = new Set(LUGW);
   WAYS.forEach((l, i) => { const isD = dw.has(i); el("polyline", { points: l.map(p => px(p[1]).toFixed(1) + "," + py(p[0]).toFixed(1)).join(" "), fill: "none", stroke: "var(--map-line)", "stroke-width": isD ? 1.8 : .7, opacity: isD ? 1 : .6, "stroke-linejoin": "round", "vector-effect": "non-scaling-stroke" }, isD ? gBord : gMun); });
   FIRE.forEach(s => el("rect", { x: px(s.lo) - 3, y: py(s.la) - 3, width: 6, height: 6, fill: "#e67e22" }, gFire));
@@ -635,7 +635,7 @@ function showPin(la, lo, label) {
   gPin.textContent = "";
   const x = px(lo), y = py(la);
   el("circle", { cx: x, cy: y, r: 11, fill: "none", stroke: "var(--ink)", "stroke-width": 2.5 }, gPin);
-  el("circle", { cx: x, cy: y, r: 3, fill: "var(--ink)" }, gPin);
+  el("circle", { cx: x, cy: y, r: 3, fill: "var(--ink)" }, gPin); scaleMarks();
   const res = document.getElementById("result");
   const cr = document.getElementById("chipread");
   if (!inCity(la, lo)) { cr.hidden = true; res.innerHTML = `<h2>${T("outH")}</h2><p class="small" style="margin:0">${T("outP")}</p>`; return; }
@@ -747,7 +747,15 @@ function drawLabels() {
   let k = [0.1, 0.2, 0.5, 1, 2, 5, 10].find(v => v * pxPerKm >= 60) || 10;
   sc.innerHTML = `<span>${k < 1 ? k * 1000 + " m" : dec(k) + " km"}</span><i style="width:${(k * pxPerKm).toFixed(0)}px"></i>`;
 }
-const setVB = () => { svg.setAttribute("viewBox", VB.map(v => v.toFixed(1)).join(" ")); drawLabels(); };
+function scaleMarks() {
+  const k = Math.min(1.1, 2.4 / ppu());
+  [gHosp, gSite, gFire, gPin].forEach(g => [...g.children].forEach(e => {
+    if (e.dataset.cx === undefined) { const b = e.getBBox(); e.dataset.cx = b.x + b.width / 2; e.dataset.cy = b.y + b.height / 2; }
+    const x = +e.dataset.cx, y = +e.dataset.cy;
+    e.setAttribute("transform", `translate(${x} ${y}) scale(${k.toFixed(3)}) translate(${-x} ${-y})`);
+  }));
+}
+const setVB = () => { svg.setAttribute("viewBox", VB.map(v => v.toFixed(1)).join(" ")); drawLabels(); scaleMarks(); };
 function zoom(f, cx, cy) {
   const w = Math.max(40, Math.min(FULL[2], VB[2] * f)), h = w * FULL[3] / FULL[2];
   cx = cx ?? VB[0] + VB[2] / 2; cy = cy ?? VB[1] + VB[3] / 2;
