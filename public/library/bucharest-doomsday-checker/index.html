@@ -713,7 +713,7 @@ const LANDMARKS = []; LMK.forEach(([re, name]) => { const s = SITES.find(x => re
 const LAKELAB = {}; X.lakes.forEach(l => { const pts = l[1].map(p => ll(p[0], p[1])); const la = pts.reduce((a, p) => a + p[0], 0) / pts.length, lo = pts.reduce((a, p) => a + p[1], 0) / pts.length; if (!LAKELAB[l[0]] || pts.length > LAKELAB[l[0]].n) LAKELAB[l[0]] = { la, lo, n: pts.length }; });
 function drawLabels() {
   gLab.textContent = "";
-  const r = svg.getBoundingClientRect(), u = VB[2] / Math.max(300, r.width); // map units per screen pixel
+  const r = svg.getBoundingClientRect(), u = 1 / Math.max(.3, ppu()); // map units per screen pixel
   const TX = (txt, x, y, o) => { const t = el("text", { x: x.toFixed(1), y: y.toFixed(1), "text-anchor": "middle", fill: o.fill || "var(--ink)", "font-size": (o.size * u).toFixed(1), "font-weight": o.w || 600, "stroke-width": ((o.sw || 3) * u).toFixed(1), opacity: o.op || 1, "font-style": o.it ? "italic" : "normal", "letter-spacing": o.ls || 0 }, gLab); t.textContent = txt; return t; };
   if (VB[2] > 240) SECS.forEach(s => { const x = px(s.lo), y = py(s.la); TX(T("sector").toUpperCase(), x, y - 30 * u, { size: 11, w: 700, ls: ".12em", op: .85 }); TX(String(s.k), x, y + 18 * u, { size: 44, w: 700, op: .8, sw: 4 }); });
   LANDMARKS.forEach(m => TX(T(m.name), px(m.lo), py(m.la) - 9 * u, { size: 11, w: 700 }));
@@ -728,7 +728,7 @@ function drawLabels() {
       TX(s.name, x, y, { size: 11, w: 500, fill: "var(--ink)", op: .9, sw: 3 });
     });
   }
-  const sc = document.getElementById("scale"), pxPerKm = r.width / (VB[2] / S);
+  const sc = document.getElementById("scale"), pxPerKm = ppu() * S;
   let k = [0.1, 0.2, 0.5, 1, 2, 5].find(v => v * pxPerKm >= 60) || 5;
   sc.innerHTML = `<span>${k < 1 ? k * 1000 + " m" : dec(k) + " km"}</span><i style="width:${(k * pxPerKm).toFixed(0)}px"></i>`;
 }
@@ -740,7 +740,8 @@ function zoom(f, cx, cy) {
   setVB();
 }
 function focusOn(la, lo, ww) { const w = ww || 420, h = w * FULL[3] / FULL[2]; VB = [Math.max(0, Math.min(FULL[2] - w, px(lo) - w / 2)), Math.max(0, Math.min(FULL[3] - h, py(la) - h / 2)), w, h]; setVB(); }
-const evPt = e => { const r = svg.getBoundingClientRect(); return [VB[0] + (e.clientX - r.left) / r.width * VB[2], VB[1] + (e.clientY - r.top) / r.height * VB[3]]; };
+const ppu = () => { const m = svg.getScreenCTM(); return m ? m.a : svg.getBoundingClientRect().width / VB[2]; }; // screen px per map unit (accounts for letterboxing)
+const evPt = e => { const m = svg.getScreenCTM(); if (!m) return [VB[0], VB[1]]; const p = new DOMPoint(e.clientX, e.clientY).matrixTransform(m.inverse()); return [p.x, p.y]; };
 document.getElementById("zin").onclick = () => zoom(.6);
 document.getElementById("zout").onclick = () => zoom(1 / .6);
 window.addEventListener("resize", drawLabels);
@@ -753,9 +754,9 @@ svg.addEventListener("pointermove", e => {
   const t = e.target.closest("[data-h],[data-s]");
   if (t && !drag) { const r = document.getElementById("mapbox").getBoundingClientRect(); tip.textContent = t.dataset.h !== undefined ? HOSP[+t.dataset.h].n + (HOSP[+t.dataset.h].er ? T("emerg") : "") : T("cat_" + SITES[+t.dataset.s].c) + (SITES[+t.dataset.s].n ? ": " + SITES[+t.dataset.s].n : ""); tip.style.left = (e.clientX - r.left) + "px"; tip.style.top = (e.clientY - r.top) + "px"; tip.style.display = "block"; } else tip.style.display = "none";
   if (!drag) return;
-  const r = svg.getBoundingClientRect(), dx = e.clientX - drag.x, dy = e.clientY - drag.y;
+  const k = 1 / ppu(), dx = e.clientX - drag.x, dy = e.clientY - drag.y;
   if (Math.abs(dx) + Math.abs(dy) > 4) drag.moved = true;
-  if (drag.moved) { VB = [Math.max(0, Math.min(FULL[2] - VB[2], drag.vb[0] - dx / r.width * VB[2])), Math.max(0, Math.min(FULL[3] - VB[3], drag.vb[1] - dy / r.height * VB[3])), VB[2], VB[3]]; setVB(); }
+  if (drag.moved) { VB = [Math.max(0, Math.min(FULL[2] - VB[2], drag.vb[0] - dx * k)), Math.max(0, Math.min(FULL[3] - VB[3], drag.vb[1] - dy * k)), VB[2], VB[3]]; setVB(); }
 });
 svg.addEventListener("pointerup", e => {
   if (drag && !drag.moved) { const [x, y] = evPt(e); showPin(toLat(y), toLon(x)); }
