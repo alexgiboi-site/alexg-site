@@ -297,7 +297,7 @@ en: {
   sel: "Selected point",
   sub: (sec, sc) => (sec ? "Sector " + sec + " · " : "") + "Relative exposure score " + sc + " of 100 (lower is better)",
   bSites: "Strategic sites", bHosp: "Hospital access", bShel: "Shelter gap",
-  fER: "Nearest emergency hospital", none: "none mapped", fShel: "Mapped shelters within 1 km", fSites: r => "Strategic sites within " + r + " km",
+  fER: "Nearest emergency hospital", none: "none mapped", fShel: "Mapped shelters within 1 km", shMap: "Teal dots inside the dashed 1 km circle on the map", shNear: "nearest", fSites: r => "Strategic sites within " + r + " km",
   supH: "Supplies and services nearby", fPh: "Pharmacies within 1 km", fSm: "Supermarkets within 1 km", fFu: "Fuel stations within 1.5 km",
   fFire: "Nearest fire station", fMetro: "Nearest metro station", fPol: "Nearest police station",
   topH: "Biggest contributors", unnamed: "Unnamed site",
@@ -346,7 +346,7 @@ it: {
   sel: "Punto selezionato",
   sub: (sec, sc) => (sec ? "Settore " + sec + " · " : "") + "Punteggio di esposizione relativa " + sc + " su 100 (più basso è meglio)",
   bSites: "Siti strategici", bHosp: "Accesso agli ospedali", bShel: "Carenza di rifugi",
-  fER: "Pronto soccorso più vicino", none: "nessuno mappato", fShel: "Rifugi mappati entro 1 km", fSites: r => "Siti strategici entro " + r + " km",
+  fER: "Pronto soccorso più vicino", none: "nessuno mappato", fShel: "Rifugi mappati entro 1 km", shMap: "Punti verde acqua dentro il cerchio tratteggiato di 1 km sulla mappa", shNear: "il più vicino", fSites: r => "Siti strategici entro " + r + " km",
   supH: "Approvvigionamenti e servizi vicini", fPh: "Farmacie entro 1 km", fSm: "Supermercati entro 1 km", fFu: "Distributori di carburante entro 1,5 km",
   fFire: "Caserma dei vigili del fuoco più vicina", fMetro: "Stazione della metro più vicina", fPol: "Stazione di polizia più vicina",
   topH: "Contributi maggiori", unnamed: "Sito senza nome",
@@ -395,7 +395,7 @@ ro: {
   sel: "Punct selectat",
   sub: (sec, sc) => (sec ? "Sector " + sec + " · " : "") + "Scor de expunere relativă " + sc + " din 100 (mai mic înseamnă mai bine)",
   bSites: "Obiective strategice", bHosp: "Acces la spital", bShel: "Deficit de adăposturi",
-  fER: "Cel mai apropiat spital cu urgențe", none: "niciunul pe hartă", fShel: "Adăposturi cartografiate pe o rază de 1 km", fSites: r => "Obiective strategice pe o rază de " + r + " km",
+  fER: "Cel mai apropiat spital cu urgențe", none: "niciunul pe hartă", fShel: "Adăposturi cartografiate pe o rază de 1 km", shMap: "Punctele turcoaz din cercul punctat de 1 km de pe hartă", shNear: "cel mai apropiat", fSites: r => "Obiective strategice pe o rază de " + r + " km",
   supH: "Aprovizionare și servicii în apropiere", fPh: "Farmacii pe o rază de 1 km", fSm: "Supermarketuri pe o rază de 1 km", fFu: "Benzinării pe o rază de 1,5 km",
   fFire: "Cea mai apropiată stație de pompieri", fMetro: "Cea mai apropiată stație de metrou", fPol: "Cea mai apropiată secție de poliție",
   topH: "Cei mai mari contribuitori", unnamed: "Obiectiv fără nume",
@@ -607,7 +607,7 @@ const svg = document.getElementById("map");
 const NS = "http://www.w3.org/2000/svg";
 const el = (n, a, p) => { const e = document.createElementNS(NS, n); for (const k in a) e.setAttribute(k, a[k]); if (p) p.appendChild(e); return e; };
 const gCells = el("g", { id: "gc" }, svg), gCoarse = el("g", {}, gCells), gFine = el("g", {}, gCells), gRoad = el("g", { "pointer-events": "none" }, svg), gRoadMin = el("g", {}, gRoad), gWater = el("g", {}, svg), gBord = el("g", {}, svg), gShel = el("g", {}, svg), gFire = el("g", {}, svg),
-  gHosp = el("g", {}, svg), gSite = el("g", {}, svg), gSvc = el("g", {}, svg), gLab = el("g", {}, svg), gPin = el("g", {}, svg);
+  gHosp = el("g", {}, svg), gSite = el("g", {}, svg), gSvc = el("g", {}, svg), gLab = el("g", {}, svg), gRing = el("g", { "pointer-events": "none" }, svg), gPin = el("g", {}, svg);
 [gShel, gFire, gHosp, gSite, gSvc, gPin].forEach(g => g.classList.add("mk"));
 const LAYERS = { cells: ["ly_cells", gCells, true], bord: ["ly_bord", gBord, true], water: ["ly_water", gWater, true], lab: ["ly_lab", gLab, true], shel: ["ly_shel", gShel, false], hosp: ["ly_hosp", gHosp, true], site: ["ly_site", gSite, true], fire: ["ly_fire", gFire, false], svc: ["ly_svc", gSvc, false], road: ["ly_road", gRoad, true] };
 
@@ -693,8 +693,12 @@ const dark = g => g === "C" || g === "D" ? " dark" : "";
 function nearestSub(la, lo) { let b = null, bd = 1e9; SUBS.forEach(s => { const d = km(la, lo, s.la, s.lo); if (d < bd) { bd = d; b = s; } }); return bd < 1.5 ? b : null; }
 function showPin(la, lo, label) {
   pin = { la, lo, label };
-  gPin.textContent = "";
+  gPin.textContent = ""; gRing.textContent = "";
   const x = px(lo), y = py(la);
+  if (inCity(la, lo)) {
+    el("circle", { cx: x, cy: y, r: S, fill: "#1abc9c", "fill-opacity": .1, stroke: "#0e8f75", "stroke-width": 1.8, "stroke-dasharray": "6 4", "vector-effect": "non-scaling-stroke" }, gRing);
+    SHEL.forEach(s => { if (Math.abs(s.la - la) * KY < 1.05 && Math.abs(s.lo - lo) * KX < 1.05 && km(la, lo, s.la, s.lo) <= 1) el("circle", { cx: px(s.lo).toFixed(1), cy: py(s.la).toFixed(1), r: 3.6, fill: "#1abc9c", stroke: "#fff", "stroke-width": 1.3 }, gPin); });
+  }
   el("circle", { cx: x, cy: y, r: 11, fill: "none", stroke: "#fff", "stroke-width": 6, opacity: .95 }, gPin);
   el("circle", { cx: x, cy: y, r: 11, fill: "none", stroke: "#18212b", "stroke-width": 2.6 }, gPin);
   el("circle", { cx: x, cy: y, r: 3.2, fill: "#18212b", stroke: "#fff", "stroke-width": 1.6 }, gPin);
@@ -715,7 +719,7 @@ function showPin(la, lo, label) {
     </div>
     <ul class="facts">
       <li><span>${T("fER")}</span><span>${r.erH ? esc(r.erH.n) + "<br>" + dec(r.er.toFixed(1)) + " km" : T("none")}</span></li>
-      <li><span>${T("fShel")}</span><span>${r.n}</span></li>
+      <li><span>${T("fShel")}<br><span class="small">${T("shMap")}</span></span><span>${r.n}${(() => { let b = 1e9; SHEL.forEach(s => { const d = km(la, lo, s.la, s.lo); if (d < b) b = d; }); return b < 1e9 ? `<br><span class="small">${T("shNear")} ${dec(b.toFixed(1))} km</span>` : ""; })()}</span></li>
       <li><span>${T("fSites")(P.rad)}</span><span>${r.parts.length}</span></li>
     </ul>
     <div><label class="lbl">${T("supH")}</label><ul class="facts">
