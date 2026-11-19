@@ -154,7 +154,7 @@ footer{color:var(--muted);font-size:13px;max-width:90ch}
 .attr{position:absolute;right:10px;bottom:2px;font-size:10px;line-height:1;color:var(--muted);opacity:.9}
 .attr a{color:inherit;text-decoration:none}
 .scale{bottom:18px}
-.cta{margin-top:16px;display:flex;flex-direction:column;gap:10px;align-items:flex-start}.cta p{margin:0}.cta .btn{display:inline-block;padding:10px 18px;border-radius:8px;background:var(--ink);color:var(--surface);text-decoration:none;font-weight:600}</style>
+.cta{margin-top:16px;display:flex;flex-direction:column;gap:10px;align-items:flex-start}.cta p{margin:0}.cta .btn{display:inline-block;padding:10px 18px;border-radius:8px;background:var(--ink);color:var(--surface);text-decoration:none;font-weight:600}#sthint{position:absolute;left:50%;top:56px;transform:translateX(-50%);width:max-content;max-width:min(calc(100% - 120px),420px);background:#1d4e9e;color:#fff;font-size:13px;line-height:1.3;font-weight:600;text-align:center;padding:6px 12px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.25);pointer-events:none;z-index:5}#sthint[hidden]{display:none}</style>
 </head>
 <body>
 <nav class="sitebar" aria-label="Site"><div>
@@ -297,7 +297,7 @@ en: {
   sel: "Selected point",
   sub: (sec, sc) => (sec ? "Sector " + sec + " · " : "") + "Relative exposure score " + sc + " of 100 (lower is better)",
   bSites: "Strategic sites", bHosp: "Hospital access", bShel: "Shelter gap",
-  fER: "Nearest emergency hospital", none: "none mapped", fShel: "Mapped shelters within 1 km", shMap: "Teal dots inside the dashed 1 km circle on the map", shNear: "nearest", fSites: r => "Strategic sites within " + r + " km",
+  fER: "Nearest emergency hospital", none: "none mapped", fShel: "Mapped shelters within 1 km", stLong: "This is a long street. Tap your part of the street on the map for an exact result.", stMove: "Tap another point on the street to move the pin.", shMap: "Teal dots inside the dashed 1 km circle on the map", shNear: "nearest", fSites: r => "Strategic sites within " + r + " km",
   supH: "Supplies and services nearby", fPh: "Pharmacies within 1 km", fSm: "Supermarkets within 1 km", fFu: "Fuel stations within 1.5 km",
   fFire: "Nearest fire station", fMetro: "Nearest metro station", fPol: "Nearest police station",
   topH: "Biggest contributors", unnamed: "Unnamed site",
@@ -346,7 +346,7 @@ it: {
   sel: "Punto selezionato",
   sub: (sec, sc) => (sec ? "Settore " + sec + " · " : "") + "Punteggio di esposizione relativa " + sc + " su 100 (più basso è meglio)",
   bSites: "Siti strategici", bHosp: "Accesso agli ospedali", bShel: "Carenza di rifugi",
-  fER: "Pronto soccorso più vicino", none: "nessuno mappato", fShel: "Rifugi mappati entro 1 km", shMap: "Punti verde acqua dentro il cerchio tratteggiato di 1 km sulla mappa", shNear: "il più vicino", fSites: r => "Siti strategici entro " + r + " km",
+  fER: "Pronto soccorso più vicino", none: "nessuno mappato", fShel: "Rifugi mappati entro 1 km", stLong: "Questa è una via lunga. Tocca sulla mappa il tuo tratto di via per un risultato preciso.", stMove: "Tocca un altro punto della via per spostare il segnaposto.", shMap: "Punti verde acqua dentro il cerchio tratteggiato di 1 km sulla mappa", shNear: "il più vicino", fSites: r => "Siti strategici entro " + r + " km",
   supH: "Approvvigionamenti e servizi vicini", fPh: "Farmacie entro 1 km", fSm: "Supermercati entro 1 km", fFu: "Distributori di carburante entro 1,5 km",
   fFire: "Caserma dei vigili del fuoco più vicina", fMetro: "Stazione della metro più vicina", fPol: "Stazione di polizia più vicina",
   topH: "Contributi maggiori", unnamed: "Sito senza nome",
@@ -395,7 +395,7 @@ ro: {
   sel: "Punct selectat",
   sub: (sec, sc) => (sec ? "Sector " + sec + " · " : "") + "Scor de expunere relativă " + sc + " din 100 (mai mic înseamnă mai bine)",
   bSites: "Obiective strategice", bHosp: "Acces la spital", bShel: "Deficit de adăposturi",
-  fER: "Cel mai apropiat spital cu urgențe", none: "niciunul pe hartă", fShel: "Adăposturi cartografiate pe o rază de 1 km", shMap: "Punctele turcoaz din cercul punctat de 1 km de pe hartă", shNear: "cel mai apropiat", fSites: r => "Obiective strategice pe o rază de " + r + " km",
+  fER: "Cel mai apropiat spital cu urgențe", none: "niciunul pe hartă", fShel: "Adăposturi cartografiate pe o rază de 1 km", stLong: "Strada e lungă. Atinge pe hartă porțiunea ta de stradă pentru un rezultat exact.", stMove: "Atinge alt punct de pe stradă ca să muți pinul.", shMap: "Punctele turcoaz din cercul punctat de 1 km de pe hartă", shNear: "cel mai apropiat", fSites: r => "Obiective strategice pe o rază de " + r + " km",
   supH: "Aprovizionare și servicii în apropiere", fPh: "Farmacii pe o rază de 1 km", fSm: "Supermarketuri pe o rază de 1 km", fFu: "Benzinării pe o rază de 1,5 km",
   fFire: "Cea mai apropiată stație de pompieri", fMetro: "Cea mai apropiată stație de metrou", fPol: "Cea mai apropiată secție de poliție",
   topH: "Cei mai mari contribuitori", unnamed: "Obiectiv fără nume",
@@ -581,7 +581,7 @@ function recalc() {
   BREAKS = { min: Math.min(...cs), max: Math.max(...cs) };
   cells.forEach(c => c.g = grade(c.s.c));
   SUBS.forEach(s => { s.r = raw(s.la, s.lo); s.s = score(s.r); s.g = grade(s.s.c); });
-  sectorStats(); fineCache.clear(); draw(); drawFine(); drawSvc(); renderTable(); renderSectors(); if (pin) showPin(pin.la, pin.lo, pin.label);
+  sectorStats(); fineCache.clear(); draw(); drawFine(); drawSvc(); renderTable(); renderSectors(); if (pin) showPin(pin.la, pin.lo, pin.label, pin.st, pin.moved);
 }
 
 let SECS = [];
@@ -607,7 +607,7 @@ const svg = document.getElementById("map");
 const NS = "http://www.w3.org/2000/svg";
 const el = (n, a, p) => { const e = document.createElementNS(NS, n); for (const k in a) e.setAttribute(k, a[k]); if (p) p.appendChild(e); return e; };
 const gCells = el("g", { id: "gc" }, svg), gCoarse = el("g", {}, gCells), gFine = el("g", {}, gCells), gRoad = el("g", { "pointer-events": "none" }, svg), gRoadMin = el("g", {}, gRoad), gWater = el("g", {}, svg), gBord = el("g", {}, svg), gShel = el("g", {}, svg), gFire = el("g", {}, svg),
-  gHosp = el("g", {}, svg), gSite = el("g", {}, svg), gSvc = el("g", {}, svg), gLab = el("g", {}, svg), gRing = el("g", { "pointer-events": "none" }, svg), gPin = el("g", {}, svg);
+  gHosp = el("g", {}, svg), gSite = el("g", {}, svg), gSvc = el("g", {}, svg), gLab = el("g", {}, svg), gStreet = el("g", { "pointer-events": "none" }, svg), gRing = el("g", { "pointer-events": "none" }, svg), gPin = el("g", {}, svg);
 [gShel, gFire, gHosp, gSite, gSvc, gPin].forEach(g => g.classList.add("mk"));
 const LAYERS = { cells: ["ly_cells", gCells, true], bord: ["ly_bord", gBord, true], water: ["ly_water", gWater, true], lab: ["ly_lab", gLab, true], shel: ["ly_shel", gShel, false], hosp: ["ly_hosp", gHosp, true], site: ["ly_site", gSite, true], fire: ["ly_fire", gFire, false], svc: ["ly_svc", gSvc, false], road: ["ly_road", gRoad, true] };
 
@@ -691,8 +691,32 @@ let pin = null;
 const esc = s => dia(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const dark = g => g === "C" || g === "D" ? " dark" : "";
 function nearestSub(la, lo) { let b = null, bd = 1e9; SUBS.forEach(s => { const d = km(la, lo, s.la, s.lo); if (d < bd) { bd = d; b = s; } }); return bd < 1.5 ? b : null; }
-function showPin(la, lo, label) {
-  pin = { la, lo, label };
+function streetOf(name, la, lo) {
+  const segs = RD.filter(r => r.n === name && r.pts.some(p => Math.hypot(p[0] - px(lo), p[1] - py(la)) < 8 * S));
+  if (!segs.length) return null;
+  let len = 0, x0 = 1e9, y0 = 1e9, x1 = -1e9, y1 = -1e9;
+  segs.forEach(r => { len += r.bl; r.pts.forEach(p => { x0 = Math.min(x0, p[0]); y0 = Math.min(y0, p[1]); x1 = Math.max(x1, p[0]); y1 = Math.max(y1, p[1]); }); });
+  return { name, segs, km: len / S, bb: [x0, y0, x1, y1] };
+}
+function snapTo(st, x, y) {
+  let b = null, bd = 1e9;
+  st.segs.forEach(r => { for (let i = 1; i < r.pts.length; i++) { const [ax, ay] = r.pts[i - 1], [bx, by] = r.pts[i], dx = bx - ax, dy = by - ay, l2 = dx * dx + dy * dy;
+    const t = l2 ? Math.max(0, Math.min(1, ((x - ax) * dx + (y - ay) * dy) / l2)) : 0, qx = ax + t * dx, qy = ay + t * dy, d = Math.hypot(x - qx, y - qy);
+    if (d < bd) { bd = d; b = [qx, qy]; } } });
+  return { x: b[0], y: b[1], d: bd };
+}
+function stHint(txt) {
+  let h = document.getElementById("sthint");
+  if (!h) { h = document.createElement("div"); h.id = "sthint"; document.getElementById("mapbox").appendChild(h); }
+  h.hidden = !txt; h.textContent = txt || "";
+}
+function showPin(la, lo, label, st, moved) {
+  pin = { la, lo, label, st, moved };
+  gStreet.textContent = "";
+  if (st) { const d = pathOf(st.segs.map(r => r.pts));
+    el("path", { d, fill: "none", stroke: "#fff", "stroke-width": 11, "stroke-opacity": .9, "stroke-linecap": "round", "stroke-linejoin": "round", "vector-effect": "non-scaling-stroke" }, gStreet);
+    el("path", { d, fill: "none", stroke: "#1d4e9e", "stroke-width": 6, "stroke-opacity": .85, "stroke-linecap": "round", "stroke-linejoin": "round", "vector-effect": "non-scaling-stroke" }, gStreet); }
+  stHint(st && st.km >= 1.5 ? (moved ? T("stMove") : T("stLong")) : "");
   gPin.textContent = ""; gRing.textContent = "";
   const x = px(lo), y = py(la);
   if (inCity(la, lo)) {
@@ -762,7 +786,12 @@ const SEARCH = [
   ...STREETS.map(s => ({ kind: "Street", name: s.name, key: s.key, la: s.la, lo: s.lo, sec: s.sec }))
 ];
 const qi = document.getElementById("q"), sg = document.getElementById("sugg"); let sgItems = [], sgOn = -1;
-function pick(it) { sg.hidden = true; qi.setAttribute("aria-expanded", "false"); qi.value = it.name; showPin(it.la, it.lo, it.name); focusOn(it.la, it.lo, it.kind === "Street" ? 200 : 420); }
+function pick(it) { sg.hidden = true; qi.setAttribute("aria-expanded", "false"); qi.value = it.name;
+  const st = it.kind === "Street" ? streetOf(it.name, it.la, it.lo) : null;
+  showPin(it.la, it.lo, it.name, st);
+  if (st && st.km >= 1.5) { const b = st.bb, w0 = Math.max(220, (b[2] - b[0]) * 1.2, (b[3] - b[1]) * 1.2 * FULL[2] / FULL[3]), w = Math.min(FULL[2], w0), h = w * FULL[3] / FULL[2];
+    VB = [Math.max(0, Math.min(FULL[2] - w, (b[0] + b[2]) / 2 - w / 2)), Math.max(0, Math.min(FULL[3] - h, (b[1] + b[3]) / 2 - h / 2)), w, h]; setVB(); }
+  else focusOn(it.la, it.lo, it.kind === "Street" ? 200 : 420); }
 function paint() { [...sg.children].forEach((li, i) => li.classList.toggle("on", i === sgOn)); }
 function suggest() {
   const AB = { bd: "bulevardul", bld: "bulevardul", bdul: "bulevardul", str: "strada", sos: "soseaua", cal: "calea", al: "aleea", dr: "drumul", int: "intrarea", pta: "piata", pt: "piata", sp: "splaiul", spl: "splaiul" };
@@ -859,7 +888,8 @@ svg.addEventListener("pointermove", e => {
   if (drag.moved) { VB = [Math.max(0, Math.min(FULL[2] - VB[2], drag.vb[0] - dx * k)), Math.max(0, Math.min(FULL[3] - VB[3], drag.vb[1] - dy * k)), VB[2], VB[3]]; setVB(); }
 });
 svg.addEventListener("pointerup", e => {
-  if (drag && !drag.moved) { const [x, y] = evPt(e); showPin(toLat(y), toLon(x)); }
+  if (drag && !drag.moved) { const [x, y] = evPt(e), st = pin && pin.st, sn = st && snapTo(st, x, y);
+    if (sn && sn.d * ppu() < 40) showPin(toLat(sn.y), toLon(sn.x), st.name, st, true); else showPin(toLat(y), toLon(x)); }
   drag = null;
 });
 
@@ -896,7 +926,7 @@ function applyLang() {
   document.querySelectorAll(".lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.lang === lang ? "true" : "false"));
   sg.hidden = true;
 }
-function relang() { applyLang(); renderSectors(); renderTable(); drawLabels(); if (pin) showPin(pin.la, pin.lo, pin.label); }
+function relang() { applyLang(); renderSectors(); renderTable(); drawLabels(); if (pin) showPin(pin.la, pin.lo, pin.label, pin.st, pin.moved); }
 document.querySelectorAll(".lang button").forEach(btn => btn.addEventListener("click", () => {
   lang = btn.dataset.lang;
   try { localStorage.setItem("bdc-lang", lang); } catch (e) {}
