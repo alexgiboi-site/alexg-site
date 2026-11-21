@@ -523,6 +523,7 @@ function sectorOf(la, lo) {
   return 0;
 }
 SUBS.forEach(s => s.sec = sectorOf(s.la, s.lo));
+const SUB1 = new Set(["1 Mai", "13 Septembrie", "23 August", "Apărătorii Patriei", "Aviatorilor", "Aviației", "Baicului", "Berceni", "Bucureștii Noi", "Băneasa", "Carol", "Centrul Civic", "Chitila", "Colentina", "Cotroceni", "Crângași", "Dorobanți", "Dristor", "Drumul Taberei", "Dămăroaia", "Ferentari", "Floreasca", "Gara de Nord", "Ghencea", "Giulești", "Giulești Sârbi", "Giurgiului", "Grivița", "Grozăvești", "Herăstrău", "Militari", "Obor", "Pajura", "Pantelimon", "Rahova", "Regie", "Străulești Nord", "Tei", "Tineretului", "Titan - Balta Albă", "Titanul Nou", "Vatra Luminoasă", "Vatra Nouă", "Viilor", "Vitan", "Văcărești"]);
 SHEL.forEach(s => s.sec = sectorOf(s.la, s.lo));
 HOSP.forEach(h => h.sec = sectorOf(h.la, h.lo));
 const pts = (a, merge) => { const o = []; a.forEach(p => { const q = { la: LA0 + p[0] / 1e5, lo: LO0 + p[1] / 1e5, n: p[2] || "" }; if (merge && o.some(r => Math.abs(r.la - q.la) * KY < .05 && Math.abs(r.lo - q.lo) * KX < .05)) return; o.push(q); }); return o; };
@@ -863,7 +864,9 @@ function drawLabels() {
   const used = new Set(), nk = s => dia(s).toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
   LANDMARKS.forEach(m => { const nm = T(m.name); if (put(nm, px(m.lo), py(m.la) - 9 * u, { size: 11, w: 700 })) used.add(nk(nm)); });
   if (VB[2] < 720) Object.entries(LAKELAB).forEach(([n, l]) => { if (put(n, px(l.lo), py(l.la) + 4 * u, { size: 11, it: true, fill: "var(--lake)", w: 600 })) used.add(nk(n)); });
-  if (VB[2] < 560) SUBS.forEach(s => { if (used.has(nk(s.name))) return; const x = px(s.lo), y = py(s.la); if (x < vis[0] || x > vis[2] || y < vis[1] || y > vis[3]) return; if (put(s.name, x, y, { size: 11, w: 500, op: .92 })) used.add(nk(s.name)); });
+  const subLab = (s, o) => { if (used.has(nk(s.name))) return; const x = px(s.lo), y = py(s.la); if (x < vis[0] || x > vis[2] || y < vis[1] || y > vis[3]) return; if ([[0, 0], [0, -16], [0, 17], [0, -27], [0, 28], [-45, 0], [45, 0]].some(([dx, dy]) => put(s.name, x + dx * u, y + dy * u, o))) used.add(nk(s.name)); };
+  if (VB[2] < 720) SUBS.forEach(s => { if (SUB1.has(s.name)) subLab(s, { size: 12, w: 700, op: .95 }); });
+  if (VB[2] < 260) SUBS.forEach(s => { if (!SUB1.has(s.name)) subLab(s, { size: 9.5, w: 500, it: true, op: .75 }); });
   if (VB[2] < 300 && gRoad.style.display !== "none") {
     const seen = new Set(); let n = 0;
     RD.filter(r => r.n && r.bm && r.bm[0] > vis[0] && r.bm[0] < vis[2] && r.bm[1] > vis[1] && r.bm[1] < vis[3] && r.bl * ppu() > r.n.length * 5.6 && (r.c < 3 || VB[2] < 160)).sort((a, b) => a.c - b.c || b.bl - a.bl).forEach(r => {
