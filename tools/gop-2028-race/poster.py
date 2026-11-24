@@ -10,27 +10,27 @@ T = {
  'en': dict(
   kicker='THE 2028 REPUBLICAN NOMINATION · AFTER THE MIDTERMS',
   vrole='JD Vance · Vice President · Ohio', rrole='Marco Rubio · Secretary of State · Florida',
-  rows=[('37%', 'MARKET ODDS · KALSHI, 16 NOV', '17%'),
-        ('39%', 'NATIONAL POLLS · 60-DAY AVERAGE', '18%'),
+  rows=[('31%', 'MARKET ODDS · KALSHI, 23 NOV', '25%'),
+        ('39%', 'NATIONAL POLLS · AVERAGE TO 31 OCT', '18%'),
         ('38%', 'NEW HAMPSHIRE · ST ANSELM, OCT', '38%')],
   tag='LATE CHALLENGER', badge='from about 5% before the midterms to 16% on Kalshi',
-  foot='Odds: Kalshi via DeFi Rate, 16 Nov 2026 · National polls: PollCheck 60-day average to 31 Oct 2026 · New Hampshire: Saint Anselm College, 19–20 Oct 2026 · alexgiboi.com/library'),
+  foot='Odds: Kalshi via DeFi Rate, 23 Nov 2026 · National polls: PollCheck 60-day average to 31 Oct 2026 (pre-midterm) · New Hampshire: Saint Anselm College, 19–20 Oct 2026 · alexgiboi.com/library'),
  'it': dict(
   kicker='LA NOMINATION REPUBBLICANA DEL 2028 · DOPO IL VOTO DI METÀ MANDATO',
   vrole='JD Vance · vicepresidente · Ohio', rrole='Marco Rubio · segretario di Stato · Florida',
-  rows=[('37%', 'MERCATI DI PREVISIONE · KALSHI, 16 NOV', '17%'),
-        ('39%', 'SONDAGGI NAZIONALI · MEDIA A 60 GIORNI', '18%'),
+  rows=[('31%', 'MERCATI DI PREVISIONE · KALSHI, 23 NOV', '25%'),
+        ('39%', 'SONDAGGI NAZIONALI · MEDIA AL 31 OTT', '18%'),
         ('38%', 'NEW HAMPSHIRE · ST ANSELM, OTT', '38%')],
   tag='LO SFIDANTE', badge='da circa il 5% prima del voto al 16% su Kalshi',
-  foot='Quote: Kalshi tramite DeFi Rate, 16 nov 2026 · Sondaggi nazionali: media PollCheck a 60 giorni al 31 ott 2026 · New Hampshire: Saint Anselm College, 19–20 ott 2026 · alexgiboi.com/library'),
+  foot='Quote: Kalshi tramite DeFi Rate, 23 nov 2026 · Sondaggi nazionali: media PollCheck a 60 giorni al 31 ott 2026 (prima del voto) · New Hampshire: Saint Anselm College, 19–20 ott 2026 · alexgiboi.com/library'),
  'ro': dict(
   kicker='CANDIDATURA REPUBLICANĂ PENTRU 2028 · DUPĂ ALEGERILE DE LA JUMĂTATEA MANDATULUI',
   vrole='JD Vance · vicepreședinte · Ohio', rrole='Marco Rubio · secretar de stat · Florida',
-  rows=[('37%', 'PIEȚE DE PREDICȚII · KALSHI, 16 NOI', '17%'),
-        ('39%', 'SONDAJE NAȚIONALE · MEDIE PE 60 DE ZILE', '18%'),
+  rows=[('31%', 'PIEȚE DE PREDICȚII · KALSHI, 23 NOI', '25%'),
+        ('39%', 'SONDAJE NAȚIONALE · MEDIE LA 31 OCT', '18%'),
         ('38%', 'NEW HAMPSHIRE · ST ANSELM, OCT', '38%')],
   tag='INTRĂ ÎN RING', badge='de la circa 5% înainte de vot la 16% pe Kalshi',
-  foot='Cote: Kalshi, prin DeFi Rate, 16 nov. 2026 · Sondaje naționale: media PollCheck pe 60 de zile, la 31 oct. 2026 · New Hampshire: Saint Anselm College, 19–20 oct. 2026 · alexgiboi.com/library'),
+  foot='Cote: Kalshi, prin DeFi Rate, 23 nov. 2026 · Sondaje naționale: media PollCheck pe 60 de zile, la 31 oct. 2026 (înainte de vot) · New Hampshire: Saint Anselm College, 19–20 oct. 2026 · alexgiboi.com/library'),
 }
 
 BLUE, ORANGE, GROUND, GREY = '#7CC4E8', '#F5A25D', '#0D1B2A', '#A9B4C2'
